@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ImageView
+            android:id="@+id/loja_chocolate"
+            android:layout_width="match_parent"
+            android:layout_height="181dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/loja_chocolate" />
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="119dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/baumans"
+            android:text="Alfajor Delícias"
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loja_chocolate" />
+
+
+        <TextView
+            android:id="@+id/resumo_historia"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/baumans"
+            android:text="Alfajor Delícias é mais nova loja de chocolates na sua cidade. Temos variedades de doces e chocolates. Estamos abertos de segunda a sabádo das 08:00 às 18:00.Entre em contato pelo telefone (71) - 55 -3444 - 5576."
+            android:textAlignment="inherit"
+            android:textColorHighlight="@color/primary_material_dark_text_selected_for_background_white"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+
+        <TextView
+            android:id="@+id/titulo_promocoes_alfajor"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/baumans"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resumo_historia" />
+
+
+        <TextView
+            android:id="@+id/resumo_promocoes_alfajor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/baumans"
+            android:isScrollContainer="true"
+            android:text=""
+            android:textColorHighlight="@color/primary_material_dark_text_selected_for_background_white"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_promocoes_alfajor" />
+
+        <TextView
+            android:id="@+id/novidades_alfajor"
+            android:layout_width="91dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/baumans"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resumo_promocoes_alfajor" />
+
+        <TextView
+            android:id="@+id/resumo_novidades_alfajor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/baumans"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textColorHighlight="@color/primary_material_dark_text_selected_for_background_white"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/novidades_alfajor" />
+
+
+        <ProgressBar
+            android:id="@+id/chocolateProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+
+            android:layout_marginBottom="43dp"
+            android:layout_marginTop="44dp"
+            android:indeterminateTint="@color/color_loading"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/resumo_novidades_alfajor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resumo_historia" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F50057</color>
+    <color name="colorPrimaryDark">#e0267d</color>
+    <color name="colorAccent">#ff4081</color>
+    <color name="viewBg">#f1f5f8</color>
+    <color name="album_title">#4c4c4c</color>
+    <color name="color_loading">#ec4c97</color>
+    <color name="background_splash">#ec4c97</color>
+    <color name="primary_material_dark">#fff</color>
+    <color name="primary_material_dark_text_selected_for_background_lilac">#3a011c</color>
+    <color name="primary_material_dark_text_selected_for_background_white">#0bbae2</color>
+</resources>

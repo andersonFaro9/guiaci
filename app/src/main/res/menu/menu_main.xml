@@ -1,0 +1,36 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="br.com.guiacistore.lojas.MainActivity">
+    <!--<item-->
+        <!--android:id="@+id/sobre"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="Sobre"-->
+        <!--app:showAsAction="never" />-->
+
+    <item
+        android:id="@+id/search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:queryHint="busque"
+        app:showAsAction="always"
+        android:title="" />
+
+        <item
+            android:id="@+id/telefone"
+            android:textColorHighlight="@color/primary_material_dark"
+            app:queryHint="telefone"
+            android:icon="@drawable/ic_contact_telefone"
+            app:showAsAction="always"
+            android:title=""
+
+            />
+
+    <item
+        android:id= "@+id/menu_share"
+        app:showAsAction="always"
+        android:title="share"
+        android:icon="@drawable/ic_share"
+
+        />
+
+</menu>

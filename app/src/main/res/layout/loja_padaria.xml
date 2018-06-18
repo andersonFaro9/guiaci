@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ImageView
+            android:id="@+id/loja_padaria"
+            android:layout_width="match_parent"
+            android:layout_height="181dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/loja_padaria" />
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="175dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/baumans"
+            android:text="Padaria R.R dos Santos"
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loja_padaria" />
+
+
+        <TextView
+            android:id="@+id/resumo_historia"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/baumans"
+            android:text="A Padaria R.R dos Santos vem ao longo de seus 10 anos fazendo os melhores pães. Inovando em qualidade eatendimento o tempo todo para vocês. Estamos abertos de segunda a sabádo das 06:00 às 21:00. Entre em contato pelo telefone (71)-55-3444-5576"
+            android:textAlignment="gravity"
+            android:textColorHighlight="@color/primary_material_dark_text_selected_for_background_white"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+
+        <TextView
+            android:id="@+id/titulo_promocoes_padaria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/baumans"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resumo_historia" />
+
+
+        <TextView
+            android:id="@+id/resumo_promocoes_padaria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/baumans"
+            android:isScrollContainer="true"
+            android:text=""
+            android:textColorHighlight="@color/primary_material_dark_text_selected_for_background_white"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resumo_historia" />
+
+        <TextView
+            android:id="@+id/novidades_padaria"
+            android:layout_width="0dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="92dp"
+            android:fontFamily="@font/baumans"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resumo_historia" />
+
+        <TextView
+            android:id="@+id/resumo_novidades_padaria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="124dp"
+            android:fontFamily="@font/baumans"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textColorHighlight="@color/primary_material_dark_text_selected_for_background_white"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resumo_historia" />
+
+        <ProgressBar
+            android:id="@+id/padariaProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="52dp"
+            android:indeterminateTint="@color/color_loading"
+            android:paddingTop="4dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resumo_historia" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "690672951518",
+    "firebase_url": "https://guiaci-2654c.firebaseio.com",
+    "project_id": "guiaci-2654c",
+    "storage_bucket": "guiaci-2654c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690672951518:android:2ef984806de8644a",
+        "android_client_info": {
+          "package_name": "br.com.guiacistore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690672951518-e0e3sdneesnbf84tt5d63tu8gg8h0ie7.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "690672951518-e0e3sdneesnbf84tt5d63tu8gg8h0ie7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAin4ySAAYnC4fnYFdhbMuCuFJsrAU5bpc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
