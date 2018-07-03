@@ -10,6 +10,7 @@ import android.graphics.Color
 import android.media.RingtoneManager
 import android.os.Bundle
 import android.support.v4.app.NotificationCompat
+import br.com.guiacistore.lojas.MainActivity
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 
@@ -36,7 +37,7 @@ class NotificationFirebaseMessagingService :  FirebaseMessagingService() {
     private fun sendNotifications(mensagem: String?,dados:Map<String, String> ) {
 
 
-        val intent = Intent(this, StorageActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         val bundle = Bundle()
 
         for (key in dados.keys) {

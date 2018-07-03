@@ -8,11 +8,18 @@ package br.com.guiacistore.model
 
 data class LojasModel(
 
-        //alfajor
-        var titulo_promocoes_alfajor: String = "",
-        var resumo_promocoes_alfajor: String = "",
-        var novidades_alfajor : String = "",
-        var resumo_novidades_alfajor: String = "",
+        //venivici
+        var venivici_empresa: String = "",
+        var venivici_historia_da_empresa: String = "",
+
+        var venivici_promocoes: String = "",
+        var venivici_conteudo_de_promocoes: String = "",
+
+        var venivici_servicos : String = "",
+        var venivici_conteudo_de_servicos: String = "",
+
+
+        //TODO -> Precisa mudar os campos abaixo com os nomes das lojas reais
 
         //padaria
         var titulo_promocoes_padaria: String= "",
@@ -31,6 +38,7 @@ data class LojasModel(
         var resumo_promocoes_farmacia: String= "",
         var novidades_farmacia : String= "",
         var resumo_novidades_farmacia : String= ""
+
 
 
 )

@@ -31,6 +31,8 @@ open class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
         rView.layoutManager = GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false)
 
+
+
     }
 
 
