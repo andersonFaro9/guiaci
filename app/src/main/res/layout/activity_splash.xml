@@ -32,13 +32,13 @@
 
         <TextView
             android:id="@+id/seu_negocio"
-            android:layout_width="259dp"
+            android:layout_width="278dp"
             android:layout_height="39dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/baumans"
-            android:text="Seu negócio na palma da mão"
+            android:text="A loja da sua cidade na palma da mão"
             android:textAlignment="center"
             android:textColor="@color/primary_material_dark"
             android:textSize="17sp"

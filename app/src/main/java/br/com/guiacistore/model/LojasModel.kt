@@ -18,14 +18,18 @@ data class LojasModel(
         var venivici_servicos : String = "",
         var venivici_conteudo_de_servicos: String = "",
 
+        //speednet
+        var speednet_empresa: String= "",
+        var speednet_historia_da_empresa: String= "",
+
+        var speednet_promocoes : String= "",
+        var speednet_conteudo_de_promocoes : String= "",
+
+        var speednet_servicos : String = "",
+        var speednet_conteudo_de_servicos: String = "",
+
 
         //TODO -> Precisa mudar os campos abaixo com os nomes das lojas reais
-
-        //padaria
-        var titulo_promocoes_padaria: String= "",
-        var resumo_promocoes_padaria : String= "",
-        var novidades_padaria : String= "",
-        var resumo_novidades_padaria : String= "",
 
         //carros
         var titulo_promocoes_carros: String = "",

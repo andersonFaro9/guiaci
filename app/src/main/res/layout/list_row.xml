@@ -10,10 +10,10 @@
         android:layout_gravity="center"
         android:layout_margin="@dimen/card_margin"
         android:clickable="true"
-        android:elevation="3dp"
+        card_view:cardElevation="3dp"
+        card_view:cardCornerRadius="@dimen/card_album_radius"
         android:focusable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        card_view:cardCornerRadius="@dimen/card_album_radius">
+        android:foreground="?android:attr/selectableItemBackground">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -23,7 +23,6 @@
                 android:id="@+id/thumbnail"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/album_cover_height"
-                android:background="?attr/selectableItemBackgroundBorderless"
                 android:scaleType="fitXY" />
 
             <TextView

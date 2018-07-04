@@ -62,7 +62,7 @@
 
         <activity  android:name=".lojas.VeniviciActvity" android:parentActivityName=".lojas.VeniviciActvity" />
 
-        <activity    android:parentActivityName=".lojas.PadariaActivity"  android:name=".lojas.PadariaActivity" />
+        <activity    android:parentActivityName=".lojas.SpeedNetActivity"  android:name=".lojas.SpeedNetActivity" />
 
         <activity  android:parentActivityName=".lojas.LocadoraDeCarrosActivity" android:name=".lojas.LocadoraDeCarrosActivity" />
         <activity   android:parentActivityName=".lojas.FarmaciaActivity" android:name=".lojas.FarmaciaActivity" />
@@ -73,6 +73,9 @@
 
         <activity android:name=".lojas.SobreActivity" android:theme="@style/barra_sobre" />
         <activity android:name=".StorageActivity" />
+        <activity android:name=".lojas.BiosInformaticaActivity" />
+        <activity android:name=".lojas.IgrejaQuadrangularActivity" />
+        <activity android:name=".lojas.CocadaMocaActivity" />
 
         <meta-data  android:name="com.google.android.geo.API_KEY" android:value="@string/google_maps_key" />
 

@@ -11,10 +11,10 @@ import android.widget.Filter
 import android.widget.Filterable
 import android.widget.ImageView
 import android.widget.TextView
-import br.com.guiacistore.lojas.VeniviciActvity
 import br.com.guiacistore.lojas.FarmaciaActivity
 import br.com.guiacistore.lojas.LocadoraDeCarrosActivity
-import br.com.guiacistore.lojas.PadariaActivity
+import br.com.guiacistore.lojas.SpeedNetActivity
+import br.com.guiacistore.lojas.VeniviciActvity
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -24,12 +24,12 @@ import kotlin.collections.ArrayList
  */
 
 
-class GuiaCityAdapter(private val context: Context, private var list: List<GuiaCity>, private var baseList: List<GuiaCity>) :
-        RecyclerView.Adapter<GuiaCityAdapter.ViewHolder>(), Filterable {
+class ListaDeClientesAdapter(private val context: Context, private var list: List<ListaDeClientes>, private var baseList: List<ListaDeClientes>) :
+        RecyclerView.Adapter<ListaDeClientesAdapter.ViewHolder>(), Filterable {
 
     override fun getFilter(): Filter {
         return object : Filter() {
-            var listShop = ArrayList<GuiaCity>()
+            var listShop = ArrayList<ListaDeClientes>()
 
             override fun performFiltering(charSequence: CharSequence?): FilterResults {
                 val results = Filter.FilterResults()
@@ -52,16 +52,16 @@ class GuiaCityAdapter(private val context: Context, private var list: List<GuiaC
             }
 
             override fun publishResults(charSequence: CharSequence?, filterResults: FilterResults?) {
-                setList(list = filterResults?.values as List<GuiaCity>)
+                setList(list = filterResults?.values as List<ListaDeClientes>)
                 notifyDataSetChanged()
             }
 
         }
     }
 
-    fun getBaseList(): List<GuiaCity> = baseList
+    fun getBaseList(): List<ListaDeClientes> = baseList
 
-    fun setList(list: List<GuiaCity>) {
+    fun setList(list: List<ListaDeClientes>) {
         this.list = list
     }
 
@@ -81,7 +81,7 @@ class GuiaCityAdapter(private val context: Context, private var list: List<GuiaC
     }
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, type: Int): GuiaCityAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, type: Int): ListaDeClientesAdapter.ViewHolder {
 
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.list_row, parent, false);
         val card = view.findViewById<CardView>(R.id.card_view) as CardView
@@ -92,9 +92,9 @@ class GuiaCityAdapter(private val context: Context, private var list: List<GuiaC
     }
 
 
-    override fun onBindViewHolder(holder: GuiaCityAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ListaDeClientesAdapter.ViewHolder, position: Int) {
 
-        val album: GuiaCity = list.get(position)
+        val album: ListaDeClientes = list.get(position)
 
         holder.titleTextView?.text = album.name
 
@@ -105,8 +105,8 @@ class GuiaCityAdapter(private val context: Context, private var list: List<GuiaC
         holder.thumbImageView?.setOnClickListener {
 
             when (position) {
-                0 ->  context.startActivity(Intent(context, VeniviciActvity::class.java))
-                1 -> context.startActivity(Intent(context,PadariaActivity::class.java ))
+                0 ->  context.startActivity(Intent(context, SpeedNetActivity::class.java))
+                1 -> context.startActivity(Intent(context,VeniviciActvity::class.java ))
                 2 -> context.startActivity(Intent(context,LocadoraDeCarrosActivity::class.java ))
                 3 -> context.startActivity(Intent(context,FarmaciaActivity::class.java ))
             }

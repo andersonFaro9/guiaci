@@ -56,7 +56,7 @@ class NotificationFirebaseMessagingService :  FirebaseMessagingService() {
 
 
         notificationCompatBuilder.setSmallIcon(R.mipmap.guiaci)
-        notificationCompatBuilder.setContentTitle("Guiaci")
+        notificationCompatBuilder.setContentTitle("ListaDeClientes")
         notificationCompatBuilder.setLargeIcon(BitmapFactory.decodeResource(resources, R.drawable.guiaci))
 
         notificationCompatBuilder.setContentText(mensagem)

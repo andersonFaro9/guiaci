@@ -2,27 +2,27 @@ package br.com.guiacistore.lojas
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import android.view.MenuItem
 import br.com.guiacistore.R
-import br.com.guiacistore.R.id.*
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
 import br.com.guiacistore.utils.ITextIsSelectable
 import br.com.guiacistore.utils.Invisible
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.loja_padaria.*
+import kotlinx.android.synthetic.main.loja_carros.*
 
 /**
  * Created by faro on 12/14/17.
  */
 
-class PadariaActivity : AppCompatActivity() , IFirebase, Invisible, ITextIsSelectable {
+class CocadaMocaActivity : AppCompatActivity() , IFirebase, Invisible, ITextIsSelectable {
 
     override fun implementTextSelectable() {
-            resumo_promocoes_padaria.setTextIsSelectable(true)
-            resumo_novidades_padaria.setTextIsSelectable(true)
-            resumo_historia.setTextIsSelectable(true)
+
+        resumo_promocoes_carros.setTextIsSelectable(true)
+        resumo_novidades_carros.setTextIsSelectable(true)
+        resumo_carros.setTextIsSelectable(true)
     }
+
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
@@ -33,26 +33,12 @@ class PadariaActivity : AppCompatActivity() , IFirebase, Invisible, ITextIsSelec
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.loja_padaria)
+        setContentView(R.layout.loja_carros)
 
         doDatabaseInstance(1)
-
         implementTextSelectable()
 
     }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-        when (item.itemId) {
-
-
-
-        }
-
-
-        return super.onOptionsItemSelected(item)
-    }
-
 
     override fun doDatabaseInstance(id: Int): Boolean {
 
@@ -66,15 +52,15 @@ class PadariaActivity : AppCompatActivity() , IFirebase, Invisible, ITextIsSelec
 
                     val cliente = d.getValue(LojasModel::class.java)
 
-                    titulo_promocoes_padaria.text = cliente?.titulo_promocoes_padaria
-                    resumo_promocoes_padaria.text = cliente?.resumo_promocoes_padaria
+                    titulo_promocoes_carros.text = cliente?.titulo_promocoes_carros
+                    resumo_promocoes_carros.text = cliente?.resumo_promocoes_carros
 
-                    novidades_padaria.text = cliente?.novidades_padaria
-                    resumo_novidades_padaria.text = cliente?.resumo_novidades_padaria
+                    novidades_carros.text = cliente?.novidades_carros
+                    resumo_novidades_carros.text = cliente?.resumo_novidades_carros
                 }
 
 
-                padariaProgressBar.visibility = transformProgressBarInvisible()
+                carrosProgressBar.visibility = transformProgressBarInvisible()
 
 
             }
