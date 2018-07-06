@@ -2,9 +2,10 @@
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_light">
+    android:background="@color/cardview_light_background">
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -16,9 +17,9 @@
         <ImageView
             android:id="@+id/topo_venivici"
             android:layout_width="match_parent"
-            android:layout_marginStart="0dp"
             android:layout_height="171dp"
             android:background="@android:color/transparent"
+            app:layout_constraintBottom_toTopOf="@+id/venivici_empresa"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/loja_venivici" />
@@ -46,8 +47,8 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/baumans"
+
             android:text=""
-            android:textAlignment="inherit"
             android:textColorHighlight="@color/primary_material_dark_text_selected_for_background_white"
             android:textSize="14sp"
             android:textStyle="normal"
@@ -126,6 +127,43 @@
             app:layout_constraintBottom_toTopOf="@+id/venivici_conteudo_de_servicos"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/facebook"
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="150dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="130dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:tint="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_facebook" />
+
+        <ImageButton
+            android:id="@+id/instagram"
+            android:layout_width="22dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="130dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toEndOf="@+id/facebook"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_instagram" />
+
+        <ImageButton
+            android:id="@+id/whatsapp"
+            android:layout_width="23dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="130dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toEndOf="@+id/instagram"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_whatsapp" />
 
 
     </android.support.constraint.ConstraintLayout>

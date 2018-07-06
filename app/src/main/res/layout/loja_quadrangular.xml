@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_light">
+    android:background="@color/cardview_light_background">
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -14,17 +14,17 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <ImageView
-            android:id="@+id/topo_speednet"
+            android:id="@+id/topo_quadrangular"
             android:layout_width="match_parent"
             android:layout_marginStart="0dp"
             android:layout_height="171dp"
             android:background="@android:color/transparent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/loja_speednet" />
+            app:srcCompat="@drawable/loja_quadrangular" />
 
         <TextView
-            android:id="@+id/speednet_empresa"
+            android:id="@+id/quadrangular_igreja"
             android:layout_width="119dp"
             android:layout_height="25dp"
             android:layout_marginStart="8dp"
@@ -35,11 +35,11 @@
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/topo_speednet" />
+            app:layout_constraintTop_toBottomOf="@+id/topo_quadrangular" />
 
 
         <TextView
-            android:id="@+id/speednet_historia_da_empresa"
+            android:id="@+id/quadrangular_historia_da_igreja"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -53,11 +53,11 @@
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/speednet_empresa" />
+            app:layout_constraintTop_toBottomOf="@+id/quadrangular_igreja" />
 
 
         <TextView
-            android:id="@+id/speednet_promocoes"
+            android:id="@+id/quadrangular_cultos"
             android:layout_width="117dp"
             android:layout_height="21dp"
             android:layout_marginStart="8dp"
@@ -68,11 +68,11 @@
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/speednet_historia_da_empresa" />
+            app:layout_constraintTop_toBottomOf="@+id/quadrangular_historia_da_igreja" />
 
 
         <TextView
-            android:id="@+id/speednet_conteudo_de_promocoes"
+            android:id="@+id/quadrangular_conteudo_dos_cultos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -84,10 +84,10 @@
             android:textSize="14sp"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/speednet_promocoes" />
+            app:layout_constraintTop_toBottomOf="@+id/quadrangular_cultos" />
 
         <TextView
-            android:id="@+id/speednet_servicos"
+            android:id="@+id/quadrangular_celulas"
             android:layout_width="91dp"
             android:layout_height="28dp"
             android:layout_marginStart="8dp"
@@ -98,10 +98,10 @@
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/speednet_conteudo_de_promocoes" />
+            app:layout_constraintTop_toBottomOf="@+id/quadrangular_conteudo_dos_cultos" />
 
         <TextView
-            android:id="@+id/speednet_conteudo_de_servicos"
+            android:id="@+id/quadrangular_conteudo_das_celulas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -113,17 +113,17 @@
             android:textSize="14sp"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/speednet_servicos" />
+            app:layout_constraintTop_toBottomOf="@+id/quadrangular_celulas" />
 
 
         <ProgressBar
-            android:id="@+id/speednetProgressBar"
+            android:id="@+id/quadrangularProgressBar"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_marginBottom="60dp"
             android:indeterminateTint="@color/color_loading"
             android:visibility="visible"
-            app:layout_constraintBottom_toTopOf="@+id/speednet_conteudo_de_servicos"
+            app:layout_constraintBottom_toTopOf="@+id/quadrangular_conteudo_das_celulas"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 

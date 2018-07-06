@@ -11,8 +11,7 @@ import android.widget.Filter
 import android.widget.Filterable
 import android.widget.ImageView
 import android.widget.TextView
-import br.com.guiacistore.lojas.FarmaciaActivity
-import br.com.guiacistore.lojas.LocadoraDeCarrosActivity
+import br.com.guiacistore.lojas.QuadrangularActivity
 import br.com.guiacistore.lojas.SpeedNetActivity
 import br.com.guiacistore.lojas.VeniviciActvity
 import java.util.*
@@ -107,8 +106,8 @@ class ListaDeClientesAdapter(private val context: Context, private var list: Lis
             when (position) {
                 0 ->  context.startActivity(Intent(context, SpeedNetActivity::class.java))
                 1 -> context.startActivity(Intent(context,VeniviciActvity::class.java ))
-                2 -> context.startActivity(Intent(context,LocadoraDeCarrosActivity::class.java ))
-                3 -> context.startActivity(Intent(context,FarmaciaActivity::class.java ))
+                2 -> context.startActivity(Intent(context,SpeedNetActivity::class.java ))
+                3 -> context.startActivity(Intent(context,QuadrangularActivity::class.java ))
             }
 
         }

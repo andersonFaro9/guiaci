@@ -42,7 +42,9 @@ class VeniviciActvity : AppCompatActivity(), IFirebase, Invisible, ITextIsSelect
 
         }
 
+
     }
+
 
     private fun verificaConexaoDaInternet(): Boolean {
         val connectivityManager = applicationContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
@@ -52,9 +54,9 @@ class VeniviciActvity : AppCompatActivity(), IFirebase, Invisible, ITextIsSelect
 
 
     override fun implementTextSelectable() {
-        venivici_historia_da_empresa.setTextIsSelectable(true)
-        venivici_conteudo_de_promocoes.setTextIsSelectable(true)
-        venivici_conteudo_de_servicos.setTextIsSelectable(true)
+        venivici_historia_da_empresa?.setTextIsSelectable(true)
+        venivici_conteudo_de_promocoes?.setTextIsSelectable(true)
+        venivici_conteudo_de_servicos?.setTextIsSelectable(true)
 
 
     }

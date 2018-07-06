@@ -35,8 +35,8 @@ open class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
         list.add(ListaDeClientes("Speednet", "A sua internet em altíssima qualidade.", R.drawable.loja_speednet))
         list.add(ListaDeClientes("Venivici", "Centro Integrado de Beleza e Bem-star.", R.drawable.loja_venivici))
-        list.add(ListaDeClientes("Bios Informática", "Trazendo soluções para sua vida.", R.drawable.loja_bios_informatica))
-        list.add(ListaDeClientes("Farmácia do Povo", "Aqui você encontra tudo", R.drawable.farmacia))
+        list.add(ListaDeClientes("Bios Informática e Papelaria", "Trazendo soluções para sua vida.", R.drawable.loja_bios_informatica))
+        list.add(ListaDeClientes("Igreja do Evangelho Quadrangular de Pojuca.", "Vivendo em cristo.", R.drawable.loja_quadrangular))
 
     }
 

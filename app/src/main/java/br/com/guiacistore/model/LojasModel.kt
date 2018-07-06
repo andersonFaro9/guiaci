@@ -31,11 +31,17 @@ data class LojasModel(
 
         //TODO -> Precisa mudar os campos abaixo com os nomes das lojas reais
 
-        //carros
-        var titulo_promocoes_carros: String = "",
-        var resumo_promocoes_carros: String = "",
-        var novidades_carros : String = "",
-        var resumo_novidades_carros: String = "",
+        //quadrangular
+        var quadrangular_igreja: String = "",
+        var quadrangular_historia_da_igreja: String = "",
+
+        var quadrangular_cultos : String = "",
+        var quadrangular_conteudo_dos_cultos: String = "",
+
+        var quadrangular_celulas: String = "",
+        var quadrangular_conteudo_das_celulas : String = "",
+
+
 
         //farmacia
         var titulo_promocoes_farmacia: String= "",

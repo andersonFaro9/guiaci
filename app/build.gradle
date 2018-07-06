@@ -6,7 +6,8 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "br.com.guiacistore"
-        minSdkVersion 21 //Se der problema mude para 23 novamente pois o 21 é uma tentativa da versão 5 funcionar
+        minSdkVersion 21
+        //Se der problema mude para 23 novamente pois o 21 é uma tentativa da versão 5 funcionar
         targetSdkVersion 26
         versionCode 7
         versionName "1.2.0"
