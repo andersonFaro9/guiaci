@@ -18,6 +18,7 @@
             android:id="@+id/topo_venivici"
             android:layout_width="match_parent"
             android:layout_height="171dp"
+            android:scaleType="fitXY"
             android:background="@android:color/transparent"
             app:layout_constraintBottom_toTopOf="@+id/venivici_empresa"
             app:layout_constraintStart_toStartOf="parent"
@@ -121,7 +122,7 @@
             android:id="@+id/veniviciProgressBar"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="8dp"
             android:indeterminateTint="@color/color_loading"
             android:visibility="visible"
             app:layout_constraintBottom_toTopOf="@+id/venivici_conteudo_de_servicos"
@@ -129,39 +130,40 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageButton
-            android:id="@+id/facebook"
-            android:layout_width="24dp"
+            android:id="@+id/ic_facebook"
+            android:layout_width="23dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="150dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="130dp"
             android:background="@android:color/transparent"
-            android:backgroundTint="@android:color/holo_blue_light"
-            android:tint="@android:color/transparent"
             app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/ic_facebook_contentDescription"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_facebook" />
 
         <ImageButton
-            android:id="@+id/instagram"
-            android:layout_width="22dp"
+            android:id="@+id/ic_instagram"
+            android:layout_width="23dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="42dp"
             android:layout_marginTop="130dp"
+            android:contentDescription="@string/ic_instagram_contentDescription"
             android:background="@android:color/transparent"
-            app:layout_constraintStart_toEndOf="@+id/facebook"
+            app:layout_constraintStart_toEndOf="@+id/ic_facebook"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_instagram" />
 
         <ImageButton
-            android:id="@+id/whatsapp"
+            android:id="@+id/ic_whatsapp"
             android:layout_width="23dp"
-            android:layout_height="24dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/ic_whatsapp_contentDescription"
             android:layout_marginStart="48dp"
             android:layout_marginTop="130dp"
             android:background="@android:color/transparent"
-            app:layout_constraintStart_toEndOf="@+id/instagram"
+            app:layout_constraintStart_toEndOf="@+id/ic_instagram"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_whatsapp" />
 

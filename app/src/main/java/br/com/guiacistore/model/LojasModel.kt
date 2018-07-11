@@ -29,8 +29,6 @@ data class LojasModel(
         var speednet_conteudo_de_servicos: String = "",
 
 
-        //TODO -> Precisa mudar os campos abaixo com os nomes das lojas reais
-
         //quadrangular
         var quadrangular_igreja: String = "",
         var quadrangular_historia_da_igreja: String = "",

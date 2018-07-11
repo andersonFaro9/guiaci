@@ -1,7 +1,14 @@
 package br.com.guiacistore.lojas
+import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.ConnectivityManager
+import android.net.Uri
 import android.os.Bundle
+import android.provider.ContactsContract
+import android.support.v4.app.ActivityCompat
+import android.support.v4.content.ContextCompat
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
@@ -13,6 +20,8 @@ import br.com.guiacistore.utils.ITextIsSelectable
 import br.com.guiacistore.utils.Invisible
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.loja_venivici.*
+
+
 
 
 /**
@@ -42,7 +51,88 @@ class VeniviciActvity : AppCompatActivity(), IFirebase, Invisible, ITextIsSelect
 
         }
 
+        show()
+        configuraFacebook()
+        abrirInstagram()
 
+    }
+
+    val REQUEST_PHONE_CALL = 1
+    fun show () {
+
+        ic_whatsapp?.setOnClickListener { it ->
+
+            when {
+                ContextCompat.checkSelfPermission(this, android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED -> ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.CALL_PHONE), REQUEST_PHONE_CALL)
+                else -> adicionaContatoNaListaDeContatosEConversaNoZap()
+            }
+
+        };
+    }
+
+    @SuppressLint("MissingPermission")
+    private fun adicionaContatoNaListaDeContatosEConversaNoZap() {
+
+        val callIntent = Intent(ContactsContract.Intents.Insert.ACTION)
+        callIntent.type = ContactsContract.RawContacts.CONTENT_TYPE
+        callIntent.putExtra(ContactsContract.Intents.Insert.NAME, "Venivici")
+
+        callIntent.putExtra(ContactsContract.Intents.Insert.PHONE, "999142522")
+        startActivityForResult(callIntent, 1)
+
+    }
+
+
+    fun abrirFacebook(context: Context): Intent {
+
+        return try {
+            context.packageManager.getPackageInfo("https://www.facebook.com/venivici.almeida/", 0)
+            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/venivici.almeida/"))
+        }
+
+        catch (e: Exception) {
+            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/venivici.almeida/"))
+        }
+    }
+
+
+    fun configuraFacebook() {
+
+        ic_facebook?.setOnClickListener {
+
+            val facebookIntent = abrirFacebook(this@VeniviciActvity)
+            startActivity(facebookIntent)
+        }
+    }
+
+
+
+
+
+    fun configurarInstagram(context: Context): Intent {
+
+        return try {
+            context.packageManager.getPackageInfo("https://www.instagram.com/venivici.vv/", 0)
+            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/venivici.vv/"))
+        }
+
+        catch (e: Exception) {
+            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/venivici.vv/"))
+        }
+    }
+
+
+    fun abrirInstagram() {
+
+        ic_instagram?.setOnClickListener {
+
+            val instagramIntent = configurarInstagram(this)
+            startActivity(instagramIntent)
+        }
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        when (requestCode) { REQUEST_PHONE_CALL -> adicionaContatoNaListaDeContatosEConversaNoZap() }
     }
 
 
@@ -57,7 +147,6 @@ class VeniviciActvity : AppCompatActivity(), IFirebase, Invisible, ITextIsSelect
         venivici_historia_da_empresa?.setTextIsSelectable(true)
         venivici_conteudo_de_promocoes?.setTextIsSelectable(true)
         venivici_conteudo_de_servicos?.setTextIsSelectable(true)
-
 
     }
 
@@ -83,21 +172,21 @@ class VeniviciActvity : AppCompatActivity(), IFirebase, Invisible, ITextIsSelect
 
                         val cliente = d.getValue(LojasModel::class.java)
 
-                        venivici_empresa.text = cliente?.venivici_empresa
-                        venivici_historia_da_empresa.text = cliente?.venivici_historia_da_empresa
+                        venivici_empresa?.text = cliente?.venivici_empresa
+                        venivici_historia_da_empresa?.text = cliente?.venivici_historia_da_empresa
 
-                        venivici_promocoes.text = cliente?.venivici_promocoes
-                        venivici_conteudo_de_promocoes.text = cliente?.venivici_conteudo_de_promocoes
+                        venivici_promocoes?.text = cliente?.venivici_promocoes
+                        venivici_conteudo_de_promocoes?.text = cliente?.venivici_conteudo_de_promocoes
 
-                        venivici_servicos.text = cliente?.venivici_servicos
-                        venivici_conteudo_de_servicos.text = cliente?.venivici_conteudo_de_servicos
+                        venivici_servicos?.text = cliente?.venivici_servicos
+                        venivici_conteudo_de_servicos?.text = cliente?.venivici_conteudo_de_servicos
 
                         veniviciProgressBar?.visibility = View.INVISIBLE
 
                     }
 
             }
-
+//ic_stat_onesignal_default
 
             override fun onCancelled(databaseError: DatabaseError?) {
 

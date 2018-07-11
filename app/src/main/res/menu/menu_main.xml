@@ -10,10 +10,10 @@
 
     <item
         android:id="@+id/search"
+        android:enabled="false"
+        android:title="busque sua loja preferida"
         app:actionViewClass="android.support.v7.widget.SearchView"
-        app:queryHint="busque"
-        app:showAsAction="always"
-        android:title="" />
+        app:showAsAction="always" />
 
         <item
             android:id="@+id/telefone"

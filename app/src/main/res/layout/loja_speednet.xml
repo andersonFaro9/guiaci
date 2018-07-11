@@ -17,6 +17,7 @@
             android:id="@+id/topo_speednet"
             android:layout_width="match_parent"
             android:layout_marginStart="0dp"
+            android:scaleType="fitXY"
             android:layout_height="171dp"
             android:background="@android:color/transparent"
             app:layout_constraintStart_toStartOf="parent"

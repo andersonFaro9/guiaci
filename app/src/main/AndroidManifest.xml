@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -14,18 +15,25 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/guiaci"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:name=".CustomAplication">
+
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
+            android:roundIcon="@mipmap/guiaci"
             android:resource="@drawable/guiaci" />
         <!--
              Set color used with incoming notification messages. This is used when no color is set for the incoming
              notification message. See README(https://goo.gl/6BKBk7) for more.
         -->
+
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/colorAccent" />
+            android:resource="@color/colorAccent"/>
 
+
+
+-->
         <activity
             android:name=".splash.SplashActivity"
             android:screenOrientation="portrait"
@@ -52,11 +60,13 @@
 
         <!-- </service> -->
 
-        <service android:name=".NotificationFirebaseMessagingService">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
+        <!--DESCOMENTE AQUI SE FOR NOTIFICAÇÕES COM FIREBASE-->
+
+        <!--<service android:name=".NotificationFirebaseMessagingService">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.google.firebase.MESSAGING_EVENT" />-->
+            <!--</intent-filter>-->
+        <!--</service>-->
 
         <!--
             Usar este trecho de código para determinar se a orientação da tela deve ficar fixa em uma orientação específica

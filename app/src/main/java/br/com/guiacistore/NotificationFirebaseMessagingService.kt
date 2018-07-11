@@ -6,7 +6,6 @@ import android.app.PendingIntent.getActivity
 import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
-import android.graphics.Color
 import android.media.RingtoneManager
 import android.os.Bundle
 import android.support.v4.app.NotificationCompat
@@ -39,14 +38,6 @@ class NotificationFirebaseMessagingService :  FirebaseMessagingService() {
 
         val intent = Intent(this, MainActivity::class.java)
         val bundle = Bundle()
-
-        for (key in dados.keys) {
-            val valor = dados[key].toString()
-            bundle.putString(key, valor)
-
-        }
-
-
         intent.putExtras(bundle)
 
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
@@ -55,9 +46,9 @@ class NotificationFirebaseMessagingService :  FirebaseMessagingService() {
         val notificationCompatBuilder = NotificationCompat.Builder(this)
 
 
-        notificationCompatBuilder.setSmallIcon(R.mipmap.guiaci)
-        notificationCompatBuilder.setContentTitle("ListaDeClientes")
-        notificationCompatBuilder.setLargeIcon(BitmapFactory.decodeResource(resources, R.drawable.guiaci))
+       notificationCompatBuilder.setSmallIcon(R.mipmap.guiaci)
+        notificationCompatBuilder.setContentTitle("guiaci - Novidades")
+       notificationCompatBuilder.setLargeIcon(BitmapFactory.decodeResource(resources, R.drawable.guiaci))
 
         notificationCompatBuilder.setContentText(mensagem)
         notificationCompatBuilder.setAutoCancel(true)
@@ -68,7 +59,7 @@ class NotificationFirebaseMessagingService :  FirebaseMessagingService() {
         notificationCompatBuilder.priority = NotificationManager.IMPORTANCE_HIGH
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         notificationCompatBuilder.setVibrate(longArrayOf(1000, 1000, 1000, 1000, 1000))
-        notificationCompatBuilder.setLights(Color.RED, 3000, 3000)
+        //notificationCompatBuilder.setLights(Color.RED, 3000, 3000)
 
         notificationManager.notify(0, notificationCompatBuilder.build())
 
