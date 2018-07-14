@@ -21,11 +21,14 @@ import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.loja_venivici.*
+import kotlinx.android.synthetic.main.loja_greg_barbearia.*
 
-class VeniviciActvity : AppCompatActivity(), IFirebase, Invisible,IRedeSocial,
+
+class GregBarbeariaActivity : AppCompatActivity(), IFirebase, Invisible,IRedeSocial,
         ITextIsSelectable,
-            IConexaoComAInternet{
+        IConexaoComAInternet{
+
+//    https://www.facebook.com/GregBarber88/
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
@@ -37,8 +40,6 @@ class VeniviciActvity : AppCompatActivity(), IFirebase, Invisible,IRedeSocial,
 
     override fun doDatabaseInstance(id: Int): Boolean {
 
-        //val detalhes = LojasModel()
-
         referenciaFirebase?.child(id.toString())
 
         referenciaFirebase?.addValueEventListener(object: ValueEventListener {
@@ -48,17 +49,16 @@ class VeniviciActvity : AppCompatActivity(), IFirebase, Invisible,IRedeSocial,
                 for (d in dataSnapshot?.children!!) {
 
                     val cliente = d.getValue(LojasModel::class.java)
+                    gregbarbearia_empresa?.text = cliente?.gregbarbearia_empresa
+                    gregbarbearia_historia_da_empresa?.text = cliente?.gregbarbearia_historia_da_empresa
 
-                    venivici_empresa?.text = cliente?.venivici_empresa
-                    venivici_historia_da_empresa?.text = cliente?.venivici_historia_da_empresa
+                    gregbarbearia_promocoes?.text = cliente?.gregbarbearia_promocoes
+                    gregbarbearia_conteudo_de_promocoes?.text = cliente?.gregbarbearia_conteudo_de_promocoes
 
-                    venivici_promocoes?.text = cliente?.venivici_promocoes
-                    venivici_conteudo_de_promocoes?.text = cliente?.venivici_conteudo_de_promocoes
+                    gregbarbearia_servicos?.text = cliente?.gregbarbearia_servicos
+                    gregbarbearia_conteudo_de_servicos.text = cliente?.gregbarbearia_conteudo_de_servicos
 
-                    venivici_servicos?.text = cliente?.venivici_servicos
-                    venivici_conteudo_de_servicos?.text = cliente?.venivici_conteudo_de_servicos
-
-                    veniviciProgressBar?.visibility = View.INVISIBLE
+                    gregbarbearia_ProgressBar?.visibility = View.INVISIBLE
 
                 }
 
@@ -82,7 +82,7 @@ class VeniviciActvity : AppCompatActivity(), IFirebase, Invisible,IRedeSocial,
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.loja_venivici)
+        setContentView(R.layout.loja_greg_barbearia)
         doDatabaseInstance(1)
         implementTextSelectable()
 
@@ -95,7 +95,7 @@ class VeniviciActvity : AppCompatActivity(), IFirebase, Invisible,IRedeSocial,
             builder.setMessage("Saia um pouco, tome um café e conecte sua internet.")
             builder.setIcon(R.drawable.emoji_triste)
             builder.setPositiveButton("tentar novamente") { dialog, which -> finish() }
-            veniviciProgressBar?.visibility = View.INVISIBLE
+            gregbarbearia_ProgressBar?.visibility = View.INVISIBLE
             builder.show()
 
         }
@@ -127,9 +127,9 @@ class VeniviciActvity : AppCompatActivity(), IFirebase, Invisible,IRedeSocial,
 
         val callIntent = Intent(ContactsContract.Intents.Insert.ACTION)
         callIntent.type = ContactsContract.RawContacts.CONTENT_TYPE
-        callIntent.putExtra(ContactsContract.Intents.Insert.NAME, "Venivici")
+        callIntent.putExtra(ContactsContract.Intents.Insert.NAME, "Barbearia do Greg")
 
-        callIntent.putExtra(ContactsContract.Intents.Insert.PHONE, "999142522")
+        callIntent.putExtra(ContactsContract.Intents.Insert.PHONE, " 996481470")
         startActivityForResult(callIntent, 1)
 
     }
@@ -138,12 +138,12 @@ class VeniviciActvity : AppCompatActivity(), IFirebase, Invisible,IRedeSocial,
     override fun configuraFacebook(context: Context): Intent {
 
         return try {
-            context.packageManager.getPackageInfo("https://www.facebook.com/venivici.almeida/", 0)
-            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/venivici.almeida/"))
+            context.packageManager.getPackageInfo("https://www.facebook.com/GregBarber88/", 0)
+            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/GregBarber88/"))
         }
 
         catch (e: Exception) {
-            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/venivici.almeida/"))
+            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/GregBarber88/"))
         }
     }
 
@@ -152,7 +152,7 @@ class VeniviciActvity : AppCompatActivity(), IFirebase, Invisible,IRedeSocial,
 
         ic_facebook?.setOnClickListener {
 
-            val facebookIntent = configuraFacebook(this@VeniviciActvity)
+            val facebookIntent = configuraFacebook(this@GregBarbeariaActivity)
             startActivity(facebookIntent)
         }
     }
@@ -160,12 +160,12 @@ class VeniviciActvity : AppCompatActivity(), IFirebase, Invisible,IRedeSocial,
     override fun configurarInstagram(context: Context): Intent {
 
         return try {
-            context.packageManager.getPackageInfo("https://www.instagram.com/venivici.vv/", 0)
-            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/venivici.vv/"))
+            context.packageManager.getPackageInfo("https://www.instagram.com/gregbarber88/", 0)
+            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/gregbarber88/"))
         }
 
         catch (e: Exception) {
-            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/venivici.vv/"))
+            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/gregbarber88/"))
         }
     }
 
@@ -190,9 +190,9 @@ class VeniviciActvity : AppCompatActivity(), IFirebase, Invisible,IRedeSocial,
 
 
     override fun implementTextSelectable() {
-        venivici_historia_da_empresa?.setTextIsSelectable(true)
-        venivici_conteudo_de_promocoes?.setTextIsSelectable(true)
-        venivici_conteudo_de_servicos?.setTextIsSelectable(true)
+        gregbarbearia_historia_da_empresa?.setTextIsSelectable(true)
+        gregbarbearia_conteudo_de_promocoes?.setTextIsSelectable(true)
+        gregbarbearia_conteudo_de_servicos?.setTextIsSelectable(true)
 
     }
 

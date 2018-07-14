@@ -3,8 +3,8 @@ package br.com.guiacistore.lojas
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import br.com.guiacistore.R
-import br.com.guiacistore.utils.IButtonOfCloseActivity
-import br.com.guiacistore.utils.ITextIsSelectable
+import br.com.guiacistore.interfaces.IButtonOfCloseActivity
+import br.com.guiacistore.interfaces.ITextIsSelectable
 import kotlinx.android.synthetic.main.activity_sobre.*
 
 class SobreActivity : AppCompatActivity(), ITextIsSelectable, IButtonOfCloseActivity {

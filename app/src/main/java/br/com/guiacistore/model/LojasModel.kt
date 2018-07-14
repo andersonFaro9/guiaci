@@ -40,12 +40,15 @@ data class LojasModel(
         var quadrangular_conteudo_das_celulas : String = "",
 
 
+        //Greg barbearia
+        var gregbarbearia_empresa: String= "",
+        var gregbarbearia_historia_da_empresa: String= "",
 
-        //farmacia
-        var titulo_promocoes_farmacia: String= "",
-        var resumo_promocoes_farmacia: String= "",
-        var novidades_farmacia : String= "",
-        var resumo_novidades_farmacia : String= ""
+        var gregbarbearia_promocoes : String= "",
+        var gregbarbearia_conteudo_de_promocoes : String= "",
+
+        var gregbarbearia_servicos : String = "",
+        var gregbarbearia_conteudo_de_servicos: String = ""
 
 
 

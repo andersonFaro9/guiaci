@@ -4,10 +4,10 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.MenuItem
 import br.com.guiacistore.R
+import br.com.guiacistore.interfaces.ITextIsSelectable
+import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
-import br.com.guiacistore.utils.ITextIsSelectable
-import br.com.guiacistore.utils.Invisible
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.loja_quadrangular.*
 

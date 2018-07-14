@@ -2,21 +2,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="br.com.guiacistore.lojas.MainActivity">
-    <!--<item-->
-        <!--android:id="@+id/sobre"-->
-        <!--android:orderInCategory="100"-->
-        <!--android:title="Sobre"-->
-        <!--app:showAsAction="never" />-->
 
     <item
         android:id="@+id/search"
         android:enabled="false"
-        android:title="busque sua loja preferida"
+        android:title="busque aqui"
         app:actionViewClass="android.support.v7.widget.SearchView"
         app:showAsAction="always" />
 
         <item
             android:id="@+id/telefone"
+            android:name="android:actionMenuTextColor"
             android:textColorHighlight="@color/primary_material_dark"
             app:queryHint="telefone"
             android:icon="@drawable/ic_contact_telefone"
@@ -24,6 +20,7 @@
             android:title=""
 
             />
+
 
     <item
         android:id= "@+id/menu_share"

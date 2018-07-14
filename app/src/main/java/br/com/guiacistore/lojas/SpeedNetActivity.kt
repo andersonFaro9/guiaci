@@ -4,10 +4,10 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.MenuItem
 import br.com.guiacistore.R
+import br.com.guiacistore.interfaces.ITextIsSelectable
+import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
-import br.com.guiacistore.utils.ITextIsSelectable
-import br.com.guiacistore.utils.Invisible
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.loja_speednet.*
 
@@ -18,6 +18,7 @@ import kotlinx.android.synthetic.main.loja_speednet.*
 class SpeedNetActivity : AppCompatActivity() , IFirebase, Invisible, ITextIsSelectable {
 
     override fun implementTextSelectable() {
+        speednet_historia_da_empresa.setTextIsSelectable(true)
         speednet_historia_da_empresa.setTextIsSelectable(true)
         speednet_conteudo_de_promocoes.setTextIsSelectable(true)
         speednet_conteudo_de_servicos.setTextIsSelectable(true)
@@ -38,7 +39,10 @@ class SpeedNetActivity : AppCompatActivity() , IFirebase, Invisible, ITextIsSele
 
         implementTextSelectable()
 
+
     }
+
+
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 

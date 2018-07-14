@@ -15,20 +15,20 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <ImageView
-            android:id="@+id/topo_venivici"
+            android:id="@+id/topo_gregbarbearia"
             android:layout_width="match_parent"
-            android:layout_height="171dp"
-            android:scaleType="centerInside"
+            android:layout_height="161dp"
             android:background="@android:color/transparent"
-            app:layout_constraintBottom_toTopOf="@+id/venivici_empresa"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toTopOf="@+id/gregbarbearia_empresa"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/loja_venivici" />
+            app:srcCompat="@drawable/loja_barbearia_greg" />
 
         <TextView
-            android:id="@+id/venivici_empresa"
-            android:layout_width="119dp"
-            android:layout_height="25dp"
+            android:id="@+id/gregbarbearia_empresa"
+            android:layout_width="149dp"
+            android:layout_height="29dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/baumans"
@@ -37,29 +37,28 @@
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/topo_venivici" />
+            app:layout_constraintTop_toBottomOf="@+id/topo_gregbarbearia" />
 
 
         <TextView
-            android:id="@+id/venivici_historia_da_empresa"
+            android:id="@+id/gregbarbearia_historia_da_empresa"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/baumans"
-
             android:text=""
             android:textColorHighlight="@color/primary_material_dark_text_selected_for_background_white"
             android:textSize="14sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/venivici_empresa" />
+            app:layout_constraintTop_toBottomOf="@+id/gregbarbearia_empresa" />
 
 
         <TextView
-            android:id="@+id/venivici_promocoes"
+            android:id="@+id/gregbarbearia_promocoes"
             android:layout_width="117dp"
             android:layout_height="21dp"
             android:layout_marginStart="8dp"
@@ -70,11 +69,11 @@
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/venivici_historia_da_empresa" />
+            app:layout_constraintTop_toBottomOf="@+id/gregbarbearia_historia_da_empresa" />
 
 
         <TextView
-            android:id="@+id/venivici_conteudo_de_promocoes"
+            android:id="@+id/gregbarbearia_conteudo_de_promocoes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -86,11 +85,11 @@
             android:textSize="14sp"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/venivici_promocoes" />
+            app:layout_constraintTop_toBottomOf="@+id/gregbarbearia_promocoes" />
 
         <TextView
-            android:id="@+id/venivici_servicos"
-            android:layout_width="91dp"
+            android:id="@+id/gregbarbearia_servicos"
+            android:layout_width="214dp"
             android:layout_height="28dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="10dp"
@@ -100,10 +99,10 @@
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/venivici_conteudo_de_promocoes" />
+            app:layout_constraintTop_toBottomOf="@+id/gregbarbearia_conteudo_de_promocoes" />
 
         <TextView
-            android:id="@+id/venivici_conteudo_de_servicos"
+            android:id="@+id/gregbarbearia_conteudo_de_servicos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -115,17 +114,17 @@
             android:textSize="14sp"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/venivici_servicos" />
+            app:layout_constraintTop_toBottomOf="@+id/gregbarbearia_servicos" />
 
 
         <ProgressBar
-            android:id="@+id/veniviciProgressBar"
+            android:id="@+id/gregbarbearia_ProgressBar"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_marginBottom="8dp"
             android:indeterminateTint="@color/color_loading"
             android:visibility="visible"
-            app:layout_constraintBottom_toTopOf="@+id/venivici_conteudo_de_servicos"
+            app:layout_constraintBottom_toTopOf="@+id/gregbarbearia_conteudo_de_servicos"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -133,38 +132,38 @@
             android:id="@+id/ic_facebook"
             android:layout_width="23dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="150dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="130dp"
+            android:layout_marginEnd="220dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:background="@android:color/transparent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:contentDescription="@string/ic_facebook_contentDescription"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gregbarbearia_empresa"
+            app:layout_constraintTop_toBottomOf="@+id/topo_gregbarbearia"
             app:srcCompat="@drawable/ic_facebook" />
 
         <ImageButton
             android:id="@+id/ic_instagram"
             android:layout_width="23dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="42dp"
-            android:layout_marginTop="130dp"
-            android:contentDescription="@string/ic_instagram_contentDescription"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:background="@android:color/transparent"
+            android:contentDescription="@string/ic_instagram_contentDescription"
             app:layout_constraintStart_toEndOf="@+id/ic_facebook"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topo_gregbarbearia"
             app:srcCompat="@drawable/ic_instagram" />
 
         <ImageButton
             android:id="@+id/ic_whatsapp"
             android:layout_width="23dp"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/ic_whatsapp_contentDescription"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="130dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:background="@android:color/transparent"
+            android:contentDescription="@string/ic_whatsapp_contentDescription"
             app:layout_constraintStart_toEndOf="@+id/ic_instagram"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topo_gregbarbearia"
             app:srcCompat="@drawable/ic_whatsapp" />
 
 
