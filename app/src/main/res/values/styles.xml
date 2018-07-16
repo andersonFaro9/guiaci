@@ -8,6 +8,44 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <style name="themeSpeednet" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimarySpeednet</item>
+        <item name="colorPrimaryDark">@color/colorPrimarySpeednet</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="themeVenivice" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryVenivice</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryVenivice</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="themeGreg" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryGreg</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryGreg</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="themeBios" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryBios</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryBios</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="themeQuadrangular" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryQuadrangular</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryQuadrangular</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

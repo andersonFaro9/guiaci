@@ -34,7 +34,7 @@ open class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
     private fun prepareList(list: ArrayList<ListaDeClientes>) {
 
-        list.add(ListaDeClientes("Speednet", "Veja nossos planos.", R.drawable.loja_speednet))
+        list.add(ListaDeClientes("Speednet", "Aqui tem internet para família inteira, com os melhores planos.", R.drawable.loja_speednet))
         list.add(ListaDeClientes("Venivici", "Centro Integrado de Beleza e Bem-star.", R.drawable.loja_venivici))
         list.add(ListaDeClientes("Bios Informática e Papelaria", "Trazendo soluções para sua vida.", R.drawable.loja_bios_informatica))
         list.add(ListaDeClientes("Igreja do Ev. Quadrangular de Pojuca.", "Vivendo em Cristo.", R.drawable.loja_quadrangular))

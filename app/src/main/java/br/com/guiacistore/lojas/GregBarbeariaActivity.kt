@@ -14,10 +14,7 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import br.com.guiacistore.R
-import br.com.guiacistore.interfaces.IConexaoComAInternet
-import br.com.guiacistore.interfaces.IRedeSocial
-import br.com.guiacistore.interfaces.ITextIsSelectable
-import br.com.guiacistore.interfaces.Invisible
+import br.com.guiacistore.interfaces.*
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
@@ -26,7 +23,7 @@ import kotlinx.android.synthetic.main.loja_greg_barbearia.*
 
 class GregBarbeariaActivity : AppCompatActivity(), IFirebase, Invisible,IRedeSocial,
         ITextIsSelectable,
-        IConexaoComAInternet{
+        IConexaoComAInternet, IChat{
 
 //    https://www.facebook.com/GregBarber88/
 

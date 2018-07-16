@@ -2,6 +2,7 @@
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cardview_light_background">
@@ -29,7 +30,7 @@
             android:layout_width="119dp"
             android:layout_height="25dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="64dp"
             android:fontFamily="@font/baumans"
             android:text=""
             android:textAlignment="textStart"
@@ -127,6 +128,33 @@
             app:layout_constraintBottom_toTopOf="@+id/quadrangular_conteudo_das_celulas"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/ic_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="200dp"
+            android:layout_marginStart="150dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/ic_facebook_contentDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topo_quadrangular"
+            app:srcCompat="@drawable/ic_facebook" />
+
+        <ImageButton
+            android:id="@+id/ic_instagram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/ic_instagram_contentDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.047"
+            app:layout_constraintStart_toEndOf="@+id/ic_facebook"
+            app:layout_constraintTop_toBottomOf="@+id/topo_quadrangular"
+            app:srcCompat="@drawable/ic_instagram" />
 
 
     </android.support.constraint.ConstraintLayout>

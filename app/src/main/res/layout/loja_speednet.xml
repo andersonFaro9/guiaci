@@ -2,6 +2,7 @@
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cardview_light_background">
@@ -29,7 +30,7 @@
             android:layout_width="119dp"
             android:layout_height="25dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="50dp"
             android:fontFamily="@font/baumans"
             android:text=""
             android:textAlignment="textStart"
@@ -57,12 +58,42 @@
             app:layout_constraintTop_toBottomOf="@+id/speednet_empresa" />
 
 
+        <!--<TextView-->
+            <!--android:id="@+id/speednet_promocoes"-->
+            <!--android:layout_width="117dp"-->
+            <!--android:layout_height="21dp"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:fontFamily="@font/baumans"-->
+            <!--android:text=""-->
+            <!--android:textAlignment="textStart"-->
+            <!--android:textSize="15sp"-->
+            <!--android:textStyle="bold"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/speednet_historia_da_empresa" />-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/speednet_conteudo_de_promocoes"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:fontFamily="@font/baumans"-->
+            <!--android:isScrollContainer="true"-->
+            <!--android:text=""-->
+            <!--android:textColorHighlight="@color/primary_material_dark_text_selected_for_background_white"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textStyle="normal"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/speednet_promocoes" />-->
+
         <TextView
-            android:id="@+id/speednet_promocoes"
-            android:layout_width="117dp"
-            android:layout_height="21dp"
+            android:id="@+id/speednet_servicos"
+            android:layout_width="91dp"
+            android:layout_height="28dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="22dp"
             android:fontFamily="@font/baumans"
             android:text=""
             android:textAlignment="textStart"
@@ -70,36 +101,6 @@
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/speednet_historia_da_empresa" />
-
-
-        <TextView
-            android:id="@+id/speednet_conteudo_de_promocoes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/baumans"
-            android:isScrollContainer="true"
-            android:text=""
-            android:textColorHighlight="@color/primary_material_dark_text_selected_for_background_white"
-            android:textSize="14sp"
-            android:textStyle="normal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/speednet_promocoes" />
-
-        <TextView
-            android:id="@+id/speednet_servicos"
-            android:layout_width="91dp"
-            android:layout_height="28dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/baumans"
-            android:text=""
-            android:textAlignment="textStart"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/speednet_conteudo_de_promocoes" />
 
         <TextView
             android:id="@+id/speednet_conteudo_de_servicos"
@@ -121,13 +122,53 @@
             android:id="@+id/speednetProgressBar"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="60dp"
             android:indeterminateTint="@color/color_loading"
             android:visibility="visible"
             app:layout_constraintBottom_toTopOf="@+id/speednet_conteudo_de_servicos"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topo_speednet" />
 
+        <ImageButton
+            android:id="@+id/ic_facebook"
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="232dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/ic_facebook_contentDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/speednet_empresa"
+            app:layout_constraintTop_toBottomOf="@+id/topo_speednet"
+            app:srcCompat="@drawable/ic_facebook" />
+
+        <ImageButton
+            android:id="@+id/ic_instagram"
+            android:layout_width="23dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/ic_instagram_contentDescription"
+            app:layout_constraintStart_toEndOf="@+id/ic_facebook"
+            app:layout_constraintTop_toBottomOf="@+id/topo_speednet"
+            app:srcCompat="@drawable/ic_instagram" />
+
+        <ImageButton
+            android:id="@+id/ic_phone"
+            android:layout_width="23dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toEndOf="@+id/ic_instagram"
+            app:layout_constraintTop_toBottomOf="@+id/topo_speednet"
+            app:srcCompat="@drawable/ic_phone" />
+
+        <!--//71 3645.5134-->
 
     </android.support.constraint.ConstraintLayout>
 

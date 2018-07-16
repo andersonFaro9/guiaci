@@ -46,8 +46,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_whatsapp" />
-                            <entry key="sourceFile" value="$USER_HOME$/Downloads/icons8-whatsapp (1).svg" />
+                            <entry key="outputName" value="ic_phone" />
+                            <entry key="sourceFile" value="$USER_HOME$/Downloads/phone.xml" />
                           </map>
                         </option>
                       </PersistentState>

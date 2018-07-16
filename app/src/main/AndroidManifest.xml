@@ -70,17 +70,21 @@
 
         <activity
             android:name=".lojas.VeniviciActvity"
-            android:parentActivityName=".lojas.VeniviciActvity" />
+            android:parentActivityName=".lojas.VeniviciActvity"
+            android:theme="@style/themeVenivice" />
         <activity
             android:name=".lojas.SpeedNetActivity"
-            android:parentActivityName=".lojas.SpeedNetActivity" />
+            android:parentActivityName=".lojas.SpeedNetActivity"
+            android:theme="@style/themeSpeednet" />
         <activity
             android:name=".lojas.SobreActivity"
             android:theme="@style/barra_sobre" />
 
         <activity android:name=".StorageActivity" />
 
-        <activity android:name=".lojas.BiosInformaticaActivity" />
+        <activity android:name=".lojas.BiosInformaticaActivity"
+            android:theme="@style/themeBios"
+            />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -91,8 +95,14 @@
 
         <activity
             android:name=".lojas.QuadrangularActivity"
-            android:parentActivityName=".lojas.QuadrangularActivity" />
-        <activity android:name=".lojas.GregBarbeariaActivity" />
+            android:parentActivityName=".lojas.QuadrangularActivity"
+            android:theme="@style/themeQuadrangular" />
+
+        <activity android:name=".lojas.GregBarbeariaActivity"
+        android:parentActivityName=".lojas.GregBarbeariaActivity"
+            android:theme="@style/themeGreg" />
+
+
 
     </application>
 

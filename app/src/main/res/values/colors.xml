@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#F50057</color>
+
+    <color name="colorPrimaryVenivice">#9b3035</color>
+    <color name="colorPrimaryBios">#0098da</color>
+    <color name="colorPrimaryGreg">#000</color>
+    <color name="colorPrimarySpeednet">#f58634</color>
+    <color name="colorPrimaryQuadrangular">#8d02ff</color>
+
     <color name="colorPrimaryy">#F50057</color>
     <color name="colorPrimaryDark">#e0267d</color>
-    <color name="colorAccent">#ff4081</color>
+    <color name="colorAccent">#ff4069</color>
     <color name="viewBg">#f1f5f8</color>
     <color name="album_title">#4c4c4c</color>
     <color name="color_loading">#ec4c97</color>

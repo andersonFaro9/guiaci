@@ -25,7 +25,7 @@ class BiosInformaticaActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.loja_speednet)
+        setContentView(R.layout.loja_bios_informatica)
 
         //doDatabaseInstance(1)
 
