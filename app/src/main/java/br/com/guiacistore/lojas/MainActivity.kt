@@ -57,7 +57,7 @@ open class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        when (item.itemId) {
+            when (item.itemId) {
 
             R.id.menu_share -> {
 

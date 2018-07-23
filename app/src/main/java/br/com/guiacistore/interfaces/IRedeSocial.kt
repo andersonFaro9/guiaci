@@ -5,9 +5,9 @@ import android.content.Intent
 
 interface IRedeSocial {
 
-    fun configuraFacebook(context: Context): Intent
-    fun abrirFacebook()
-    fun configurarInstagram(context: Context): Intent
-    fun abrirInstagram()
+    fun abrirFacebook(context: Context): Intent
+
+    fun abrirInstagram(context: Context): Intent
+
 
 }

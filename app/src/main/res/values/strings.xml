@@ -5,6 +5,12 @@
     <string name="ic_instagram_contentDescription">instagram</string>
     <string name="ic_whatsapp_contentDescription">whatsapp</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+
 </resources>
 
 

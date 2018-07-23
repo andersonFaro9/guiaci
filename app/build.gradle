@@ -17,10 +17,9 @@ android {
                 onesignal_google_project_number: '690672951518'
         ]
         minSdkVersion 21
-        //Se der problema mude para 23 novamente pois o 21 é uma tentativa da versão 5 funcionar
         targetSdkVersion 27
-        versionCode 7
-        versionName "1.2.0"
+        versionCode 8
+        versionName "1.2.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
 
@@ -48,12 +47,17 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:11.8.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.android.support:design:27.1.1'
-    implementation 'com.google.firebase:firebase-core:15.0.0'
+    implementation 'com.google.firebase:firebase-core:15.0.2'
     //compile 'com.google.firebase:firebase-messaging:11.8.0'
     implementation 'com.android.support:cardview-v7:27.1.1'
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.onesignal:OneSignal:[3.9.1, 3.99.99]'
+    implementation 'com.android.support:support-fragment:27.1.1'
+    implementation 'com.android.support:support-compat:27.1.1'
+    implementation 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+    implementation 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar'
+    implementation 'com.android.support:support-v4:27.1.1'
 }
 
 repositories {

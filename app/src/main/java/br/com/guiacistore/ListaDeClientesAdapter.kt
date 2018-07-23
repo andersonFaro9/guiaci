@@ -7,14 +7,11 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Filter
-import android.widget.Filterable
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import br.com.guiacistore.lojas.GregBarbeariaActivity
 import br.com.guiacistore.lojas.QuadrangularActivity
 import br.com.guiacistore.lojas.SpeedNetActivity
-import br.com.guiacistore.lojas.VeniviciActvity
+import br.com.guiacistore.lojas.VeniviciActivity
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -106,8 +103,8 @@ class ListaDeClientesAdapter(private val context: Context, private var list: Lis
 
             when (position) {
                 0 ->  context.startActivity(Intent(context, SpeedNetActivity::class.java))
-                1 -> context.startActivity(Intent(context,VeniviciActvity::class.java ))
-                2 -> context.startActivity(Intent(context,SpeedNetActivity::class.java ))
+                1 -> context.startActivity(Intent(context,VeniviciActivity::class.java ))
+                2 -> Toast.makeText(context, "Aguardem e breve estará disponível!!!", Toast.LENGTH_SHORT).show()
                 3 -> context.startActivity(Intent(context,QuadrangularActivity::class.java ))
                 4 -> context.startActivity(Intent(context,GregBarbeariaActivity::class.java ))
             }

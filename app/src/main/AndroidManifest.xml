@@ -4,8 +4,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -60,17 +58,19 @@
         <!-- DESCOMENTE AQUI SE FOR NOTIFICAÇÕES COM FIREBASE -->
 
 
-         <!--<service android:name=".NotificationFirebaseMessagingService">-->
+        <!-- <service android:name=".NotificationFirebaseMessagingService"> -->
 
-             <!--<intent-filter>-->
-                    <!--<action android:name="com.google.firebase.MESSAGING_EVENT" />-->
-             <!--</intent-filter>-->
 
-         <!--</service>-->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.MESSAGING_EVENT" /> -->
+        <!-- </intent-filter> -->
+
+
+        <!-- </service> -->
 
         <activity
-            android:name=".lojas.VeniviciActvity"
-            android:parentActivityName=".lojas.VeniviciActvity"
+            android:name=".lojas.VeniviciActivity"
+            android:parentActivityName=".lojas.VeniviciActivity"
             android:theme="@style/themeVenivice" />
         <activity
             android:name=".lojas.SpeedNetActivity"
@@ -79,12 +79,10 @@
         <activity
             android:name=".lojas.SobreActivity"
             android:theme="@style/barra_sobre" />
-
         <activity android:name=".StorageActivity" />
-
-        <activity android:name=".lojas.BiosInformaticaActivity"
-            android:theme="@style/themeBios"
-            />
+        <activity
+            android:name=".lojas.BiosInformaticaActivity"
+            android:theme="@style/themeBios" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -97,12 +95,10 @@
             android:name=".lojas.QuadrangularActivity"
             android:parentActivityName=".lojas.QuadrangularActivity"
             android:theme="@style/themeQuadrangular" />
-
-        <activity android:name=".lojas.GregBarbeariaActivity"
-        android:parentActivityName=".lojas.GregBarbeariaActivity"
+        <activity
+            android:name=".lojas.GregBarbeariaActivity"
+            android:parentActivityName=".lojas.GregBarbeariaActivity"
             android:theme="@style/themeGreg" />
-
-
 
     </application>
 

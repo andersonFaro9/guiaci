@@ -6,7 +6,7 @@
     android:paddingLeft="0dp"
     android:paddingTop="0px"
     android:paddingRight="0dp"
-    android:background="@color/background_splash"
+    android:background="@color/cardview_light_background"
     android:orientation="vertical">
 
     <android.support.constraint.ConstraintLayout
@@ -24,7 +24,7 @@
             android:fontFamily="@font/baumans"
             android:text="Guiaci"
             android:textAlignment="center"
-            android:textColor="@color/primary_material_dark"
+            android:textColor="@color/album_title"
             android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
@@ -36,6 +36,7 @@
             android:id="@+id/splash_guia_city"
             android:layout_width="80dp"
             android:layout_height="80dp"
+
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="20dp"
@@ -50,15 +51,16 @@
 
         <TextView
             android:id="@+id/text_telefone"
-            android:layout_width="match_parent"
-            android:layout_height="57dp"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+
             android:layout_marginEnd="8dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/baumans"
-            android:text="Divulgue sua loja em nosso aplicativo. Ligue ou fale pelo Whatsapp no número 71-99687-7997."
+            android:text="Faça a propaganda de sua loja em nosso aplicativo. Ligue ou fale pelo Whatsapp no número 71-99687-7997."
             android:textAlignment="center"
-            android:textColor="#DCDCDC"
+            android:textColor="@color/album_title"
             android:textSize="17dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

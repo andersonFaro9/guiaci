@@ -8,40 +8,39 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
 import br.com.guiacistore.R
-import br.com.guiacistore.fragments.HistoriaDaBarbeariaGregFragment
-import br.com.guiacistore.fragments.PromocoesDaBarbeariaGregFragment
-import br.com.guiacistore.fragments.ServicosDaBarbeariaGregFragment
+import br.com.guiacistore.fragments.HistoriaDaVeniviciFragment
+import br.com.guiacistore.fragments.PromocoesDaVeniviciFragment
+import br.com.guiacistore.fragments.ServicosDaVeniviciFragment
 import br.com.guiacistore.interfaces.IRedeSocial
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 
 
-class GregBarbeariaActivity : AppCompatActivity(), IRedeSocial {
+class VeniviciActivity : AppCompatActivity(), IRedeSocial {
 
     override fun abrirFacebook(context: Context): Intent {
 
         return try {
-            context.packageManager.getPackageInfo("https://www.facebook.com/erivan.lokau", 0)
-            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/erivan.lokau"))
+            context.packageManager.getPackageInfo("https://www.facebook.com/venivici.almeida", 0)
+            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/venivici.almeida"))
         }
 
         catch (e: Exception) {
-            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/erivan.lokau"))
+            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/venivici.almeida"))
         }
     }
 
     override fun abrirInstagram(context: Context): Intent {
 
         return try {
-            context.packageManager.getPackageInfo("https://www.instagram.com/gregbarber88/", 0)
-            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/gregbarber88/"))
+            context.packageManager.getPackageInfo("https://www.facebook.com/venivici.almeida", 0)
+            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/venivici.almeida"))
         }
 
         catch (e: Exception) {
-            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/gregbarber88/"))
+            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/venivici.almeida"))
         }
     }
 
@@ -49,19 +48,19 @@ class GregBarbeariaActivity : AppCompatActivity(), IRedeSocial {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.loja_greg_barbearia)
-        Toast.makeText(this,"Atendemos pedidos de corte ao gosto do cliente e com Desenhos específicos", Toast.LENGTH_LONG).show()
+        setContentView(R.layout.loja_venivici)
 
-        supportActionBar?.title = "Barbearia do Greg"
+
+        supportActionBar?.title = "Venivici"
 
         // tira elevação da borda da actionbar
         supportActionBar?.elevation = 0F
 
         val adapter = FragmentPagerItemAdapter(
                 supportFragmentManager, FragmentPagerItems.with(this)
-                .add("PROMOÇÕES", PromocoesDaBarbeariaGregFragment::class.java)
-                .add("SERVIÇOS", ServicosDaBarbeariaGregFragment::class.java)
-                .add("HISTÓRIA", HistoriaDaBarbeariaGregFragment::class.java)
+                .add("PROMOÇÕES", PromocoesDaVeniviciFragment::class.java)
+                .add("SERVIÇOS", ServicosDaVeniviciFragment::class.java)
+                .add("HISTÓRIA", HistoriaDaVeniviciFragment::class.java)
 
                 .create())
 
