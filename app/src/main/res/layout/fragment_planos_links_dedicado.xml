@@ -35,19 +35,15 @@
 
                 <TextView
                     android:id="@+id/speednet_link_dedicado"
-                    style="@style/Base.TextAppearance.AppCompat.Headline"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/thumbnail"
-                    android:fontFamily="@font/baumans"
                     android:paddingLeft="@dimen/album_title_padding"
                     android:paddingRight="@dimen/album_title_padding"
                     android:paddingTop="@dimen/album_title_padding"
                     android:text=""
-                    android:textAlignment="viewStart"
-                    android:textColor="@color/album_title"
-                    android:textSize="@dimen/size_text_title"
-                    android:textStyle="normal" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="16sp" />
 
                 <ProgressBar
                     android:id="@+id/speednetPlanoDedicadoProgressBar"

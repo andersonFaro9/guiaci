@@ -34,27 +34,24 @@
 
                 <TextView
                     android:id="@+id/speednet_download_5_megas"
-                    style="@style/Base.TextAppearance.AppCompat.Headline"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/thumbnail"
-                    android:fontFamily="@font/baumans"
                     android:paddingLeft="@dimen/album_title_padding"
                     android:paddingRight="@dimen/album_title_padding"
                     android:paddingTop="@dimen/album_title_padding"
                     android:text=""
-                    android:textAlignment="gravity"
-                    android:textColor="@color/album_title"
-                    android:textSize="@dimen/size_text_title"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/speednet_download_5_megas_speedZap"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/title"
                     android:layout_marginTop="35dp"
-                    android:fontFamily="@font/baumans"
                     android:paddingBottom="@dimen/songs_count_padding_bottom"
                     android:paddingLeft="@dimen/album_title_padding"
                     android:paddingRight="@dimen/album_title_padding"
@@ -64,7 +61,7 @@
 
                 <TextView
                     android:id="@+id/speednet_download_7_megas"
-                    style="@style/Base.TextAppearance.AppCompat.Headline"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/thumbnail"
@@ -75,17 +72,17 @@
                     android:paddingTop="@dimen/album_title_padding"
                     android:text=""
                     android:textAlignment="gravity"
-                    android:textColor="@color/album_title"
-                    android:textSize="@dimen/size_text_title"
+                    android:textSize="16dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/speednet_download_7_megas_speedFace"
+                    style="@style/Base.TextAppearance.AppCompat.Headline"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/title"
                     android:layout_marginTop="93dp"
-                    android:fontFamily="@font/baumans"
+
                     android:paddingBottom="@dimen/songs_count_padding_bottom"
                     android:paddingLeft="@dimen/album_title_padding"
                     android:paddingRight="@dimen/album_title_padding"
@@ -95,28 +92,26 @@
 
                 <TextView
                     android:id="@+id/speednet_download_10_megas"
-                    style="@style/Base.TextAppearance.AppCompat.Headline"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/thumbnail"
                     android:layout_marginTop="120dp"
-                    android:fontFamily="@font/baumans"
                     android:paddingLeft="@dimen/album_title_padding"
                     android:paddingRight="@dimen/album_title_padding"
                     android:paddingTop="@dimen/album_title_padding"
                     android:text=""
                     android:textAlignment="gravity"
-                    android:textColor="@color/album_title"
-                    android:textSize="@dimen/size_text_title"
+                    android:textSize="16dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/speednet_download_10_megas_speedFlix"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/title"
                     android:layout_marginTop="150dp"
-                    android:fontFamily="@font/baumans"
                     android:paddingBottom="@dimen/songs_count_padding_bottom"
                     android:paddingLeft="@dimen/album_title_padding"
                     android:paddingRight="@dimen/album_title_padding"
@@ -127,28 +122,26 @@
 
                 <TextView
                     android:id="@+id/speednet_download_15_megas"
-                    style="@style/Base.TextAppearance.AppCompat.Headline"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/thumbnail"
                     android:layout_marginTop="165dp"
-                    android:fontFamily="@font/baumans"
                     android:paddingLeft="@dimen/album_title_padding"
                     android:paddingRight="@dimen/album_title_padding"
                     android:paddingTop="20dp"
                     android:text=""
                     android:textAlignment="gravity"
-                    android:textColor="@color/album_title"
-                    android:textSize="@dimen/size_text_title"
+                    android:textSize="16dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/speednet_download_15_megas_speedUltra"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/title"
                     android:layout_marginTop="200dp"
-                    android:fontFamily="@font/baumans"
                     android:paddingBottom="@dimen/songs_count_padding_bottom"
                     android:paddingTop="10dp"
                     android:paddingLeft="@dimen/album_title_padding"
@@ -160,28 +153,27 @@
 
                 <TextView
                     android:id="@+id/speednet_download_20_megas"
-                    style="@style/Base.TextAppearance.AppCompat.Headline"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="53dp"
                     android:layout_below="@id/thumbnail"
                     android:layout_marginTop="220dp"
-                    android:fontFamily="@font/baumans"
+
                     android:paddingLeft="@dimen/album_title_padding"
                     android:paddingRight="@dimen/album_title_padding"
                     android:paddingTop="20dp"
                     android:text=""
                     android:textAlignment="gravity"
-                    android:textColor="@color/album_title"
-                    android:textSize="@dimen/size_text_title"
+                    android:textSize="16dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/speednet_download_20_megas_speedFull"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/title"
                     android:layout_marginTop="250dp"
-                    android:fontFamily="@font/baumans"
                     android:paddingBottom="@dimen/songs_count_padding_bottom"
                     android:paddingTop="10dp"
                     android:paddingLeft="@dimen/album_title_padding"

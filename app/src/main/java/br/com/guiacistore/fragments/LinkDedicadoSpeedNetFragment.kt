@@ -1,8 +1,5 @@
 package br.com.guiacistore.fragments
 
-
-import android.content.Context
-import android.net.ConnectivityManager
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.util.Log
@@ -10,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.com.guiacistore.R
-import br.com.guiacistore.interfaces.IConexaoComAInternet
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
@@ -25,13 +21,9 @@ private const val ARG_PARAM2 = "param2"
  * A simple [Fragment] subclass.
  *
  */
-class LinkDedicadoSpeedNetFragment : Fragment(), IFirebase, IConexaoComAInternet {
+class LinkDedicadoSpeedNetFragment : Fragment(), IFirebase {
 
-    override fun verificaConexaoComAInternet(): Boolean {
-        val connectivityManager = context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        val activeNetworkInfo = connectivityManager.activeNetworkInfo
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected
-    }
+
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
@@ -48,10 +40,10 @@ class LinkDedicadoSpeedNetFragment : Fragment(), IFirebase, IConexaoComAInternet
 
     override fun doDatabaseInstance(id: Int): Boolean {
 
-        if (!verificaConexaoComAInternet()) {
+
             speednetPlanoDedicadoProgressBar?.visibility = View.VISIBLE
 
-        }
+
 
         referenciaFirebase?.child(id.toString())
 

@@ -1,8 +1,6 @@
 package br.com.guiacistore.fragments
 
 
-import android.content.Context
-import android.net.ConnectivityManager
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.util.Log
@@ -10,16 +8,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.com.guiacistore.R
-import br.com.guiacistore.interfaces.IConexaoComAInternet
 import br.com.guiacistore.interfaces.ITextIsSelectable
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.fragment_historia_da_speednet.*
 import kotlinx.android.synthetic.main.fragment_historia_da_venivici.*
 
 
-class HistoriaDaVeniviciFragment : Fragment(), IFirebase, IConexaoComAInternet, ITextIsSelectable {
+class HistoriaDaVeniviciFragment : Fragment(), IFirebase,  ITextIsSelectable {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -29,7 +25,7 @@ class HistoriaDaVeniviciFragment : Fragment(), IFirebase, IConexaoComAInternet, 
     }
 
     override fun implementTextSelectable() {
-        speednet_historia_da_empresa?.setTextIsSelectable(true)
+        venivici_historia_da_empresa?.setTextIsSelectable(true)
     }
 
 
@@ -40,20 +36,12 @@ class HistoriaDaVeniviciFragment : Fragment(), IFirebase, IConexaoComAInternet, 
         get() = databaseInstance?.getReference("clientes")
 
 
-    override fun verificaConexaoComAInternet(): Boolean {
-        val connectivityManager = context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        val activeNetworkInfo = connectivityManager.activeNetworkInfo
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected
-    }
 
     override fun doDatabaseInstance(id: Int): Boolean {
 
-        //verificaConexaoComAInternet()
 
-        if (!verificaConexaoComAInternet()) {
             veniviciHistoriaProgressBar?.visibility = View.VISIBLE
 
-        }
 
         referenciaFirebase?.child(id.toString())
 

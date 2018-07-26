@@ -9,7 +9,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import br.com.guiacistore.R
 import br.com.guiacistore.interfaces.IConexaoComAInternet
 import br.com.guiacistore.interfaces.ITextIsSelectable
@@ -18,11 +17,13 @@ import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_historia_da_barbearia_greg.*
 
+
 class HistoriaDaBarbeariaGregFragment : Fragment(), IFirebase, IConexaoComAInternet, ITextIsSelectable {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         doDatabaseInstance(1)
+
 
         return inflater.inflate(R.layout.fragment_historia_da_barbearia_greg, container, false)
     }
@@ -47,12 +48,11 @@ class HistoriaDaBarbeariaGregFragment : Fragment(), IFirebase, IConexaoComAInter
 
     override fun doDatabaseInstance(id: Int): Boolean {
 
-        //verificaConexaoComAInternet()
 
-        if (!verificaConexaoComAInternet()) {
+
+
             barbeariaGregHistoriaProgressBar?.visibility = View.VISIBLE
-            Toast.makeText(context,"Sem internet, toma um café e volte depois", Toast.LENGTH_SHORT).show()
-        }
+
 
         referenciaFirebase?.child(id.toString())
 

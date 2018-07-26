@@ -5,6 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -13,12 +14,22 @@ import br.com.guiacistore.fragments.CelulaDaQuadrangularFragment
 import br.com.guiacistore.fragments.CultoNaIgrejaQuadrangularFragment
 import br.com.guiacistore.fragments.HistoriaDaIgrejaQuadrangularFragment
 import br.com.guiacistore.interfaces.IRedeSocial
+import br.com.guiacistore.model.IFirebase
+import br.com.guiacistore.model.LojasModel
+import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
+import kotlinx.android.synthetic.main.fragment_celulas_da_igreja_quadrangular.*
 
 
 class QuadrangularActivity : AppCompatActivity(), IRedeSocial {
+
+
+
+
+
+
 
     override fun abrirFacebook(context: Context): Intent {
 

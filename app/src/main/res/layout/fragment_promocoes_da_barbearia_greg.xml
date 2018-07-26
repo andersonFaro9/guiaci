@@ -17,14 +17,18 @@
         tools:context=".fragments.PromocoesDaBarbeariaDoGregFragment">
 
         <!-- TODO: Update blank fragment layout -->
+
+
         <TextView
             android:id="@+id/gregbarbearia_promocoes"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="169dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginStart="4dp"
-            android:textAlignment="center"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

@@ -1,7 +1,5 @@
 package br.com.guiacistore.fragments
 
-import android.content.Context
-import android.net.ConnectivityManager
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.util.Log
@@ -9,20 +7,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.com.guiacistore.R
-import br.com.guiacistore.interfaces.IConexaoComAInternet
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_plano_speednet.*
 
 
-class PlanosDaSpeednetFragment : Fragment() , IFirebase, IConexaoComAInternet {
 
-    override fun verificaConexaoComAInternet(): Boolean {
-        val connectivityManager = context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        val activeNetworkInfo = connectivityManager.activeNetworkInfo
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected
-    }
+
+class PlanosDaSpeednetFragment : Fragment() , IFirebase {
+
+
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -44,9 +39,9 @@ class PlanosDaSpeednetFragment : Fragment() , IFirebase, IConexaoComAInternet {
     override fun doDatabaseInstance(id: Int): Boolean {
         referenciaFirebase?.child(id.toString())
 
-        if (!verificaConexaoComAInternet()) {
+
             planoSpeednetprogressBar?.visibility = View.VISIBLE
-        }
+
 
 
         referenciaFirebase?.addValueEventListener(object: ValueEventListener {

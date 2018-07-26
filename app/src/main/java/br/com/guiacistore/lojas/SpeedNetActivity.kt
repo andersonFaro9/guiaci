@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -13,14 +14,19 @@ import br.com.guiacistore.R
 import br.com.guiacistore.fragments.HistoriaDaSpeedNetFragment
 import br.com.guiacistore.fragments.LinkDedicadoSpeedNetFragment
 import br.com.guiacistore.fragments.PlanosDaSpeednetFragment
+import br.com.guiacistore.fragments.PromocoesDaSpeedNetFragment
 import br.com.guiacistore.interfaces.IRedeSocial
 import br.com.guiacistore.interfaces.Invisible
+import br.com.guiacistore.model.IFirebase
+import br.com.guiacistore.model.LojasModel
+import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
+import kotlinx.android.synthetic.main.fragment_plano_speednet.*
 
 class SpeedNetActivity : AppCompatActivity(),
-           Invisible, IRedeSocial{
+           Invisible, IRedeSocial, IFirebase{
 
     override fun abrirFacebook(context: Context): Intent {
 
@@ -45,6 +51,63 @@ class SpeedNetActivity : AppCompatActivity(),
             Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/speednetalliance/"))
         }
     }
+    override val databaseInstance: FirebaseDatabase?
+        get() = FirebaseDatabase.getInstance()
+
+    override val referenciaFirebase: DatabaseReference?
+        get() = databaseInstance?.getReference("clientes")
+
+
+    override fun doDatabaseInstance(id: Int): Boolean {
+        referenciaFirebase?.child(id.toString())
+
+
+            planoSpeednetprogressBar?.visibility = View.VISIBLE
+
+
+
+        referenciaFirebase?.addValueEventListener(object: ValueEventListener {
+
+            override fun onDataChange(dataSnapshot: DataSnapshot?) {
+
+                for (d in dataSnapshot?.children!!) {
+
+                    val cliente = d.getValue(LojasModel::class.java)
+                    speednet_download_5_megas?.text = cliente?.speednet_download_5_megas
+                    speednet_download_5_megas_speedZap?.text = cliente?.speednet_download_5_megas_speedZap
+
+                    speednet_download_7_megas?.text = cliente?.speednet_download_7_megas
+                    speednet_download_7_megas_speedFace?.text = cliente?.speednet_download_7_megas_speedFace
+
+                    speednet_download_10_megas?.text = cliente?.speednet_download_10_megas
+                    speednet_download_10_megas_speedFlix?.text = cliente?.speednet_download_10_megas_speedFlix
+
+                    speednet_download_15_megas?.text = cliente?.speednet_download_15_megas
+                    speednet_download_15_megas_speedUltra?.text = cliente?.speednet_download_15_megas_speedUltra
+
+                    speednet_download_20_megas?.text = cliente?.speednet_download_20_megas
+                    speednet_download_20_megas_speedFull?.text = cliente?.speednet_download_20_megas_speedFull
+
+
+                }
+
+                planoSpeednetprogressBar?.visibility = View.INVISIBLE
+            }
+
+            override fun onCancelled(databaseError: DatabaseError?) {
+                Log.d("onCancelled", "error...", databaseError?.toException())
+
+
+            }
+
+        })
+
+        return true
+    }
+
+
+
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,10 +118,12 @@ class SpeedNetActivity : AppCompatActivity(),
 
         // tira elevação da borda da actionbar
         supportActionBar?.elevation = 0F
+        doDatabaseInstance(1)
 
         val adapter = FragmentPagerItemAdapter(
                 supportFragmentManager, FragmentPagerItems.with(this)
                 .add("HISTÓRIA", HistoriaDaSpeedNetFragment::class.java)
+                .add("PROMOÇÕES", PromocoesDaSpeedNetFragment::class.java)
                 .add("PLANOS", PlanosDaSpeednetFragment::class.java)
                 .add("LINK DEDICADO", LinkDedicadoSpeedNetFragment::class.java)
 
