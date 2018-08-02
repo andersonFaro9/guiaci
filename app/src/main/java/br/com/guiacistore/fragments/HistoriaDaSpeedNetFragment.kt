@@ -8,20 +8,36 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.com.guiacistore.R
+import br.com.guiacistore.interfaces.IFabFloatingAction
 import br.com.guiacistore.interfaces.ITextIsSelectable
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_historia_da_speednet.*
 
-class HistoriaDaSpeedNetFragment : Fragment(), IFirebase, ITextIsSelectable {
+class HistoriaDaSpeedNetFragment : Fragment(), IFirebase, ITextIsSelectable, IFabFloatingAction {
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         doDatabaseInstance(1)
-
+        //flutuarBotaoDeContato()
         return inflater.inflate(R.layout.fragment_historia_da_speednet, container, false)
+
     }
+
+    override fun flutuarBotaoDeContato() {
+
+//        floatingActionButton?.setOnClickListener { view ->
+//
+//            val context:Context? = null
+//            Toast.makeText(context, "teste", Toast.LENGTH_SHORT).show()
+//            val intent = Intent(context, VeniviciActivity::class.java)
+//            startActivity(intent)
+//        }
+
+    }
+
 
     override fun implementTextSelectable() {
         speednet_historia_da_empresa?.setTextIsSelectable(true)

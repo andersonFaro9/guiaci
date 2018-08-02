@@ -22,12 +22,10 @@ import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
-import kotlinx.android.synthetic.main.fragment_promocoes_da_venivici.*
 import kotlinx.android.synthetic.main.fragment_servicos_da_venivici.*
 
 
 class VeniviciActivity : AppCompatActivity(), IRedeSocial, Invisible, IFirebase {
-
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
@@ -39,7 +37,7 @@ class VeniviciActivity : AppCompatActivity(), IRedeSocial, Invisible, IFirebase 
     override fun doDatabaseInstance(id: Int): Boolean {
 
 
-        veniviciPromocoesProgressBar?.visibility = View.VISIBLE
+        veniviciServicosProgressBar?.visibility = View.VISIBLE
 
 
         referenciaFirebase?.child(id.toString())
@@ -50,20 +48,14 @@ class VeniviciActivity : AppCompatActivity(), IRedeSocial, Invisible, IFirebase 
 
                 for (d in dataSnapshot?.children!!) {
 
-
-
-                    /*
-
-                    Venha com seu filho na semana dos pais e ganhe um mega desconto de 10% no seu corte!!. Ligue para o telefone
-                    99648-1470 e fique por dentro, "paizão"
-                     */
-
-
                     val cliente = d.getValue(LojasModel::class.java)
 
                     val listaApp  = listOf(
+
                             //Mostra a lista de serviços da venivici
-                            cliente?.venivici_produto_1.toString(),cliente?.venivici_produto_2.toString(),
+
+
+                            cliente?.venivici_produto_1.toString(), cliente?.venivici_produto_2.toString(),
                             cliente?.venivici_produto_3.toString(),cliente?.venivici_produto_4.toString(),
                             cliente?.venivici_produto_5.toString(),cliente?.venivici_produto_6.toString(),
                             cliente?.venivici_produto_7.toString(),cliente?.venivici_produto_8.toString(),
@@ -76,9 +68,9 @@ class VeniviciActivity : AppCompatActivity(), IRedeSocial, Invisible, IFirebase 
                             cliente?.venivici_produto_21.toString(),cliente?.venivici_produto_22.toString()
 
                     )
-                    veniviciPromocoesProgressBar?.visibility = View.INVISIBLE
+                    veniviciServicosProgressBar?.visibility = View.INVISIBLE
 
-                    val arrayAdapter : ArrayAdapter<String?> = ArrayAdapter(this@VeniviciActivity, android.R.layout.simple_list_item_1, listaApp)
+                    val arrayAdapter : ArrayAdapter<Any?> = ArrayAdapter(this@VeniviciActivity, android.R.layout.simple_list_item_1, listaApp)
                     venivici_servicos?.adapter = arrayAdapter //<- com as extensions
 
 
@@ -129,7 +121,6 @@ class VeniviciActivity : AppCompatActivity(), IRedeSocial, Invisible, IFirebase 
 
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -137,6 +128,8 @@ class VeniviciActivity : AppCompatActivity(), IRedeSocial, Invisible, IFirebase 
         doDatabaseInstance(1)
 
         supportActionBar?.title = "Venivici"
+
+
 
         // tira elevação da borda da actionbar
         supportActionBar?.elevation = 0F

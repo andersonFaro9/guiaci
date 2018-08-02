@@ -56,9 +56,12 @@ class PromocoesDaSpeedNetFragment : Fragment(), IFirebase {
         return true
     }
 
+    //@RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         doDatabaseInstance(1)
+
+        ///speednet_promocoes?.justificationMode = JUSTIFICATION_MODE_INTER_WORD
 
         return inflater.inflate(R.layout.fragment_promocoes_da_speednet, container, false)
     }

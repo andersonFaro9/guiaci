@@ -9,11 +9,10 @@ package br.com.guiacistore.model
 data class LojasModel(
 
         //venivici
-    //17 produtos
+        //17 produtos
         var venivici_historia_da_empresa:String?= null,
-
+        var venivici_imagem: String?= null,
         var venivici_promocoes: String?= null,
-
         var venivici_produto_1: String?= null,
         var venivici_produto_2: String?= null,
         var venivici_produto_3: String?= null,

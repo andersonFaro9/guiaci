@@ -18,8 +18,8 @@ android {
         ]
         minSdkVersion 21
         targetSdkVersion 27
-        versionCode 8
-        versionName "1.2.1"
+        versionCode 9
+        versionName "1.2.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
 
@@ -58,6 +58,7 @@ dependencies {
     implementation 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
     implementation 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar'
     implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.uncopt:android.justified:1.0'
 }
 
 repositories {

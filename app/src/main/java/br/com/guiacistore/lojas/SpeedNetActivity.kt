@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.support.design.widget.Snackbar
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
@@ -15,6 +16,7 @@ import br.com.guiacistore.fragments.HistoriaDaSpeedNetFragment
 import br.com.guiacistore.fragments.LinkDedicadoSpeedNetFragment
 import br.com.guiacistore.fragments.PlanosDaSpeednetFragment
 import br.com.guiacistore.fragments.PromocoesDaSpeedNetFragment
+import br.com.guiacistore.interfaces.IFabFloatingAction
 import br.com.guiacistore.interfaces.IRedeSocial
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.model.IFirebase
@@ -23,10 +25,69 @@ import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
+import kotlinx.android.synthetic.main.activity_main3.*
 import kotlinx.android.synthetic.main.fragment_plano_speednet.*
 
+
+
 class SpeedNetActivity : AppCompatActivity(),
-           Invisible, IRedeSocial, IFirebase{
+           Invisible, IRedeSocial, IFirebase, IFabFloatingAction {
+
+
+    override fun flutuarBotaoDeContato() {
+
+//        floatingActionButton?.setOnClickListener { view ->
+//            Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
+//                    .setAction("Action", null).show()
+//            Toast.makeText(this, "teste", Toast.LENGTH_SHORT).show()
+//        }
+
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        setContentView(R.layout.loja_speednet)
+        supportActionBar?.title = "Speednet Alliance"
+
+        // tira elevação da borda da actionbar
+        supportActionBar?.elevation = 0F
+        doDatabaseInstance(1)
+
+        fab?.setOnClickListener { view ->
+            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show()
+        }
+
+        //flutuarBotaoDeContato()
+
+        val adapter = FragmentPagerItemAdapter(
+                supportFragmentManager, FragmentPagerItems.with(this)
+                .add("HISTÓRIA", HistoriaDaSpeedNetFragment::class.java)
+                .add("PROMOÇÕES", PromocoesDaSpeedNetFragment::class.java)
+                .add("PLANOS", PlanosDaSpeednetFragment::class.java)
+                .add("LINK DEDICADO", LinkDedicadoSpeedNetFragment::class.java)
+
+                .create())
+
+        val viewPager = findViewById<View>(R.id.viewpager) as ViewPager
+
+        val viewPagerTab = findViewById<SmartTabLayout>(R.id.viewPagerTab)
+
+        viewPagerTab.setViewPager(viewPager)
+
+        viewPager.adapter = adapter
+
+        viewPagerTab.setViewPager(viewPager)
+
+        abrirInstagram(this)
+        abrirFacebook(this)
+
+    }
+
+
+
+
 
     override fun abrirFacebook(context: Context): Intent {
 
@@ -106,43 +167,6 @@ class SpeedNetActivity : AppCompatActivity(),
     }
 
 
-
-
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        setContentView(R.layout.loja_speednet)
-        supportActionBar?.title = "Speednet Alliance"
-
-        // tira elevação da borda da actionbar
-        supportActionBar?.elevation = 0F
-        doDatabaseInstance(1)
-
-        val adapter = FragmentPagerItemAdapter(
-                supportFragmentManager, FragmentPagerItems.with(this)
-                .add("HISTÓRIA", HistoriaDaSpeedNetFragment::class.java)
-                .add("PROMOÇÕES", PromocoesDaSpeedNetFragment::class.java)
-                .add("PLANOS", PlanosDaSpeednetFragment::class.java)
-                .add("LINK DEDICADO", LinkDedicadoSpeedNetFragment::class.java)
-
-                .create())
-
-        val viewPager = findViewById<View>(R.id.viewpager) as ViewPager
-
-        val viewPagerTab = findViewById<SmartTabLayout>(R.id.viewPagerTab)
-
-        viewPagerTab.setViewPager(viewPager)
-
-        viewPager.adapter = adapter
-
-        viewPagerTab.setViewPager(viewPager)
-
-        abrirInstagram(this)
-        abrirFacebook(this)
-
-    }
 
 
 

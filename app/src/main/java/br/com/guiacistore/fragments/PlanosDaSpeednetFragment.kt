@@ -17,9 +17,6 @@ import kotlinx.android.synthetic.main.fragment_plano_speednet.*
 
 class PlanosDaSpeednetFragment : Fragment() , IFirebase {
 
-
-
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment

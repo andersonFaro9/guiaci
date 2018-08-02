@@ -21,5 +21,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+    <ProgressBar
+        android:id="@+id/gregBarbeariaServicosProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:indeterminateTint="@color/color_loading"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/barbearia_do_greg_servicos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/barbearia_do_greg_servicos"
+        tools:layout_marginBottom="11dp" />
 
 </android.support.constraint.ConstraintLayout>

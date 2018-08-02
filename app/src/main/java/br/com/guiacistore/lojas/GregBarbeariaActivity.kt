@@ -23,7 +23,6 @@ import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
-import kotlinx.android.synthetic.main.fragment_promocoes_da_barbearia_greg.*
 import kotlinx.android.synthetic.main.fragment_servicos_da_barbearia_greg.*
 
 
@@ -36,9 +35,10 @@ class GregBarbeariaActivity : AppCompatActivity(), IRedeSocial, Invisible, IFire
         get() = databaseInstance?.getReference("clientes")
 
 
+
     override fun doDatabaseInstance(id: Int): Boolean {
 
-        gregBarbeariaProgressBar?.visibility = View.VISIBLE
+        gregBarbeariaServicosProgressBar?.visibility = View.VISIBLE
 
         referenciaFirebase?.child(id.toString())
 
@@ -60,7 +60,7 @@ class GregBarbeariaActivity : AppCompatActivity(), IRedeSocial, Invisible, IFire
                     val arrayAdapter : ArrayAdapter<String?> = ArrayAdapter(this@GregBarbeariaActivity, android.R.layout.simple_list_item_1, listaApp)
                     barbearia_do_greg_servicos?.adapter = arrayAdapter //<- com as extensions
 
-                    gregBarbeariaProgressBar?.visibility = View.INVISIBLE
+                    gregBarbeariaServicosProgressBar?.visibility = View.INVISIBLE
 
                 }
 

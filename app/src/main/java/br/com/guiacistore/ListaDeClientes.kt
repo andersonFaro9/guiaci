@@ -9,3 +9,4 @@ class ListaDeClientes (val name : String, val subTitle: String, val thumbnail : 
 
 
 
+
