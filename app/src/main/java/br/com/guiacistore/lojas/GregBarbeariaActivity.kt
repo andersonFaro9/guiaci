@@ -1,8 +1,12 @@
 package br.com.guiacistore.lojas
-import android.content.Context
+import android.Manifest
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
+import android.support.v4.app.ActivityCompat
+import android.support.v4.content.ContextCompat
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
@@ -15,10 +19,11 @@ import br.com.guiacistore.R
 import br.com.guiacistore.fragments.HistoriaDaBarbeariaGregFragment
 import br.com.guiacistore.fragments.PromocoesDaBarbeariaGregFragment
 import br.com.guiacistore.fragments.ServicosDaBarbeariaGregFragment
-import br.com.guiacistore.interfaces.IRedeSocial
+import br.com.guiacistore.interfaces.ICheckPermission
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
+import br.com.guiacistore.redesocial.GregBarbeariaRedesSociaisActivity
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
@@ -26,7 +31,7 @@ import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 import kotlinx.android.synthetic.main.fragment_servicos_da_barbearia_greg.*
 
 
-class GregBarbeariaActivity : AppCompatActivity(), IRedeSocial, Invisible, IFirebase {
+class GregBarbeariaActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
@@ -78,30 +83,6 @@ class GregBarbeariaActivity : AppCompatActivity(), IRedeSocial, Invisible, IFire
 
         return true
     }
-    override fun abrirFacebook(context: Context): Intent {
-
-        return try {
-            context.packageManager.getPackageInfo("https://www.facebook.com/GregBarber88/", 0)
-            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/erivan.lokau"))
-        }
-
-        catch (e: Exception) {
-            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/GregBarber88/"))
-        }
-    }
-
-    override fun abrirInstagram(context: Context): Intent {
-
-        return try {
-            context.packageManager.getPackageInfo("https://www.instagram.com/gregbarber88/", 0)
-            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/gregbarber88/"))
-        }
-
-        catch (e: Exception) {
-            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/gregbarber88/"))
-        }
-    }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -109,7 +90,7 @@ class GregBarbeariaActivity : AppCompatActivity(), IRedeSocial, Invisible, IFire
         doDatabaseInstance(1)
 
         setContentView(R.layout.loja_greg_barbearia)
-        Toast.makeText(this,"Atendemos pedidos de corte ao gosto do cliente e com Desenhos específicos", Toast.LENGTH_LONG).show()
+        Toast.makeText(this,"Atendemos pedidos de corte ao gosto do cliente e com desenhos específicos", Toast.LENGTH_LONG).show()
 
         supportActionBar?.title = "Barbearia do Greg"
 
@@ -134,8 +115,8 @@ class GregBarbeariaActivity : AppCompatActivity(), IRedeSocial, Invisible, IFire
 
         viewPagerTab.setViewPager(viewPager)
 
-        abrirInstagram(this)
-        abrirFacebook(this)
+        //abrirInstagram(this)
+        ///abrirFacebook(this)
 
 
 
@@ -145,7 +126,7 @@ class GregBarbeariaActivity : AppCompatActivity(), IRedeSocial, Invisible, IFire
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
 
-        menuInflater.inflate(R.menu.menu_main_speednet, menu)
+        menuInflater.inflate(R.menu.menu_main_lojas, menu)
         return true
 
     }
@@ -155,25 +136,55 @@ class GregBarbeariaActivity : AppCompatActivity(), IRedeSocial, Invisible, IFire
 
         when (item.itemId) {
 
-            R.id.ic_instagram -> {
+            R.id.ic_menu-> {
 
-                val instagramIntent = abrirInstagram(this)
-                startActivity(instagramIntent)
+                val intent = Intent(this@GregBarbeariaActivity, GregBarbeariaRedesSociaisActivity::class.java)
 
+                startActivity (intent)
                 return true
             }
 
-            R.id.ic_facebook-> {
+            R.id.ic_phone -> {
 
-                val facebookIntent = abrirFacebook(this)
-                startActivity(facebookIntent )
-
+                checkPermissionForCallPhone()
                 return true
             }
         }
 
         return super.onOptionsItemSelected(item)
     }
+
+
+
+    override fun checkPermissionForCallPhone() {
+        when {
+            ContextCompat.checkSelfPermission(SpeedNetActivity@ this,
+                    Manifest.permission.CALL_PHONE)
+                    != PackageManager.PERMISSION_GRANTED -> if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                            Manifest.permission.CALL_PHONE)) {
+
+            } else {
+
+                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE), 42)
+            }
+            else -> callPhone()
+        }
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+
+        when { requestCode == 42 && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED -> callPhone() }
+
+    }
+
+    @SuppressLint("MissingPermission")
+    fun callPhone(){
+
+        val callIntent = Intent(Intent.ACTION_CALL)
+        callIntent.data = Uri.parse("tel:996481470")
+        startActivity(callIntent)
+    }
+
 
 
 }

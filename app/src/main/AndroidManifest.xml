@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACTION_DIAL" />
 
     <application
         android:name=".CustomAplication"
@@ -99,15 +101,13 @@
             android:name=".lojas.GregBarbeariaActivity"
             android:parentActivityName=".lojas.GregBarbeariaActivity"
             android:theme="@style/themeGreg" />
-        <activity
-            android:name=".lojas.Main2Activity"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".lojas.Teste" />
-        <activity
-            android:name=".lojas.Main3Activity"
-            android:label="@string/title_activity_main3"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity android:screenOrientation="portrait" android:name=".redesocial.SpeednetRedesSociaisActivity" />
+        <activity android:screenOrientation="portrait" android:name=".redesocial.VeniviciRedesSociaisActivity" />
+        <activity android:screenOrientation="portrait" android:name=".redesocial.GregBarbeariaRedesSociaisActivity" />
+        <activity android:screenOrientation="portrait" android:name=".redesocial.IgrejaQuadrangularRedesSociaisActivity" />
+        <activity android:screenOrientation="portrait" android:theme="@style/themeEvolution" android:name=".lojas.AcademiaEvolutionActivity" android:parentActivityName=".lojas.AcademiaEvolutionActivity"/>
+        <activity  android:screenOrientation="portrait" android:name=".redesocial.AcademiaEvolutionRedesSociaisActivity" />
     </application>
 
 </manifest>

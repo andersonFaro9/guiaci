@@ -6,9 +6,10 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.HistoriaDaSpeedNetFragment">
+    tools:context=".fragments.HistoriaDaSpeedNetFragment"
+    tools:showIn="@layout/loja_speednet">
 
-    <!-- TODO: Update blank fragment layout -->
+
 
     <TextView
         android:id="@+id/speednet_historia_da_empresa"
@@ -34,17 +35,6 @@
         android:layout_marginTop="8dp"
         android:layout_gravity="center"
          />
-
-    <!--<include layout="@layout/content_main_speednet" />-->
-
-    <!--<android.support.design.widget.FloatingActionButton-->
-        <!--android:id="@+id/floatingActionButton"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:clickable="true"-->
-        <!--android:layout_gravity="bottom|end"-->
-        <!--android:layout_margin="@dimen/fab_margin"-->
-        <!--app:srcCompat="@drawable/ic_phone" />-->
 
 
 </android.support.design.widget.CoordinatorLayout>

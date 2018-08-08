@@ -8,13 +8,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.com.guiacistore.R
-import br.com.guiacistore.interfaces.ITextIsSelectable
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_celulas_da_igreja_quadrangular.*
 
-class CelulaDaQuadrangularFragment: Fragment(),   ITextIsSelectable,  IFirebase {
+class CelulaDaQuadrangularFragment: Fragment(), IFirebase {
 
 
     override val databaseInstance: FirebaseDatabase?
@@ -56,9 +55,7 @@ class CelulaDaQuadrangularFragment: Fragment(),   ITextIsSelectable,  IFirebase 
         return true
     }
 
-    override fun implementTextSelectable() {
-        quadrangular_celulas?.setTextIsSelectable(true)
-    }
+
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,

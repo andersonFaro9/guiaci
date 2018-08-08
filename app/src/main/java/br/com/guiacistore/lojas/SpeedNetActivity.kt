@@ -1,10 +1,13 @@
 package br.com.guiacistore.lojas
 
-import android.content.Context
+import android.Manifest
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import android.support.design.widget.Snackbar
+import android.support.v4.app.ActivityCompat
+import android.support.v4.content.ContextCompat.checkSelfPermission
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
@@ -16,33 +19,20 @@ import br.com.guiacistore.fragments.HistoriaDaSpeedNetFragment
 import br.com.guiacistore.fragments.LinkDedicadoSpeedNetFragment
 import br.com.guiacistore.fragments.PlanosDaSpeednetFragment
 import br.com.guiacistore.fragments.PromocoesDaSpeedNetFragment
-import br.com.guiacistore.interfaces.IFabFloatingAction
-import br.com.guiacistore.interfaces.IRedeSocial
+import br.com.guiacistore.interfaces.ICheckPermission
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
+import br.com.guiacistore.redesocial.SpeednetRedesSociaisActivity
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
-import kotlinx.android.synthetic.main.activity_main3.*
 import kotlinx.android.synthetic.main.fragment_plano_speednet.*
 
-
-
 class SpeedNetActivity : AppCompatActivity(),
-           Invisible, IRedeSocial, IFirebase, IFabFloatingAction {
+           Invisible,  IFirebase, ICheckPermission {
 
-
-    override fun flutuarBotaoDeContato() {
-
-//        floatingActionButton?.setOnClickListener { view ->
-//            Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
-//                    .setAction("Action", null).show()
-//            Toast.makeText(this, "teste", Toast.LENGTH_SHORT).show()
-//        }
-
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,16 +40,11 @@ class SpeedNetActivity : AppCompatActivity(),
         setContentView(R.layout.loja_speednet)
         supportActionBar?.title = "Speednet Alliance"
 
+
         // tira elevação da borda da actionbar
+
         supportActionBar?.elevation = 0F
         doDatabaseInstance(1)
-
-        fab?.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
-
-        //flutuarBotaoDeContato()
 
         val adapter = FragmentPagerItemAdapter(
                 supportFragmentManager, FragmentPagerItems.with(this)
@@ -80,38 +65,10 @@ class SpeedNetActivity : AppCompatActivity(),
 
         viewPagerTab.setViewPager(viewPager)
 
-        abrirInstagram(this)
-        abrirFacebook(this)
 
     }
 
 
-
-
-
-    override fun abrirFacebook(context: Context): Intent {
-
-        return try {
-            context.packageManager.getPackageInfo("https://www.facebook.com/speednetalliance/", 0)
-            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/speednetalliance/"))
-        }
-
-        catch (e: Exception) {
-            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/speednetalliance/"))
-        }
-    }
-
-    override fun abrirInstagram(context: Context): Intent {
-
-        return try {
-            context.packageManager.getPackageInfo("https://www.instagram.com/speednetalliance/", 0)
-            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/speednetalliance/"))
-        }
-
-        catch (e: Exception) {
-            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/speednetalliance/"))
-        }
-    }
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
 
@@ -166,41 +123,71 @@ class SpeedNetActivity : AppCompatActivity(),
         return true
     }
 
-
-
-
-
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
 
-        menuInflater.inflate(R.menu.menu_main_speednet, menu)
+        menuInflater.inflate(R.menu.menu_main_lojas, menu)
         return true
 
     }
 
 
+
+    @SuppressLint("MissingPermission")
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when (item.itemId) {
 
-            R.id.ic_instagram -> {
+            R.id.ic_phone -> {
 
-                val instagramIntent = abrirInstagram(this)
-                startActivity(instagramIntent)
+                checkPermissionForCallPhone()
+                return true
+            }
+
+            R.id.ic_menu -> {
+
+                val intent = Intent(this@SpeedNetActivity, SpeednetRedesSociaisActivity::class.java)
+
+                startActivity (intent)
 
                 return true
             }
 
-            R.id.ic_facebook-> {
-
-                val facebookIntent = abrirFacebook(this)
-                startActivity(facebookIntent )
-
-                return true
-            }
         }
 
         return super.onOptionsItemSelected(item)
     }
+
+
+    override fun checkPermissionForCallPhone() {
+        when {
+            checkSelfPermission(SpeedNetActivity@this,
+                    Manifest.permission.CALL_PHONE)
+                    != PackageManager.PERMISSION_GRANTED -> if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                            Manifest.permission.CALL_PHONE)) {
+
+            } else {
+
+                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE), 42)
+            }
+            else -> callPhone()
+        }
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+
+        when { requestCode == 42 && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED -> callPhone() }
+
+    }
+
+    @SuppressLint("MissingPermission")
+    fun callPhone(){
+
+        val callIntent = Intent(Intent.ACTION_CALL)
+                callIntent.data = Uri.parse("tel:36455134")
+                startActivity(callIntent)
+    }
+
+
 
 
 }

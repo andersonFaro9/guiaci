@@ -8,14 +8,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.com.guiacistore.R
-import br.com.guiacistore.interfaces.ITextIsSelectable
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_historia_da_venivici.*
 
 
-class HistoriaDaVeniviciFragment : Fragment(), IFirebase,  ITextIsSelectable {
+class HistoriaDaVeniviciFragment : Fragment(), IFirebase {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -24,9 +23,6 @@ class HistoriaDaVeniviciFragment : Fragment(), IFirebase,  ITextIsSelectable {
         return inflater.inflate(R.layout.fragment_historia_da_venivici, container, false)
     }
 
-    override fun implementTextSelectable() {
-        venivici_historia_da_empresa?.setTextIsSelectable(true)
-    }
 
 
     override val databaseInstance: FirebaseDatabase?
@@ -58,7 +54,7 @@ class HistoriaDaVeniviciFragment : Fragment(), IFirebase,  ITextIsSelectable {
                     veniviciHistoriaProgressBar?.visibility = View.INVISIBLE
                 }
 
-                implementTextSelectable()
+
 
             }
 

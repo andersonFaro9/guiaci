@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="br.com.guiacistore.Main2Activity">
+
+
+    <item
+        android:id="@+id/ic_menu"
+        android:name="android:actionMenuTextColor"
+        app:queryHint="menu"
+        android:icon="@drawable/ic_menu_24dp"
+        app:showAsAction="never"
+        android:title="Redes sociais"
+
+        />
+
+</menu>

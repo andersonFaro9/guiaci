@@ -3,7 +3,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
@@ -21,6 +21,12 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimaryVenivice</item>
         <item name="colorPrimaryDark">@color/colorPrimaryVenivice</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="themeEvolution" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryEvolution</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryEvolution</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
@@ -57,8 +63,8 @@
 
     <!--Estilo barra SplashActivity-->
     <style name="theme_splash" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     </style>
 
     <!--Estilo barra sobre-->

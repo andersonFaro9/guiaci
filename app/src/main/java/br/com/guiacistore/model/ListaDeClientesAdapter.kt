@@ -1,4 +1,4 @@
-package br.com.guiacistore
+package br.com.guiacistore.model
 
 import android.content.Context
 import android.content.Intent
@@ -8,10 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import br.com.guiacistore.lojas.GregBarbeariaActivity
-import br.com.guiacistore.lojas.QuadrangularActivity
-import br.com.guiacistore.lojas.SpeedNetActivity
-import br.com.guiacistore.lojas.VeniviciActivity
+import br.com.guiacistore.R
+import br.com.guiacistore.lojas.*
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -78,7 +76,7 @@ class ListaDeClientesAdapter(private val context: Context, private var list: Lis
     }
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, type: Int): ListaDeClientesAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, type: Int): ViewHolder {
 
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.list_row, parent, false);
         val card = view.findViewById<CardView>(R.id.card_view) as CardView
@@ -89,7 +87,7 @@ class ListaDeClientesAdapter(private val context: Context, private var list: Lis
     }
 
 
-    override fun onBindViewHolder(holder: ListaDeClientesAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val album: ListaDeClientes = list.get(position)
 
@@ -103,10 +101,11 @@ class ListaDeClientesAdapter(private val context: Context, private var list: Lis
 
             when (position) {
                 0 ->  context.startActivity(Intent(context, SpeedNetActivity::class.java))
-                1 -> context.startActivity(Intent(context,VeniviciActivity::class.java ))
-                2 -> Toast.makeText(context, "Aguardem e breve estará disponível!!!", Toast.LENGTH_SHORT).show()
-                3 -> context.startActivity(Intent(context,QuadrangularActivity::class.java ))
-                4 -> context.startActivity(Intent(context,GregBarbeariaActivity::class.java ))
+                1 ->  context.startActivity(Intent(context,VeniviciActivity::class.java ))
+                2 ->  Toast.makeText(context, "Aguardem e breve estará disponível!!!", Toast.LENGTH_SHORT).show()
+                3 ->  context.startActivity(Intent(context,QuadrangularActivity::class.java ))
+                4 ->  context.startActivity(Intent(context,GregBarbeariaActivity::class.java ))
+                5 ->  context.startActivity(Intent(context,AcademiaEvolutionActivity::class.java ))
             }
 
         }

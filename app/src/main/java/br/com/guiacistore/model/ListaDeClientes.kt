@@ -1,4 +1,4 @@
-package br.com.guiacistore
+package br.com.guiacistore.model
 
 /**
  * Created by faro on 9/24/17.

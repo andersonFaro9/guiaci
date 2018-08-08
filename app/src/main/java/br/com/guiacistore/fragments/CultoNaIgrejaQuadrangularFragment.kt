@@ -8,7 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.com.guiacistore.R
-import br.com.guiacistore.interfaces.ITextIsSelectable
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
@@ -16,7 +15,7 @@ import kotlinx.android.synthetic.main.fragment_culto_na_igreja_quadrangular.*
 
 
 
-class CultoNaIgrejaQuadrangularFragment : Fragment(), ITextIsSelectable, IFirebase {
+class CultoNaIgrejaQuadrangularFragment : Fragment(), IFirebase {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
@@ -64,9 +63,7 @@ class CultoNaIgrejaQuadrangularFragment : Fragment(), ITextIsSelectable, IFireba
 
 
 
-    override fun implementTextSelectable() {
-        quadrangular_culto?.setTextIsSelectable(true)
-    }
+
 
 
 

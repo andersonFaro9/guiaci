@@ -8,9 +8,9 @@ import android.support.v7.widget.SearchView
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import br.com.guiacistore.ListaDeClientes
-import br.com.guiacistore.ListaDeClientesAdapter
 import br.com.guiacistore.R
+import br.com.guiacistore.model.ListaDeClientes
+import br.com.guiacistore.model.ListaDeClientesAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
 open class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
@@ -39,6 +39,7 @@ open class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
         list.add(ListaDeClientes("Bios Informática e Papelaria", "Trazendo soluções para sua vida.", R.drawable.loja_bios_informatica))
         list.add(ListaDeClientes("Igreja do Ev. Quadrangular de Pojuca.", "Vivendo em Cristo.", R.drawable.loja_quadrangular))
         list.add(ListaDeClientes("Barbearia do Greg.", "Seu estilo passa primeiro por aqui.", R.drawable.loja_barbearia_greg))
+        list.add(ListaDeClientes("Academia Evolution Fitness de Pojuca", "Sua evolução começa agora!!.", R.drawable.loja_evolution))
 
     }
 

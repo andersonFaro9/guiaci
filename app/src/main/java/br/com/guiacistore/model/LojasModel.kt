@@ -54,6 +54,13 @@ data class LojasModel(
         var gregbarbearia_servico6 : String?= null,
 
 
+        var academia_evolution_historia_da_empresa: String?= null,
+        var academia_evolution_promocoes : String?= null,
+        var academia_evolution_servico1 : String?= null,
+        var academia_evolution_servico2 : String?= null,
+        var academia_evolution_servico3 : String?= null,
+        var academia_evolution_servico4 : String?= null,
+
 
         //speednet
         var speednet_historia_da_empresa: String?= null,

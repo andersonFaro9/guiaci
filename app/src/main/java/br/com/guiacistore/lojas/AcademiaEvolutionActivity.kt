@@ -15,22 +15,26 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
 import br.com.guiacistore.R
-import br.com.guiacistore.fragments.HistoriaDaVeniviciFragment
-import br.com.guiacistore.fragments.PromocoesDaVeniviciFragment
-import br.com.guiacistore.fragments.ServicosDaVeniviciFragment
+import br.com.guiacistore.fragments.HistoriaDaAcademiaEvolutionFragment
+import br.com.guiacistore.fragments.PromocoesDaAcademiaEvolutionFragment
+import br.com.guiacistore.fragments.ServicosDaAcademiaEvolutionFragment
 import br.com.guiacistore.interfaces.ICheckPermission
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
-import br.com.guiacistore.redesocial.VeniviciRedesSociaisActivity
+import br.com.guiacistore.redesocial.AcademiaEvolutionRedesSociaisActivity
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
-import kotlinx.android.synthetic.main.fragment_servicos_da_venivici.*
+import kotlinx.android.synthetic.main.fragment_servicos_da_academia_evolution.*
+import kotlinx.android.synthetic.main.fragment_servicos_da_barbearia_greg.*
 
+/*
 
-class VeniviciActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPermission {
+novidades, serviços, história
+ */
+class AcademiaEvolutionActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
@@ -39,11 +43,10 @@ class VeniviciActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPermis
         get() = databaseInstance?.getReference("clientes")
 
 
+
     override fun doDatabaseInstance(id: Int): Boolean {
 
-
-        veniviciServicosProgressBar?.visibility = View.VISIBLE
-
+        gregBarbeariaServicosProgressBar?.visibility = View.VISIBLE
 
         referenciaFirebase?.child(id.toString())
 
@@ -56,31 +59,16 @@ class VeniviciActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPermis
                     val cliente = d.getValue(LojasModel::class.java)
 
                     val listaApp  = listOf(
-
-                            //Mostra a lista de serviços da venivici
-
-
-                            cliente?.venivici_produto_1.toString(), cliente?.venivici_produto_2.toString(),
-                            cliente?.venivici_produto_3.toString(),cliente?.venivici_produto_4.toString(),
-                            cliente?.venivici_produto_5.toString(),cliente?.venivici_produto_6.toString(),
-                            cliente?.venivici_produto_7.toString(),cliente?.venivici_produto_8.toString(),
-                            cliente?.venivici_produto_9.toString(),cliente?.venivici_produto_10.toString(),
-                            cliente?.venivici_produto_11.toString(),cliente?.venivici_produto_12.toString(),
-                            cliente?.venivici_produto_13.toString(),cliente?.venivici_produto_14.toString(),
-                            cliente?.venivici_produto_15.toString(),cliente?.venivici_produto_16.toString(),
-                            cliente?.venivici_produto_17.toString(),cliente?.venivici_produto_18.toString(),
-                            cliente?.venivici_produto_19.toString(),cliente?.venivici_produto_20.toString(),
-                            cliente?.venivici_produto_21.toString(),cliente?.venivici_produto_22.toString()
+                            //Mostra a lista de serviços da  Barbearia do Greg
+                            cliente?.academia_evolution_servico1,cliente?.academia_evolution_servico2,
+                            cliente?.academia_evolution_servico3,cliente?.academia_evolution_servico4
 
                     )
 
+                    val arrayAdapter : ArrayAdapter<String?> = ArrayAdapter(this@AcademiaEvolutionActivity, android.R.layout.simple_list_item_1, listaApp)
+                    evolution_academia_servicos?.adapter = arrayAdapter //<- com as extensions
 
-                    val arrayAdapter : ArrayAdapter<Any?> = ArrayAdapter(this@VeniviciActivity, android.R.layout.simple_list_item_1, listaApp)
-                    venivici_servicos?.adapter = arrayAdapter //<- com as extensions
-
-
-                    veniviciServicosProgressBar?.visibility = View.INVISIBLE
-
+                    evolutionAcademiaServicosProgressBar?.visibility = View.INVISIBLE
 
                 }
 
@@ -99,25 +87,23 @@ class VeniviciActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPermis
         return true
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.loja_venivici)
         doDatabaseInstance(1)
 
-        supportActionBar?.title = "Venivici"
+        setContentView(R.layout.loja_academia_evolution)
 
-
+        supportActionBar?.title = "Evolution Fitness"
 
         // tira elevação da borda da actionbar
         supportActionBar?.elevation = 0F
 
         val adapter = FragmentPagerItemAdapter(
                 supportFragmentManager, FragmentPagerItems.with(this)
-                .add("PROMOÇÕES", PromocoesDaVeniviciFragment::class.java)
-                .add("SERVIÇOS", ServicosDaVeniviciFragment::class.java)
-                .add("HISTÓRIA", HistoriaDaVeniviciFragment::class.java)
+                .add("NOVIDADES", PromocoesDaAcademiaEvolutionFragment::class.java)
+                .add("SERVIÇOS", ServicosDaAcademiaEvolutionFragment::class.java)
+                .add("HISTÓRIA", HistoriaDaAcademiaEvolutionFragment::class.java)
 
                 .create())
 
@@ -130,6 +116,8 @@ class VeniviciActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPermis
         viewPager.adapter = adapter
 
         viewPagerTab.setViewPager(viewPager)
+
+
 
     }
 
@@ -147,30 +135,29 @@ class VeniviciActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPermis
 
         when (item.itemId) {
 
-            R.id.ic_phone -> {
-
-                checkPermissionForCallPhone()
-                return true
-            }
-
             R.id.ic_menu-> {
 
-                val intent = Intent(this@VeniviciActivity, VeniviciRedesSociaisActivity::class.java)
+                val intent = Intent(this@AcademiaEvolutionActivity, AcademiaEvolutionRedesSociaisActivity::class.java)
 
                 startActivity (intent)
                 return true
             }
 
+            R.id.ic_phone -> {
 
+                checkPermissionForCallPhone()
+                return true
             }
-
+        }
 
         return super.onOptionsItemSelected(item)
     }
 
+
+
     override fun checkPermissionForCallPhone() {
         when {
-            ContextCompat.checkSelfPermission(VeniviciActivity@ this,
+            ContextCompat.checkSelfPermission(SpeedNetActivity@ this,
                     Manifest.permission.CALL_PHONE)
                     != PackageManager.PERMISSION_GRANTED -> if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                             Manifest.permission.CALL_PHONE)) {
@@ -193,13 +180,10 @@ class VeniviciActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPermis
     fun callPhone(){
 
         val callIntent = Intent(Intent.ACTION_CALL)
-        callIntent.data = Uri.parse("tel:999142522")
+        callIntent.data = Uri.parse("tel:999392850")
         startActivity(callIntent)
     }
 
 
 
 }
-
-
-

@@ -1,5 +1,6 @@
 package br.com.guiacistore.fragments
 
+
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.util.Log
@@ -10,10 +11,11 @@ import br.com.guiacistore.R
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.fragment_historia_igreja_quadrangular.*
+import kotlinx.android.synthetic.main.fragment_novidades_da_academia_evolution.*
+import kotlinx.android.synthetic.main.fragment_promocoes_da_barbearia_greg.*
 
 
-class HistoriaDaIgrejaQuadrangularFragment : Fragment(), IFirebase {
+class PromocoesDaAcademiaEvolutionFragment : Fragment(), IFirebase {
 
 
     override val databaseInstance: FirebaseDatabase?
@@ -23,10 +25,20 @@ class HistoriaDaIgrejaQuadrangularFragment : Fragment(), IFirebase {
         get() = databaseInstance?.getReference("clientes")
 
 
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+
+        doDatabaseInstance(1)
+        return inflater.inflate(R.layout.fragment_novidades_da_academia_evolution, container, false)
+    }
+
+
 
     override fun doDatabaseInstance(id: Int): Boolean {
 
-        quadrangularHistoriaProgressBar?.visibility = View.VISIBLE
+
+            gregBarbeariaProgressBar?.visibility = View.VISIBLE
+
 
         referenciaFirebase?.child(id.toString())
 
@@ -37,9 +49,9 @@ class HistoriaDaIgrejaQuadrangularFragment : Fragment(), IFirebase {
                 for (d in dataSnapshot?.children!!) {
 
                     val cliente = d.getValue(LojasModel::class.java)
-                    quadrangular_historia?.text =  cliente?.quadrangular_historia
+                    academia_evolution_promocoes?.text =  cliente?.academia_evolution_promocoes
 
-                    quadrangularHistoriaProgressBar?.visibility = View.INVISIBLE
+                    promocoesAcademiaEvolutionProgressBar?.visibility = View.INVISIBLE
                 }
 
             }
@@ -54,18 +66,6 @@ class HistoriaDaIgrejaQuadrangularFragment : Fragment(), IFirebase {
 
         return true
     }
-
-
-
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-
-        doDatabaseInstance(1)
-
-        return inflater.inflate(R.layout.fragment_historia_igreja_quadrangular, container, false)
-    }
-
 
 
 
