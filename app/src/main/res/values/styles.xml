@@ -16,6 +16,28 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="themeDocesCake" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryDocesCake</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDocesCake</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="colorPrimaryRepSol" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryRepSol</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryRepSol</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="themeJobSat" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryJobSat</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryJobSat</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
 
     <style name="themeVenivice" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->

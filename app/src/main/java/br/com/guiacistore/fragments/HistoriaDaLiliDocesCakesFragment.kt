@@ -10,14 +10,15 @@ import br.com.guiacistore.R
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.fragment_planos_links_dedicado.*
+import kotlinx.android.synthetic.main.fragment_historia_da_lili_doces_cakes.*
 
+class HistoriaDaLiliDocesCakesFragment :  Fragment(), IFirebase {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-/**
- * A simple [Fragment] subclass.
- *
- */
-class LinkDedicadoSpeedNetFragment : Fragment(), IFirebase {
+        doDatabaseInstance(1)
+
+        return inflater.inflate(R.layout.fragment_historia_da_lili_doces_cakes, container, false)
+    }
 
 
 
@@ -27,18 +28,12 @@ class LinkDedicadoSpeedNetFragment : Fragment(), IFirebase {
     override val referenciaFirebase: DatabaseReference?
         get() = databaseInstance?.getReference("clientes")
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        doDatabaseInstance(1)
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_planos_links_dedicado, container, false)
-    }
+
 
     override fun doDatabaseInstance(id: Int): Boolean {
 
 
-            speednetPlanoDedicadoProgressBar?.visibility = View.VISIBLE
-
+        liliDocesCakesHistoriaProgressBar?.visibility = View.VISIBLE
 
 
         referenciaFirebase?.child(id.toString())
@@ -50,17 +45,18 @@ class LinkDedicadoSpeedNetFragment : Fragment(), IFirebase {
                 for (d in dataSnapshot?.children!!) {
 
                     val cliente = d.getValue(LojasModel::class.java)
-                    speednet_link_dedicado?.text = cliente?.speednet_link_dedicado
 
+                    lili_doces_cakes_historia_da_empresa?.text = cliente?.lili_doces_cakes_historia_da_empresa
+
+                    liliDocesCakesHistoriaProgressBar?.visibility = View.INVISIBLE
                 }
 
-                speednetPlanoDedicadoProgressBar?.visibility = View.INVISIBLE
+
+
             }
 
             override fun onCancelled(databaseError: DatabaseError?) {
                 Log.d("onCancelled", "error...", databaseError?.toException())
-
-
             }
 
         })

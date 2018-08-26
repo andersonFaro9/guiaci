@@ -54,6 +54,21 @@ data class LojasModel(
         var gregbarbearia_servico6 : String?= null,
 
 
+
+        //Jobsat
+
+        var jobsat_historia_da_empresa: String?= null,
+        var jobsat_promocoes : String?= null,
+        var jobsat_servico1 : String?= null,
+        var jobsat_servico2 : String ?= null,
+        var jobsat_servico3 : String ?= null,
+        var jobsat_servico4 : String ?= null,
+        var jobsat_servico5 : String ?= null,
+        var jobsat_servico6 : String ?= null,
+        var jobsat_servico7 : String ?= null,
+        var jobsat_servico8 : String ?= null,
+
+
         var academia_evolution_historia_da_empresa: String?= null,
         var academia_evolution_promocoes : String?= null,
         var academia_evolution_servico1 : String?= null,
@@ -84,18 +99,46 @@ data class LojasModel(
         var speednet_link_dedicado: String?= null,
 
         //quadrangular
-
         var quadrangular_historia:String?= null,
-
         var quadrangular_culto: String?= null,
-
-        var quadrangular_celulas: String?= null
-
+        var quadrangular_celulas: String?= null,
 
 
+        var repsol_historia_da_empresa:String?= null,
+        var repsol_promocoes: String?= null,
+        var repsol_produto_1: String?= null,
+        var repsol_produto_2: String?= null,
+        var repsol_produto_3: String?= null,
+        var repsol_produto_4: String?= null,
+        var repsol_produto_5: String?= null,
+        var repsol_produto_6: String?= null,
+        var repsol_produto_7: String?= null,
+        var repsol_produto_8: String?= null,
+        var repsol_produto_9: String?= null,
 
 
+        var lili_doces_cakes_historia_da_empresa : String?=null,
+        var lili_doces_cakes_promocoes: String?= null,
+        var lili_doces_cakes_produto_1: String?= null,
+        var lili_doces_cakes_produto_2: String?= null,
+        var lili_doces_cakes_produto_3: String?= null,
+        var lili_doces_cakes_produto_4: String?= null,
+        var lili_doces_cakes_produto_5: String?= null,
+        var lili_doces_cakes_produto_6: String?= null,
+        var lili_doces_cakes_produto_7: String?= null,
+        var lili_doces_cakes_produto_8: String?= null,
+        var lili_doces_cakes_produto_9: String?= null,
 
+
+        var bios_informatica_promocoes: String?= null,
+        var bios_servico1: String?= null,
+        var bios_servico2: String?= null,
+        var bios_servico3: String?= null,
+        var bios_servico4: String?= null,
+        var bios_servico5: String?= null,
+        var bios_servico6: String?= null,
+        var bios_servico7: String?= null,
+        var bios_servico8: String?= null
 
 )
 

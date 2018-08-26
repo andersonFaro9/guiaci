@@ -9,12 +9,12 @@ import android.view.ViewGroup
 import br.com.guiacistore.R
 
 
-class ServicosDaBarbeariaGregFragment : Fragment() {
+class ServicosDaRepsolFragment : Fragment() {
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-
-        return inflater.inflate(R.layout.fragment_servicos_da_barbearia_greg, container, false)
+        return inflater.inflate(R.layout.fragment_servicos_da_repsol, container, false)
     }
 
 

@@ -115,10 +115,6 @@ class GregBarbeariaActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckP
 
         viewPagerTab.setViewPager(viewPager)
 
-        //abrirInstagram(this)
-        ///abrirFacebook(this)
-
-
 
     }
 

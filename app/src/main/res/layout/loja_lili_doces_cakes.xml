@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
@@ -13,7 +12,6 @@
     tools:layout_editor_absoluteY="81dp">
 
 
-
     <com.ogaclejapan.smarttablayout.SmartTabLayout
         android:id="@+id/viewPagerTab"
         android:layout_width="match_parent"
@@ -23,14 +21,14 @@
         app:stl_indicatorInFront="false"
         app:stl_indicatorInterpolation="smart"
         app:stl_indicatorGravity="bottom"
-        app:stl_indicatorColor="@android:color/black"
-        app:stl_indicatorThickness="2dp"
+        app:stl_indicatorColor="#21aa87"
+        app:stl_indicatorThickness="4dp"
         app:stl_indicatorWidth="auto"
         app:stl_indicatorCornerRadius="2dp"
-        app:stl_overlineColor="#4D000000"
-        android:background="@color/colorPrimarySpeednet"
+        app:stl_overlineColor="@color/colorPrimaryDocesCake"
+        android:background="@color/colorPrimaryDocesCake"
         app:stl_overlineThickness="0dp"
-        app:stl_underlineColor="#4D000000"
+        app:stl_underlineColor="@color/colorPrimaryDocesCake"
         app:stl_underlineThickness="1dp"
         app:stl_dividerThickness="1dp"
         app:stl_defaultTabTextAllCaps="true"
@@ -40,18 +38,14 @@
         app:stl_defaultTabTextMinWidth="0dp"
         app:stl_distributeEvenly="true"
         app:stl_clickable="true"
-        app:stl_titleOffset="16dp"
+        app:stl_titleOffset="24dp"
         app:stl_drawDecorationAfterTab="false"
         />
-
-
-
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="end" />
+        android:layout_height="match_parent" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rView"
@@ -59,10 +53,4 @@
         android:layout_height="match_parent" />
 
 
-
-
 </LinearLayout>
-
-
-
-

@@ -15,34 +15,56 @@
     tools:context=".fragments.PromocoesDaVeniviciFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+
+
     <TextView
         android:id="@+id/venivici_promocoes"
         android:layout_width="0dp"
-        android:layout_height="98dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginStart="4dp"
-        android:text=""
+        android:layout_height="129dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="272dp"
+        android:elegantTextHeight="true"
+        android:text="  "
+        android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textIsSelectable="true"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-
+        android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.136" />
+        />
 
     <ProgressBar
         android:id="@+id/veniviciPromocoesProgressBar"
         android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:indeterminateTint="@color/color_loading"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/venivici_promocoes" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/venivici_promocoes"
+        />
+
+
+    <ImageView
+        android:id="@+id/promo_da_loja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/venivici_promocoes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/veniviciPromocoesProgressBar"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/promo_da_loja" />
 
 </android.support.constraint.ConstraintLayout>
 </ScrollView>

@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import br.com.guiacistore.R
 
 
-class ServicosDaAcademiaEvolutionFragment : Fragment() {
+class ServicosDaJobSatFragment : Fragment() {
 
 
 
@@ -19,7 +19,7 @@ class ServicosDaAcademiaEvolutionFragment : Fragment() {
 
 
 
-        return inflater.inflate(R.layout.fragment_servicos_da_academia_evolution, container, false)
+        return inflater.inflate(R.layout.fragment_servicos_da_job_sat, container, false)
     }
 
 

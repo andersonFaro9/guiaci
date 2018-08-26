@@ -1,5 +1,6 @@
 package br.com.guiacistore.fragments
 
+
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.util.Log
@@ -10,15 +11,19 @@ import br.com.guiacistore.R
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.fragment_planos_links_dedicado.*
+import kotlinx.android.synthetic.main.fragment_historia_da_barbearia_greg.*
+import kotlinx.android.synthetic.main.fragment_historia_da_job_sat.*
 
 
-/**
- * A simple [Fragment] subclass.
- *
- */
-class LinkDedicadoSpeedNetFragment : Fragment(), IFirebase {
+class HistoriaDaJobSatFragment : Fragment(), IFirebase {
 
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
+        doDatabaseInstance(1)
+
+
+        return inflater.inflate(R.layout.fragment_historia_da_job_sat, container, false)
+    }
 
 
     override val databaseInstance: FirebaseDatabase?
@@ -27,18 +32,11 @@ class LinkDedicadoSpeedNetFragment : Fragment(), IFirebase {
     override val referenciaFirebase: DatabaseReference?
         get() = databaseInstance?.getReference("clientes")
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        doDatabaseInstance(1)
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_planos_links_dedicado, container, false)
-    }
+
 
     override fun doDatabaseInstance(id: Int): Boolean {
 
-
-            speednetPlanoDedicadoProgressBar?.visibility = View.VISIBLE
-
+            barbeariaGregHistoriaProgressBar?.visibility = View.VISIBLE
 
 
         referenciaFirebase?.child(id.toString())
@@ -50,17 +48,18 @@ class LinkDedicadoSpeedNetFragment : Fragment(), IFirebase {
                 for (d in dataSnapshot?.children!!) {
 
                     val cliente = d.getValue(LojasModel::class.java)
-                    speednet_link_dedicado?.text = cliente?.speednet_link_dedicado
 
+                    jobsat_historia_da_empresa?.text = cliente?.jobsat_historia_da_empresa
+
+                    jobSatHistoriaProgressBar?.visibility = View.INVISIBLE
                 }
 
-                speednetPlanoDedicadoProgressBar?.visibility = View.INVISIBLE
+
+
             }
 
             override fun onCancelled(databaseError: DatabaseError?) {
                 Log.d("onCancelled", "error...", databaseError?.toException())
-
-
             }
 
         })
@@ -70,3 +69,5 @@ class LinkDedicadoSpeedNetFragment : Fragment(), IFirebase {
 
 
 }
+
+

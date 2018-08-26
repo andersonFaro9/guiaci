@@ -15,26 +15,22 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
 import br.com.guiacistore.R
-import br.com.guiacistore.fragments.HistoriaDaAcademiaEvolutionFragment
-import br.com.guiacistore.fragments.PromocoesDaAcademiaEvolutionFragment
-import br.com.guiacistore.fragments.ServicosDaAcademiaEvolutionFragment
+import br.com.guiacistore.fragments.HistoriaDaRepSolFragment
+import br.com.guiacistore.fragments.PromocoesDaRepSolFragment
+import br.com.guiacistore.fragments.ServicosDaRepsolFragment
 import br.com.guiacistore.interfaces.ICheckPermission
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
-import br.com.guiacistore.redesocial.AcademiaEvolutionRedesSociaisActivity
+import br.com.guiacistore.redesocial.VeniviciRedesSociaisActivity
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
-import kotlinx.android.synthetic.main.fragment_servicos_da_academia_evolution.*
-import kotlinx.android.synthetic.main.fragment_servicos_da_barbearia_greg.*
+import kotlinx.android.synthetic.main.fragment_servicos_da_repsol.*
 
-/*
 
-novidades, serviços, história
- */
-class AcademiaEvolutionActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission {
+class RepSolActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPermission {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
@@ -43,10 +39,11 @@ class AcademiaEvolutionActivity : AppCompatActivity(),  Invisible, IFirebase,ICh
         get() = databaseInstance?.getReference("clientes")
 
 
-
     override fun doDatabaseInstance(id: Int): Boolean {
 
-        gregBarbeariaServicosProgressBar?.visibility = View.VISIBLE
+
+        repSolServicosProgressBar?.visibility = View.VISIBLE
+
 
         referenciaFirebase?.child(id.toString())
 
@@ -59,16 +56,22 @@ class AcademiaEvolutionActivity : AppCompatActivity(),  Invisible, IFirebase,ICh
                     val cliente = d.getValue(LojasModel::class.java)
 
                     val listaApp  = listOf(
-                            //Mostra a lista de serviços da  Barbearia do Greg
-                            cliente?.academia_evolution_servico1,cliente?.academia_evolution_servico2,
-                            cliente?.academia_evolution_servico3,cliente?.academia_evolution_servico4
+
+
+                            cliente?.repsol_produto_1.toString(), cliente?.repsol_produto_2.toString(),
+                            cliente?.repsol_produto_3.toString(),cliente?.repsol_produto_4.toString(),
+                            cliente?.repsol_produto_5.toString(),cliente?.repsol_produto_6.toString()
+
 
                     )
 
-                    val arrayAdapter : ArrayAdapter<String?> = ArrayAdapter(this@AcademiaEvolutionActivity, android.R.layout.simple_list_item_1, listaApp)
-                    evolution_academia_servicos?.adapter = arrayAdapter //<- com as extensions
 
-                    evolutionAcademiaServicosProgressBar?.visibility = View.INVISIBLE
+                    val arrayAdapter : ArrayAdapter<Any?> = ArrayAdapter(this@RepSolActivity, android.R.layout.simple_list_item_1, listaApp)
+                    repsol_servicos?.adapter = arrayAdapter //<- com as extensions
+
+
+                    repSolServicosProgressBar?.visibility = View.INVISIBLE
+
 
                 }
 
@@ -87,24 +90,25 @@ class AcademiaEvolutionActivity : AppCompatActivity(),  Invisible, IFirebase,ICh
         return true
     }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        setContentView(R.layout.loja_repsol)
         doDatabaseInstance(1)
 
-        setContentView(R.layout.loja_academia_evolution)
+        supportActionBar?.title = "RepSol Moto Center"
 
-        supportActionBar?.title = "Evolution Fitness"
+
 
         // tira elevação da borda da actionbar
         supportActionBar?.elevation = 0F
 
         val adapter = FragmentPagerItemAdapter(
                 supportFragmentManager, FragmentPagerItems.with(this)
-                .add("NOVIDADES", PromocoesDaAcademiaEvolutionFragment::class.java)
-                .add("SERVIÇOS", ServicosDaAcademiaEvolutionFragment::class.java)
-                .add("HISTÓRIA", HistoriaDaAcademiaEvolutionFragment::class.java)
-
+                .add("HISTÓRIA", HistoriaDaRepSolFragment::class.java)
+                .add("SERVIÇOS", ServicosDaRepsolFragment::class.java)
+                .add("PROMOÇÕES", PromocoesDaRepSolFragment::class.java)
                 .create())
 
         val viewPager = findViewById<View>(R.id.viewpager) as ViewPager
@@ -116,8 +120,6 @@ class AcademiaEvolutionActivity : AppCompatActivity(),  Invisible, IFirebase,ICh
         viewPager.adapter = adapter
 
         viewPagerTab.setViewPager(viewPager)
-
-
 
     }
 
@@ -135,29 +137,30 @@ class AcademiaEvolutionActivity : AppCompatActivity(),  Invisible, IFirebase,ICh
 
         when (item.itemId) {
 
-            R.id.ic_menu-> {
-
-                val intent = Intent(this@AcademiaEvolutionActivity, AcademiaEvolutionRedesSociaisActivity::class.java)
-
-                startActivity (intent)
-                return true
-            }
-
             R.id.ic_phone -> {
 
                 checkPermissionForCallPhone()
                 return true
             }
-        }
+
+            R.id.ic_menu-> {
+
+                val intent = Intent(this@RepSolActivity, VeniviciRedesSociaisActivity::class.java)
+
+                startActivity (intent)
+                return true
+            }
+
+
+            }
+
 
         return super.onOptionsItemSelected(item)
     }
 
-
-
     override fun checkPermissionForCallPhone() {
         when {
-            ContextCompat.checkSelfPermission(SpeedNetActivity@ this,
+            ContextCompat.checkSelfPermission(VeniviciActivity@ this,
                     Manifest.permission.CALL_PHONE)
                     != PackageManager.PERMISSION_GRANTED -> if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                             Manifest.permission.CALL_PHONE)) {
@@ -180,10 +183,13 @@ class AcademiaEvolutionActivity : AppCompatActivity(),  Invisible, IFirebase,ICh
     fun callPhone(){
 
         val callIntent = Intent(Intent.ACTION_CALL)
-        callIntent.data = Uri.parse("tel:999392850")
+        callIntent.data = Uri.parse("tel:998393329")
         startActivity(callIntent)
     }
 
 
 
 }
+
+
+

@@ -15,20 +15,25 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
 import br.com.guiacistore.R
-import br.com.guiacistore.fragments.PromocoesDaBiosInformaticaFragment
-import br.com.guiacistore.fragments.ServicosDaBiosInformaticaFragment
+import br.com.guiacistore.fragments.HistoriaDaJobSatFragment
+import br.com.guiacistore.fragments.PromocoesDaJobSatFragment
+import br.com.guiacistore.fragments.ServicosDaJobSatFragment
 import br.com.guiacistore.interfaces.ICheckPermission
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
-import br.com.guiacistore.redesocial.LiliDocesCakesRedesSociaisActivity
+import br.com.guiacistore.redesocial.JobSatRedesSociaisActivity
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
-import kotlinx.android.synthetic.main.fragment_servicos_bios_informatica.*
+import kotlinx.android.synthetic.main.fragment_servicos_da_job_sat.*
 
-class BiosInformaticaActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission {
+/*
+
+novidades, serviços, história
+ */
+class JobSatActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
@@ -40,7 +45,7 @@ class BiosInformaticaActivity : AppCompatActivity(),  Invisible, IFirebase,IChec
 
     override fun doDatabaseInstance(id: Int): Boolean {
 
-        servicosBiosInformaticaProgressBar?.visibility = View.VISIBLE
+        servicosJobSatProgressBar?.visibility = View.VISIBLE
 
         referenciaFirebase?.child(id.toString())
 
@@ -54,17 +59,17 @@ class BiosInformaticaActivity : AppCompatActivity(),  Invisible, IFirebase,IChec
 
                     val listaApp  = listOf(
                             //Mostra a lista de serviços da  Barbearia do Greg
-                            cliente?.bios_servico1, cliente?.bios_servico2,
-                            cliente?.bios_servico3, cliente?.bios_servico4,
-                            cliente?.bios_servico5, cliente?.bios_servico6,
-                            cliente?.bios_servico7, cliente?.bios_servico8
+                            cliente?.jobsat_servico1, cliente?.jobsat_servico2,
+                            cliente?.jobsat_servico3, cliente?.jobsat_servico4,
+                            cliente?.jobsat_servico5, cliente?.jobsat_servico6, cliente?.jobsat_servico7,
+                            cliente?.jobsat_servico8
 
                     )
 
-                    val arrayAdapter : ArrayAdapter<String?> = ArrayAdapter(this@BiosInformaticaActivity, android.R.layout.simple_list_item_1, listaApp)
-                    servicos_bios_informatica?.adapter = arrayAdapter //<- com as extensions
+                    val arrayAdapter : ArrayAdapter<String?> = ArrayAdapter(this@JobSatActivity, android.R.layout.simple_list_item_1, listaApp)
+                    job_sat_servicos?.adapter = arrayAdapter //<- com as extensions
 
-                    servicosBiosInformaticaProgressBar?.visibility = View.INVISIBLE
+                    servicosJobSatProgressBar?.visibility = View.INVISIBLE
 
                 }
 
@@ -88,18 +93,18 @@ class BiosInformaticaActivity : AppCompatActivity(),  Invisible, IFirebase,IChec
 
         doDatabaseInstance(1)
 
-        setContentView(R.layout.loja_bios_informatica)
+        setContentView(R.layout.loja_job_sat)
 
-        supportActionBar?.title = "Bios Informática"
+        supportActionBar?.title = "Job Sat"
 
         // tira elevação da borda da actionbar
         supportActionBar?.elevation = 0F
 
         val adapter = FragmentPagerItemAdapter(
                 supportFragmentManager, FragmentPagerItems.with(this)
-                //.add("HISTÓRIA", HistoriaDaLiliDocesCakesFragment::class.java)
-                .add("SERVIÇOS", ServicosDaBiosInformaticaFragment::class.java)
-                .add("PROMOÇÕES", PromocoesDaBiosInformaticaFragment::class.java)
+                .add("HISTÓRIA", HistoriaDaJobSatFragment::class.java)
+                .add("SERVIÇOS", ServicosDaJobSatFragment::class.java)
+                .add("PROMOÇÕES", PromocoesDaJobSatFragment::class.java)
 
                 .create())
 
@@ -133,7 +138,7 @@ class BiosInformaticaActivity : AppCompatActivity(),  Invisible, IFirebase,IChec
 
             R.id.ic_menu-> {
 
-                val intent = Intent(this@BiosInformaticaActivity, LiliDocesCakesRedesSociaisActivity::class.java)
+                val intent = Intent(this@JobSatActivity, JobSatRedesSociaisActivity::class.java)
 
                 startActivity (intent)
                 return true
@@ -176,7 +181,7 @@ class BiosInformaticaActivity : AppCompatActivity(),  Invisible, IFirebase,IChec
     fun callPhone(){
 
         val callIntent = Intent(Intent.ACTION_CALL)
-        callIntent.data = Uri.parse("tel: 988104762")
+        callIntent.data = Uri.parse("tel:99841903")
         startActivity(callIntent)
     }
 

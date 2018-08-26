@@ -101,11 +101,14 @@ class ListaDeClientesAdapter(private val context: Context, private var list: Lis
 
             when (position) {
                 0 ->  context.startActivity(Intent(context, SpeedNetActivity::class.java))
-                1 ->  context.startActivity(Intent(context,VeniviciActivity::class.java ))
-                2 ->  Toast.makeText(context, "Aguardem e breve estará disponível!!!", Toast.LENGTH_SHORT).show()
-                3 ->  context.startActivity(Intent(context,QuadrangularActivity::class.java ))
-                4 ->  context.startActivity(Intent(context,GregBarbeariaActivity::class.java ))
-                5 ->  context.startActivity(Intent(context,AcademiaEvolutionActivity::class.java ))
+                1 ->  context.startActivity(Intent(context,GregBarbeariaActivity::class.java ))
+                2 ->  context.startActivity(Intent(context,JobSatActivity::class.java ))
+                3 ->  context.startActivity(Intent(context,LiliDocesCakesActivity::class.java ))
+                4 ->  context.startActivity(Intent(context,BiosInformaticaActivity::class.java ))
+                5 ->  context.startActivity(Intent(context,RepSolActivity::class.java ))
+                6 ->  context.startActivity(Intent(context,QuadrangularActivity::class.java ))
+                7 ->  Toast.makeText(context, "Em breve ficará disponível!", Toast.LENGTH_SHORT).show()
+
             }
 
         }

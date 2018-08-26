@@ -84,7 +84,8 @@
         <activity android:name=".StorageActivity" />
         <activity
             android:name=".lojas.BiosInformaticaActivity"
-            android:theme="@style/themeBios" />
+            android:parentActivityName=".lojas.BiosInformaticaActivity"
+            android:theme="@style/themeBios"/>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -102,12 +103,27 @@
             android:parentActivityName=".lojas.GregBarbeariaActivity"
             android:theme="@style/themeGreg" />
 
+        <activity
+            android:name=".lojas.JobSatActivity"
+            android:parentActivityName=".lojas.JobSatActivity"
+            android:theme="@style/themeJobSat" />
+
+        <activity android:name=".lojas.RepSolActivity"
+            android:parentActivityName=".lojas.RepSolActivity"
+            android:theme="@style/colorPrimaryRepSol" />
+
+        <activity android:name=".lojas.LiliDocesCakesActivity"
+            android:parentActivityName=".lojas.LiliDocesCakesActivity"
+            android:theme="@style/themeDocesCake" />
+
         <activity android:screenOrientation="portrait" android:name=".redesocial.SpeednetRedesSociaisActivity" />
         <activity android:screenOrientation="portrait" android:name=".redesocial.VeniviciRedesSociaisActivity" />
         <activity android:screenOrientation="portrait" android:name=".redesocial.GregBarbeariaRedesSociaisActivity" />
         <activity android:screenOrientation="portrait" android:name=".redesocial.IgrejaQuadrangularRedesSociaisActivity" />
-        <activity android:screenOrientation="portrait" android:theme="@style/themeEvolution" android:name=".lojas.AcademiaEvolutionActivity" android:parentActivityName=".lojas.AcademiaEvolutionActivity"/>
-        <activity  android:screenOrientation="portrait" android:name=".redesocial.AcademiaEvolutionRedesSociaisActivity" />
+        <activity android:screenOrientation="portrait" android:name=".redesocial.JobSatRedesSociaisActivity"/>
+        <activity android:screenOrientation="portrait" android:name=".redesocial.LiliDocesCakesRedesSociaisActivity" />
+
+
     </application>
 
 </manifest>

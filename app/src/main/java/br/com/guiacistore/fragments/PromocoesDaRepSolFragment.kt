@@ -11,18 +11,15 @@ import br.com.guiacistore.R
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.fragment_historia_da_academia_evolution.*
-import kotlinx.android.synthetic.main.fragment_historia_da_barbearia_greg.*
+import kotlinx.android.synthetic.main.fragment_promocoes_da_repsol.*
 
+class PromocoesDaRepSolFragment : Fragment(), IFirebase {
 
-class HistoriaDaAcademiaEvolutionFragment : Fragment(), IFirebase {
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+        // Inflate the layout for this fragment
         doDatabaseInstance(1)
-
-
-        return inflater.inflate(R.layout.fragment_historia_da_academia_evolution, container, false)
+        return inflater.inflate(R.layout.fragment_promocoes_da_repsol, container, false)
     }
 
 
@@ -36,7 +33,10 @@ class HistoriaDaAcademiaEvolutionFragment : Fragment(), IFirebase {
 
     override fun doDatabaseInstance(id: Int): Boolean {
 
-            barbeariaGregHistoriaProgressBar?.visibility = View.VISIBLE
+
+            repsolPromocoesProgressBar?.visibility = View.VISIBLE
+
+
 
 
         referenciaFirebase?.child(id.toString())
@@ -48,18 +48,19 @@ class HistoriaDaAcademiaEvolutionFragment : Fragment(), IFirebase {
                 for (d in dataSnapshot?.children!!) {
 
                     val cliente = d.getValue(LojasModel::class.java)
+                    repsol_promocoes?.text =  cliente?.repsol_promocoes
 
-                    academia_evolution_historia_da_empresa?.text = cliente?.academia_evolution_historia_da_empresa
 
-                    academiaEvolutionHistoriaProgressBar?.visibility = View.INVISIBLE
                 }
 
-
+                repsolPromocoesProgressBar?.visibility = View.INVISIBLE
 
             }
 
             override fun onCancelled(databaseError: DatabaseError?) {
                 Log.d("onCancelled", "error...", databaseError?.toException())
+
+
             }
 
         })
@@ -69,5 +70,3 @@ class HistoriaDaAcademiaEvolutionFragment : Fragment(), IFirebase {
 
 
 }
-
-

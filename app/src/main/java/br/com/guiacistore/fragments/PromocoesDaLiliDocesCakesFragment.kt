@@ -11,11 +11,10 @@ import br.com.guiacistore.R
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.fragment_novidades_da_academia_evolution.*
-import kotlinx.android.synthetic.main.fragment_promocoes_da_barbearia_greg.*
+import kotlinx.android.synthetic.main.fragment_promocoes_lili_doces_cakes.*
 
 
-class PromocoesDaAcademiaEvolutionFragment : Fragment(), IFirebase {
+class PromocoesDaLiliDocesCakesFragment : Fragment(), IFirebase {
 
 
     override val databaseInstance: FirebaseDatabase?
@@ -29,7 +28,7 @@ class PromocoesDaAcademiaEvolutionFragment : Fragment(), IFirebase {
                               savedInstanceState: Bundle?): View? {
 
         doDatabaseInstance(1)
-        return inflater.inflate(R.layout.fragment_novidades_da_academia_evolution, container, false)
+        return inflater.inflate(R.layout.fragment_promocoes_lili_doces_cakes, container, false)
     }
 
 
@@ -37,7 +36,7 @@ class PromocoesDaAcademiaEvolutionFragment : Fragment(), IFirebase {
     override fun doDatabaseInstance(id: Int): Boolean {
 
 
-            gregBarbeariaProgressBar?.visibility = View.VISIBLE
+        promocoesLiliDocesCakesProgressBar?.visibility = View.VISIBLE
 
 
         referenciaFirebase?.child(id.toString())
@@ -49,9 +48,9 @@ class PromocoesDaAcademiaEvolutionFragment : Fragment(), IFirebase {
                 for (d in dataSnapshot?.children!!) {
 
                     val cliente = d.getValue(LojasModel::class.java)
-                    academia_evolution_promocoes?.text =  cliente?.academia_evolution_promocoes
+                    lili_doces_cakes_promocoes?.text =  cliente?.lili_doces_cakes_promocoes
 
-                    promocoesAcademiaEvolutionProgressBar?.visibility = View.INVISIBLE
+                    promocoesLiliDocesCakesProgressBar?.visibility = View.INVISIBLE
                 }
 
             }
