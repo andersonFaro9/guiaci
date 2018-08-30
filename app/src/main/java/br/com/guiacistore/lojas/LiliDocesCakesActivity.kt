@@ -54,7 +54,7 @@ class LiliDocesCakesActivity : AppCompatActivity(),  Invisible, IFirebase,ICheck
                     val cliente = d.getValue(LojasModel::class.java)
 
                     val listaApp  = listOf(
-                            //Mostra a lista de serviços da  Barbearia do Greg
+
                             cliente?.lili_doces_cakes_produto_1, cliente?.lili_doces_cakes_produto_2,
                             cliente?.lili_doces_cakes_produto_3, cliente?.lili_doces_cakes_produto_4,
                             cliente?.lili_doces_cakes_produto_5, cliente?.lili_doces_cakes_produto_6,
@@ -66,9 +66,11 @@ class LiliDocesCakesActivity : AppCompatActivity(),  Invisible, IFirebase,ICheck
                     val arrayAdapter : ArrayAdapter<String?> = ArrayAdapter(this@LiliDocesCakesActivity, android.R.layout.simple_list_item_1, listaApp)
                     servicos_lili_doces_cakes?.adapter = arrayAdapter //<- com as extensions
 
-                    servicosDocesCakesProgressBar?.visibility = View.INVISIBLE
 
                 }
+
+                servicosDocesCakesProgressBar?.visibility = View.INVISIBLE
+
 
             }
 

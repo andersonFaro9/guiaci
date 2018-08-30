@@ -99,9 +99,9 @@ class GregBarbeariaActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckP
 
         val adapter = FragmentPagerItemAdapter(
                 supportFragmentManager, FragmentPagerItems.with(this)
-                .add("PROMOÇÕES", PromocoesDaBarbeariaGregFragment::class.java)
-                .add("SERVIÇOS", ServicosDaBarbeariaGregFragment::class.java)
                 .add("HISTÓRIA", HistoriaDaBarbeariaGregFragment::class.java)
+                .add("SERVIÇOS", ServicosDaBarbeariaGregFragment::class.java)
+                .add("PROMOÇÕES", PromocoesDaBarbeariaGregFragment::class.java)
 
                 .create())
 

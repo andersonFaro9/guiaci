@@ -6,7 +6,7 @@ import br.com.guiacistore.R
 import br.com.guiacistore.interfaces.IButtonOfCloseActivity
 import kotlinx.android.synthetic.main.activity_speednet_redesocial.*
 
-class VeniviciRedesSociaisActivity : AppCompatActivity(), IButtonOfCloseActivity {
+class AcademiaEvolutionRedesSociaisActivity : AppCompatActivity(), IButtonOfCloseActivity {
 
     override fun closeActivity() {
         close.setOnClickListener { finish() }
@@ -14,7 +14,7 @@ class VeniviciRedesSociaisActivity : AppCompatActivity(), IButtonOfCloseActivity
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_venivici_redesocial)
+        setContentView(R.layout.activity_academia_evolution_redesocial)
         closeActivity()
     }
 

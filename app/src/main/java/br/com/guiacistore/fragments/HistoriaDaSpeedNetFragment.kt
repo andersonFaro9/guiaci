@@ -13,6 +13,8 @@ import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_historia_da_speednet.*
 
+
+
 class HistoriaDaSpeedNetFragment : Fragment(), IFirebase {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -51,6 +53,7 @@ class HistoriaDaSpeedNetFragment : Fragment(), IFirebase {
                     val cliente = d.getValue(LojasModel::class.java)
 
                     speednet_historia_da_empresa?.text = cliente?.speednet_historia_da_empresa
+
 
 
                 }

@@ -1,6 +1,5 @@
 package br.com.guiacistore.fragments
 
-
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.util.Log
@@ -11,16 +10,14 @@ import br.com.guiacistore.R
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.fragment_historia_da_venivici.*
+import kotlinx.android.synthetic.main.fragment_historia_da_academia_evolution.*
 
-
-class HistoriaDaVeniviciFragment : Fragment(), IFirebase {
-
+class HistoriaDaAcademiaEvolutionFragment :  Fragment(), IFirebase {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         doDatabaseInstance(1)
 
-        return inflater.inflate(R.layout.fragment_historia_da_venivici, container, false)
+        return inflater.inflate(R.layout.fragment_historia_da_academia_evolution, container, false)
     }
 
 
@@ -36,7 +33,7 @@ class HistoriaDaVeniviciFragment : Fragment(), IFirebase {
     override fun doDatabaseInstance(id: Int): Boolean {
 
 
-            veniviciHistoriaProgressBar?.visibility = View.VISIBLE
+        evolutionHistoriaProgressBar?.visibility = View.VISIBLE
 
 
         referenciaFirebase?.child(id.toString())
@@ -49,9 +46,9 @@ class HistoriaDaVeniviciFragment : Fragment(), IFirebase {
 
                     val cliente = d.getValue(LojasModel::class.java)
 
-                    venivici_historia_da_empresa?.text = cliente?.venivici_historia_da_empresa
+                    academia_evolution_historia_da_empresa?.text = cliente?.academia_evolution_historia_da_empresa
 
-                    veniviciHistoriaProgressBar?.visibility = View.INVISIBLE
+                    evolutionHistoriaProgressBar?.visibility = View.INVISIBLE
                 }
 
 
@@ -69,5 +66,3 @@ class HistoriaDaVeniviciFragment : Fragment(), IFirebase {
 
 
 }
-
-

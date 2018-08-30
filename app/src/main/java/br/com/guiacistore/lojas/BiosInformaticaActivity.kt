@@ -21,7 +21,7 @@ import br.com.guiacistore.interfaces.ICheckPermission
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
-import br.com.guiacistore.redesocial.LiliDocesCakesRedesSociaisActivity
+import br.com.guiacistore.redesocial.BiosInformaticaRedesSociaisActivity
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
@@ -133,7 +133,7 @@ class BiosInformaticaActivity : AppCompatActivity(),  Invisible, IFirebase,IChec
 
             R.id.ic_menu-> {
 
-                val intent = Intent(this@BiosInformaticaActivity, LiliDocesCakesRedesSociaisActivity::class.java)
+                val intent = Intent(this@BiosInformaticaActivity, BiosInformaticaRedesSociaisActivity::class.java)
 
                 startActivity (intent)
                 return true

@@ -75,6 +75,9 @@ data class LojasModel(
         var academia_evolution_servico2 : String?= null,
         var academia_evolution_servico3 : String?= null,
         var academia_evolution_servico4 : String?= null,
+        var academia_evolution_servico5 : String?= null,
+        var academia_evolution_servico6 : String?= null,
+        var academia_evolution_servico7 : String?= null,
 
 
         //speednet
@@ -115,6 +118,11 @@ data class LojasModel(
         var repsol_produto_7: String?= null,
         var repsol_produto_8: String?= null,
         var repsol_produto_9: String?= null,
+        var repsol_produto_10: String?= null,
+        var repsol_produto_11: String?= null,
+        var repsol_produto_12: String?= null,
+
+
 
 
         var lili_doces_cakes_historia_da_empresa : String?=null,

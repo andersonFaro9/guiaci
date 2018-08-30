@@ -71,10 +71,6 @@
         <!-- </service> -->
 
         <activity
-            android:name=".lojas.VeniviciActivity"
-            android:parentActivityName=".lojas.VeniviciActivity"
-            android:theme="@style/themeVenivice" />
-        <activity
             android:name=".lojas.SpeedNetActivity"
             android:parentActivityName=".lojas.SpeedNetActivity"
             android:theme="@style/themeSpeednet" />
@@ -116,12 +112,20 @@
             android:parentActivityName=".lojas.LiliDocesCakesActivity"
             android:theme="@style/themeDocesCake" />
 
+        <activity android:name=".lojas.AcademiaEvolutionActivity"
+            android:parentActivityName=".lojas.AcademiaEvolutionActivity"
+            android:theme="@style/themeEvolution"
+            />
+
         <activity android:screenOrientation="portrait" android:name=".redesocial.SpeednetRedesSociaisActivity" />
-        <activity android:screenOrientation="portrait" android:name=".redesocial.VeniviciRedesSociaisActivity" />
         <activity android:screenOrientation="portrait" android:name=".redesocial.GregBarbeariaRedesSociaisActivity" />
         <activity android:screenOrientation="portrait" android:name=".redesocial.IgrejaQuadrangularRedesSociaisActivity" />
         <activity android:screenOrientation="portrait" android:name=".redesocial.JobSatRedesSociaisActivity"/>
         <activity android:screenOrientation="portrait" android:name=".redesocial.LiliDocesCakesRedesSociaisActivity" />
+        <activity android:screenOrientation="portrait" android:name=".redesocial.AcademiaEvolutionRedesSociaisActivity" />
+        <activity android:name=".lojas.RepSolVendasActivity" />
+        <activity android:name=".redesocial.RepsolRedesSociaisActivity" />
+        <activity android:name=".redesocial.BiosInformaticaRedesSociaisActivity" />
 
 
     </application>

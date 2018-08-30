@@ -5,10 +5,10 @@
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.ServicosDaVeniviciFragment">
+    tools:context=".fragments.ServicosDaAcademiaEvolutionFragment">
 
     <ListView
-        android:id="@+id/venivici_servicos"
+        android:id="@+id/servicos_academia_evolution"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
@@ -20,19 +20,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <ProgressBar
-        android:id="@+id/veniviciServicosProgressBar"
+        android:id="@+id/servicosAcademiaEvolutionProgressBar"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginBottom="150dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:indeterminateTint="@color/color_loading"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/venivici_servicos"
+        app:layout_constraintBottom_toBottomOf="@+id/servicos_academia_evolution"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/venivici_servicos" />
-
+        app:layout_constraintTop_toTopOf="@+id/servicos_academia_evolution"
+        tools:layout_marginBottom="11dp" />
 
 </android.support.constraint.ConstraintLayout>

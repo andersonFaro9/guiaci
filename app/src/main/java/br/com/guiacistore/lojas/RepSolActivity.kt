@@ -15,14 +15,13 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
 import br.com.guiacistore.R
-import br.com.guiacistore.fragments.HistoriaDaRepSolFragment
 import br.com.guiacistore.fragments.PromocoesDaRepSolFragment
 import br.com.guiacistore.fragments.ServicosDaRepsolFragment
 import br.com.guiacistore.interfaces.ICheckPermission
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
-import br.com.guiacistore.redesocial.VeniviciRedesSociaisActivity
+import br.com.guiacistore.redesocial.RepsolRedesSociaisActivity
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
@@ -55,23 +54,20 @@ class RepSolActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPermissi
 
                     val cliente = d.getValue(LojasModel::class.java)
 
-                    val listaApp  = listOf(
-
+                    val listaApp = listOf(
 
                             cliente?.repsol_produto_1.toString(), cliente?.repsol_produto_2.toString(),
-                            cliente?.repsol_produto_3.toString(),cliente?.repsol_produto_4.toString(),
-                            cliente?.repsol_produto_5.toString(),cliente?.repsol_produto_6.toString()
-
+                            cliente?.repsol_produto_3.toString(), cliente?.repsol_produto_4.toString(),
+                            cliente?.repsol_produto_5.toString(), cliente?.repsol_produto_6.toString(),
+                            cliente?.repsol_produto_7.toString(), cliente?.repsol_produto_8.toString(),
+                            cliente?.repsol_produto_9.toString(), cliente?.repsol_produto_10.toString(),
+                            cliente?.repsol_produto_11.toString(), cliente?.repsol_produto_12.toString()
 
                     )
 
-
                     val arrayAdapter : ArrayAdapter<Any?> = ArrayAdapter(this@RepSolActivity, android.R.layout.simple_list_item_1, listaApp)
                     repsol_servicos?.adapter = arrayAdapter //<- com as extensions
-
-
                     repSolServicosProgressBar?.visibility = View.INVISIBLE
-
 
                 }
 
@@ -99,16 +95,15 @@ class RepSolActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPermissi
 
         supportActionBar?.title = "RepSol Moto Center"
 
-
-
         // tira elevação da borda da actionbar
         supportActionBar?.elevation = 0F
 
         val adapter = FragmentPagerItemAdapter(
                 supportFragmentManager, FragmentPagerItems.with(this)
-                .add("HISTÓRIA", HistoriaDaRepSolFragment::class.java)
-                .add("SERVIÇOS", ServicosDaRepsolFragment::class.java)
+                //.add("HISTÓRIA", HistoriaDaRepSolFragment::class.java)
+                .add("SERVIÇOS",  ServicosDaRepsolFragment::class.java)
                 .add("PROMOÇÕES", PromocoesDaRepSolFragment::class.java)
+                //.add("VENDAS",    VendasDaRepsolFragment::class.java)
                 .create())
 
         val viewPager = findViewById<View>(R.id.viewpager) as ViewPager
@@ -145,7 +140,7 @@ class RepSolActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPermissi
 
             R.id.ic_menu-> {
 
-                val intent = Intent(this@RepSolActivity, VeniviciRedesSociaisActivity::class.java)
+                val intent = Intent(this@RepSolActivity, RepsolRedesSociaisActivity::class.java)
 
                 startActivity (intent)
                 return true
@@ -183,7 +178,7 @@ class RepSolActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPermissi
     fun callPhone(){
 
         val callIntent = Intent(Intent.ACTION_CALL)
-        callIntent.data = Uri.parse("tel:998393329")
+        callIntent.data = Uri.parse("tel:997393329")
         startActivity(callIntent)
     }
 

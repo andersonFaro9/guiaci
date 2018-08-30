@@ -7,7 +7,10 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.Filter
+import android.widget.Filterable
+import android.widget.ImageView
+import android.widget.TextView
 import br.com.guiacistore.R
 import br.com.guiacistore.lojas.*
 import java.util.*
@@ -106,8 +109,9 @@ class ListaDeClientesAdapter(private val context: Context, private var list: Lis
                 3 ->  context.startActivity(Intent(context,LiliDocesCakesActivity::class.java ))
                 4 ->  context.startActivity(Intent(context,BiosInformaticaActivity::class.java ))
                 5 ->  context.startActivity(Intent(context,RepSolActivity::class.java ))
-                6 ->  context.startActivity(Intent(context,QuadrangularActivity::class.java ))
-                7 ->  Toast.makeText(context, "Em breve ficará disponível!", Toast.LENGTH_SHORT).show()
+                6 ->  context.startActivity(Intent(context,AcademiaEvolutionActivity::class.java ))
+                7 ->  context.startActivity(Intent(context,QuadrangularActivity::class.java ))
+
 
             }
 

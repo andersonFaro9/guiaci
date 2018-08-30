@@ -64,7 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="28dp"
             android:layout_marginTop="20dp"
-            android:text="Curta: @JobSatPojuca"
+            android:text="Curta: @Repsol-Moto-Center"
             android:textAlignment="center"
             android:textColor="@color/album_title"
             android:textSize="17dp"

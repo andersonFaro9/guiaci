@@ -11,16 +11,10 @@ import br.com.guiacistore.R
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.fragment_promocoes_da_venivici.*
+import kotlinx.android.synthetic.main.fragment_promocoes_academia_evolution.*
 
-class PromocoesDaVeniviciFragment : Fragment(), IFirebase {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        doDatabaseInstance(1)
-        return inflater.inflate(R.layout.fragment_promocoes_da_venivici, container, false)
-    }
+class PromocoesDaAcademiaEvolutionFragment : Fragment(), IFirebase {
 
 
     override val databaseInstance: FirebaseDatabase?
@@ -30,13 +24,19 @@ class PromocoesDaVeniviciFragment : Fragment(), IFirebase {
         get() = databaseInstance?.getReference("clientes")
 
 
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+
+        doDatabaseInstance(1)
+        return inflater.inflate(R.layout.fragment_promocoes_academia_evolution, container, false)
+    }
+
+
 
     override fun doDatabaseInstance(id: Int): Boolean {
 
 
-            veniviciPromocoesProgressBar?.visibility = View.VISIBLE
-
-
+        promocoesAcademiaEvolutionProgressBar?.visibility = View.VISIBLE
 
 
         referenciaFirebase?.child(id.toString())
@@ -48,12 +48,10 @@ class PromocoesDaVeniviciFragment : Fragment(), IFirebase {
                 for (d in dataSnapshot?.children!!) {
 
                     val cliente = d.getValue(LojasModel::class.java)
-                    venivici_promocoes?.text =  cliente?.venivici_promocoes
+                    academia_evolution_promocoes?.text =  cliente?.academia_evolution_promocoes
 
-
+                    promocoesAcademiaEvolutionProgressBar?.visibility = View.INVISIBLE
                 }
-
-                veniviciPromocoesProgressBar?.visibility = View.INVISIBLE
 
             }
 
@@ -67,6 +65,7 @@ class PromocoesDaVeniviciFragment : Fragment(), IFirebase {
 
         return true
     }
+
 
 
 }

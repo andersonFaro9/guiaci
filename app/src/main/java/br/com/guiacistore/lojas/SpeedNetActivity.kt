@@ -30,6 +30,7 @@ import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 import kotlinx.android.synthetic.main.fragment_plano_speednet.*
 
+
 class SpeedNetActivity : AppCompatActivity(),
            Invisible,  IFirebase, ICheckPermission {
 
@@ -92,6 +93,7 @@ class SpeedNetActivity : AppCompatActivity(),
 
                     val cliente = d.getValue(LojasModel::class.java)
                     speednet_download_5_megas?.text = cliente?.speednet_download_5_megas
+
                     speednet_download_5_megas_speedZap?.text = cliente?.speednet_download_5_megas_speedZap
 
                     speednet_download_7_megas?.text = cliente?.speednet_download_7_megas
