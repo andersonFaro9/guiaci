@@ -19,22 +19,19 @@
     <TextView
         android:id="@+id/speednet_historia_da_empresa"
         android:layout_width="0dp"
-        android:layout_height="224dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="  "
-        android:textIsSelectable="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="349dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:justificationMode="inter_word"
+        android:text="Com um atendimento eficaz e uso de tecnologias inovadoras, a SpeedNet Alliance é uma empresa brasileira fundada em outubro de 2012 com o intuito imediato de suprir a carência de acesso à internet em Pojuca, na Bahia. Cidade que contava somente com planos de velocidade de até 600Kbps e preços elevados. Assim nasceu a SpeedNet Alliance: à partir da certeza de criar um provedor de internet que atendesse às reais necessidades de seus clientes. Uma empresa que age dentro da legislação homologada pela Anatel."
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guiaci_foguete"
+        app:layout_constraintTop_toBottomOf="@+id/guiaci_foguete" />
 
-        app:layout_constraintVertical_bias="0.0" />
+
 
 
     <ProgressBar

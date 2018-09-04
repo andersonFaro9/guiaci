@@ -59,6 +59,8 @@ dependencies {
     implementation 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar'
     implementation 'com.android.support:support-v4:27.1.1'
     implementation 'com.uncopt:android.justified:1.0'
+    implementation 'me.biubiubiu.justifytext:library:1.1'
+
 }
 
 repositories {

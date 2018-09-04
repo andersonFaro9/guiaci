@@ -10,6 +10,10 @@ import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat.checkSelfPermission
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
+import android.text.Layout
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.style.AlignmentSpan
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -31,6 +35,8 @@ import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 import kotlinx.android.synthetic.main.fragment_plano_speednet.*
 
 
+
+
 class SpeedNetActivity : AppCompatActivity(),
            Invisible,  IFirebase, ICheckPermission {
 
@@ -40,7 +46,6 @@ class SpeedNetActivity : AppCompatActivity(),
 
         setContentView(R.layout.loja_speednet)
         supportActionBar?.title = "Speednet Alliance"
-
 
         // tira elevação da borda da actionbar
 
@@ -87,12 +92,15 @@ class SpeedNetActivity : AppCompatActivity(),
 
         referenciaFirebase?.addValueEventListener(object: ValueEventListener {
 
+
             override fun onDataChange(dataSnapshot: DataSnapshot?) {
 
                 for (d in dataSnapshot?.children!!) {
 
                     val cliente = d.getValue(LojasModel::class.java)
+
                     speednet_download_5_megas?.text = cliente?.speednet_download_5_megas
+                    //speednet_download_5_megas.justificationMode = JUSTIFICATION_MODE_INTER_WORD;
 
                     speednet_download_5_megas_speedZap?.text = cliente?.speednet_download_5_megas_speedZap
 
