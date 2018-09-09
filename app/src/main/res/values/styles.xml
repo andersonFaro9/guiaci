@@ -53,6 +53,24 @@
     </style>
 
 
+    <style name="themeMaseratt" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryMaseratt</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryMaseratt</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+    <style name="themeEsound" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryEsound</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryEsound</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
     <style name="themeGreg" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimaryGreg</item>

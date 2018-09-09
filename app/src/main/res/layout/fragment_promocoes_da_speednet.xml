@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/cardview_light_background">
+    android:layout_height="match_parent">
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -22,23 +21,24 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="272dp"
             android:elegantTextHeight="true"
-            android:text=" Natal antecipado: Indique dois amigos e ganhe um mês grátis de internet.  Consulte nosso regulamento no site www.speednetba.com.br "
-            android:textAlignment="textStart"
             android:justificationMode="inter_word"
+            android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="13sp"
             android:textIsSelectable="true"
+            android:textSize="14sp"
+            android:text=""
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
+
         <ProgressBar
             android:id="@+id/speednetPromocoesProgressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="22dp"
             android:indeterminateTint="@color/color_loading"
             android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"

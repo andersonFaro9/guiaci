@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/browser_actions_bg_grey">
+    android:layout_height="match_parent">
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -12,10 +11,8 @@
         android:id="@+id/frameLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/cardview_light_background"
-        tools:context=".fragments.PromocoesDaRepSolFragment">
 
-        <!-- TODO: Update blank fragment layout -->
+        tools:context=".fragments.PromocoesDaRepSolFragment">
 
 
         <TextView
@@ -26,12 +23,12 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:elegantTextHeight="true"
-            android:text="   "
             android:justificationMode="inter_word"
+            android:text="   "
+            android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="13sp"
-            android:textAlignment="textStart"
             android:textIsSelectable="true"
+            android:textSize="14sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.428"

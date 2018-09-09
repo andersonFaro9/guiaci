@@ -10,14 +10,16 @@
     <color name="colorPrimarySpeednet">#f58634</color>
     <color name="colorPrimaryJobSat">#e71212</color>
     <color name="colorPrimaryDocesCake">#e1599d</color>
+    <color name="colorPrimaryMaseratt">#141202</color>
     <color name="colorPrimaryQuadrangular">#8d02ff</color>
+    <color name="colorPrimaryEsound">#828282</color>
 
     <color name="colorPrimaryy">#F50057</color>
     <color name="colorPrimaryDark">#e0267d</color>
     <color name="colorAccent">#ff4069</color>
     <color name="viewBg">#f1f5f8</color>
     <color name="album_title">#4c4c4c</color>
-    <color name="color_loading">#ec4c97</color>
+    <color name="color_loading">#e0267d</color>
     <color name="background_splash">#e0267d</color>
     <color name="primary_material_dark">#fff</color>
     <color name="primary_material_dark_text_selected_for_background_lilac">#3a011c</color>

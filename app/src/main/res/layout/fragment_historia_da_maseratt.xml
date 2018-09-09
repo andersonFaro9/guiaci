@@ -11,8 +11,7 @@
         android:id="@+id/frameLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".fragments.HistoriaDaBarbeariaGregFragment">
-
+        tools:context=".fragments.HistoriaDaMaserattFragment">
 
 
         <ImageView
@@ -24,11 +23,26 @@
             android:layout_marginTop="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/barbeariaGregHistoriaProgressBar"
+            app:layout_constraintTop_toBottomOf="@+id/maserattHistoriaProgressBar"
             app:srcCompat="@drawable/historia_da_empresa" />
 
+
+
+        <ProgressBar
+            android:id="@+id/maserattHistoriaProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
         <TextView
-            android:id="@+id/gregbarbearia_historia_da_empresa"
+            android:id="@+id/studio_maseratt_historia_da_empresa"
             android:layout_width="wrap_content"
             android:layout_height="293dp"
             android:layout_marginEnd="4dp"
@@ -46,22 +60,11 @@
 
 
 
-        <ProgressBar
-            android:id="@+id/barbeariaGregHistoriaProgressBar"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
 
 
 
 
 
-    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
 </ScrollView>

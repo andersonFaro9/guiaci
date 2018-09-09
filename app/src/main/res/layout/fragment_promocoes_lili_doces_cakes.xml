@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/common_google_signin_btn_text_dark_default">
+    >
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -24,10 +24,11 @@
             android:layout_marginTop="272dp"
             android:elegantTextHeight="true"
             android:justificationMode="inter_word"
-            android:text=""
+            android:text="Ops!, não fique triste, em breve teremos mais promoções!!"
+            android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="13sp"
             android:textIsSelectable="true"
+            android:textSize="14sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

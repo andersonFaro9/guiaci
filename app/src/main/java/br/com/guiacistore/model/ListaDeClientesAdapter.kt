@@ -111,6 +111,8 @@ class ListaDeClientesAdapter(private val context: Context, private var list: Lis
                 5 ->  context.startActivity(Intent(context,RepSolActivity::class.java ))
                 6 ->  context.startActivity(Intent(context,AcademiaEvolutionActivity::class.java ))
                 7 ->  context.startActivity(Intent(context,QuadrangularActivity::class.java ))
+                8 ->  context.startActivity(Intent(context, StudioMaserattActivity::class.java ))
+                9 -> context.startActivity(Intent(context, StudioESoundActivity::class.java))
 
 
             }

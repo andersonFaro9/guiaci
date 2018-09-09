@@ -138,6 +138,28 @@ data class LojasModel(
         var lili_doces_cakes_produto_9: String?= null,
 
 
+
+        var studio_maseratt_historia_da_empresa: String?= null,
+        var studio_maseratt_promocoes: String?= null,
+        var studio_maseratt_produto_1: String?= null,
+        var studio_maseratt_produto_2: String?= null,
+        var studio_maseratt_produto_3: String?= null,
+        var studio_maseratt_produto_4: String?= null,
+        var studio_maseratt_produto_5: String?= null,
+        var studio_maseratt_produto_6: String?= null,
+
+
+        var studio_esound_historia_da_empresa: String?= null,
+        var studio_esound_promocoes: String?= null,
+        var studio_esound_produto_1: String?= null,
+        var studio_esound_produto_2: String?= null,
+        var studio_esound_produto_3: String?= null,
+        var studio_esound_produto_4: String?= null,
+        var studio_esound_produto_5: String?= null,
+        var studio_esound_produto_6: String?= null,
+
+
+
         var bios_informatica_promocoes: String?= null,
         var bios_servico1: String?= null,
         var bios_servico2: String?= null,

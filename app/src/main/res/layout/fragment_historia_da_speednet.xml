@@ -4,8 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/browser_actions_bg_grey">
+    android:layout_height="match_parent">
 
 
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -16,35 +15,37 @@
     android:layout_height="match_parent"
     tools:context=".fragments.HistoriaDaSpeedNetFragment">
 
-    <TextView
-        android:id="@+id/speednet_historia_da_empresa"
-        android:layout_width="0dp"
-        android:layout_height="349dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
-        android:justificationMode="inter_word"
-        android:text="Com um atendimento eficaz e uso de tecnologias inovadoras, a SpeedNet Alliance é uma empresa brasileira fundada em outubro de 2012 com o intuito imediato de suprir a carência de acesso à internet em Pojuca, na Bahia. Cidade que contava somente com planos de velocidade de até 600Kbps e preços elevados. Assim nasceu a SpeedNet Alliance: à partir da certeza de criar um provedor de internet que atendesse às reais necessidades de seus clientes. Uma empresa que age dentro da legislação homologada pela Anatel."
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guiaci_foguete" />
-
-
-
 
     <ProgressBar
         android:id="@+id/speednetHistoriaProgressBar"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/speednet_historia_da_empresa"
+        android:layout_width="wrap_content"
+        android:layout_height="293dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:justificationMode="inter_word"
+        android:text=" "
+        android:textAlignment="textStart"
+        android:textIsSelectable="true"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guiaci_foguete" />
+
 
 
     <ImageView
@@ -57,7 +58,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/speednetHistoriaProgressBar"
-        app:srcCompat="@drawable/historia_guiaci" />
+        app:srcCompat="@drawable/historia_da_empresa" />
 
 
 
