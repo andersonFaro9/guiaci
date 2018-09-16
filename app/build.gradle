@@ -18,8 +18,8 @@ android {
         ]
         minSdkVersion 21
         targetSdkVersion 27
-        versionCode 12
-        versionName "1.2.5" //<-versão já syncronizada mas precisa ser colocada ainda hoje dia 8/09/2018
+        versionCode 13
+        versionName "1.2.6"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
 

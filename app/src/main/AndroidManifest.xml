@@ -91,6 +91,9 @@
         <activity android:name=".lojas.StudioESoundActivity" android:theme="@style/themeEsound"
             android:parentActivityName=".lojas.StudioESoundActivity"/>
 
+
+        <activity android:name=".lojas.InoveActivity"  android:parentActivityName=".lojas.InoveActivity" android:theme="@style/themeInove" />
+
         <activity android:screenOrientation="portrait" android:name=".redesocial.SpeednetRedesSociaisActivity" />
         <activity android:screenOrientation="portrait" android:name=".redesocial.GregBarbeariaRedesSociaisActivity" />
         <activity android:screenOrientation="portrait" android:name=".redesocial.IgrejaQuadrangularRedesSociaisActivity" />
@@ -102,6 +105,7 @@
 
 
         <activity android:name=".redesocial.StudioMaserattActivityRedesSociaisActivity" />
+        <activity android:name=".redesocial.InoveRedesSociaisActivity" />
 
 
     </application>

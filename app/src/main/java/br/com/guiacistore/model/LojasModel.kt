@@ -8,41 +8,6 @@ package br.com.guiacistore.model
 
 data class LojasModel(
 
-        //venivici
-        //17 produtos
-        var venivici_historia_da_empresa:String?= null,
-        var venivici_imagem: String?= null,
-        var venivici_promocoes: String?= null,
-        var venivici_produto_1: String?= null,
-        var venivici_produto_2: String?= null,
-        var venivici_produto_3: String?= null,
-
-        var venivici_produto_4: String?= null,
-        var venivici_produto_5: String?= null,
-        var venivici_produto_6: String?= null,
-
-        var venivici_produto_7: String?= null,
-        var venivici_produto_8: String?= null,
-        var venivici_produto_9: String?= null,
-
-        var venivici_produto_10: String?= null,
-        var venivici_produto_11: String?= null,
-        var venivici_produto_12: String?= null,
-
-        var venivici_produto_13: String?= null,
-        var venivici_produto_14: String?= null,
-        var venivici_produto_15: String?= null,
-
-        var venivici_produto_16: String?= null,
-        var venivici_produto_17: String?= null,
-
-        var venivici_produto_18: String?= null,
-        var venivici_produto_19: String?= null,
-        var venivici_produto_20: String?= null,
-
-        var venivici_produto_21: String?= null,
-        var venivici_produto_22: String?= null,
-
 
         var gregbarbearia_historia_da_empresa: String?= null,
         var gregbarbearia_promocoes : String?= null,
@@ -168,7 +133,22 @@ data class LojasModel(
         var bios_servico5: String?= null,
         var bios_servico6: String?= null,
         var bios_servico7: String?= null,
-        var bios_servico8: String?= null
+        var bios_servico8: String?= null,
+
+
+        var inove_historia_da_empresa: String?= null,
+        var inove_novidades: String?= null,
+        var inove_servico1: String?= null,
+        var inove_servico2: String?= null,
+        var inove_servico3: String?= null,
+        var inove_servico4: String?= null,
+        var inove_servico5: String?= null,
+        var inove_servico6: String?= null,
+        var inove_servico7: String?= null,
+        var inove_servico8: String?= null,
+        var inove_servico9: String?= null,
+        var inove_servico10: String?= null,
+        var inove_servico11: String?= null
 
 )
 

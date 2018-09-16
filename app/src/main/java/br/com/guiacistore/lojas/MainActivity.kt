@@ -44,6 +44,7 @@ open class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
         list.add(ListaDeClientes("Igreja do Ev. Quadrangular de Pojuca.", "Vivendo em Cristo.", R.drawable.loja_quadrangular))
         list.add(ListaDeClientes("Studio Maseratt, seu momento é agora!.", "Fotografia, artes gráficas e publicidade.", R.drawable.loja_maseratt))
         list.add(ListaDeClientes("E Sound, sonorização.", "Casamento, aniversário e festa particular.", R.drawable.loja_esound))
+        list.add(ListaDeClientes("Inove.", "Fabricação, montagem e manutenção industrial.", R.drawable.loja_inove))
 
     }
 
