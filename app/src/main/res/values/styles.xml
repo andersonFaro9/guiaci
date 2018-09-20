@@ -24,6 +24,16 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="themeEpg" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryEpg</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryEpg</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+
     <style name="themeDocesCake" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimaryDocesCake</item>
@@ -36,6 +46,14 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimaryRepSol</item>
         <item name="colorPrimaryDark">@color/colorPrimaryRepSol</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="colorPrimaryRosaDeSaron" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryRosaDeSaron</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryRosaDeSaron</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 

@@ -91,8 +91,11 @@
         <activity android:name=".lojas.StudioESoundActivity" android:theme="@style/themeEsound"
             android:parentActivityName=".lojas.StudioESoundActivity"/>
 
+        <activity android:name=".lojas.RosaDeSaronActivity"  android:theme="@style/colorPrimaryRosaDeSaron" android:parentActivityName=".lojas.RosaDeSaronActivity"/>
 
         <activity android:name=".lojas.InoveActivity"  android:parentActivityName=".lojas.InoveActivity" android:theme="@style/themeInove" />
+        <activity android:name=".lojas.EpgActivity" android:parentActivityName=".lojas.EpgActivity" />
+
 
         <activity android:screenOrientation="portrait" android:name=".redesocial.SpeednetRedesSociaisActivity" />
         <activity android:screenOrientation="portrait" android:name=".redesocial.GregBarbeariaRedesSociaisActivity" />
@@ -102,10 +105,11 @@
         <activity android:screenOrientation="portrait" android:name=".redesocial.AcademiaEvolutionRedesSociaisActivity" />
         <activity android:screenOrientation="portrait" android:name=".redesocial.RepsolRedesSociaisActivity" />
         <activity android:screenOrientation="portrait" android:name=".redesocial.BiosInformaticaRedesSociaisActivity" />
+        <activity android:screenOrientation="portrait" android:name=".redesocial.IgrejaRosaDeSaronRedesSociaisActivity" />
+        <activity android:screenOrientation="portrait" android:name=".redesocial.StudioMaserattActivityRedesSociaisActivity" />
+        <activity android:screenOrientation="portrait" android:name=".redesocial.InoveRedesSociaisActivity" />
 
-
-        <activity android:name=".redesocial.StudioMaserattActivityRedesSociaisActivity" />
-        <activity android:name=".redesocial.InoveRedesSociaisActivity" />
+        <activity android:name=".redesocial.EpgContatosRedesSociaisActivity" />
 
 
     </application>

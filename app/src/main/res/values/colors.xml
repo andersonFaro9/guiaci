@@ -4,6 +4,8 @@
 
     <color name="colorPrimaryVenivice">#9b3035</color>
     <color name="colorPrimaryRepSol">#db0e30</color>
+    <color name="colorPrimaryRosaDeSaron">#01a75b</color>
+
     <color name="colorPrimaryBios">#0098da</color>
     <color name="colorPrimaryGreg">#79661c</color>
     <color name="colorPrimaryEvolution">#daa625</color>
@@ -14,6 +16,7 @@
     <color name="colorPrimaryQuadrangular">#8d02ff</color>
     <color name="colorPrimaryEsound">#828282</color>
     <color name="colorPrimaryInove">#2c4e58</color>
+    <color name="colorPrimaryEpg">#2c4e58</color>
 
     <color name="colorPrimaryy">#F50057</color>
     <color name="colorPrimaryDark">#e0267d</color>

@@ -14,14 +14,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
-        tools:context=".fragments.CultoNaIgrejaQuadrangular">
+        tools:context=".fragments.CultoDaIgrejaRosaDeSaron">
 
         <!-- TODO: Update blank fragment layout -->
         <TextView
-            android:id="@+id/quadrangular_culto"
+            android:id="@+id/rosa_saron_cultos"
             android:layout_width="0dp"
             android:layout_height="112dp"
             android:layout_marginEnd="4dp"
+            android:textIsSelectable="true"
             android:layout_marginStart="4dp"
             android:layout_marginTop="24dp"
             android:justificationMode="inter_word"
@@ -43,12 +44,12 @@
             android:layout_marginTop="32dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/quadrangularCultoProgressBar"
-            app:srcCompat="@drawable/cultos_igrejas" />
+            app:layout_constraintTop_toBottomOf="@+id/rosaSaronCultoProgressBar"
+            app:srcCompat="@drawable/culto_rosa_saron" />
 
 
         <ProgressBar
-            android:id="@+id/quadrangularCultoProgressBar"
+            android:id="@+id/rosaSaronCultoProgressBar"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_marginTop="32dp"

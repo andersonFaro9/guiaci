@@ -1,11 +1,5 @@
 package br.com.guiacistore.model
 
-
-/**
- * Created by faro on 3/22/18.
- */
-
-
 data class LojasModel(
 
 
@@ -67,9 +61,7 @@ data class LojasModel(
         var speednet_link_dedicado: String?= null,
 
         //quadrangular
-        var quadrangular_historia:String?= null,
-        var quadrangular_culto: String?= null,
-        var quadrangular_celulas: String?= null,
+
 
 
         var repsol_historia_da_empresa:String?= null,
@@ -148,7 +140,24 @@ data class LojasModel(
         var inove_servico8: String?= null,
         var inove_servico9: String?= null,
         var inove_servico10: String?= null,
-        var inove_servico11: String?= null
+        var inove_servico11: String?= null,
+
+        var quadrangular_historia:String?= null,
+        var quadrangular_culto: String?= null,
+        var quadrangular_celulas: String?= null,
+
+        var rosa_de_saron_historia: String?= null,
+        var rosa_saron_cultos: String?= null,
+        var rosa_saron_escola_biblica_dominical:String?= null,
+
+        var epg_novidades: String?= null,
+        var epg_contatos: String?= null,
+        var epg_servico1: String?= null,
+        var epg_servico2: String?= null,
+        var epg_servico3: String?= null,
+        var epg_servico4: String?= null,
+        var epg_servico5: String?= null,
+        var epg_servico6: String?= null
 
 )
 

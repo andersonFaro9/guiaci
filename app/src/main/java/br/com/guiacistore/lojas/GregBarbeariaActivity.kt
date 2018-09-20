@@ -154,7 +154,7 @@ class GregBarbeariaActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckP
 
     override fun checkPermissionForCallPhone() {
         when {
-            ContextCompat.checkSelfPermission(SpeedNetActivity@ this,
+            ContextCompat.checkSelfPermission(GregBarbeariaActivity@ this,
                     Manifest.permission.CALL_PHONE)
                     != PackageManager.PERMISSION_GRANTED -> if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                             Manifest.permission.CALL_PHONE)) {

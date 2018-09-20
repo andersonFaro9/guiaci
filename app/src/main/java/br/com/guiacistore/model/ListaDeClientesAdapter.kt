@@ -114,6 +114,8 @@ class ListaDeClientesAdapter(private val context: Context, private var list: Lis
                 8 ->  context.startActivity(Intent(context, StudioMaserattActivity::class.java ))
                 9 ->  context.startActivity(Intent(context, StudioESoundActivity::class.java))
                 10 -> context.startActivity(Intent(context, InoveActivity::class.java))
+                11 -> context.startActivity(Intent(context, RosaDeSaronActivity::class.java))
+                12 -> context.startActivity(Intent(context, EpgActivity::class.java))
 
 
             }

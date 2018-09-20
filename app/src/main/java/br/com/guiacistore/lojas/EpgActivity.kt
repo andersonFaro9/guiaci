@@ -15,24 +15,25 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
 import br.com.guiacistore.R
-import br.com.guiacistore.fragments.PromocoesDaRepSolFragment
-import br.com.guiacistore.fragments.ServicosDaRepsolFragment
+import br.com.guiacistore.fragments.ContatosDaEpgFragment
+import br.com.guiacistore.fragments.NovidadesDaEpgFragment
+import br.com.guiacistore.fragments.ServicosDaEpgFragment
 import br.com.guiacistore.interfaces.ICheckPermission
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
-import br.com.guiacistore.redesocial.RepsolRedesSociaisActivity
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
-import kotlinx.android.synthetic.main.fragment_servicos_da_repsol.*
+import kotlinx.android.synthetic.main.fragment_servicos_da_epg.*
 
 
-class RepSolActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPermission {
+class EpgActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
+
 
     override val referenciaFirebase: DatabaseReference?
         get() = databaseInstance?.getReference("clientes")
@@ -40,9 +41,7 @@ class RepSolActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPermissi
 
     override fun doDatabaseInstance(id: Int): Boolean {
 
-
-        repSolServicosProgressBar?.visibility = View.VISIBLE
-
+        epgServicosProgressBar?.visibility = View.VISIBLE
 
         referenciaFirebase?.child(id.toString())
 
@@ -54,20 +53,17 @@ class RepSolActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPermissi
 
                     val cliente = d.getValue(LojasModel::class.java)
 
-                    val listaApp = listOf(
+                    val listaApp  = listOf(
 
-                            cliente?.repsol_produto_1.toString(), cliente?.repsol_produto_2.toString(),
-                            cliente?.repsol_produto_3.toString(), cliente?.repsol_produto_4.toString(),
-                            cliente?.repsol_produto_5.toString(), cliente?.repsol_produto_6.toString(),
-                            cliente?.repsol_produto_7.toString(), cliente?.repsol_produto_8.toString(),
-                            cliente?.repsol_produto_9.toString(), cliente?.repsol_produto_10.toString(),
-                            cliente?.repsol_produto_11.toString(), cliente?.repsol_produto_12.toString()
-
+                            cliente?.epg_servico1,cliente?.epg_servico2,
+                            cliente?.epg_servico3,cliente?.epg_servico4,
+                            cliente?.epg_servico5, cliente?.epg_servico6
                     )
 
-                    val arrayAdapter : ArrayAdapter<Any?> = ArrayAdapter(this@RepSolActivity, android.R.layout.simple_list_item_1, listaApp)
-                    repsol_servicos?.adapter = arrayAdapter //<- com as extensions
-                    repSolServicosProgressBar?.visibility = View.INVISIBLE
+                    val arrayAdapter : ArrayAdapter<String?> = ArrayAdapter(this@EpgActivity, android.R.layout.simple_list_item_1, listaApp)
+                    epg_servicos?.adapter = arrayAdapter //<- com as extensions
+
+                    epgServicosProgressBar?.visibility = View.INVISIBLE
 
                 }
 
@@ -86,22 +82,24 @@ class RepSolActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPermissi
         return true
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.loja_repsol)
         doDatabaseInstance(1)
 
-        supportActionBar?.title = "RepSol Moto Center"
+        setContentView(R.layout.loja_epg)
+
+        supportActionBar?.title = "EPG"
 
         // tira elevação da borda da actionbar
         supportActionBar?.elevation = 0F
 
         val adapter = FragmentPagerItemAdapter(
                 supportFragmentManager, FragmentPagerItems.with(this)
-                .add("SERVIÇOS",  ServicosDaRepsolFragment::class.java)
-                .add("PROMOÇÕES", PromocoesDaRepSolFragment::class.java)
+                .add("CONTATOS",  ContatosDaEpgFragment::class.java)
+                .add("SERVIÇOS",  ServicosDaEpgFragment::class.java)
+                .add("NOVIDADES", NovidadesDaEpgFragment::class.java)
+
                 .create())
 
         val viewPager = findViewById<View>(R.id.viewpager) as ViewPager
@@ -113,6 +111,7 @@ class RepSolActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPermissi
         viewPager.adapter = adapter
 
         viewPagerTab.setViewPager(viewPager)
+
 
     }
 
@@ -130,30 +129,29 @@ class RepSolActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPermissi
 
         when (item.itemId) {
 
+//            R.id.ic_menu-> {
+//
+//                val intent = Intent(this@InoveActivity, InoveRedesSociaisActivity::class.java)
+//
+//                startActivity (intent)
+//                return true
+//            }
+
             R.id.ic_phone -> {
 
                 checkPermissionForCallPhone()
                 return true
             }
-
-            R.id.ic_menu-> {
-
-                val intent = Intent(this@RepSolActivity, RepsolRedesSociaisActivity::class.java)
-
-                startActivity (intent)
-                return true
-            }
-
-
-            }
-
+        }
 
         return super.onOptionsItemSelected(item)
     }
 
+
+
     override fun checkPermissionForCallPhone() {
         when {
-            ContextCompat.checkSelfPermission(VeniviciActivity@ this,
+            ContextCompat.checkSelfPermission(InoveActivity@ this,
                     Manifest.permission.CALL_PHONE)
                     != PackageManager.PERMISSION_GRANTED -> if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                             Manifest.permission.CALL_PHONE)) {
@@ -176,13 +174,10 @@ class RepSolActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPermissi
     fun callPhone(){
 
         val callIntent = Intent(Intent.ACTION_CALL)
-        callIntent.data = Uri.parse("tel:997393329")
+        callIntent.data = Uri.parse("tel:996629466")
         startActivity(callIntent)
     }
 
 
 
 }
-
-
-
