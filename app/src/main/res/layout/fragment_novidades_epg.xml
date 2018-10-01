@@ -16,7 +16,7 @@
 
 
         <ImageView
-            android:id="@+id/historia"
+            android:id="@+id/epg_novidades_icone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -25,7 +25,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/epgProgressBar"
-            app:srcCompat="@drawable/historia_da_empresa" />
+            app:srcCompat="@drawable/epg_novidades_icone" />
 
 
         <ProgressBar
@@ -43,17 +43,20 @@
         <TextView
             android:id="@+id/epg_novidades"
             android:layout_width="wrap_content"
-            android:layout_height="293dp"
-            android:layout_marginEnd="2dp"
+            android:layout_height="201dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginEnd="6dp"
             android:layout_marginStart="6dp"
             android:layout_marginTop="24dp"
             android:justificationMode="inter_word"
-            android:textAlignment="textStart"
+            android:text=" "
+            android:textAlignment="center"
             android:textIsSelectable="true"
             android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/historia" />
+            app:layout_constraintTop_toBottomOf="@+id/epg_novidades_icone" />
 
 
 </android.support.constraint.ConstraintLayout>

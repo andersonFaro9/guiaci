@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import br.com.guiacistore.R
 
 
-class ServicosDaInoveFragment : Fragment() {
+class CursosBlueWayFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {

@@ -157,7 +157,21 @@ data class LojasModel(
         var epg_servico3: String?= null,
         var epg_servico4: String?= null,
         var epg_servico5: String?= null,
-        var epg_servico6: String?= null
+        var epg_servico6: String?= null,
+        var epg_servico7: String?= null,
+        var epg_servico8: String?= null,
+        var epg_servico9: String?= null,
+        var epg_servico10: String?= null,
+        var epg_servico11: String?= null,
+        var epg_servico12: String?= null,
+        var epg_servico13: String?= null,
+        var epg_servico14: String?= null,
+        var epg_servico15: String?= null,
+        var epg_servico16: String?= null,
+        var epg_servico17: String?= null,
+        var epg_servico18: String?= null,
+        var epg_servico19: String?= null,
+        var epg_servico20: String?= null
 
 )
 

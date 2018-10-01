@@ -15,9 +15,9 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
 import br.com.guiacistore.R
-import br.com.guiacistore.fragments.HistoriaDaInoveFragment
-import br.com.guiacistore.fragments.NovidadesDaInoveFragment
-import br.com.guiacistore.fragments.ServicosDaInoveFragment
+import br.com.guiacistore.fragments.CursosBlueWayFragment
+import br.com.guiacistore.fragments.HistoriaBlueWayFragment
+import br.com.guiacistore.fragments.NovidadesBlueWayFragment
 import br.com.guiacistore.interfaces.ICheckPermission
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.model.IFirebase
@@ -29,7 +29,7 @@ import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 import kotlinx.android.synthetic.main.fragment_servicos_da_inove.*
 
 
-class InoveActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission {
+class BlueWayActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
@@ -63,7 +63,7 @@ class InoveActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermissio
                             cliente?.inove_servico11
                     )
 
-                    val arrayAdapter : ArrayAdapter<String?> = ArrayAdapter(this@InoveActivity, android.R.layout.simple_list_item_1, listaApp)
+                    val arrayAdapter : ArrayAdapter<String?> = ArrayAdapter(this@BlueWayActivity, android.R.layout.simple_list_item_1, listaApp)
                     inove_servicos?.adapter = arrayAdapter //<- com as extensions
 
                     inoveServicosProgressBar?.visibility = View.INVISIBLE
@@ -99,9 +99,9 @@ class InoveActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermissio
 
         val adapter = FragmentPagerItemAdapter(
                 supportFragmentManager, FragmentPagerItems.with(this)
-                .add("HISTÓRIA",  HistoriaDaInoveFragment::class.java)
-                .add("SERVIÇOS", ServicosDaInoveFragment::class.java)
-                .add("NOVIDADES", NovidadesDaInoveFragment::class.java)
+                .add("HISTÓRIA",  HistoriaBlueWayFragment::class.java)
+                .add("CURSOS", CursosBlueWayFragment::class.java)
+                .add("NOVIDADES", NovidadesBlueWayFragment::class.java)
 
                 .create())
 

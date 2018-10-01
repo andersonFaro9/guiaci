@@ -14,7 +14,7 @@ import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_novidades_epg.*
 
 
-class NovidadesDaEpgFragment : Fragment(), IFirebase {
+class NovidadesBlueWayFragment : Fragment(), IFirebase {
 
 
     override val databaseInstance: FirebaseDatabase?

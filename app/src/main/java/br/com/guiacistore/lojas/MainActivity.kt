@@ -46,7 +46,7 @@ open class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
         list.add(ListaDeClientes("E Sound, sonorização.", "Casamento, aniversário e festa particular.", R.drawable.loja_esound))
         list.add(ListaDeClientes("Inove.", "Fabricação, montagem e manutenção industrial.", R.drawable.loja_inove))
         list.add(ListaDeClientes("Igreja Batista Nacional Rosa de Saron.", " Graça e paz.", R.drawable.loja_rosa_saron))
-        //list.add(ListaDeClientes("EPG Impressões.", " Impressões diversas.", 0))
+        list.add(ListaDeClientes("EPG Impressões.", " Impressão em camisas, canecas, cartões de visita e muito mais.", R.drawable.loja_epg))
 
     }
 

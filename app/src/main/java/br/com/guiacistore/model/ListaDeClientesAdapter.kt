@@ -117,7 +117,6 @@ class ListaDeClientesAdapter(private val context: Context, private var list: Lis
                 11 -> context.startActivity(Intent(context, RosaDeSaronActivity::class.java))
                 12 -> context.startActivity(Intent(context, EpgActivity::class.java))
 
-
             }
 
         }

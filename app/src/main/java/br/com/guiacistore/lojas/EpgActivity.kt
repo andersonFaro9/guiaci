@@ -57,7 +57,14 @@ class EpgActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission 
 
                             cliente?.epg_servico1,cliente?.epg_servico2,
                             cliente?.epg_servico3,cliente?.epg_servico4,
-                            cliente?.epg_servico5, cliente?.epg_servico6
+                            cliente?.epg_servico5, cliente?.epg_servico6,
+                            cliente?.epg_servico7,cliente?.epg_servico8,
+                            cliente?.epg_servico9,cliente?.epg_servico10,
+                            cliente?.epg_servico11, cliente?.epg_servico12,
+                            cliente?.epg_servico13, cliente?.epg_servico14,
+                            cliente?.epg_servico15, cliente?.epg_servico16,
+                            cliente?.epg_servico17, cliente?.epg_servico18,
+                            cliente?.epg_servico19, cliente?.epg_servico20
                     )
 
                     val arrayAdapter : ArrayAdapter<String?> = ArrayAdapter(this@EpgActivity, android.R.layout.simple_list_item_1, listaApp)
@@ -89,7 +96,7 @@ class EpgActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission 
 
         setContentView(R.layout.loja_epg)
 
-        supportActionBar?.title = "EPG"
+        supportActionBar?.title = "EPG Impressões"
 
         // tira elevação da borda da actionbar
         supportActionBar?.elevation = 0F
@@ -119,7 +126,7 @@ class EpgActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission 
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
 
-        menuInflater.inflate(R.menu.menu_main_lojas, menu)
+        menuInflater.inflate(R.menu.menu_main_loja_epg, menu)
         return true
 
     }
@@ -151,7 +158,7 @@ class EpgActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission 
 
     override fun checkPermissionForCallPhone() {
         when {
-            ContextCompat.checkSelfPermission(InoveActivity@ this,
+            ContextCompat.checkSelfPermission(EpgActivity@ this,
                     Manifest.permission.CALL_PHONE)
                     != PackageManager.PERMISSION_GRANTED -> if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                             Manifest.permission.CALL_PHONE)) {
@@ -174,7 +181,7 @@ class EpgActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission 
     fun callPhone(){
 
         val callIntent = Intent(Intent.ACTION_CALL)
-        callIntent.data = Uri.parse("tel:996629466")
+            callIntent.data = Uri.parse("tel:96363518")
         startActivity(callIntent)
     }
 

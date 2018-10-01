@@ -25,7 +25,7 @@ class QuadrangularActivity : AppCompatActivity() {
         setContentView(R.layout.loja_quadrangular)
 
 
-        supportActionBar?.title = "Quadrangular"
+        supportActionBar?.title = "Igreja Quadrangular"
 
         // tira elevação da borda da actionbar
         supportActionBar?.elevation = 0F
