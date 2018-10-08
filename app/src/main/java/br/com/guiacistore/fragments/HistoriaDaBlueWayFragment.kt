@@ -11,10 +11,20 @@ import br.com.guiacistore.R
 import br.com.guiacistore.model.IFirebase
 import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.fragment_novidades_epg.*
+import kotlinx.android.synthetic.main.fragment_historia_da_barbearia_greg.*
 
 
-class NovidadesBlueWayFragment : Fragment(), IFirebase {
+class HistoriaDaBlueWayFragment : Fragment(), IFirebase {
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
+        doDatabaseInstance(1)
+
+
+        return inflater.inflate(R.layout.fragment_historia_da_barbearia_greg, container, false)
+    }
+
+
 
 
     override val databaseInstance: FirebaseDatabase?
@@ -24,20 +34,10 @@ class NovidadesBlueWayFragment : Fragment(), IFirebase {
         get() = databaseInstance?.getReference("clientes")
 
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-
-        doDatabaseInstance(1)
-        return inflater.inflate(R.layout.fragment_novidades_epg, container, false)
-    }
-
-
 
     override fun doDatabaseInstance(id: Int): Boolean {
 
-
-        epgProgressBar?.visibility = View.VISIBLE
-
+            barbeariaGregHistoriaProgressBar?.visibility = View.VISIBLE
 
         referenciaFirebase?.child(id.toString())
 
@@ -48,17 +48,17 @@ class NovidadesBlueWayFragment : Fragment(), IFirebase {
                 for (d in dataSnapshot?.children!!) {
 
                     val cliente = d.getValue(LojasModel::class.java)
-                    epg_novidades?.text =  cliente?.epg_novidades
 
-                    epgProgressBar?.visibility = View.INVISIBLE
+                    gregbarbearia_historia_da_empresa?.text = cliente?.gregbarbearia_historia_da_empresa
+
+                    barbeariaGregHistoriaProgressBar?.visibility = View.INVISIBLE
                 }
+
 
             }
 
             override fun onCancelled(databaseError: DatabaseError?) {
                 Log.d("onCancelled", "error...", databaseError?.toException())
-
-
             }
 
         })
@@ -67,5 +67,6 @@ class NovidadesBlueWayFragment : Fragment(), IFirebase {
     }
 
 
-
 }
+
+

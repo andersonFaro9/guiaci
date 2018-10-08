@@ -15,7 +15,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
 import br.com.guiacistore.R
-import br.com.guiacistore.fragments.HistoriaDaAcademiaEvolutionFragment
+import br.com.guiacistore.fragments.NossaMissaoBlueWayFragment
 import br.com.guiacistore.fragments.PromocoesDaAcademiaEvolutionFragment
 import br.com.guiacistore.fragments.ServicosDaAcademiaEvolutionFragment
 import br.com.guiacistore.interfaces.ICheckPermission
@@ -98,7 +98,7 @@ class AcademiaEvolutionActivity : AppCompatActivity(),  Invisible, IFirebase,ICh
 
         val adapter = FragmentPagerItemAdapter(
                 supportFragmentManager, FragmentPagerItems.with(this)
-                .add("HISTÓRIA", HistoriaDaAcademiaEvolutionFragment::class.java)
+                .add("HISTÓRIA", NossaMissaoBlueWayFragment::class.java)
                 .add("SERVIÇOS", ServicosDaAcademiaEvolutionFragment::class.java)
                 .add("PROMOÇÕES", PromocoesDaAcademiaEvolutionFragment::class.java)
 

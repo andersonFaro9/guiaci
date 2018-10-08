@@ -17,6 +17,16 @@
     </style>
 
 
+
+    <style name="themeBlueWay" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryBlueWay</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryBlueWay</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
     <style name="themeInove" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimaryInove</item>
@@ -30,8 +40,6 @@
         <item name="colorPrimaryDark">@color/colorPrimaryEpg</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
-
 
 
     <style name="themeDocesCake" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -71,6 +79,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryVenivice</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
     <style name="themeEvolution" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimaryEvolution</item>
@@ -87,14 +96,12 @@
     </style>
 
 
-
     <style name="themeEsound" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimaryEsound</item>
         <item name="colorPrimaryDark">@color/colorPrimaryEsound</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
 
 
     <style name="themeGreg" parent="Theme.AppCompat.Light.DarkActionBar">

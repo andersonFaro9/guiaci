@@ -16,7 +16,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".splash.SplashActivity"
             android:screenOrientation="portrait"
@@ -27,14 +26,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity
             android:name=".lojas.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
         <activity
             android:name=".lojas.SpeedNetActivity"
             android:parentActivityName=".lojas.SpeedNetActivity"
@@ -46,7 +42,7 @@
         <activity
             android:name=".lojas.BiosInformaticaActivity"
             android:parentActivityName=".lojas.BiosInformaticaActivity"
-            android:theme="@style/themeBios"/>
+            android:theme="@style/themeBios" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -63,55 +59,80 @@
             android:name=".lojas.GregBarbeariaActivity"
             android:parentActivityName=".lojas.GregBarbeariaActivity"
             android:theme="@style/themeGreg" />
-
         <activity
             android:name=".lojas.JobSatActivity"
             android:parentActivityName=".lojas.JobSatActivity"
             android:theme="@style/themeJobSat" />
-
-        <activity android:name=".lojas.RepSolActivity"
+        <activity
+            android:name=".lojas.RepSolActivity"
             android:parentActivityName=".lojas.RepSolActivity"
             android:theme="@style/colorPrimaryRepSol" />
-
-        <activity android:name=".lojas.LiliDocesCakesActivity"
+        <activity
+            android:name=".lojas.LiliDocesCakesActivity"
             android:parentActivityName=".lojas.LiliDocesCakesActivity"
             android:theme="@style/themeDocesCake" />
-
-        <activity android:name=".lojas.AcademiaEvolutionActivity"
+        <activity
+            android:name=".lojas.AcademiaEvolutionActivity"
             android:parentActivityName=".lojas.AcademiaEvolutionActivity"
-            android:theme="@style/themeEvolution"
-            />
-
-
-        <activity android:theme="@style/themeMaseratt"
+            android:theme="@style/themeEvolution" />
+        <activity
+            android:name=".lojas.StudioMaserattActivity"
             android:parentActivityName=".lojas.StudioMaserattActivity"
-            android:name=".lojas.StudioMaserattActivity" />
-
-
-        <activity android:name=".lojas.StudioESoundActivity" android:theme="@style/themeEsound"
-            android:parentActivityName=".lojas.StudioESoundActivity"/>
-
-        <activity android:name=".lojas.RosaDeSaronActivity"  android:theme="@style/colorPrimaryRosaDeSaron" android:parentActivityName=".lojas.RosaDeSaronActivity"/>
-
-        <activity android:name=".lojas.InoveActivity"  android:parentActivityName=".lojas.InoveActivity" android:theme="@style/themeInove" />
-        <activity android:name=".lojas.EpgActivity" android:theme="@style/themeEpg" android:parentActivityName=".lojas.EpgActivity" />
-
-
-        <activity android:screenOrientation="portrait" android:name=".redesocial.SpeednetRedesSociaisActivity" />
-        <activity android:screenOrientation="portrait" android:name=".redesocial.GregBarbeariaRedesSociaisActivity" />
-        <activity android:screenOrientation="portrait" android:name=".redesocial.IgrejaQuadrangularRedesSociaisActivity" />
-        <activity android:screenOrientation="portrait" android:name=".redesocial.JobSatRedesSociaisActivity"/>
-        <activity android:screenOrientation="portrait" android:name=".redesocial.LiliDocesCakesRedesSociaisActivity" />
-        <activity android:screenOrientation="portrait" android:name=".redesocial.AcademiaEvolutionRedesSociaisActivity" />
-        <activity android:screenOrientation="portrait" android:name=".redesocial.RepsolRedesSociaisActivity" />
-        <activity android:screenOrientation="portrait" android:name=".redesocial.BiosInformaticaRedesSociaisActivity" />
-        <activity android:screenOrientation="portrait" android:name=".redesocial.IgrejaRosaDeSaronRedesSociaisActivity" />
-        <activity android:screenOrientation="portrait" android:name=".redesocial.StudioMaserattActivityRedesSociaisActivity" />
-        <activity android:screenOrientation="portrait" android:name=".redesocial.InoveRedesSociaisActivity" />
-
+            android:theme="@style/themeMaseratt" />
+        <activity
+            android:name=".lojas.StudioESoundActivity"
+            android:parentActivityName=".lojas.StudioESoundActivity"
+            android:theme="@style/themeEsound" />
+        <activity
+            android:name=".lojas.RosaDeSaronActivity"
+            android:parentActivityName=".lojas.RosaDeSaronActivity"
+            android:theme="@style/colorPrimaryRosaDeSaron" />
+        <activity
+            android:name=".lojas.InoveActivity"
+            android:parentActivityName=".lojas.InoveActivity"
+            android:theme="@style/themeInove" />
+        <activity
+            android:name=".lojas.EpgActivity"
+            android:parentActivityName=".lojas.EpgActivity"
+            android:theme="@style/themeEpg" />
+        <activity
+            android:name=".redesocial.SpeednetRedesSociaisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".redesocial.GregBarbeariaRedesSociaisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".redesocial.IgrejaQuadrangularRedesSociaisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".redesocial.JobSatRedesSociaisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".redesocial.LiliDocesCakesRedesSociaisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".redesocial.AcademiaEvolutionRedesSociaisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".redesocial.RepsolRedesSociaisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".redesocial.BiosInformaticaRedesSociaisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".redesocial.IgrejaRosaDeSaronRedesSociaisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".redesocial.StudioMaserattActivityRedesSociaisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".redesocial.InoveRedesSociaisActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".redesocial.EpgContatosRedesSociaisActivity" />
-        <activity android:name=".lojas.BlueWayActivity" />
 
+
+        <activity android:name=".lojas.BlueWayIdiomasActivity" android:parentActivityName=".lojas.BlueWayIdiomasActivity"  android:theme="@style/themeBlueWay"  />
+        <activity android:name=".fragments.ParceirosDaBlueWayFragment" />
 
     </application>
 

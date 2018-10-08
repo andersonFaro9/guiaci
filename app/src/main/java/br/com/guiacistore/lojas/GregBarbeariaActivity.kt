@@ -57,8 +57,8 @@ class GregBarbeariaActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckP
 
                     val listaApp  = listOf(
                             //Mostra a lista de serviços da  Barbearia do Greg
-                            cliente?.gregbarbearia_servico1,cliente?.gregbarbearia_servico2,
-                            cliente?.gregbarbearia_servico3,cliente?.gregbarbearia_servico4,
+                            cliente?.gregbarbearia_servico1, cliente?.gregbarbearia_servico2,
+                            cliente?.gregbarbearia_servico3, cliente?.gregbarbearia_servico4,
                             cliente?.gregbarbearia_servico5, cliente?.gregbarbearia_servico6
                     )
 
