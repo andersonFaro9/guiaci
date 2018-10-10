@@ -8,12 +8,12 @@ import android.widget.TextView
 import br.com.guiacistore.R
 
 
-class BlueWayAdapter(private val listaFilmes: List<Filme>) : RecyclerView.Adapter<BlueWayAdapter.MyViewHolder>() {
+class BlueWayIdiomasParceirosAdapter(private val listaFilmes: List<Filme>) : RecyclerView.Adapter<BlueWayIdiomasParceirosAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
         val itemLista = LayoutInflater.from(parent.context)
-                .inflate(R.layout.adapter_lista, parent, false)
+                .inflate(R.layout.adapter_lista_blue_way_parceria, parent, false)
 
         return MyViewHolder(itemLista)
     }

@@ -1,18 +1,7 @@
 package br.com.guiacistore.model
 
-class Filme {
+data class Filme ( val tituloFilme: String, val genero: String,val ano: String )
 
-    var tituloFilme: String? = null
-    var genero: String? = null
-    var ano: String? = null
 
-    constructor() {
 
-    }
 
-    constructor(tituloFilme: String, genero: String, ano: String) {
-        this.tituloFilme = tituloFilme
-        this.genero = genero
-        this.ano = ano
-    }
-}

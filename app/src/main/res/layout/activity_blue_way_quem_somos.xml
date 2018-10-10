@@ -1,0 +1,54 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingTop="0px"
+    android:paddingRight="0dp"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/quem_somos_blue_way"
+            android:layout_width="0dp"
+            android:layout_height="257dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="Somos a família BLUE WAY e atuamos no mercado de idiomas há quase 07 anos, ofertando cursos de inglês. Atualmente com unidades nos municípios de Pojuca, praça Alm. Vasconcelos, 115-119 e em Catu, na Av. Antônio Balbino, 47. Contamos com mais de 250 alunos, com um diferencial; o ensino de qualidade e a excelência no atendimento ao cliente."
+            android:textAlignment="viewStart"
+            android:textColor="@color/album_title"
+            android:textIsSelectable="true"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quem_somos" />
+
+        <ImageView
+            android:id="@+id/quem_somos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="76dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_quem_somos" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>
+</ScrollView>

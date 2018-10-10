@@ -1,4 +1,4 @@
-package br.com.guiacistore.lojas
+package br.com.guiacistore.blueway
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import br.com.guiacistore.R
+import br.com.guiacistore.lojas.SobreActivity
 import br.com.guiacistore.model.ListaDeClientes
 import br.com.guiacistore.model.ListaDeClientesAdapter
 import kotlinx.android.synthetic.main.activity_main.*

@@ -13,6 +13,11 @@ data class LojasModel(
         var gregbarbearia_servico6 : String?= null,
 
 
+        //BlueWay Promoções
+        var blue_way_promocoes: String?= null,
+
+
+
 
         //Jobsat
 

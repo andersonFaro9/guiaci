@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".lojas.MainActivity"
+            android:name=".blueway.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
@@ -132,7 +132,15 @@
 
 
         <activity android:name=".lojas.BlueWayIdiomasActivity" android:parentActivityName=".lojas.BlueWayIdiomasActivity"  android:theme="@style/themeBlueWay"  />
-        <activity android:name=".fragments.ParceirosDaBlueWayFragment" />
+        <activity android:name=".blueway.BlueWayIdiomasParceirosActivity" android:theme="@style/themeBlueWay"  android:parentActivityName=".lojas.BlueWayIdiomasActivity" />
+        <activity android:name=".blueway.BlueWayIdiomasMetodologiaActivity" android:theme="@style/themeBlueWay"   android:parentActivityName= ".blueway.BlueWayIdiomasMetodologiaActivity"   />
+        <activity android:name=".blueway.BlueWayIdiomasPrecosActivity" android:theme="@style/themeBlueWay"   android:parentActivityName= ".blueway.BlueWayIdiomasPrecosActivity"   />
+        <activity android:name=".blueway.BlueWayIdiomasQuemSomosActivity" android:theme="@style/themeBlueWay"   android:parentActivityName= ".blueway.BlueWayIdiomasQuemSomosActivity"  />
+        <activity android:name=".blueway.BlueWayIdiomasPromocoesActivity" android:theme="@style/themeBlueWay"   android:parentActivityName= ".blueway.BlueWayIdiomasPromocoesActivity"   />
+        <activity android:name=".blueway.BlueWayIdiomasNossaMissaoActivity"  android:theme="@style/themeBlueWay"  android:parentActivityName= ".blueway.BlueWayIdiomasNossaMissaoActivity"   />
+        <activity android:name=".blueway.BlueWayIdiomasContatosActivity"  android:theme="@style/themeBlueWay"  android:parentActivityName= ".blueway.BlueWayIdiomasContatosActivity"  />
+        <activity android:name=".blueway.BlueWayIdiomasRedesSociaisActivity" android:theme="@style/themeBlueWay"  android:parentActivityName= ".blueway.BlueWayIdiomasRedesSociaisActivity"   />
+
 
     </application>
 
