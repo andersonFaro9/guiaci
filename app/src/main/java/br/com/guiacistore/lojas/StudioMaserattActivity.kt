@@ -21,7 +21,7 @@ import br.com.guiacistore.fragments.PromocoesDaMaserattFragment
 import br.com.guiacistore.fragments.ServicosDaMaserattFragment
 import br.com.guiacistore.interfaces.ICheckPermission
 import br.com.guiacistore.interfaces.Invisible
-import br.com.guiacistore.model.IFirebase
+import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.model.LojasModel
 import br.com.guiacistore.redesocial.StudioMaserattActivityRedesSociaisActivity
 import com.google.firebase.database.*

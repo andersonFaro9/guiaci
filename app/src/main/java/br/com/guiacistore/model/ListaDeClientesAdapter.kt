@@ -111,12 +111,11 @@ class ListaDeClientesAdapter(private val context: Context, private var list: Lis
                 5 ->  context.startActivity(Intent(context,RepSolActivity::class.java ))
                 6 ->  context.startActivity(Intent(context,AcademiaEvolutionActivity::class.java ))
                 7 ->  context.startActivity(Intent(context,QuadrangularActivity::class.java ))
-                8 ->  context.startActivity(Intent(context, StudioMaserattActivity::class.java ))
-                9 ->  context.startActivity(Intent(context, BlueWayIdiomasActivity::class.java))
-                10 -> context.startActivity(Intent(context, StudioESoundActivity::class.java))
-                11 -> context.startActivity(Intent(context, RosaDeSaronActivity::class.java))
-                12 -> context.startActivity(Intent(context, EpgActivity::class.java))
-                13 -> context.startActivity(Intent(context, BlueWayIdiomasActivity::class.java))
+                8 ->  context.startActivity(Intent(context,BlueWayIdiomasActivity::class.java ))
+                9 ->  context.startActivity(Intent(context, StudioESoundActivity::class.java))
+                10 -> context.startActivity(Intent(context, RosaDeSaronActivity::class.java))
+                11 -> context.startActivity(Intent(context, EpgActivity::class.java))
+                12 -> context.startActivity(Intent(context, InoveActivity::class.java))
 
             }
 

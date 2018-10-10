@@ -36,7 +36,7 @@ class BlueWayIdiomasActivity : AppCompatActivity(), ICheckPermission {
         recyclerView = findViewById(R.id.recyclerView)
 
         //Listagem de filmes
-        this.criarFilmes()
+        this.mostrarMenuBlueWay()
 
         //Configurar adapter
         val adapter = BlueWayIdiomasAdapter(listaFilmes)
@@ -56,8 +56,8 @@ class BlueWayIdiomasActivity : AppCompatActivity(), ICheckPermission {
                         applicationContext,
                         recyclerView!!,
                         object : RecyclerItemClickListener.OnItemClickListener {
-                            override fun onLongItemClick(view: View?, position: Int) {  }
 
+                            override fun onLongItemClick(view: View?, position: Int) {  }
 
                             override fun onItemClick(view: View, position: Int) {
                                 when (position) {
@@ -115,7 +115,7 @@ class BlueWayIdiomasActivity : AppCompatActivity(), ICheckPermission {
         startActivity (intent)
     }
 
-    fun criarFilmes() {
+    fun mostrarMenuBlueWay() {
 
         var filme = BlueWayModel("Quem somos", "", "")
         listaFilmes.add(filme)

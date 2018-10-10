@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".blueway.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />

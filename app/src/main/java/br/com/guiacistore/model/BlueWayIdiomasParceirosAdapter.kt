@@ -21,9 +21,9 @@ class BlueWayIdiomasParceirosAdapter(private val listaFilmes: List<BlueWayModel>
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
         val filme = listaFilmes[position]
-        holder.titulo.text = filme.tituloFilme
-        holder.genero.text = filme.genero
-        holder.ano.text = filme.ano
+        holder.titulo.text = filme.tituloBlueWay
+        holder.genero.text = filme.subTituloBlueWay
+        holder.ano.text = filme.detalheBlueWay
 
     }
 
@@ -39,9 +39,9 @@ class BlueWayIdiomasParceirosAdapter(private val listaFilmes: List<BlueWayModel>
 
         init {
 
-            titulo = itemView.findViewById(R.id.textTitulo)
-            ano = itemView.findViewById(R.id.textAno)
-            genero = itemView.findViewById(R.id.textGenero)
+            titulo = itemView.findViewById(R.id.tituloBlueWay)
+            ano = itemView.findViewById(R.id.detalheBlueWay)
+            genero = itemView.findViewById(R.id.subTituloBlueWay)
 
         }
     }

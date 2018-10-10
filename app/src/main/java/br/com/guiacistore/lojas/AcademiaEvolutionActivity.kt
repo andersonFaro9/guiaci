@@ -20,7 +20,7 @@ import br.com.guiacistore.fragments.PromocoesDaAcademiaEvolutionFragment
 import br.com.guiacistore.fragments.ServicosDaAcademiaEvolutionFragment
 import br.com.guiacistore.interfaces.ICheckPermission
 import br.com.guiacistore.interfaces.Invisible
-import br.com.guiacistore.model.IFirebase
+import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.model.LojasModel
 import br.com.guiacistore.redesocial.AcademiaEvolutionRedesSociaisActivity
 import com.google.firebase.database.*

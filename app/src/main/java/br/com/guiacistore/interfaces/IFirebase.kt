@@ -1,4 +1,4 @@
-package br.com.guiacistore.model
+package br.com.guiacistore.interfaces
 
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase

@@ -20,7 +20,7 @@ import br.com.guiacistore.fragments.PromocoesDaJobSatFragment
 import br.com.guiacistore.fragments.ServicosDaJobSatFragment
 import br.com.guiacistore.interfaces.ICheckPermission
 import br.com.guiacistore.interfaces.Invisible
-import br.com.guiacistore.model.IFirebase
+import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.model.LojasModel
 import br.com.guiacistore.redesocial.JobSatRedesSociaisActivity
 import com.google.firebase.database.*

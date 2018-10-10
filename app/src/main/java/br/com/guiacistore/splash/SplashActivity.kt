@@ -6,7 +6,7 @@ import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.view.Window
 import br.com.guiacistore.R
-import br.com.guiacistore.blueway.MainActivity
+import br.com.guiacistore.MainActivity
 
 
 class SplashActivity : AppCompatActivity() {

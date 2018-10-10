@@ -20,7 +20,7 @@ import br.com.guiacistore.fragments.PromocoesDaLiliDocesCakesFragment
 import br.com.guiacistore.fragments.ServicosDaLiliDocesCakesFragment
 import br.com.guiacistore.interfaces.ICheckPermission
 import br.com.guiacistore.interfaces.Invisible
-import br.com.guiacistore.model.IFirebase
+import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.model.LojasModel
 import br.com.guiacistore.redesocial.LiliDocesCakesRedesSociaisActivity
 import com.google.firebase.database.*

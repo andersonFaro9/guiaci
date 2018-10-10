@@ -1,4 +1,4 @@
-package br.com.guiacistore.blueway
+package br.com.guiacistore
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,7 +8,6 @@ import android.support.v7.widget.SearchView
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import br.com.guiacistore.R
 import br.com.guiacistore.lojas.SobreActivity
 import br.com.guiacistore.model.ListaDeClientes
 import br.com.guiacistore.model.ListaDeClientesAdapter
@@ -43,12 +42,12 @@ open class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
         list.add(ListaDeClientes("RepSol Moto Center.", "Vendas e manutenção de peças para moto.", R.drawable.loja_repsol))
         list.add(ListaDeClientes("Academia Evolution Fitness de Pojuca.", "Sua evolução começa agora!!.", R.drawable.loja_evolution))
         list.add(ListaDeClientes("Igreja do Ev. Quadrangular de Pojuca.", "Vivendo em Cristo.", R.drawable.loja_quadrangular))
-        list.add(ListaDeClientes("Studio Maseratt, seu momento é agora!.", "Fotografia, artes gráficas e publicidade.", R.drawable.loja_maseratt))
         list.add(ListaDeClientes("Blue Way Idiomas", "Faça a diferença, faça Blue Way!.", R.drawable.loja_blueway))
         list.add(ListaDeClientes("E Sound, sonorização.", "Casamento, aniversário e festa particular.", R.drawable.loja_esound))
-        list.add(ListaDeClientes("Inove.", "Fabricação, montagem e manutenção industrial.", R.drawable.loja_inove))
         list.add(ListaDeClientes("Igreja Batista Nacional Rosa de Saron.", " Graça e paz.", R.drawable.loja_rosa_saron))
         list.add(ListaDeClientes("EPG Impressões.", " Impressão em camisas, canecas, cartões de visita e muito mais.", R.drawable.loja_epg))
+        list.add(ListaDeClientes("Inove.", "Fabricação, montagem e manutenção industrial.", R.drawable.loja_inove))
+
 
     }
 

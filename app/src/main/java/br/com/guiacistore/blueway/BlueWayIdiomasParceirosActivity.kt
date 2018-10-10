@@ -40,7 +40,7 @@ class BlueWayIdiomasParceirosActivity : AppCompatActivity() {
         recyclerView?.addItemDecoration(DividerItemDecoration(this, LinearLayout.VERTICAL))
         recyclerView?.adapter = adapter
 
-        //evento de click
+
         recyclerView?.addOnItemTouchListener(
                 RecyclerItemClickListener(
                         applicationContext,
@@ -49,7 +49,7 @@ class BlueWayIdiomasParceirosActivity : AppCompatActivity() {
                             override fun onLongItemClick(view: View?, position: Int) { }
 
                             override fun onItemClick(view: View, position: Int) {
-                                when {/*Aqui vc pode direcionar todas as activitys*/  }
+                                when {/*Aqui vc pode direcionar todas as activitys com os clicks*/  }
                             }
 
                             override fun onItemClick(adapterView: AdapterView<*>, view: View, position: Int, l: Long) {}

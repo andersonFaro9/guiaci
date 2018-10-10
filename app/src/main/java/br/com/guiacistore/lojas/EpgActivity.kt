@@ -20,7 +20,7 @@ import br.com.guiacistore.fragments.NovidadesDaEpgFragment
 import br.com.guiacistore.fragments.ServicosDaEpgFragment
 import br.com.guiacistore.interfaces.ICheckPermission
 import br.com.guiacistore.interfaces.Invisible
-import br.com.guiacistore.model.IFirebase
+import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout

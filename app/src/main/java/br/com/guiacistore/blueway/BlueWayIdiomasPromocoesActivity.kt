@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import br.com.guiacistore.R
-import br.com.guiacistore.model.IFirebase
+import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_blue_way_idiomas_promocoes.*

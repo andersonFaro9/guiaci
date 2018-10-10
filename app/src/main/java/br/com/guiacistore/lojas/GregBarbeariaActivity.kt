@@ -21,7 +21,7 @@ import br.com.guiacistore.fragments.PromocoesDaBarbeariaGregFragment
 import br.com.guiacistore.fragments.ServicosDaBarbeariaGregFragment
 import br.com.guiacistore.interfaces.ICheckPermission
 import br.com.guiacistore.interfaces.Invisible
-import br.com.guiacistore.model.IFirebase
+import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.model.LojasModel
 import br.com.guiacistore.redesocial.GregBarbeariaRedesSociaisActivity
 import com.google.firebase.database.*

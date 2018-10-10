@@ -10,10 +10,6 @@ import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat.checkSelfPermission
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
-import android.text.Layout
-import android.text.SpannableString
-import android.text.Spanned
-import android.text.style.AlignmentSpan
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -25,7 +21,7 @@ import br.com.guiacistore.fragments.PlanosDaSpeednetFragment
 import br.com.guiacistore.fragments.PromocoesDaSpeedNetFragment
 import br.com.guiacistore.interfaces.ICheckPermission
 import br.com.guiacistore.interfaces.Invisible
-import br.com.guiacistore.model.IFirebase
+import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.model.LojasModel
 import br.com.guiacistore.redesocial.SpeednetRedesSociaisActivity
 import com.google.firebase.database.*
@@ -38,7 +34,7 @@ import kotlinx.android.synthetic.main.fragment_plano_speednet.*
 
 
 class SpeedNetActivity : AppCompatActivity(),
-           Invisible,  IFirebase, ICheckPermission {
+           Invisible, IFirebase, ICheckPermission {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
