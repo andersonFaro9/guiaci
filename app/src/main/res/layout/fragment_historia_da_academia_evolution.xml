@@ -11,8 +11,7 @@
         android:id="@+id/frameLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".fragments.NossaMissaoBlueWayFragment">
-
+        tools:context=".fragments.HistoriaDaAcademiaEvolution">
 
 
         <ImageView
@@ -21,29 +20,10 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="22dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/evolutionHistoriaProgressBar"
-            app:srcCompat="@drawable/historia_da_empresa" />
-
-
-
-
-
-
-        <ProgressBar
-            android:id="@+id/evolutionHistoriaProgressBar"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="22dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+            app:srcCompat="@drawable/historia_da_empresa"
+            tools:layout_editor_absoluteY="63dp" />
 
 
         <TextView
@@ -55,7 +35,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="26dp"
             android:justificationMode="inter_word"
-            android:text=""
+            android:text=" Nascemos da ideia de trazer para Pojuca um novo conceito de academia. Em março de 2015 nasce a Evolution com a proposta de ser uma academia que cuida dos seus alunos de proporcionar resultados positivos na saúde, no corpo  e na mente. Temos a melhor infraestrutura com ambiente arejado, bem ventilado, e iluminado naturalmente, além de uma visão privilegiada. Nossos horários de funcionamento: A Nossa matriz localizada no bairro Inocope, rua J, n20, ao lado da delegacia funciona das 05:00hs às 21:00hs da noite e nossa filial no bairro da Star, funciona das 05:00hs ao meio-dia e das 13:00hs até às 20:30hs da noite. "
             android:textAlignment="textStart"
             android:textIsSelectable="true"
             android:textSize="14sp"

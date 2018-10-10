@@ -10,14 +10,14 @@ import android.widget.LinearLayout
 import br.com.guiacistore.R
 import br.com.guiacistore.lojas.RecyclerItemClickListener
 import br.com.guiacistore.model.BlueWayIdiomasParceirosAdapter
-import br.com.guiacistore.model.Filme
+import br.com.guiacistore.model.BlueWayModel
 
 
 class BlueWayIdiomasParceirosActivity : AppCompatActivity() {
 
     private var recyclerView: RecyclerView? = null
 
-    private val listaFilmes = ArrayList<Filme>()
+    private val listaDeParceiros = ArrayList<BlueWayModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,10 +26,10 @@ class BlueWayIdiomasParceirosActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.recyclerView)
 
 
-        this.criarFilmes()
+        this.mostrarListaDeParceiros()
 
         //Configurar adapter
-        val adapter = BlueWayIdiomasParceirosAdapter(listaFilmes)
+        val adapter = BlueWayIdiomasParceirosAdapter(listaDeParceiros)
 
         supportActionBar?.title = "Parceiros Blue Way"
 
@@ -46,13 +46,10 @@ class BlueWayIdiomasParceirosActivity : AppCompatActivity() {
                         applicationContext,
                         recyclerView!!,
                         object : RecyclerItemClickListener.OnItemClickListener {
-                            override fun onLongItemClick(view: View?, position: Int) {
-                                TODO("not implemented")
-                            }
+                            override fun onLongItemClick(view: View?, position: Int) { }
 
                             override fun onItemClick(view: View, position: Int) {
-                                when (position) {
-                                }
+                                when {/*Aqui vc pode direcionar todas as activitys*/  }
                             }
 
                             override fun onItemClick(adapterView: AdapterView<*>, view: View, position: Int, l: Long) {}
@@ -62,44 +59,44 @@ class BlueWayIdiomasParceirosActivity : AppCompatActivity() {
 
     }
 
-    fun criarFilmes() {
+    fun mostrarListaDeParceiros() {
 
         // Lista dos parceiros em Pojuca
 
-        var filme = Filme("Unidade de Pojuca", "Tel: 99628-7958", "")
-        listaFilmes.add(filme)
-        filme = Filme("", "Academia Evolution", "")
-        listaFilmes.add(filme)
+        var parceirosDaBlueWay = BlueWayModel("Unidade de Pojuca", "Tel: 99628-7958", "")
+        listaDeParceiros.add(parceirosDaBlueWay)
+        parceirosDaBlueWay = BlueWayModel("", "Academia Evolution", "")
+        listaDeParceiros.add(parceirosDaBlueWay)
 
-        filme = Filme("", "Escola Surpreza", "")
-        listaFilmes.add(filme)
+        parceirosDaBlueWay = BlueWayModel("", "Escola Surpresa", "")
+        listaDeParceiros.add(parceirosDaBlueWay)
 
-        filme = Filme("", "Colégio 29 de Julho", "")
-        listaFilmes.add(filme)
+        parceirosDaBlueWay = BlueWayModel("", "Colégio 29 de Julho", "")
+        listaDeParceiros.add(parceirosDaBlueWay)
 
-        filme = Filme("", "Escola Betel", "")
-        listaFilmes.add(filme)
+        parceirosDaBlueWay = BlueWayModel("", "Escola Betel", "")
+        listaDeParceiros.add(parceirosDaBlueWay)
 
 
 //        Lista dos parceiros em Catu
-         filme = Filme("Unidade de Catu", "Tel: 99694-6672", "")
-        listaFilmes.add(filme)
-        filme = Filme("", "Halliburton", "")
-        listaFilmes.add(filme)
-        filme = Filme("", "Escola Ágappe", "")
-        listaFilmes.add(filme)
-        filme = Filme("", "Escola Traços e Letras", "")
-        listaFilmes.add(filme)
+         parceirosDaBlueWay = BlueWayModel("Unidade de Catu", "Tel: 99694-6672", "")
+        listaDeParceiros.add(parceirosDaBlueWay)
+        parceirosDaBlueWay = BlueWayModel("", "Halliburton", "")
+        listaDeParceiros.add(parceirosDaBlueWay)
+        parceirosDaBlueWay = BlueWayModel("", "Escola Ágappe", "")
+        listaDeParceiros.add(parceirosDaBlueWay)
+        parceirosDaBlueWay = BlueWayModel("", "Escola Traços e Letras", "")
+        listaDeParceiros.add(parceirosDaBlueWay)
 
-        filme = Filme("", "Escola da Tia Lia", "")
-        listaFilmes.add(filme)
-        filme = Filme("", "Escola da Tia Margô", "")
-        listaFilmes.add(filme)
+        parceirosDaBlueWay = BlueWayModel("", "Escola da Tia Lia", "")
+        listaDeParceiros.add(parceirosDaBlueWay)
+        parceirosDaBlueWay = BlueWayModel("", "Escola da Tia Margô", "")
+        listaDeParceiros.add(parceirosDaBlueWay)
 
-        filme = Filme("", "Colégio Athena", "")
-        listaFilmes.add(filme)
-                filme = Filme("", "Filhote de Ogro", "")
-        listaFilmes.add(filme)
+        parceirosDaBlueWay = BlueWayModel("", "Colégio Athena", "")
+        listaDeParceiros.add(parceirosDaBlueWay)
+        parceirosDaBlueWay = BlueWayModel("", "Filhote de Ogro", "")
+        listaDeParceiros.add(parceirosDaBlueWay)
 
 
 

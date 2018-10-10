@@ -20,14 +20,14 @@ import br.com.guiacistore.R
 import br.com.guiacistore.blueway.*
 import br.com.guiacistore.interfaces.ICheckPermission
 import br.com.guiacistore.model.BlueWayIdiomasAdapter
-import br.com.guiacistore.model.Filme
+import br.com.guiacistore.model.BlueWayModel
 
 
 class BlueWayIdiomasActivity : AppCompatActivity(), ICheckPermission {
 
     private var recyclerView: RecyclerView? = null
 
-    private val listaFilmes = ArrayList<Filme>()
+    private val listaFilmes = ArrayList<BlueWayModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -117,30 +117,30 @@ class BlueWayIdiomasActivity : AppCompatActivity(), ICheckPermission {
 
     fun criarFilmes() {
 
-        var filme = Filme("Quem somos", "", "")
+        var filme = BlueWayModel("Quem somos", "", "")
         listaFilmes.add(filme)
 
-        filme = Filme("Matrícula", "", "")
+        filme = BlueWayModel("Matrícula", "", "")
         listaFilmes.add(filme)
 
-        filme = Filme("Metodologia", "", "")
+        filme = BlueWayModel("Metodologia", "", "")
         listaFilmes.add(filme)
 
-        filme = Filme("Nossas redes sociais", "", "")
-        listaFilmes.add(filme)
-
-
-        filme = Filme("Contatos", "", "")
-        listaFilmes.add(filme)
-
-        filme = Filme("Parceiros", "", "")
+        filme = BlueWayModel("Nossas redes sociais", "", "")
         listaFilmes.add(filme)
 
 
-        filme = Filme("Promoções", "", "")
+        filme = BlueWayModel("Contatos", "", "")
         listaFilmes.add(filme)
 
-        filme = Filme("Nossa missão", "", "")
+        filme = BlueWayModel("Parceiros", "", "")
+        listaFilmes.add(filme)
+
+
+        filme = BlueWayModel("Promoções", "", "")
+        listaFilmes.add(filme)
+
+        filme = BlueWayModel("Nossa missão", "", "")
         listaFilmes.add(filme)
 
 

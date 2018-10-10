@@ -8,7 +8,7 @@ import android.widget.TextView
 import br.com.guiacistore.R
 
 
-class BlueWayIdiomasAdapter(private val listaFilmes: List<Filme>) : RecyclerView.Adapter<BlueWayIdiomasAdapter.MyViewHolder>() {
+class BlueWayIdiomasAdapter(private val listaFilmes: List<BlueWayModel>) : RecyclerView.Adapter<BlueWayIdiomasAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
