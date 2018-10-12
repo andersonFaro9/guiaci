@@ -18,22 +18,30 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <TextView
             android:id="@+id/precos_blue_way"
             android:layout_width="0dp"
-            android:layout_height="180dp"
+            android:layout_height="257dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="26dp"
+            android:lineSpacingExtra="8sp"
             android:text="Ofertamos aulas de inglês para adultos e crianças, à partir dos 05 anos. Nossa matrícula tem valor de R$ 165,00 reais ( material incluso) + mensais do mesmo valor, com data de pagamento até o dia 10 de cada mês com 10% de desconto. Nossos alunos de escolas e academias parceiras possuem 20% de desconto."
             android:textAlignment="viewStart"
-            android:textColor="@color/album_title"
+            android:textColor="#4a4545"
             android:textIsSelectable="true"
-            android:textSize="18sp"
+            android:typeface="normal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ic_preco_blue_way" />
+
+
+
+
+
+
 
         <ImageView
             android:id="@+id/ic_preco_blue_way"

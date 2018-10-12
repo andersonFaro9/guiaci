@@ -25,7 +25,6 @@ class BlueWayIdiomasParceirosActivity : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.recyclerView)
 
-
         this.mostrarListaDeParceiros()
 
         //Configurar adapter

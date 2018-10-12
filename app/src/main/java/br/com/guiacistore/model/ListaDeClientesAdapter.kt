@@ -72,9 +72,9 @@ class ListaDeClientesAdapter(private val context: Context, private var list: Lis
 
 
         init {
-            titleTextView = itemView.findViewById<TextView>(R.id.title)
-            subtitleTextView = itemView.findViewById<TextView>(R.id.subtituloItem)
-            thumbImageView = itemView.findViewById<ImageView>(R.id.thumbnail)
+            titleTextView = itemView.findViewById(R.id.title)
+            subtitleTextView = itemView.findViewById(R.id.subtituloItem)
+            thumbImageView = itemView.findViewById(R.id.thumbnail)
         }
     }
 

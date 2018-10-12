@@ -134,7 +134,7 @@
         <activity android:name=".lojas.BlueWayIdiomasActivity" android:parentActivityName=".lojas.BlueWayIdiomasActivity"  android:theme="@style/themeBlueWay"  />
         <activity android:name=".blueway.BlueWayIdiomasParceirosActivity" android:theme="@style/themeBlueWay"  android:parentActivityName=".lojas.BlueWayIdiomasActivity" />
         <activity android:name=".blueway.BlueWayIdiomasMetodologiaActivity" android:theme="@style/themeBlueWay"   android:parentActivityName= ".blueway.BlueWayIdiomasMetodologiaActivity"   />
-        <activity android:name=".blueway.BlueWayIdiomasPrecosActivity" android:theme="@style/themeBlueWay"   android:parentActivityName= ".blueway.BlueWayIdiomasPrecosActivity"   />
+        <activity android:name=".blueway.BlueWayMatriculasActivity" android:theme="@style/themeBlueWay"   android:parentActivityName= ".blueway.BlueWayMatriculasActivity"   />
         <activity android:name=".blueway.BlueWayIdiomasQuemSomosActivity" android:theme="@style/themeBlueWay"   android:parentActivityName= ".blueway.BlueWayIdiomasQuemSomosActivity"  />
         <activity android:name=".blueway.BlueWayIdiomasPromocoesActivity" android:theme="@style/themeBlueWay"   android:parentActivityName= ".blueway.BlueWayIdiomasPromocoesActivity"   />
         <activity android:name=".blueway.BlueWayIdiomasNossaMissaoActivity"  android:theme="@style/themeBlueWay"  android:parentActivityName= ".blueway.BlueWayIdiomasNossaMissaoActivity"   />

@@ -4,11 +4,11 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import br.com.guiacistore.R
 
-class BlueWayIdiomasPrecosActivity : AppCompatActivity() {
+class BlueWayMatriculasActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_blue_way_idiomas_precos)
-        supportActionBar?.title = "Preços Blue Way"
+        setContentView(R.layout.activity_blue_way_idiomas_matricula)
+        supportActionBar?.title = "Matrículas Blue Way"
     }
 }

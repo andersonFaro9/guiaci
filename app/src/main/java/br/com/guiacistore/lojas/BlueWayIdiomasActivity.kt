@@ -62,7 +62,7 @@ class BlueWayIdiomasActivity : AppCompatActivity(), ICheckPermission {
                             override fun onItemClick(view: View, position: Int) {
                                 when (position) {
                                     0 ->  startActivity(Intent(this@BlueWayIdiomasActivity, BlueWayIdiomasQuemSomosActivity::class.java))
-                                    1 ->  startActivity(Intent(this@BlueWayIdiomasActivity, BlueWayIdiomasPrecosActivity::class.java))
+                                    1 ->  startActivity(Intent(this@BlueWayIdiomasActivity, BlueWayMatriculasActivity::class.java))
                                     2 ->  startActivity(Intent(this@BlueWayIdiomasActivity, BlueWayIdiomasMetodologiaActivity::class.java))
                                     3 ->  startActivity(Intent(this@BlueWayIdiomasActivity, BlueWayIdiomasRedesSociaisActivity::class.java))
                                     4 ->  startActivity(Intent(this@BlueWayIdiomasActivity, BlueWayIdiomasContatosActivity::class.java))
@@ -110,7 +110,7 @@ class BlueWayIdiomasActivity : AppCompatActivity(), ICheckPermission {
     }
 
     fun mostrarPrecoDosCursos() {
-        val intent = Intent(this@BlueWayIdiomasActivity, BlueWayIdiomasPrecosActivity::class.java)
+        val intent = Intent(this@BlueWayIdiomasActivity, BlueWayMatriculasActivity::class.java)
 
         startActivity (intent)
     }
