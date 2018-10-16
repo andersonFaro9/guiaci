@@ -22,25 +22,21 @@
         <TextView
             android:id="@+id/precos_blue_way"
             android:layout_width="0dp"
-            android:layout_height="257dp"
+            android:layout_height="184dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="26dp"
+            android:layout_marginTop="28dp"
             android:lineSpacingExtra="8sp"
             android:text="Ofertamos aulas de inglês para adultos e crianças, à partir dos 05 anos. Nossa matrícula tem valor de R$ 165,00 reais ( material incluso) + mensais do mesmo valor, com data de pagamento até o dia 10 de cada mês com 10% de desconto. Nossos alunos de escolas e academias parceiras possuem 20% de desconto."
-            android:textAlignment="viewStart"
+            android:textAlignment="center"
             android:textColor="#4a4545"
             android:textIsSelectable="true"
+            android:textSize="13sp"
             android:typeface="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ic_preco_blue_way" />
-
-
-
-
-
 
 
         <ImageView
@@ -49,11 +45,23 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="76dp"
+            android:layout_marginTop="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_preco" />
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:srcCompat="@drawable/ic_centro_matricula" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="Matricule-se"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
 </LinearLayout>
 </ScrollView>

@@ -38,7 +38,7 @@
         <activity
             android:name=".lojas.SobreActivity"
             android:theme="@style/barra_sobre" />
-        <activity android:name=".StorageActivity" />
+
         <activity
             android:name=".lojas.BiosInformaticaActivity"
             android:parentActivityName=".lojas.BiosInformaticaActivity"
@@ -75,10 +75,8 @@
             android:name=".lojas.AcademiaEvolutionActivity"
             android:parentActivityName=".lojas.AcademiaEvolutionActivity"
             android:theme="@style/themeEvolution" />
-        <activity
-            android:name=".lojas.StudioMaserattActivity"
-            android:parentActivityName=".lojas.StudioMaserattActivity"
-            android:theme="@style/themeMaseratt" />
+
+
         <activity
             android:name=".lojas.StudioESoundActivity"
             android:parentActivityName=".lojas.StudioESoundActivity"
@@ -122,24 +120,24 @@
         <activity
             android:name=".redesocial.IgrejaRosaDeSaronRedesSociaisActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".redesocial.StudioMaserattActivityRedesSociaisActivity"
-            android:screenOrientation="portrait" />
+
         <activity
             android:name=".redesocial.InoveRedesSociaisActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".redesocial.EpgContatosRedesSociaisActivity" />
 
+        <activity android:name=".redesocial.EpgContatosRedesSociaisActivity" android:screenOrientation="portrait" />
 
         <activity android:name=".lojas.BlueWayIdiomasActivity" android:parentActivityName=".lojas.BlueWayIdiomasActivity"  android:theme="@style/themeBlueWay"  />
         <activity android:name=".blueway.BlueWayIdiomasParceirosActivity" android:theme="@style/themeBlueWay"  android:parentActivityName=".lojas.BlueWayIdiomasActivity" />
-        <activity android:name=".blueway.BlueWayIdiomasMetodologiaActivity" android:theme="@style/themeBlueWay"   android:parentActivityName= ".blueway.BlueWayIdiomasMetodologiaActivity"   />
         <activity android:name=".blueway.BlueWayMatriculasActivity" android:theme="@style/themeBlueWay"   android:parentActivityName= ".blueway.BlueWayMatriculasActivity"   />
         <activity android:name=".blueway.BlueWayIdiomasQuemSomosActivity" android:theme="@style/themeBlueWay"   android:parentActivityName= ".blueway.BlueWayIdiomasQuemSomosActivity"  />
         <activity android:name=".blueway.BlueWayIdiomasPromocoesActivity" android:theme="@style/themeBlueWay"   android:parentActivityName= ".blueway.BlueWayIdiomasPromocoesActivity"   />
         <activity android:name=".blueway.BlueWayIdiomasNossaMissaoActivity"  android:theme="@style/themeBlueWay"  android:parentActivityName= ".blueway.BlueWayIdiomasNossaMissaoActivity"   />
         <activity android:name=".blueway.BlueWayIdiomasContatosActivity"  android:theme="@style/themeBlueWay"  android:parentActivityName= ".blueway.BlueWayIdiomasContatosActivity"  />
         <activity android:name=".blueway.BlueWayIdiomasRedesSociaisActivity" android:theme="@style/themeBlueWay"  android:parentActivityName= ".blueway.BlueWayIdiomasRedesSociaisActivity"   />
+        <activity android:name=".lojas.BlueWayFragmentsActivity" android:parentActivityName=".lojas.BlueWayIdiomasActivity" android:theme="@style/themeBlueWay"/>
+        <activity android:name=".blueway.BlueWayPromocoesActivity" android:parentActivityName=".blueway.BlueWayPromocoesActivity"  android:theme="@style/themeBlueWay"/>
+        <activity android:name=".lojas.BlueWayMapasActivity" android:parentActivityName=".lojas.BlueWayMapasActivity" android:theme="@style/themeBlueWay" />
 
 
     </application>

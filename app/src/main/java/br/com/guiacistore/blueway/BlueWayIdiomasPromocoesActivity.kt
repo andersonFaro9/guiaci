@@ -8,7 +8,7 @@ import br.com.guiacistore.R
 import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.activity_blue_way_idiomas_promocoes.*
+import kotlinx.android.synthetic.main.activity_blue_way_promocoes.*
 
 
 class BlueWayIdiomasPromocoesActivity : AppCompatActivity(), IFirebase {
@@ -59,7 +59,7 @@ class BlueWayIdiomasPromocoesActivity : AppCompatActivity(), IFirebase {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_blue_way_idiomas_promocoes)
+        setContentView(R.layout.activity_blue_way_promocoes)
         doDatabaseInstance(1)
         supportActionBar?.title = "Promoções Blue Way"
     }

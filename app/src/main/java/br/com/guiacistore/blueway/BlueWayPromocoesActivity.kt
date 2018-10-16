@@ -1,26 +1,16 @@
-package br.com.guiacistore.fragments
+package br.com.guiacistore.blueway
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import br.com.guiacistore.R
 import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.model.LojasModel
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.fragment_historia_da_maseratt.*
+import kotlinx.android.synthetic.main.activity_blue_way_promocoes.*
 
-class HistoriaDaMaserattFragment :  Fragment(), IFirebase {
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
-        doDatabaseInstance(1)
-
-        return inflater.inflate(R.layout.fragment_historia_da_maseratt, container, false)
-    }
-
+class BlueWayPromocoesActivity : AppCompatActivity(), IFirebase {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
@@ -30,11 +20,10 @@ class HistoriaDaMaserattFragment :  Fragment(), IFirebase {
 
 
 
+
     override fun doDatabaseInstance(id: Int): Boolean {
 
-
-        maserattHistoriaProgressBar?.visibility = View.VISIBLE
-
+        blue_way_progressBar?.visibility = View.VISIBLE
 
         referenciaFirebase?.child(id.toString())
 
@@ -46,17 +35,23 @@ class HistoriaDaMaserattFragment :  Fragment(), IFirebase {
 
                     val cliente = d.getValue(LojasModel::class.java)
 
-                    studio_maseratt_historia_da_empresa?.text = cliente?.studio_maseratt_historia_da_empresa
 
-                    maserattHistoriaProgressBar?.visibility = View.INVISIBLE
+
+                            blue_way_promocoes?.text = cliente?.blue_way_promocoes
+
+
+                    blue_way_progressBar?.visibility = View.INVISIBLE
+
                 }
-
-
 
             }
 
+
+
             override fun onCancelled(databaseError: DatabaseError?) {
                 Log.d("onCancelled", "error...", databaseError?.toException())
+
+
             }
 
         })
@@ -65,4 +60,10 @@ class HistoriaDaMaserattFragment :  Fragment(), IFirebase {
     }
 
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        doDatabaseInstance(1)
+        setContentView(R.layout.activity_blue_way_promocoes)
+        supportActionBar?.title = "Promoções Blue Way"
+    }
 }

@@ -22,12 +22,12 @@
             android:id="@+id/contatos_blue_way"
             android:layout_width="0dp"
             android:layout_height="149dp"
-            android:layout_marginEnd="12dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="32dp"
             android:lineSpacingExtra="8sp"
             android:text="Estamos em duas unidades, uma unidade em Pojuca, com telefone 99628-7958 e outra unidade em Catu, com telefone 99694-6672 para comunicação. Não fique com dúvidas, entre em contato e saiba como aproveitar o melhor desses cursos."
-            android:textAlignment="viewStart"
+            android:textAlignment="center"
             android:textColor="@color/album_title"
             android:textIsSelectable="true"
             android:textSize="14sp"
@@ -42,11 +42,27 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="76dp"
+            android:layout_marginTop="36dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_contatos_blue_way" />
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:srcCompat="@drawable/ic_centro_contato" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="291dp"
+            android:layout_height="71dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="44dp"
+            android:text="Entre em contato com uma de nossas unidades"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </android.support.constraint.ConstraintLayout>

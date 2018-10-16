@@ -11,22 +11,40 @@
         android:id="@+id/frameLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".fragments.QuemSomosBlueWayFragment">
+        tools:context=".fragments.MetodologiaDaBlueWayFragment">
 
 
         <ImageView
-            android:id="@+id/ic_quem_somos"
+            android:id="@+id/ic_metodologia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="32dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/texto_quem_somos_blue_way"
-            app:srcCompat="@drawable/ic_quem_somos" />
+            app:srcCompat="@drawable/ic_metodologia" />
 
+
+        <TextView
+            android:id="@+id/blue_way_metodologia"
+            android:layout_width="349dp"
+            android:layout_height="122dp"
+            android:layout_marginBottom="11dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="26dp"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="8sp"
+            android:text=" Nossa metodologia é diversificada, dinâmica e divertida. Além disso, nossas aulas são 100% presenciais e utilizamos vários recursos complementares, tais como: vídeos, filmes, séries, músicas, apresentações, jogos e muito mais. "
+            android:textAlignment="center"
+            android:textIsSelectable="true"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ic_metodologia" />
 
         <TextView
             android:id="@+id/texto_quem_somos_blue_way"
@@ -36,28 +54,12 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="60dp"
             android:fontFamily="sans-serif"
-            android:text="Quem somos"
+            android:text="Nossa metodologia"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/blue_way_quem_somos"
-            android:layout_width="0dp"
-            android:layout_height="133dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="28dp"
-            android:lineSpacingExtra="8sp"
-            android:text="Somos a família A BLUE WAY e atuamos no mercado de idiomas à quase 7 anos, ofertando cursos de inglês. Atualmente possuímos unidades nos municípios de Pojuca e Catu, e contamos com mais de 250 alunos. Temos como diferencial, o ensino de qualidade e a excelência no atendimento ao cliente."
-            android:textAlignment="center"
-            android:textSize="13dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.571"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ic_quem_somos" />
 
 
     </android.support.constraint.ConstraintLayout>

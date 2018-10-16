@@ -50,7 +50,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/Applications/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material_design_icons/editor/ic_attach_money_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/Applications/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material_design_icons/communication/ic_location_on_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -61,11 +61,10 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="f51d44" />
-                            <entry key="height" value="80" />
-                            <entry key="outputName" value="ic_preco_blue_way" />
+                            <entry key="opacityPercent" value="93" />
+                            <entry key="outputName" value="ic__blue_way_map" />
                             <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="$USER_HOME$/Downloads/zap_epg.svg" />
-                            <entry key="width" value="80" />
+                            <entry key="sourceFile" value="$USER_HOME$/Desktop/icones/ic_mapa_blue_way.svg" />
                           </map>
                         </option>
                       </PersistentState>

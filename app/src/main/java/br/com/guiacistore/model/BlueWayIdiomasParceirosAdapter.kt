@@ -13,7 +13,7 @@ class BlueWayIdiomasParceirosAdapter(private val listaFilmes: List<BlueWayModel>
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
         val itemLista = LayoutInflater.from(parent.context)
-                .inflate(R.layout.adapter_lista_blue_way_parceria, parent, false)
+                .inflate(R.layout.adapter_lista_blue_way, parent, false)
 
         return MyViewHolder(itemLista)
     }

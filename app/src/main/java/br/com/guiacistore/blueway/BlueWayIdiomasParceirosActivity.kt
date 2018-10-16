@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.LinearLayout
 import br.com.guiacistore.R
-import br.com.guiacistore.lojas.RecyclerItemClickListener
+import br.com.guiacistore.blueway.clickListener_blueway_parceiros.RecyclerItemClickListener
 import br.com.guiacistore.model.BlueWayIdiomasParceirosAdapter
 import br.com.guiacistore.model.BlueWayModel
 
@@ -21,7 +21,7 @@ class BlueWayIdiomasParceirosActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_blue_way)
+        setContentView(R.layout.activity_recycleview)
 
         recyclerView = findViewById(R.id.recyclerView)
 
@@ -45,10 +45,11 @@ class BlueWayIdiomasParceirosActivity : AppCompatActivity() {
                         applicationContext,
                         recyclerView!!,
                         object : RecyclerItemClickListener.OnItemClickListener {
-                            override fun onLongItemClick(view: View?, position: Int) { }
+                            override fun onLongItemClick(view: View?, position: Int) {}
 
                             override fun onItemClick(view: View, position: Int) {
-                                when {/*Aqui vc pode direcionar todas as activitys com os clicks*/  }
+                                when {/*Aqui vc pode direcionar todas as activitys com os clicks*/
+                                }
                             }
 
                             override fun onItemClick(adapterView: AdapterView<*>, view: View, position: Int, l: Long) {}

@@ -8,77 +8,54 @@ import android.os.Bundle
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.DividerItemDecoration
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import android.widget.AdapterView
-import android.widget.LinearLayout
+import android.widget.ListView
 import br.com.guiacistore.R
 import br.com.guiacistore.blueway.*
 import br.com.guiacistore.interfaces.ICheckPermission
-import br.com.guiacistore.model.BlueWayIdiomasAdapter
-import br.com.guiacistore.model.BlueWayModel
+import br.com.guiacistore.model.BlueWayDetalhesModel
+import br.com.guiacistore.model.CustomAdapterBlueWay
 
 
 class BlueWayIdiomasActivity : AppCompatActivity(), ICheckPermission {
 
-    private var recyclerView: RecyclerView? = null
-
-    private val listaFilmes = ArrayList<BlueWayModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_blue_way)
 
-        recyclerView = findViewById(R.id.recyclerView)
+        val listView = findViewById<ListView>(R.id.listView)
+        val blueWayDetalhesModel: ArrayList<BlueWayDetalhesModel> = ArrayList()
 
-        //Listagem de filmes
-        this.mostrarMenuBlueWay()
+        blueWayDetalhesModel.add(BlueWayDetalhesModel("Blue Way Idiomas", R.drawable.ic_a_blue_way))
+        blueWayDetalhesModel.add(BlueWayDetalhesModel("Matrícule-se", R.drawable.ic_matricula_blue_way))
+        blueWayDetalhesModel.add(BlueWayDetalhesModel("Nossos parceiros", R.drawable.ic_parceiros_blue_way))
+        blueWayDetalhesModel.add(BlueWayDetalhesModel("Promoções", R.drawable.ic_promocao))
+        blueWayDetalhesModel.add(BlueWayDetalhesModel("Contatos", R.drawable.ic_contatos_blue_way))
+        blueWayDetalhesModel.add(BlueWayDetalhesModel("Redes Sociais", R.drawable.ic_redes_sociais_blue_way))
+        blueWayDetalhesModel.add(BlueWayDetalhesModel("Localização em Pojuca", R.drawable.ic_blue_way_map_menu))
 
-        //Configurar adapter
-        val adapter = BlueWayIdiomasAdapter(listaFilmes)
+        listView.adapter = CustomAdapterBlueWay(applicationContext, blueWayDetalhesModel)
 
         supportActionBar?.title = "Blue Way Idiomas"
 
-        //Configurar Recyclerview
-        val layoutManager = LinearLayoutManager(applicationContext)
-        recyclerView?.layoutManager = layoutManager
-        recyclerView?.setHasFixedSize(true)
-        recyclerView?.addItemDecoration(DividerItemDecoration(this, LinearLayout.VERTICAL))
-        recyclerView?.adapter = adapter
+        listView.setOnItemClickListener { adapterView, view, position, l ->
 
-        //evento de click
-        recyclerView?.addOnItemTouchListener(
-                RecyclerItemClickListener(
-                        applicationContext,
-                        recyclerView!!,
-                        object : RecyclerItemClickListener.OnItemClickListener {
+            when (position) {
+                0 ->  startActivity(Intent(this, BlueWayFragmentsActivity::class.java))
+                1 ->  startActivity(Intent(this, BlueWayMatriculasActivity::class.java))
+                2 ->  startActivity(Intent(this, BlueWayIdiomasParceirosActivity::class.java))
+                3 ->  startActivity(Intent(this, BlueWayPromocoesActivity::class.java))
+                4 ->  startActivity(Intent(this, BlueWayIdiomasContatosActivity::class.java))
+                5 ->  startActivity(Intent(this, BlueWayIdiomasRedesSociaisActivity::class.java))
+                6 ->  startActivity(Intent(this, BlueWayMapasActivity::class.java))
+            }
+        }
 
-                            override fun onLongItemClick(view: View?, position: Int) {  }
-
-                            override fun onItemClick(view: View, position: Int) {
-                                when (position) {
-                                    0 ->  startActivity(Intent(this@BlueWayIdiomasActivity, BlueWayIdiomasQuemSomosActivity::class.java))
-                                    1 ->  startActivity(Intent(this@BlueWayIdiomasActivity, BlueWayMatriculasActivity::class.java))
-                                    2 ->  startActivity(Intent(this@BlueWayIdiomasActivity, BlueWayIdiomasMetodologiaActivity::class.java))
-                                    3 ->  startActivity(Intent(this@BlueWayIdiomasActivity, BlueWayIdiomasRedesSociaisActivity::class.java))
-                                    4 ->  startActivity(Intent(this@BlueWayIdiomasActivity, BlueWayIdiomasContatosActivity::class.java))
-                                    5 ->  startActivity(Intent(this@BlueWayIdiomasActivity, BlueWayIdiomasParceirosActivity::class.java))
-                                    6 ->  startActivity(Intent(this@BlueWayIdiomasActivity, BlueWayIdiomasPromocoesActivity::class.java))
-                                    7 ->  startActivity(Intent(this@BlueWayIdiomasActivity, BlueWayIdiomasNossaMissaoActivity::class.java))
-
-                                }
-                            }
-
-                            override fun onItemClick(adapterView: AdapterView<*>, view: View, position: Int, l: Long) { }
-                        }
-                )
-        )
 
     }
+
 
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -99,52 +76,18 @@ class BlueWayIdiomasActivity : AppCompatActivity(), ICheckPermission {
                 return true
             }
 
-            R.id.ic_preco_blue_way -> {
+            R.id.ic_mapa_blue_way -> {
 
-                mostrarPrecoDosCursos()
+                startActivity(Intent(this, BlueWayMapasActivity::class.java))
+
                 return true
             }
+
         }
 
         return super.onOptionsItemSelected(item)
     }
 
-    fun mostrarPrecoDosCursos() {
-        val intent = Intent(this@BlueWayIdiomasActivity, BlueWayMatriculasActivity::class.java)
-
-        startActivity (intent)
-    }
-
-    fun mostrarMenuBlueWay() {
-
-        var filme = BlueWayModel("Quem somos", "", "")
-        listaFilmes.add(filme)
-
-        filme = BlueWayModel("Matrícula", "", "")
-        listaFilmes.add(filme)
-
-        filme = BlueWayModel("Metodologia", "", "")
-        listaFilmes.add(filme)
-
-        filme = BlueWayModel("Nossas redes sociais", "", "")
-        listaFilmes.add(filme)
-
-
-        filme = BlueWayModel("Contatos", "", "")
-        listaFilmes.add(filme)
-
-        filme = BlueWayModel("Parceiros", "", "")
-        listaFilmes.add(filme)
-
-
-        filme = BlueWayModel("Promoções", "", "")
-        listaFilmes.add(filme)
-
-        filme = BlueWayModel("Nossa missão", "", "")
-        listaFilmes.add(filme)
-
-
-    }
 
 
     override fun checkPermissionForCallPhone() {
@@ -175,6 +118,14 @@ class BlueWayIdiomasActivity : AppCompatActivity(), ICheckPermission {
         callIntent.data = Uri.parse("tel:996287958")
         startActivity(callIntent)
     }
+
+
+
+
+
+
+
+
 
 
 }
