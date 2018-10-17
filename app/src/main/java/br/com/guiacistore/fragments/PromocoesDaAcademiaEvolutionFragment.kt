@@ -7,9 +7,10 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import br.com.guiacistore.R
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.LojasModel
+import br.com.guiacistore.model.LojasModelFireBase
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_promocoes_academia_evolution.*
 
@@ -28,6 +29,8 @@ class PromocoesDaAcademiaEvolutionFragment : Fragment(), IFirebase {
                               savedInstanceState: Bundle?): View? {
 
         doDatabaseInstance(1)
+
+
         return inflater.inflate(R.layout.fragment_promocoes_academia_evolution, container, false)
     }
 
@@ -47,8 +50,18 @@ class PromocoesDaAcademiaEvolutionFragment : Fragment(), IFirebase {
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasModel::class.java)
-                    academia_evolution_promocoes?.text =  cliente?.academia_evolution_promocoes
+                    val cliente = d.getValue(LojasModelFireBase::class.java)
+
+                    val listaApp  = listOf(
+
+                             cliente?.academia_evolution_promocao_1,  cliente?.academia_evolution_promocao_2,
+                            cliente?.academia_evolution_promocao_3, cliente?.academia_evolution_promocao_4,
+                            cliente?.academia_evolution_promocao_5
+                    )
+
+                    val arrayAdapter : ArrayAdapter<String?> = ArrayAdapter(context, android.R.layout.simple_list_item_1, listaApp)
+                    academia_evolution_servicos?.adapter = arrayAdapter //<- com as extensions
+
 
                     promocoesAcademiaEvolutionProgressBar?.visibility = View.INVISIBLE
                 }

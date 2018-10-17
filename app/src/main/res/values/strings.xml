@@ -1,41 +1,15 @@
 <resources>
-    <string name="app_name">Guiaci</string>
-    <string name="action_settings">Settings</string>
-    <string name="ic_facebook_contentDescription">facebook</string>
-    <string name="ic_instagram_contentDescription">instagram</string>
-    <string name="ic_whatsapp_contentDescription">whatsapp</string>
+
+    <string name="app_name"> Guiaci </string>
+
+    <string name="historia_inove">
+        A empresa Inove, Fabricação, Montagem e Manutenção Industrial, surgiu no dia 01 de Outubro de 2017 em Pojuca na Bahia, atuando no mercado industrial,  fabricando e montando estruturas metálicas,  tubulação, montagem eletromecânica, reparação de tanques e caldeiras, caldeiraria pesada e leve e solda em geral e controle de qualidade. A segurança e respeito ao meio ambiente são virtudes que possuímos. Nosso profissionalismo permeia esta empresa, e prioriza pelos cuidados e cursos à nossos colaboradores; e focados em atender as principais exigências que a legislação exige.
+    </string>
 
 
-    <!-- TODO: Remove or change this placeholder text -->
-
-
-    <string name="title_activity_main2">POJUCA</string>
-    <string name="title_activity_main3">Main3Activity</string>
-    <string name="title_activity_teste_de_float">TesteDeFloatActivity</string>
-    <string name="title_activity_blue_way2">BlueWay2Activity</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-
-
-        <string-array   name="Planets">
-            <item>Sun</item>
-            <item>Mercury</item>
-            <item>Venus</item>
-            <item>Earth</item>
-            <item>Mars</item>
-            <item>Jupiter</item>
-            <item>Saturn</item>
-            <item>Uranus</item>
-            <item>Neptune</item>
-        </string-array>
-
-
-
-    <!-- TODO: Remove or change this placeholder text -->
-
+    <string name="historia_academia_evolution">
+       Nascemos da ideia de trazer para Pojuca um novo conceito de academia. Em março de 2015 nasce a Evolution com a proposta de ser uma academia que cuida dos seus alunos de proporcionar resultados positivos na saúde, no corpo  e na mente. Temos a melhor infraestrutura com ambiente arejado, bem ventilado, e iluminado naturalmente, além de uma visão privilegiada. Nossos horários de funcionamento: A Nossa matriz localizada no bairro Inocope, rua J, n20, ao lado da delegacia funciona das 05:00hs às 21:00hs da noite e nossa filial no bairro da Star, funciona das 05:00hs ao meio-dia e das 13:00hs até às 20:30hs da noite. "
+    </string>
 
 </resources>
 

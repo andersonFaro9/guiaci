@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import br.com.guiacistore.R
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.LojasModel
+import br.com.guiacistore.model.LojasModelFireBase
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_historia_do_studio_esound.*
 
@@ -44,7 +44,7 @@ class HistoriaDoStudioESoundFragment :  Fragment(), IFirebase {
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasModel::class.java)
+                    val cliente = d.getValue(LojasModelFireBase::class.java)
 
                     studio_esound_historia_da_empresa?.text = cliente?.studio_esound_historia_da_empresa
 

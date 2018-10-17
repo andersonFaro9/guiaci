@@ -19,9 +19,9 @@ import br.com.guiacistore.fragments.HistoriaDaAcademiaEvolutionFragment
 import br.com.guiacistore.fragments.PromocoesDaAcademiaEvolutionFragment
 import br.com.guiacistore.fragments.ServicosDaAcademiaEvolutionFragment
 import br.com.guiacistore.interfaces.ICheckPermission
-import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.LojasModel
+import br.com.guiacistore.interfaces.Invisible
+import br.com.guiacistore.model.LojasModelFireBase
 import br.com.guiacistore.redesocial.AcademiaEvolutionRedesSociaisActivity
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
@@ -51,7 +51,7 @@ class AcademiaEvolutionActivity : AppCompatActivity(),  Invisible, IFirebase,ICh
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasModel::class.java)
+                    val cliente = d.getValue(LojasModelFireBase::class.java)
 
                     val listaApp  = listOf(
 

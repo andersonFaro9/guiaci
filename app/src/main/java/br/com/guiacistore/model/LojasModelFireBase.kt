@@ -1,6 +1,6 @@
 package br.com.guiacistore.model
 
-data class LojasModel(
+data class LojasModelFireBase(
 
 
         var gregbarbearia_historia_da_empresa: String?= null,
@@ -42,6 +42,13 @@ data class LojasModel(
         var academia_evolution_servico5 : String?= null,
         var academia_evolution_servico6 : String?= null,
         var academia_evolution_servico7 : String?= null,
+
+        var academia_evolution_promocao_1 : String?= null,
+        var academia_evolution_promocao_2 : String?= null,
+        var academia_evolution_promocao_3 : String?= null,
+        var academia_evolution_promocao_4 : String?= null,
+        var academia_evolution_promocao_5 : String?= null,
+
 
 
         //speednet

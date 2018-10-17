@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import br.com.guiacistore.R
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.LojasModel
+import br.com.guiacistore.model.LojasModelFireBase
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_novidades_epg.*
 
@@ -47,7 +47,7 @@ class NovidadesDaEpgFragment : Fragment(), IFirebase {
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasModel::class.java)
+                    val cliente = d.getValue(LojasModelFireBase::class.java)
                     epg_novidades?.text =  cliente?.epg_novidades
 
                     epgProgressBar?.visibility = View.INVISIBLE

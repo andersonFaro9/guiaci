@@ -20,9 +20,9 @@ import br.com.guiacistore.fragments.HistoriaDaBarbeariaGregFragment
 import br.com.guiacistore.fragments.PromocoesDaBarbeariaGregFragment
 import br.com.guiacistore.fragments.ServicosDaBarbeariaGregFragment
 import br.com.guiacistore.interfaces.ICheckPermission
-import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.LojasModel
+import br.com.guiacistore.interfaces.Invisible
+import br.com.guiacistore.model.LojasModelFireBase
 import br.com.guiacistore.redesocial.GregBarbeariaRedesSociaisActivity
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
@@ -53,7 +53,7 @@ class GregBarbeariaActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckP
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasModel::class.java)
+                    val cliente = d.getValue(LojasModelFireBase::class.java)
 
                     val listaApp  = listOf(
                             //Mostra a lista de serviços da  Barbearia do Greg

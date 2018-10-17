@@ -19,9 +19,9 @@ import br.com.guiacistore.fragments.ContatosDaEpgFragment
 import br.com.guiacistore.fragments.NovidadesDaEpgFragment
 import br.com.guiacistore.fragments.ServicosDaEpgFragment
 import br.com.guiacistore.interfaces.ICheckPermission
-import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.LojasModel
+import br.com.guiacistore.interfaces.Invisible
+import br.com.guiacistore.model.LojasModelFireBase
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
@@ -29,7 +29,7 @@ import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 import kotlinx.android.synthetic.main.fragment_servicos_da_epg.*
 
 
-class EpgActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission {
+class EpgActivity : AppCompatActivity(),  Invisible, IFirebase, ICheckPermission {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
@@ -51,7 +51,7 @@ class EpgActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission 
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasModel::class.java)
+                    val cliente = d.getValue(LojasModelFireBase::class.java)
 
                     val listaApp  = listOf(
 
@@ -136,13 +136,6 @@ class EpgActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission 
 
         when (item.itemId) {
 
-//            R.id.ic_menu-> {
-//
-//                val intent = Intent(this@InoveActivity, InoveRedesSociaisActivity::class.java)
-//
-//                startActivity (intent)
-//                return true
-//            }
 
             R.id.ic_phone -> {
 

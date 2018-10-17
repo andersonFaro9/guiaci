@@ -19,9 +19,8 @@ import br.com.guiacistore.fragments.HistoriaDaInoveFragment
 import br.com.guiacistore.fragments.NovidadesDaInoveFragment
 import br.com.guiacistore.fragments.ServicosDaInoveFragment
 import br.com.guiacistore.interfaces.ICheckPermission
-import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.LojasModel
+import br.com.guiacistore.interfaces.Invisible
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
@@ -29,7 +28,7 @@ import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 import kotlinx.android.synthetic.main.fragment_servicos_da_inove.*
 
 
-class InoveActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission {
+class InoveActivity : AppCompatActivity(),  Invisible, IFirebase, ICheckPermission {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
@@ -41,7 +40,7 @@ class InoveActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermissio
 
     override fun doDatabaseInstance(id: Int): Boolean {
 
-        inoveServicosProgressBar?.visibility = View.VISIBLE
+
 
         referenciaFirebase?.child(id.toString())
 
@@ -51,22 +50,27 @@ class InoveActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermissio
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasModel::class.java)
+                    //val cliente = d.getValue(LojasModel::class.java)
 
                     val listaApp  = listOf(
 
-                            cliente?.inove_servico1,cliente?.inove_servico2,
-                            cliente?.inove_servico3,cliente?.inove_servico4,
-                            cliente?.inove_servico5, cliente?.inove_servico6,
-                            cliente?.inove_servico7, cliente?.inove_servico8,
-                            cliente?.inove_servico9, cliente?.inove_servico10,
-                            cliente?.inove_servico11
+                            "Manutenção industrial.",
+                            "Pinturas e jateamentos industriais.",
+                            "Controle da Qualidade e Inspeções.",
+                            "Fabricação de estruturas metálicas.",
+                            "Montagem de estruturas metálicas.",
+                            "Montagem de tubulação em geral.",
+                            "Montagem eletromecânica.",
+                            "Manutenção e Reparação de Tanques e Caldeiras.",
+                            "Tratamento e Revestimento em Metais.",
+                            "Calderaria pesada e leve.",
+                            "Soldas em geral."
                     )
 
                     val arrayAdapter : ArrayAdapter<String?> = ArrayAdapter(this@InoveActivity, android.R.layout.simple_list_item_1, listaApp)
-                    inove_servicos?.adapter = arrayAdapter //<- com as extensions
+                    inove_servicos?.adapter = arrayAdapter
 
-                    inoveServicosProgressBar?.visibility = View.INVISIBLE
+
 
                 }
 
@@ -132,13 +136,7 @@ class InoveActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermissio
 
         when (item.itemId) {
 
-//            R.id.ic_menu-> {
-//
-//                val intent = Intent(this@InoveActivity, InoveRedesSociaisActivity::class.java)
-//
-//                startActivity (intent)
-//                return true
-//            }
+
 
             R.id.ic_phone -> {
 
@@ -177,7 +175,7 @@ class InoveActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermissio
     fun callPhone(){
 
         val callIntent = Intent(Intent.ACTION_CALL)
-        callIntent.data = Uri.parse("tel:996629466")
+        callIntent.data = Uri.parse("tel:987294702")
         startActivity(callIntent)
     }
 

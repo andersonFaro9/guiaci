@@ -6,7 +6,7 @@ import android.util.Log
 import android.view.View
 import br.com.guiacistore.R
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.LojasModel
+import br.com.guiacistore.model.LojasModelFireBase
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_blue_way_promocoes.*
 
@@ -33,7 +33,7 @@ class BlueWayPromocoesActivity : AppCompatActivity(), IFirebase {
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasModel::class.java)
+                    val cliente = d.getValue(LojasModelFireBase::class.java)
 
 
 

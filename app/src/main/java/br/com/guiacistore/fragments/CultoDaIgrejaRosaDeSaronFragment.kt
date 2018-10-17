@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import br.com.guiacistore.R
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.LojasModel
+import br.com.guiacistore.model.LojasModelFireBase
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_culto_na_igreja_rosa_de_saron.*
 
@@ -34,7 +34,7 @@ class CultoDaIgrejaRosaDeSaronFragment : Fragment(), IFirebase {
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasModel::class.java)
+                    val cliente = d.getValue(LojasModelFireBase::class.java)
                     rosa_saron_cultos?.text =  cliente?.rosa_saron_cultos
 
                     rosaSaronCultoProgressBar?.visibility = View.INVISIBLE
