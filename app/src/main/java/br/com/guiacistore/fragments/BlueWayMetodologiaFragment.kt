@@ -12,7 +12,7 @@ class BlueWayMetodologiaFragment: Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_metodologia_blue_way, container, false)
+        return inflater.inflate(R.layout.blue_way_metodologia_fragment, container, false)
     }
 
 

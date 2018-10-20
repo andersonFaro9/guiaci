@@ -138,7 +138,7 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <!--Estilo barra SplashActivity-->
+    <!--Estilo barra br.com.guiacistore.SplashActivity-->
     <style name="theme_splash" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorAccent">@color/colorPrimaryDark</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>

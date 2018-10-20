@@ -8,7 +8,6 @@ import android.support.v7.widget.SearchView
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import br.com.guiacistore.lojas.SobreActivity
 import br.com.guiacistore.model.ListaDeClientes
 import br.com.guiacistore.model.ListaDeClientesAdapter
 import kotlinx.android.synthetic.main.activity_main.*
@@ -28,8 +27,8 @@ open class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
         rView.adapter = adapter
         rView.layoutManager = GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false)
 
-
     }
+
 
 
     private fun  prepareList(list: ArrayList<ListaDeClientes>) {

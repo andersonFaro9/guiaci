@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import br.com.guiacistore.R
 import br.com.guiacistore.interfaces.IButtonOfCloseActivity
-import kotlinx.android.synthetic.main.activity_speednet_redesocial.*
+import kotlinx.android.synthetic.main.speednet_redesocial.*
 
 class SpeednetRedesSociaisActivity : AppCompatActivity(), IButtonOfCloseActivity {
 
@@ -14,7 +14,7 @@ class SpeednetRedesSociaisActivity : AppCompatActivity(), IButtonOfCloseActivity
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_speednet_redesocial)
+        setContentView(R.layout.speednet_redesocial)
         closeActivity()
     }
 

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/frameLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context=".fragments.RosaDeSaronHistoriaFragment">
+
+        <ImageView
+            android:id="@+id/historia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rosaDeSaronHistoriaProgressBar"
+            app:srcCompat="@drawable/historia_rosa_saron" />
+
+
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/rosa_de_saron_historia"
+            android:layout_width="0dp"
+            android:layout_height="218dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:justificationMode="inter_word"
+            android:text=""
+            android:textIsSelectable="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/historia" />
+
+        <ProgressBar
+            android:id="@+id/rosaDeSaronHistoriaProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:indeterminateTint="@color/color_loading"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
