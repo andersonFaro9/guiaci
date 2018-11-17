@@ -18,10 +18,10 @@ import br.com.guiacistore.R
 import br.com.guiacistore.fragments.EpgContatosFragment
 import br.com.guiacistore.fragments.EpgNovidadesFragment
 import br.com.guiacistore.fragments.EpgServicosFragment
-import br.com.guiacistore.interfaces.ICheckPermission
+import br.com.guiacistore.interfaces.CallNumber
 import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.interfaces.Invisible
-import br.com.guiacistore.model.LojasModelFireBase
+import br.com.guiacistore.model.LojasFireBaseModel
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
@@ -29,7 +29,7 @@ import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 import kotlinx.android.synthetic.main.epg_fragment_servicos.*
 
 
-class EpgActivity : AppCompatActivity(),  Invisible, IFirebase, ICheckPermission {
+class EpgActivity : AppCompatActivity(),  Invisible, IFirebase, CallNumber {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
@@ -51,7 +51,7 @@ class EpgActivity : AppCompatActivity(),  Invisible, IFirebase, ICheckPermission
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasModelFireBase::class.java)
+                    val cliente = d.getValue(LojasFireBaseModel::class.java)
 
                     val listaApp  = listOf(
 
@@ -139,7 +139,7 @@ class EpgActivity : AppCompatActivity(),  Invisible, IFirebase, ICheckPermission
 
             R.id.ic_phone -> {
 
-                checkPermissionForCallPhone()
+                callNumber()
                 return true
             }
         }
@@ -149,7 +149,7 @@ class EpgActivity : AppCompatActivity(),  Invisible, IFirebase, ICheckPermission
 
 
 
-    override fun checkPermissionForCallPhone() {
+    override fun callNumber() {
         when {
             ContextCompat.checkSelfPermission(EpgActivity@ this,
                     Manifest.permission.CALL_PHONE)

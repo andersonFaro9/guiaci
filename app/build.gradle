@@ -40,27 +40,26 @@ android {
     }
     buildToolsVersion '27.0.3'
 
-
     //Separa os arquivos por pastas
     sourceSets {
         main {
             res.srcDirs =
                     [
-                       'src/main/res/layouts/academia-evolution',
-                       'src/main/res/layouts/quadrangular',
-                       'src/main/res/layouts/speednet',
-                       'src/main/res/layouts/bios-informatica',
-                       'src/main/res/layouts/epg',
-                       'src/main/res/layouts/rep-sol',
-                       'src/main/res/layouts/lili-doces-cakes',
-                       'src/main/res/layouts/barbearia-greg',
-                       'src/main/res/layouts/blue-way',
-                       'src/main/res/layouts/e-sound',
-                       'src/main/res/layouts/inove',
-                       'src/main/res/layouts/job-sat',
-                       'src/main/res/layouts/rosa-saron',
-                       'src/main/res/layouts',
-                       'src/main/res'
+                            'src/main/res/layouts/academia-evolution',
+                            'src/main/res/layouts/quadrangular',
+                            'src/main/res/layouts/speednet',
+                            'src/main/res/layouts/bios-informatica',
+                            'src/main/res/layouts/epg',
+                            'src/main/res/layouts/publicart',
+                            'src/main/res/layouts/lili-doces-cakes',
+                            'src/main/res/layouts/barbearia-greg',
+                            'src/main/res/layouts/blue-way',
+                            'src/main/res/layouts/e-sound',
+                            'src/main/res/layouts/inove',
+                            'src/main/res/layouts/job-sat',
+                            'src/main/res/layouts/rosa-saron',
+                            'src/main/res/layouts',
+                            'src/main/res'
                     ]
         }
     }
@@ -74,7 +73,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.google.firebase:firebase-core:15.0.2'
-    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:cardview-v7:28.0.0'
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.onesignal:OneSignal:[3.9.1, 3.99.99]'
@@ -85,7 +84,7 @@ dependencies {
     implementation 'com.android.support:support-v4:27.1.1'
     implementation 'com.uncopt:android.justified:1.0'
     implementation 'com.github.chrisbanes:PhotoView:1.2.6'
-
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
 
 }
 

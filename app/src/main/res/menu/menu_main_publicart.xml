@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="br.com.guiacistore.lojas.Main2Activity">
+
+
+    <item
+        android:id="@+id/ic_mapa_publi_cart"
+        android:name="android:actionMenuTextColor"
+        app:queryHint="mapa"
+        android:icon="@drawable/ic_publicart_map"
+        app:showAsAction="always"
+        android:title=""
+
+        />
+
+    <item
+        android:id="@+id/ic_phone"
+        android:name="android:actionMenuTextColor"
+        app:queryHint="telefone"
+        android:icon="@drawable/ic_phone_publicart"
+        app:showAsAction="always"
+        android:title=""
+
+        />
+
+
+
+
+</menu>

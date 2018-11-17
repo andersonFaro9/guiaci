@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import br.com.guiacistore.R
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.LojasModelFireBase
+import br.com.guiacistore.model.LojasFireBaseModel
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.lili_doces_cakes_fragment_historia.*
 
@@ -44,7 +44,7 @@ class LiliDocesCakesHistoriaFragment :  Fragment(), IFirebase {
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasModelFireBase::class.java)
+                    val cliente = d.getValue(LojasFireBaseModel::class.java)
 
                     lili_doces_cakes_historia_da_empresa?.text = cliente?.lili_doces_cakes_historia_da_empresa
 

@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import br.com.guiacistore.R
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.LojasModelFireBase
+import br.com.guiacistore.model.LojasFireBaseModel
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.speednet_fragment_plano_links_dedicado.*
 
@@ -49,7 +49,7 @@ class SpeedNetLinkDedicadoFragment : Fragment(), IFirebase {
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasModelFireBase::class.java)
+                    val cliente = d.getValue(LojasFireBaseModel::class.java)
                     speednet_link_dedicado?.text = cliente?.speednet_link_dedicado
 
                 }

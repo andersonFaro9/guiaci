@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#F50057</color>
-
-    <color name="colorPrimaryVenivice">#9b3035</color>
-    <color name="colorPrimaryRepSol">#db0e30</color>
+    <color name="colorPrimaryPubliCart">#1f9fc4</color>
     <color name="colorPrimaryRosaDeSaron">#01a75b</color>
 
     <color name="colorPrimaryBios">#0098da</color>
     <color name="colorPrimaryGreg">#79661c</color>
     <color name="colorPrimaryEvolution">#daa625</color>
     <color name="colorPrimaryBlueWay">#0102d8</color>
+
     <color name="colorPrimarySpeednet">#f58634</color>
     <color name="colorPrimaryJobSat">#e71212</color>
     <color name="colorPrimaryDocesCake">#e1599d</color>

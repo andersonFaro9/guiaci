@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import br.com.guiacistore.R
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.LojasModelFireBase
+import br.com.guiacistore.model.LojasFireBaseModel
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.esound_fragment_promocoes.*
 
@@ -43,7 +43,7 @@ class ESoundPromocoesFragment : Fragment(), IFirebase {
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasModelFireBase::class.java)
+                    val cliente = d.getValue(LojasFireBaseModel::class.java)
                     studio_esound_promocoes?.text =  cliente?.studio_esound_promocoes
 
                     promocoesESoundProgressBar?.visibility = View.INVISIBLE

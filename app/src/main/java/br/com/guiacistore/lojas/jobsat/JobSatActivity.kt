@@ -18,10 +18,10 @@ import br.com.guiacistore.R
 import br.com.guiacistore.fragments.JobSatHistoriaFragment
 import br.com.guiacistore.fragments.JobSatPromocoesFragment
 import br.com.guiacistore.fragments.JobSatServicosFragment
-import br.com.guiacistore.interfaces.ICheckPermission
+import br.com.guiacistore.interfaces.CallNumber
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.LojasModelFireBase
+import br.com.guiacistore.model.LojasFireBaseModel
 import br.com.guiacistore.redesocial.JobSatRedesSociaisActivity
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
@@ -33,7 +33,7 @@ import kotlinx.android.synthetic.main.jobsat_fragment_servicos.*
 
 novidades, serviços, história
  */
-class JobSatActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission {
+class JobSatActivity : AppCompatActivity(),  Invisible, IFirebase,CallNumber {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
@@ -55,7 +55,7 @@ class JobSatActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermissi
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasModelFireBase::class.java)
+                    val cliente = d.getValue(LojasFireBaseModel::class.java)
 
                     val listaApp  = listOf(
                             //Mostra a lista de serviços da  Barbearia do Greg
@@ -146,7 +146,7 @@ class JobSatActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermissi
 
             R.id.ic_phone -> {
 
-                checkPermissionForCallPhone()
+                callNumber()
                 return true
             }
         }
@@ -156,7 +156,7 @@ class JobSatActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermissi
 
 
 
-    override fun checkPermissionForCallPhone() {
+    override fun callNumber() {
         when {
             ContextCompat.checkSelfPermission(SpeedNetActivity@ this,
                     Manifest.permission.CALL_PHONE)

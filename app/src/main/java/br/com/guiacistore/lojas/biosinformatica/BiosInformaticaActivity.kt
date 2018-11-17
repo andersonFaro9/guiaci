@@ -17,10 +17,10 @@ import android.widget.ArrayAdapter
 import br.com.guiacistore.R
 import br.com.guiacistore.fragments.BiosInformaticaPromocoesFragment
 import br.com.guiacistore.fragments.BiosInformaticaServicosFragment
-import br.com.guiacistore.interfaces.ICheckPermission
+import br.com.guiacistore.interfaces.CallNumber
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.LojasModelFireBase
+import br.com.guiacistore.model.LojasFireBaseModel
 import br.com.guiacistore.redesocial.BiosInformaticaRedesSociaisActivity
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
@@ -28,7 +28,7 @@ import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 import kotlinx.android.synthetic.main.bios_informatica_fragment_servicos.*
 
-class BiosInformaticaActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission {
+class BiosInformaticaActivity : AppCompatActivity(),  Invisible, IFirebase,CallNumber {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
@@ -50,7 +50,7 @@ class BiosInformaticaActivity : AppCompatActivity(),  Invisible, IFirebase,IChec
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasModelFireBase::class.java)
+                    val cliente = d.getValue(LojasFireBaseModel::class.java)
 
                     val listaApp  = listOf(
                             //Mostra a lista de serviços da  Barbearia do Greg
@@ -140,7 +140,7 @@ class BiosInformaticaActivity : AppCompatActivity(),  Invisible, IFirebase,IChec
 
             R.id.ic_phone -> {
 
-                checkPermissionForCallPhone()
+                callNumber()
                 return true
             }
         }
@@ -150,7 +150,7 @@ class BiosInformaticaActivity : AppCompatActivity(),  Invisible, IFirebase,IChec
 
 
 
-    override fun checkPermissionForCallPhone() {
+    override fun callNumber() {
         when {
             ContextCompat.checkSelfPermission(SpeedNetActivity@ this,
                     Manifest.permission.CALL_PHONE)

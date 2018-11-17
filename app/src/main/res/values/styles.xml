@@ -52,13 +52,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-
-    <style name="colorPrimaryRepSol" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="colorPrimaryPubliCart" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimaryRepSol</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryRepSol</item>
+        <item name="colorPrimary">@color/colorPrimaryPubliCart</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryPubliCart</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
 
 
     <style name="colorPrimaryRosaDeSaron" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -76,25 +76,10 @@
     </style>
 
 
-    <style name="themeVenivice" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimaryVenivice</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryVenivice</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
     <style name="themeEvolution" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimaryEvolution</item>
         <item name="colorPrimaryDark">@color/colorPrimaryEvolution</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
-
-    <style name="themeMaseratt" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimaryMaseratt</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryMaseratt</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 

@@ -9,7 +9,6 @@ import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
-import android.transition.Fade
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -19,10 +18,10 @@ import br.com.guiacistore.R
 import br.com.guiacistore.fragments.AcademiaEvolutionHistoriaFragment
 import br.com.guiacistore.fragments.AcademiaEvolutionPromocoesFragment
 import br.com.guiacistore.fragments.AcademiaEvolutionServicosFragment
-import br.com.guiacistore.interfaces.ICheckPermission
+import br.com.guiacistore.interfaces.CallNumber
 import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.interfaces.Invisible
-import br.com.guiacistore.model.LojasModelFireBase
+import br.com.guiacistore.model.LojasFireBaseModel
 import br.com.guiacistore.redesocial.AcademiaEvolutionRedesSociaisActivity
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
@@ -30,7 +29,7 @@ import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 import kotlinx.android.synthetic.main.academia_evolution_fragment_servicos.*
 
-class AcademiaEvolutionActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission {
+class AcademiaEvolutionActivity : AppCompatActivity(),  Invisible, IFirebase,CallNumber {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
@@ -52,7 +51,7 @@ class AcademiaEvolutionActivity : AppCompatActivity(),  Invisible, IFirebase,ICh
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasModelFireBase::class.java)
+                    val cliente = d.getValue(LojasFireBaseModel::class.java)
 
                     val listaApp  = listOf(
 
@@ -143,7 +142,7 @@ class AcademiaEvolutionActivity : AppCompatActivity(),  Invisible, IFirebase,ICh
 
             R.id.ic_phone -> {
 
-                checkPermissionForCallPhone()
+                callNumber()
                 return true
             }
         }
@@ -153,7 +152,7 @@ class AcademiaEvolutionActivity : AppCompatActivity(),  Invisible, IFirebase,ICh
 
 
 
-    override fun checkPermissionForCallPhone() {
+    override fun callNumber() {
         when {
             ContextCompat.checkSelfPermission(SpeedNetActivity@ this,
                     Manifest.permission.CALL_PHONE)

@@ -19,10 +19,10 @@ import br.com.guiacistore.R
 import br.com.guiacistore.fragments.GregBarbeariaHistoriaFragment
 import br.com.guiacistore.fragments.GregBarbeariaPromocoesFragment
 import br.com.guiacistore.fragments.GregBarbeariaServicosFragment
-import br.com.guiacistore.interfaces.ICheckPermission
+import br.com.guiacistore.interfaces.CallNumber
 import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.interfaces.Invisible
-import br.com.guiacistore.model.LojasModelFireBase
+import br.com.guiacistore.model.LojasFireBaseModel
 import br.com.guiacistore.redesocial.GregBarbeariaRedesSociaisActivity
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
@@ -31,7 +31,7 @@ import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 import kotlinx.android.synthetic.main.greg_barbearia_fragment_servicos.*
 
 
-class GregBarbeariaActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission {
+class GregBarbeariaActivity : AppCompatActivity(),  Invisible, IFirebase,CallNumber {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
@@ -53,7 +53,7 @@ class GregBarbeariaActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckP
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasModelFireBase::class.java)
+                    val cliente = d.getValue(LojasFireBaseModel::class.java)
 
                     val listaApp  = listOf(
                             //Mostra a lista de serviços da  Barbearia do Greg
@@ -142,7 +142,7 @@ class GregBarbeariaActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckP
 
             R.id.ic_phone -> {
 
-                checkPermissionForCallPhone()
+                callNumber()
                 return true
             }
         }
@@ -152,7 +152,7 @@ class GregBarbeariaActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckP
 
 
 
-    override fun checkPermissionForCallPhone() {
+    override fun callNumber() {
         when {
             ContextCompat.checkSelfPermission(GregBarbeariaActivity@ this,
                     Manifest.permission.CALL_PHONE)

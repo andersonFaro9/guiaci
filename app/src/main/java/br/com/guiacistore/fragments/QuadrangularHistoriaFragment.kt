@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import br.com.guiacistore.R
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.LojasModelFireBase
+import br.com.guiacistore.model.LojasFireBaseModel
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.quadrangular_fragment_historia.*
 
@@ -36,7 +36,7 @@ class QuadrangularHistoriaFragment : Fragment(), IFirebase {
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasModelFireBase::class.java)
+                    val cliente = d.getValue(LojasFireBaseModel::class.java)
                     quadrangular_historia?.text =  cliente?.quadrangular_historia
 
                     quadrangularHistoriaProgressBar?.visibility = View.INVISIBLE

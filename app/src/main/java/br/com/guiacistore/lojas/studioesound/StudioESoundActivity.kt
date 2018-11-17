@@ -19,19 +19,19 @@ import android.widget.ArrayAdapter
 import br.com.guiacistore.fragments.ESoundHistoriaFragment
 import br.com.guiacistore.fragments.ESoundPromocoesFragment
 import br.com.guiacistore.fragments.ESoundServicosFragment
-import br.com.guiacistore.interfaces.ICheckPermission
+import br.com.guiacistore.interfaces.CallNumber
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.LojasModelFireBase
+import br.com.guiacistore.model.LojasFireBaseModel
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 import kotlinx.android.synthetic.main.esound_fragment_servicos.*
 
-class StudioESoundActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPermission {
+class StudioESoundActivity : AppCompatActivity(), Invisible, IFirebase, CallNumber {
 
-    override fun checkPermissionForCallPhone() {
+    override fun callNumber() {
         when {
             ContextCompat.checkSelfPermission(StudioESoundActivity@ this,
                     Manifest.permission.CALL_PHONE)
@@ -80,7 +80,7 @@ class StudioESoundActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPe
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasModelFireBase::class.java)
+                    val cliente = d.getValue(LojasFireBaseModel::class.java)
 
                     val listaApp  = listOf(
 
@@ -128,7 +128,7 @@ class StudioESoundActivity : AppCompatActivity(), Invisible, IFirebase, ICheckPe
 
             br.com.guiacistore.R.id.ic_phone -> {
 
-                checkPermissionForCallPhone()
+                callNumber()
                 return true
             }
         }

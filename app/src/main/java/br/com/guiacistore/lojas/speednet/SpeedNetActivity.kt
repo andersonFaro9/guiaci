@@ -19,10 +19,10 @@ import br.com.guiacistore.fragments.SpeedNetHistoriaFragment
 import br.com.guiacistore.fragments.SpeedNetLinkDedicadoFragment
 import br.com.guiacistore.fragments.SpeedNetPlanosFragment
 import br.com.guiacistore.fragments.SpeedNetPromocoesFragment
-import br.com.guiacistore.interfaces.ICheckPermission
+import br.com.guiacistore.interfaces.CallNumber
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.LojasModelFireBase
+import br.com.guiacistore.model.LojasFireBaseModel
 import br.com.guiacistore.redesocial.SpeednetRedesSociaisActivity
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
@@ -34,7 +34,7 @@ import kotlinx.android.synthetic.main.speednet_fragment_planos.*
 
 
 class SpeedNetActivity : AppCompatActivity(),
-           Invisible, IFirebase, ICheckPermission {
+           Invisible, IFirebase, CallNumber {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -93,7 +93,7 @@ class SpeedNetActivity : AppCompatActivity(),
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasModelFireBase::class.java)
+                    val cliente = d.getValue(LojasFireBaseModel::class.java)
 
                     speednet_download_5_megas?.text = cliente?.speednet_download_5_megas
                     //speednet_download_5_megas.justificationMode = JUSTIFICATION_MODE_INTER_WORD;
@@ -145,7 +145,7 @@ class SpeedNetActivity : AppCompatActivity(),
 
             R.id.ic_phone -> {
 
-                checkPermissionForCallPhone()
+                callNumber()
                 return true
             }
 
@@ -164,7 +164,7 @@ class SpeedNetActivity : AppCompatActivity(),
     }
 
 
-    override fun checkPermissionForCallPhone() {
+    override fun callNumber() {
         when {
             checkSelfPermission(SpeedNetActivity@this,
                     Manifest.permission.CALL_PHONE)

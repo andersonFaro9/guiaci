@@ -8,14 +8,14 @@ import android.support.v7.widget.SearchView
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import br.com.guiacistore.model.ListaDeClientes
-import br.com.guiacistore.model.ListaDeClientesAdapter
+import br.com.guiacistore.adapter.ListaDasLojasAdapter
+import br.com.guiacistore.model.ListaDasLojasModel
 import kotlinx.android.synthetic.main.activity_main.*
 
 open class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
-    var list = ArrayList<ListaDeClientes>()
-    var adapter = ListaDeClientesAdapter(this, list, list)
+    var list = ArrayList<ListaDasLojasModel>()
+    var adapter = ListaDasLojasAdapter(this, list, list)
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -31,21 +31,21 @@ open class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
 
 
-    private fun  prepareList(list: ArrayList<ListaDeClientes>) {
+    private fun  prepareList(list: ArrayList<ListaDasLojasModel>) {
 
-        list.add(ListaDeClientes("Speednet", "Aqui tem internet para família inteira, com os melhores planos.", R.drawable.loja_speednet))
-        list.add(ListaDeClientes("Barbearia do Greg.", "Seu estilo passa primeiro por aqui.", R.drawable.loja_barbearia_greg))
-        list.add(ListaDeClientes("Job Sat.", "Vendas, instalação e manutenção de antenas.", R.drawable.loja_job_sat))
-        list.add(ListaDeClientes("Lili Doces & Cakes.", "Trabalhamos à pronta entrega e sob encomenda.", R.drawable.loja_lili_doces_cakes))
-        list.add(ListaDeClientes("Bios Informática e Papelaria", "Trazendo soluções para sua vida.", R.drawable.loja_bios_informatica))
-        list.add(ListaDeClientes("RepSol Moto Center.", "Vendas e manutenção de peças para moto.", R.drawable.loja_repsol))
-        list.add(ListaDeClientes("Academia Evolution Fitness de Pojuca.", "Sua evolução começa agora!!.", R.drawable.loja_evolution))
-        list.add(ListaDeClientes("Igreja do Ev. Quadrangular de Pojuca.", "Vivendo em Cristo.", R.drawable.loja_quadrangular))
-        list.add(ListaDeClientes("Blue Way Idiomas", "Faça a diferença, faça Blue Way!.", R.drawable.loja_blueway))
-        list.add(ListaDeClientes("E Sound, sonorização.", "Casamento, aniversário e festa particular.", R.drawable.loja_esound))
-        list.add(ListaDeClientes("Igreja Batista Nacional Rosa de Saron.", " Graça e paz.", R.drawable.loja_rosa_saron))
-        list.add(ListaDeClientes("EPG Impressões.", " Impressão em camisas, canecas, cartões de visita e muito mais.", R.drawable.loja_epg))
-        list.add(ListaDeClientes("Inove.", "Fabricação, Montagem e Manutenção industrial.", R.drawable.loja_inove))
+        list.add(ListaDasLojasModel("Speednet", "Aqui tem internet para família inteira, com os melhores planos.", R.drawable.loja_speednet))
+        list.add(ListaDasLojasModel("Barbearia do Greg.", "Seu estilo passa primeiro por aqui.", R.drawable.loja_barbearia_greg))
+        list.add(ListaDasLojasModel("Job Sat.", "Vendas, instalação e manutenção de antenas.", R.drawable.loja_job_sat))
+        list.add(ListaDasLojasModel("Lili Doces & Cakes.", "Trabalhamos à pronta entrega e sob encomenda.", R.drawable.loja_lili_doces_cakes))
+        list.add(ListaDasLojasModel("Bios Informática e Papelaria", "Trazendo soluções para sua vida.", R.drawable.loja_bios_informatica))
+        list.add(ListaDasLojasModel("Publicart.", "Soluções em comunicação visual, conteúdo e entretenimento .", R.drawable.loja_publicart))
+        list.add(ListaDasLojasModel("Academia Evolution Fitness de Pojuca.", "Sua evolução começa agora!!.", R.drawable.loja_evolution))
+        list.add(ListaDasLojasModel("Igreja do Ev. Quadrangular de Pojuca.", "Vivendo em Cristo.", R.drawable.loja_quadrangular))
+        list.add(ListaDasLojasModel("Blue Way Idiomas", "Faça a diferença, faça Blue Way!.", R.drawable.loja_blueway))
+        list.add(ListaDasLojasModel("E Sound, sonorização.", "Casamento, aniversário e festa particular.", R.drawable.loja_esound))
+        list.add(ListaDasLojasModel("Igreja Batista Nacional Rosa de Saron.", " Graça e paz.", R.drawable.loja_rosa_saron))
+        list.add(ListaDasLojasModel("EPG Impressões.", " Impressão em camisas, canecas, cartões de visita e muito mais.", R.drawable.loja_epg))
+        list.add(ListaDasLojasModel("Inove.", "Fabricação, Montagem e Manutenção industrial.", R.drawable.loja_inove))
 
 
     }

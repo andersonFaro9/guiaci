@@ -2,15 +2,41 @@
 
     <string name="app_name"> Guiaci </string>
 
+
+    //INOVE
     <string name="historia_inove">
         A empresa Inove, Fabricação, Montagem e Manutenção Industrial, surgiu no dia 01 de Outubro de 2017 em Pojuca na Bahia, atuando no mercado industrial,  fabricando e montando estruturas metálicas,  tubulação, montagem eletromecânica, reparação de tanques e caldeiras, caldeiraria pesada e leve e solda em geral e controle de qualidade. A segurança e respeito ao meio ambiente são virtudes que possuímos. Nosso profissionalismo permeia esta empresa, e prioriza pelos cuidados e cursos à nossos colaboradores; e focados em atender as principais exigências que a legislação exige.
     </string>
 
 
+    //EVOLUTION
     <string name="historia_academia_evolution">
        Nascemos da ideia de trazer para Pojuca um novo conceito de academia. Em março de 2015 nasce a Evolution com a proposta de ser uma academia que cuida dos seus alunos de proporcionar resultados positivos na saúde, no corpo  e na mente. Temos a melhor infraestrutura com ambiente arejado, bem ventilado, e iluminado naturalmente, além de uma visão privilegiada. Nossos horários de funcionamento: A Nossa matriz localizada no bairro Inocope, rua J, n20, ao lado da delegacia funciona das 05:00hs às 21:00hs da noite e nossa filial no bairro da Star, funciona das 05:00hs ao meio-dia e das 13:00hs até às 20:30hs da noite. "
     </string>
 
+
+
+    //PUBLICART
+    <string name="missao_publicart">
+       Oferecer à nossos clientes, soluções de comunicação, conteúdo e entretenimento de forma criativa e aplicadas à estratégias assertivas, sempre demonstrando os resultados obtidos.
+    </string>
+
+    <string name="visao_publicart">
+        Conquistar o mundo com ideias e estratégias criativas, desenvolvendo projetos que integrem cada vez mais as marcas aos seus consumidores.
+    </string>
+
+
+    <string name="texto_visao_publicart"> Visão </string>
+
+
+    <string name="valores_publicart">
+        Resultado, talento, paixão, motivação, criatividade, inovação, sucesso, trabalho em equipe, urgência, pró atividade, determinação e entusiasmo.
+    </string>
+
+
+    <string name="texto_valores">
+        Valores
+    </string>
 </resources>
 
 

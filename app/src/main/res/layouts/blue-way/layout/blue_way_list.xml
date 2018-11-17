@@ -8,7 +8,7 @@
     android:id="@+id/relativeLayout">
 
     <ImageView
-        android:id="@+id/imageView_blue_way"
+        android:id="@+id/images"
         android:layout_width="39dp"
         android:layout_height="39dp"
         android:layout_marginStart="2dp"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/titulo_blue_way"
+        android:id="@+id/titulo"
         android:layout_width="280dp"
         android:layout_height="66dp"
         android:layout_marginStart="16dp"
@@ -26,7 +26,7 @@
         android:textColor="#d04d54"
         android:textSize="17sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView_blue_way"
+        app:layout_constraintStart_toEndOf="@+id/images"
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

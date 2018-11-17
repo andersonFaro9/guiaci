@@ -18,10 +18,10 @@ import br.com.guiacistore.R
 import br.com.guiacistore.fragments.LiliDocesCakesHistoriaFragment
 import br.com.guiacistore.fragments.LiliDocesCakesPromocoesFragment
 import br.com.guiacistore.fragments.LiliDocesCakesServicosFragment
-import br.com.guiacistore.interfaces.ICheckPermission
+import br.com.guiacistore.interfaces.CallNumber
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.LojasModelFireBase
+import br.com.guiacistore.model.LojasFireBaseModel
 import br.com.guiacistore.redesocial.LiliDocesCakesRedesSociaisActivity
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
@@ -29,7 +29,7 @@ import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 import kotlinx.android.synthetic.main.lili_doces_cakes_fragment_servicos.*
 
-class LiliDocesCakesActivity : AppCompatActivity(),  Invisible, IFirebase,ICheckPermission {
+class LiliDocesCakesActivity : AppCompatActivity(),  Invisible, IFirebase,CallNumber {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
@@ -51,7 +51,7 @@ class LiliDocesCakesActivity : AppCompatActivity(),  Invisible, IFirebase,ICheck
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasModelFireBase::class.java)
+                    val cliente = d.getValue(LojasFireBaseModel::class.java)
 
                     val listaApp  = listOf(
 
@@ -145,7 +145,7 @@ class LiliDocesCakesActivity : AppCompatActivity(),  Invisible, IFirebase,ICheck
 
             R.id.ic_phone -> {
 
-                checkPermissionForCallPhone()
+                callNumber()
                 return true
             }
         }
@@ -155,7 +155,7 @@ class LiliDocesCakesActivity : AppCompatActivity(),  Invisible, IFirebase,ICheck
 
 
 
-    override fun checkPermissionForCallPhone() {
+    override fun callNumber() {
         when {
             ContextCompat.checkSelfPermission(SpeedNetActivity@ this,
                     Manifest.permission.CALL_PHONE)

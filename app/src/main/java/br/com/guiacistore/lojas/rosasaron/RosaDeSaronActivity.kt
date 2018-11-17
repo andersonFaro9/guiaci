@@ -16,14 +16,14 @@ import br.com.guiacistore.R
 import br.com.guiacistore.fragments.RosaDeSaronCultoFragment
 import br.com.guiacistore.fragments.RosaDeSaronEscolaBiblicaDominicalFragment
 import br.com.guiacistore.fragments.RosaDeSaronHistoriaFragment
-import br.com.guiacistore.interfaces.ICheckPermission
+import br.com.guiacistore.interfaces.CallNumber
 import br.com.guiacistore.redesocial.IgrejaRosaDeSaronRedesSociaisActivity
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 
 
-class RosaDeSaronActivity : AppCompatActivity(), ICheckPermission {
+class RosaDeSaronActivity : AppCompatActivity(), CallNumber {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -91,7 +91,7 @@ class RosaDeSaronActivity : AppCompatActivity(), ICheckPermission {
 
 
 
-    override fun checkPermissionForCallPhone() {
+    override fun callNumber() {
         when {
             ContextCompat.checkSelfPermission(RosaDeSaronActivity@ this,
                     Manifest.permission.CALL_PHONE)

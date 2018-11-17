@@ -12,12 +12,13 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.ListView
 import br.com.guiacistore.R
-import br.com.guiacistore.interfaces.ICheckPermission
-import br.com.guiacistore.model.BlueWayDetalhesModel
-import br.com.guiacistore.model.CustomAdapterBlueWay
+import br.com.guiacistore.adapter.CustomListaSimplesBlueWayAdapter
+import br.com.guiacistore.interfaces.CallNumber
+import br.com.guiacistore.interfaces.IMapa
+import br.com.guiacistore.model.ListaCustomizadaModel
 
 
-class BlueWayActivity : AppCompatActivity(), ICheckPermission {
+class BlueWayActivity : AppCompatActivity(), CallNumber, IMapa {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,17 +26,16 @@ class BlueWayActivity : AppCompatActivity(), ICheckPermission {
         setContentView(R.layout.blue_way_activity)
 
         val listView = findViewById<ListView>(R.id.listView)
-        val blueWayDetalhesModel: ArrayList<BlueWayDetalhesModel> = ArrayList()
+        val listaCustomizadaModel: ArrayList<ListaCustomizadaModel> = ArrayList()
 
-        blueWayDetalhesModel.add(BlueWayDetalhesModel("Blue Way Idiomas", R.drawable.ic_a_blue_way))
-        blueWayDetalhesModel.add(BlueWayDetalhesModel("Matrícule-se", R.drawable.ic_matricula_blue_way))
-        blueWayDetalhesModel.add(BlueWayDetalhesModel("Nossos parceiros", R.drawable.ic_parceiros_blue_way))
-        blueWayDetalhesModel.add(BlueWayDetalhesModel("Promoções", R.drawable.ic_promocao))
-        blueWayDetalhesModel.add(BlueWayDetalhesModel("Contatos", R.drawable.ic_contatos_blue_way))
-        blueWayDetalhesModel.add(BlueWayDetalhesModel("Redes Sociais", R.drawable.ic_redes_sociais_blue_way))
-        blueWayDetalhesModel.add(BlueWayDetalhesModel("Localização em Pojuca", R.drawable.ic_blue_way_map_menu))
+        listaCustomizadaModel.add(ListaCustomizadaModel("Blue Way Idiomas", R.drawable.ic_a_blue_way))
+        listaCustomizadaModel.add(ListaCustomizadaModel("Matrícule-se", R.drawable.ic_matricula_blue_way))
+        listaCustomizadaModel.add(ListaCustomizadaModel("Nossos parceiros", R.drawable.ic_parceiros_blue_way))
+        listaCustomizadaModel.add(ListaCustomizadaModel("Promoções", R.drawable.ic_promocao))
+        listaCustomizadaModel.add(ListaCustomizadaModel("Contatos", R.drawable.ic_contatos_blue_way))
+        listaCustomizadaModel.add(ListaCustomizadaModel("Redes Sociais", R.drawable.ic_redes_sociais_blue_way))
 
-        listView.adapter = CustomAdapterBlueWay(applicationContext, blueWayDetalhesModel)
+        listView.adapter = CustomListaSimplesBlueWayAdapter(applicationContext, listaCustomizadaModel)
 
         supportActionBar?.title = "Blue Way Idiomas"
 
@@ -48,7 +48,7 @@ class BlueWayActivity : AppCompatActivity(), ICheckPermission {
                 3 ->  startActivity(Intent(this, BlueWayPromocoesActivity::class.java))
                 4 ->  startActivity(Intent(this, BlueWayContatosActivity::class.java))
                 5 ->  startActivity(Intent(this, BlueWayRedesSociaisActivity::class.java))
-                6 ->  startActivity(Intent(this, BlueWayMapasActivity::class.java))
+
             }
         }
 
@@ -64,20 +64,24 @@ class BlueWayActivity : AppCompatActivity(), ICheckPermission {
 
     }
 
-
+    override fun verNoMapa() {
+        val uri = Uri.parse("https://goo.gl/maps/YKqrLs5QE6H2")
+        val intent = Intent(Intent.ACTION_VIEW, uri)
+        startActivity(intent)
+    }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when (item.itemId) {
 
             R.id.ic_phone -> {
 
-                checkPermissionForCallPhone()
+                callNumber()
                 return true
             }
 
             R.id.ic_mapa_blue_way -> {
 
-                startActivity(Intent(this, BlueWayMapasActivity::class.java))
+                verNoMapa()
 
                 return true
             }
@@ -89,7 +93,7 @@ class BlueWayActivity : AppCompatActivity(), ICheckPermission {
 
 
 
-    override fun checkPermissionForCallPhone() {
+    override fun callNumber() {
         when {
             ContextCompat.checkSelfPermission(BlueWayIdiomasActivity@ this,
                     Manifest.permission.CALL_PHONE)
