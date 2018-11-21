@@ -1,4 +1,4 @@
-package br.com.guiacistore.adapter
+package br.com.guiacistore.adapter.publicart
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import android.widget.TextView
 import br.com.guiacistore.R
 import br.com.guiacistore.model.ListaCustomizadaModel
 
-//Lista adapter simples com imagem e texto Publicart
+//Lista simples adapter responsável pelo menu principal da Publicart com imagem e texto
 
 class CustomListaSimplesPubliCartAdapter(var context: Context, var listaCustomizadaModel:ArrayList<ListaCustomizadaModel>) : BaseAdapter() {
 
@@ -46,8 +46,6 @@ class CustomListaSimplesPubliCartAdapter(var context: Context, var listaCustomiz
         var listaCustomizada : ListaCustomizadaModel = getItem(position) as ListaCustomizadaModel
         viewHolder.textName?.text = listaCustomizada.nome
         viewHolder.imageView?.setImageResource(listaCustomizada.image)
-
-
 
         return view as View
     }

@@ -1,4 +1,4 @@
-package br.com.guiacistore.adapter
+package br.com.guiacistore.adapter.publicart
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -8,13 +8,14 @@ import android.widget.TextView
 import br.com.guiacistore.R
 import br.com.guiacistore.model.ListaSimplesCustomModel
 
+//Responsável pela lista de parceiros da Publicart... lista simples com texto e subtitulo
 
 class PubliCartParceirosAdapter(private val listaPublicartModel: List<ListaSimplesCustomModel>) :
         RecyclerView.Adapter<PubliCartParceirosAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
-        val itemLista = LayoutInflater.from(parent.context).inflate(R.layout.publi_cart_adapter_lista, parent, false)
+        val itemLista = LayoutInflater.from(parent.context).inflate(R.layout.publicart_adapter_lista, parent, false)
 
         return MyViewHolder(itemLista)
     }

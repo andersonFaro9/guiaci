@@ -158,7 +158,12 @@
             android:theme="@style/colorPrimaryPubliCart" android:parentActivityName=".lojas.publicart.PubliCartServicosActivity"/>
 
         <activity android:name=".lojas.publicart.PubliCartFragmentsActivity" android:parentActivityName=".lojas.publicart.PubliCartFragmentsActivity" android:theme="@style/colorPrimaryPubliCart"/>
-        <activity android:name=".lojas.publicart.PublicartContatosActivity" />
+        <activity android:name=".lojas.publicart.PublicartContatosActivity"  android:parentActivityName=".lojas.publicart.PublicartContatosActivity" android:theme="@style/colorPrimaryPubliCart"/>
+        <activity android:theme="@style/colorPrimaryPubliCart" android:name=".lojas.publicart.PublicartNovidadesActivity" android:parentActivityName=".lojas.publicart.PublicartNovidadesActivity"/>
+        <activity android:name=".lojas.publicart.fotos.PubliCartPrimeiraFotoActivity" android:theme="@style/colorPrimaryPubliCart"/>
+        <activity android:name=".lojas.publicart.fotos.PubliCartSegundaFotoActivity" android:theme="@style/colorPrimaryPubliCart" />
+        <activity android:name=".lojas.publicart.fotos.PubliCartTerceiraFotoActivity" android:theme="@style/colorPrimaryPubliCart" />
+        <activity android:name=".lojas.publicart.fotos.PubliCartQuartaFotoActivity" android:theme="@style/colorPrimaryPubliCart"/>
 
 
     </application>

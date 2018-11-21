@@ -7,14 +7,13 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.ListView
 import br.com.guiacistore.R
-import br.com.guiacistore.adapter.CustomListaSimplesPubliCartAdapter
+import br.com.guiacistore.adapter.publicart.CustomListaSimplesPubliCartAdapter
+import br.com.guiacistore.extensions.verMapa
 import br.com.guiacistore.interfaces.CallNumber
-import br.com.guiacistore.interfaces.IMapa
-import br.com.guiacistore.lojas.blueway.BlueWayRedesSociaisActivity
 import br.com.guiacistore.model.ListaCustomizadaModel
 
 
-class PubliCartActivity : AppCompatActivity(), IMapa, CallNumber{
+ class PubliCartActivity : AppCompatActivity(),  CallNumber{
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +25,7 @@ class PubliCartActivity : AppCompatActivity(), IMapa, CallNumber{
 
         listaCustomizadaModel.add(ListaCustomizadaModel("A Publicart", R.drawable.ic_a_publi_cart))
         listaCustomizadaModel.add(ListaCustomizadaModel("Nossos serviços", R.drawable.ic_a_publi_cart_servicos))
-        listaCustomizadaModel.add(ListaCustomizadaModel("Contatos", R.drawable.ic_phone_publicart_menu))
+        listaCustomizadaModel.add(ListaCustomizadaModel("Contatos e redes sociais", R.drawable.ic_phone_publicart_menu))
         listaCustomizadaModel.add(ListaCustomizadaModel("Nossos parceiros", R.drawable.ic_a_publi_cart_parceiros))
         listaCustomizadaModel.add(ListaCustomizadaModel("Novidades", R.drawable.ic_a_publi_cart_novidades))
 
@@ -42,12 +41,10 @@ class PubliCartActivity : AppCompatActivity(), IMapa, CallNumber{
                 1 ->  startActivity(Intent(this, PubliCartServicosActivity::class.java))
                 2 ->  startActivity(Intent(this, PublicartContatosActivity::class.java))
                 3 ->  startActivity(Intent(this, PublicartParceirosActivity::class.java))
-                4 ->  startActivity(Intent(this, BlueWayRedesSociaisActivity::class.java))
+                4 ->  startActivity(Intent(this, PublicartNovidadesActivity::class.java))
 
             }
         }
-
-
     }
 
 
@@ -58,13 +55,6 @@ class PubliCartActivity : AppCompatActivity(), IMapa, CallNumber{
         return true
 
     }
-
-    override fun verNoMapa() {
-        val uri = Uri.parse("https://goo.gl/maps/Cu1JkvVYymk")
-        val intent = Intent(Intent.ACTION_VIEW, uri)
-        startActivity(intent)
-    }
-
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
@@ -78,7 +68,7 @@ class PubliCartActivity : AppCompatActivity(), IMapa, CallNumber{
 
             R.id.ic_mapa_publi_cart -> {
 
-                verNoMapa()
+                verMapa(Uri.parse("https://goo.gl/maps/Cu1JkvVYymk"))
 
                 return true
             }

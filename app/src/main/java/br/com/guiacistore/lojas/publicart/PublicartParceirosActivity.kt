@@ -8,9 +8,9 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.LinearLayout
 import br.com.guiacistore.R
+import br.com.guiacistore.adapter.publicart.PubliCartParceirosAdapter
 import br.com.guiacistore.composicao.ListaDeParceiros
 import br.com.guiacistore.lojas.blueway.RecyclerItemClickListener
-import br.com.guiacistore.adapter.PubliCartParceirosAdapter
 
 
 class PublicartParceirosActivity : AppCompatActivity() {
@@ -21,7 +21,7 @@ class PublicartParceirosActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycleview)
 
-        recyclerView = findViewById(R.id.recyclerView)
+        recyclerView = findViewById(R.id.recView)
 
         val parceirosPubliCart = ListaDeParceiros()
 
@@ -29,7 +29,7 @@ class PublicartParceirosActivity : AppCompatActivity() {
 
         val adapter = PubliCartParceirosAdapter(parceirosPubliCart.listaDeParceiros)
 
-        supportActionBar?.title = "Parceiros Publicart"
+        supportActionBar?.title = "Publicart"
 
         confiraListaRecycleView(adapter)
 

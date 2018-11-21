@@ -1,24 +1,19 @@
 package br.com.guiacistore.lojas.blueway
-import android.Manifest
-import android.annotation.SuppressLint
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import android.support.v4.app.ActivityCompat
-import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ListView
 import br.com.guiacistore.R
-import br.com.guiacistore.adapter.CustomListaSimplesBlueWayAdapter
+import br.com.guiacistore.adapter.blueway.CustomListaSimplesBlueWayAdapter
+import br.com.guiacistore.extensions.verMapa
 import br.com.guiacistore.interfaces.CallNumber
-import br.com.guiacistore.interfaces.IMapa
 import br.com.guiacistore.model.ListaCustomizadaModel
 
 
-class BlueWayActivity : AppCompatActivity(), CallNumber, IMapa {
+class BlueWayActivity : AppCompatActivity(), CallNumber {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,11 +59,7 @@ class BlueWayActivity : AppCompatActivity(), CallNumber, IMapa {
 
     }
 
-    override fun verNoMapa() {
-        val uri = Uri.parse("https://goo.gl/maps/YKqrLs5QE6H2")
-        val intent = Intent(Intent.ACTION_VIEW, uri)
-        startActivity(intent)
-    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when (item.itemId) {
@@ -81,7 +72,7 @@ class BlueWayActivity : AppCompatActivity(), CallNumber, IMapa {
 
             R.id.ic_mapa_blue_way -> {
 
-                verNoMapa()
+                verMapa(Uri.parse("https://goo.gl/maps/xveDad3JKWk"))
 
                 return true
             }
@@ -94,36 +85,11 @@ class BlueWayActivity : AppCompatActivity(), CallNumber, IMapa {
 
 
     override fun callNumber() {
-        when {
-            ContextCompat.checkSelfPermission(BlueWayIdiomasActivity@ this,
-                    Manifest.permission.CALL_PHONE)
-                    != PackageManager.PERMISSION_GRANTED -> if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                            Manifest.permission.CALL_PHONE)) {
 
-            } else {
-
-                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE), 42)
-            }
-            else -> callPhone()
-        }
-    }
-
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
-
-        when { requestCode == 42 && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED -> callPhone() }
-
-    }
-
-    @SuppressLint("MissingPermission")
-    fun callPhone(){
-
-        val callIntent = Intent(Intent.ACTION_CALL)
-        callIntent.data = Uri.parse("tel:996287958")
+        val callIntent = Intent(Intent.ACTION_DIAL)
+        callIntent.data = Uri.parse("tel:71 9627-1187")
         startActivity(callIntent)
     }
-
-
-
 
 
 

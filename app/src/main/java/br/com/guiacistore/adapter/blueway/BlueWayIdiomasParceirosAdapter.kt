@@ -1,4 +1,4 @@
-package br.com.guiacistore.adapter
+package br.com.guiacistore.adapter.blueway
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater

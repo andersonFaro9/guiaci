@@ -21,15 +21,15 @@
 
             <TextView
                 android:id="@+id/titleTop"
-                style="@style/Base.TextAppearance.AppCompat.Headline"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:paddingLeft="8dp"
-                android:paddingTop="12dp"
                 android:paddingRight="@dimen/album_title_padding"
+                android:paddingTop="12dp"
                 android:text=""
+                android:textAlignment="center"
                 android:textColor="@color/album_title"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -37,8 +37,8 @@
             <ImageView
                 android:id="@+id/imagemCardView"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/album_cover_height"
                 android:layout_marginTop="80dp"
+                android:layout_height="@dimen/album_cover_height"
                 android:scaleType="centerInside" />
 
             <TextView
@@ -51,6 +51,7 @@
                 android:paddingLeft="8dp"
                 android:paddingRight="@dimen/album_title_padding"
                 android:text=" "
+                android:textAlignment="center"
                 android:paddingTop="10dp"
                 android:textSize="14sp"
                 android:textStyle="normal" />

@@ -60,6 +60,15 @@
     </style>
 
 
+    <style name="colorPrimaryFundoFoto" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryPubliCart</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryPubliCart</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
 
     <style name="colorPrimaryRosaDeSaron" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->

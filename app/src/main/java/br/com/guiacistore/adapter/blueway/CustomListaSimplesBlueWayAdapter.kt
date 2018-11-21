@@ -1,4 +1,4 @@
-package br.com.guiacistore.adapter
+package br.com.guiacistore.adapter.blueway
 
 import android.content.Context
 import android.view.LayoutInflater

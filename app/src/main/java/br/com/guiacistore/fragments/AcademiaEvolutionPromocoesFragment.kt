@@ -17,7 +17,6 @@ import kotlinx.android.synthetic.main.academia_evolution_fragment_promocoes.*
 
 class AcademiaEvolutionPromocoesFragment : Fragment(), IFirebase {
 
-
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()
 

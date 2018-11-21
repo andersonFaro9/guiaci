@@ -3,6 +3,8 @@ package br.com.guiacistore.model
 data class LojasFireBaseModel(
 
 
+        var publicartNovidades: String?= null,
+
         var gregbarbearia_historia_da_empresa: String?= null,
         var gregbarbearia_promocoes : String?= null,
         var gregbarbearia_servico1 : String?= null,
@@ -72,28 +74,6 @@ data class LojasFireBaseModel(
 
         var speednet_link_dedicado: String?= null,
 
-        //quadrangular
-
-
-
-        var repsol_historia_da_empresa:String?= null,
-        var repsol_promocoes: String?= null,
-        var repsol_produto_1: String?= null,
-        var repsol_produto_2: String?= null,
-        var repsol_produto_3: String?= null,
-        var repsol_produto_4: String?= null,
-        var repsol_produto_5: String?= null,
-        var repsol_produto_6: String?= null,
-        var repsol_produto_7: String?= null,
-        var repsol_produto_8: String?= null,
-        var repsol_produto_9: String?= null,
-        var repsol_produto_10: String?= null,
-        var repsol_produto_11: String?= null,
-        var repsol_produto_12: String?= null,
-
-
-
-
         var lili_doces_cakes_historia_da_empresa : String?=null,
         var lili_doces_cakes_promocoes: String?= null,
         var lili_doces_cakes_produto_1: String?= null,
@@ -107,15 +87,6 @@ data class LojasFireBaseModel(
         var lili_doces_cakes_produto_9: String?= null,
 
 
-
-        var studio_maseratt_historia_da_empresa: String?= null,
-        var studio_maseratt_promocoes: String?= null,
-        var studio_maseratt_produto_1: String?= null,
-        var studio_maseratt_produto_2: String?= null,
-        var studio_maseratt_produto_3: String?= null,
-        var studio_maseratt_produto_4: String?= null,
-        var studio_maseratt_produto_5: String?= null,
-        var studio_maseratt_produto_6: String?= null,
 
 
         var studio_esound_historia_da_empresa: String?= null,

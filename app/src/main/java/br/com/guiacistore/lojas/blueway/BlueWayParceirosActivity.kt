@@ -9,7 +9,7 @@ import android.widget.AdapterView
 import android.widget.LinearLayout
 import br.com.guiacistore.R
 import br.com.guiacistore.composicao.ListaDeParceiros
-import br.com.guiacistore.adapter.BlueWayIdiomasParceirosAdapter
+import br.com.guiacistore.adapter.blueway.BlueWayIdiomasParceirosAdapter
 
 
 class BlueWayParceirosActivity : AppCompatActivity() {
@@ -21,7 +21,7 @@ class BlueWayParceirosActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycleview)
 
-        recyclerView = findViewById(R.id.recyclerView)
+        recyclerView = findViewById(R.id.recView)
 
         val parceirosBlueWay = ListaDeParceiros()
 

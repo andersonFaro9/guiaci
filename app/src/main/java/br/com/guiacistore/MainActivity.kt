@@ -10,7 +10,7 @@ import android.view.Menu
 import android.view.MenuItem
 import br.com.guiacistore.adapter.ListaDasLojasAdapter
 import br.com.guiacistore.model.ListaDasLojasModel
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_recycleview.*
 
 open class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
@@ -20,12 +20,12 @@ open class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_recycleview)
 
         prepareList(list)
 
-        rView.adapter = adapter
-        rView.layoutManager = GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false)
+        recView.adapter = adapter
+        recView.layoutManager = GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false)
 
     }
 
