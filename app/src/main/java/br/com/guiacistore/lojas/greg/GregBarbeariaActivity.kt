@@ -19,7 +19,7 @@ import br.com.guiacistore.R
 import br.com.guiacistore.fragments.GregBarbeariaHistoriaFragment
 import br.com.guiacistore.fragments.GregBarbeariaPromocoesFragment
 import br.com.guiacistore.fragments.GregBarbeariaServicosFragment
-import br.com.guiacistore.interfaces.CallNumber
+import br.com.guiacistore.interfaces.ICallNumber
 import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.model.LojasFireBaseModel
@@ -31,7 +31,7 @@ import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 import kotlinx.android.synthetic.main.greg_barbearia_fragment_servicos.*
 
 
-class GregBarbeariaActivity : AppCompatActivity(),  Invisible, IFirebase,CallNumber {
+class GregBarbeariaActivity : AppCompatActivity(),  Invisible, IFirebase,ICallNumber {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()

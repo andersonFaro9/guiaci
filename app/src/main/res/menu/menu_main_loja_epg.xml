@@ -15,5 +15,17 @@
         />
 
 
+    <item
+        android:id="@+id/ic_mapa"
+        android:name="android:actionMenuTextColor"
+        android:textColorHighlight="@color/colorPrimary"
+        app:queryHint="telefone"
+        android:icon="@drawable/ic_mapa_epg_menu_topo"
+        app:showAsAction="always"
+        android:title=""
+
+        />
+
+
 
 </menu>

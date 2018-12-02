@@ -18,7 +18,7 @@ import br.com.guiacistore.R
 import br.com.guiacistore.fragments.LiliDocesCakesHistoriaFragment
 import br.com.guiacistore.fragments.LiliDocesCakesPromocoesFragment
 import br.com.guiacistore.fragments.LiliDocesCakesServicosFragment
-import br.com.guiacistore.interfaces.CallNumber
+import br.com.guiacistore.interfaces.ICallNumber
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.model.LojasFireBaseModel
@@ -29,7 +29,7 @@ import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 import kotlinx.android.synthetic.main.lili_doces_cakes_fragment_servicos.*
 
-class LiliDocesCakesActivity : AppCompatActivity(),  Invisible, IFirebase,CallNumber {
+class LiliDocesCakesActivity : AppCompatActivity(),  Invisible, IFirebase,ICallNumber {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()

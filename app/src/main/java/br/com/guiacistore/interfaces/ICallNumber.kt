@@ -1,5 +1,5 @@
 package br.com.guiacistore.interfaces
 
-interface CallNumber {
+interface ICallNumber {
     fun callNumber()
 }

@@ -130,6 +130,7 @@ class ListaDasLojasAdapter(private val context: Context, private var list: List<
                 11 -> context.startActivity(Intent(context, EpgActivity::class.java))
                 12 -> context.startActivity(Intent(context, InoveActivity::class.java))
 
+
             }
 
         }

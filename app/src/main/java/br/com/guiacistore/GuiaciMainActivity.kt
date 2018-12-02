@@ -12,7 +12,7 @@ import br.com.guiacistore.adapter.ListaDasLojasAdapter
 import br.com.guiacistore.model.ListaDasLojasModel
 import kotlinx.android.synthetic.main.activity_recycleview.*
 
-open class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
+open class GuiaciMainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
     var list = ArrayList<ListaDasLojasModel>()
     var adapter = ListaDasLojasAdapter(this, list, list)
@@ -23,6 +23,13 @@ open class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
         setContentView(R.layout.activity_recycleview)
 
         prepareList(list)
+
+
+//        var mToolbar = findViewById<Toolbar>(R.id.mCustomToolbar)
+//        setSupportActionBar(mToolbar)
+
+
+        //supportActionBar?.setIcon(R.drawable.guiaci);
 
         recView.adapter = adapter
         recView.layoutManager = GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false)
@@ -80,7 +87,7 @@ open class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
             R.id.telefone -> {
 
-                val intent = Intent(this@MainActivity, SobreActivity::class.java)
+                val intent = Intent(this@GuiaciMainActivity, SobreActivity::class.java)
 
                 startActivity(intent)
                 return true

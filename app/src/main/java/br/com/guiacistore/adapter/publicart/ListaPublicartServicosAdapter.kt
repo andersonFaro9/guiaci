@@ -14,7 +14,7 @@ import br.com.guiacistore.lojas.publicart.fotos.PubliCartPrimeiraFotoActivity
 import br.com.guiacistore.lojas.publicart.fotos.PubliCartQuartaFotoActivity
 import br.com.guiacistore.lojas.publicart.fotos.PubliCartSegundaFotoActivity
 import br.com.guiacistore.lojas.publicart.fotos.PubliCartTerceiraFotoActivity
-import br.com.guiacistore.model.ListaDasLojasPublicartModel
+import br.com.guiacistore.model.ListaDeFotosModel
 
 
 /**
@@ -26,7 +26,7 @@ demonstração dos serviços ajudando a classe PubliCartServicosActivity
  dos clientes
  */
 
-class ListaPublicartServicosAdapter(private val context: Context, private var list: List<ListaDasLojasPublicartModel>, private var baseList: List<ListaDasLojasPublicartModel>) :
+class ListaPublicartServicosAdapter(private val context: Context, private var list: List<ListaDeFotosModel>, private var baseList: List<ListaDeFotosModel>) :
         RecyclerView.Adapter<ListaPublicartServicosAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -58,7 +58,7 @@ class ListaPublicartServicosAdapter(private val context: Context, private var li
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        val modelPublicart: ListaDasLojasPublicartModel = list.get(position)
+        val modelPublicart: ListaDeFotosModel = list.get(position)
 
         holder.tituloTop?.text = modelPublicart.tituloTop
         holder.subTitulo?.text = modelPublicart.subTitle

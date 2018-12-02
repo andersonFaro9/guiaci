@@ -18,7 +18,7 @@ import br.com.guiacistore.R
 import br.com.guiacistore.fragments.InoveHistoriaFragment
 import br.com.guiacistore.fragments.InoveNovidadesFragment
 import br.com.guiacistore.fragments.InoveServicosFragment
-import br.com.guiacistore.interfaces.CallNumber
+import br.com.guiacistore.interfaces.ICallNumber
 import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.interfaces.Invisible
 import com.google.firebase.database.*
@@ -28,7 +28,7 @@ import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 import kotlinx.android.synthetic.main.inove_fragment_servicos.*
 
 
-class InoveActivity : AppCompatActivity(),  Invisible, IFirebase, CallNumber {
+class InoveActivity : AppCompatActivity(),  Invisible, IFirebase, ICallNumber {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()

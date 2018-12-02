@@ -18,10 +18,11 @@ android {
         ]
         minSdkVersion 21
         targetSdkVersion 27
-        versionCode 23
-        versionName "1.2.16"
+        versionCode 24
+        versionName "1.2.17"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        vectorDrawables.useSupportLibrary = true
 
     }
     buildTypes {
@@ -58,6 +59,8 @@ android {
                             'src/main/res/layouts/inove',
                             'src/main/res/layouts/job-sat',
                             'src/main/res/layouts/rosa-saron',
+                            'src/main/res/layouts/vinte-nove-de-julho',
+                            'src/main/res/layouts/unopar-pojuca',
                             'src/main/res/layouts',
                             'src/main/res'
                     ]

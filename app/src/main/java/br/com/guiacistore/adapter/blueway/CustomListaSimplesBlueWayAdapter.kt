@@ -10,7 +10,7 @@ import android.widget.TextView
 import br.com.guiacistore.R
 import br.com.guiacistore.model.ListaCustomizadaModel
 
-//Lista adapter simples com imagem e texto Blue Way
+//Lista adapter simples com imagem e texto
 
 class CustomListaSimplesBlueWayAdapter(var context: Context, var listaCustomizadaModel:ArrayList<ListaCustomizadaModel>) : BaseAdapter() {
 
@@ -51,9 +51,6 @@ class CustomListaSimplesBlueWayAdapter(var context: Context, var listaCustomizad
 
         return view as View
     }
-
-
-
 
     override fun getItem(position: Int): Any {
 

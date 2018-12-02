@@ -16,14 +16,14 @@ import br.com.guiacistore.R
 import br.com.guiacistore.fragments.RosaDeSaronCultoFragment
 import br.com.guiacistore.fragments.RosaDeSaronEscolaBiblicaDominicalFragment
 import br.com.guiacistore.fragments.RosaDeSaronHistoriaFragment
-import br.com.guiacistore.interfaces.CallNumber
+import br.com.guiacistore.interfaces.ICallNumber
 import br.com.guiacistore.redesocial.IgrejaRosaDeSaronRedesSociaisActivity
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 
 
-class RosaDeSaronActivity : AppCompatActivity(), CallNumber {
+class RosaDeSaronActivity : AppCompatActivity(), ICallNumber {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -18,7 +18,7 @@ import br.com.guiacistore.R
 import br.com.guiacistore.fragments.JobSatHistoriaFragment
 import br.com.guiacistore.fragments.JobSatPromocoesFragment
 import br.com.guiacistore.fragments.JobSatServicosFragment
-import br.com.guiacistore.interfaces.CallNumber
+import br.com.guiacistore.interfaces.ICallNumber
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.model.LojasFireBaseModel
@@ -33,7 +33,7 @@ import kotlinx.android.synthetic.main.jobsat_fragment_servicos.*
 
 novidades, serviços, história
  */
-class JobSatActivity : AppCompatActivity(),  Invisible, IFirebase,CallNumber {
+class JobSatActivity : AppCompatActivity(),  Invisible, IFirebase,ICallNumber {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()

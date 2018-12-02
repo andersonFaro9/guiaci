@@ -19,7 +19,7 @@ import android.widget.ArrayAdapter
 import br.com.guiacistore.fragments.ESoundHistoriaFragment
 import br.com.guiacistore.fragments.ESoundPromocoesFragment
 import br.com.guiacistore.fragments.ESoundServicosFragment
-import br.com.guiacistore.interfaces.CallNumber
+import br.com.guiacistore.interfaces.ICallNumber
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.model.LojasFireBaseModel
@@ -29,7 +29,7 @@ import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 import kotlinx.android.synthetic.main.esound_fragment_servicos.*
 
-class StudioESoundActivity : AppCompatActivity(), Invisible, IFirebase, CallNumber {
+class StudioESoundActivity : AppCompatActivity(), Invisible, IFirebase, ICallNumber {
 
     override fun callNumber() {
         when {

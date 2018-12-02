@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.LinearLayout
 import br.com.guiacistore.R
-import br.com.guiacistore.composicao.ListaDeParceiros
+import br.com.guiacistore.composicao.Parceiros
 import br.com.guiacistore.adapter.blueway.BlueWayIdiomasParceirosAdapter
 
 
@@ -23,11 +23,11 @@ class BlueWayParceirosActivity : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.recView)
 
-        val parceirosBlueWay = ListaDeParceiros()
+        val parceirosBlueWay = Parceiros()
 
         parceirosBlueWay.exibirParceirosDaBlueWay()
 
-        val adapter = BlueWayIdiomasParceirosAdapter(parceirosBlueWay.listaDeParceiros)
+        val adapter = BlueWayIdiomasParceirosAdapter(parceirosBlueWay.lista)
 
         supportActionBar?.title = "Parceiros Blue Way"
 

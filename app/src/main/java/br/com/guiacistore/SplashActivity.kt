@@ -23,7 +23,7 @@ class SplashActivity : AppCompatActivity() {
 
         Handler().postDelayed({
 
-            val i = Intent(this@SplashActivity, MainActivity::class.java)
+            val i = Intent(this@SplashActivity, GuiaciMainActivity::class.java)
             startActivity(i)
 
             // close this activity

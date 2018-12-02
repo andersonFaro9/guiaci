@@ -128,7 +128,7 @@
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
-            android:text="(71) 9.99636-3518 / 9.9983-4169"
+            android:text="(71) 9.9636-3518 / 9.9983-4169"
             android:textAlignment="viewStart"
             android:textColor="@color/album_title"
             android:textIsSelectable="true"

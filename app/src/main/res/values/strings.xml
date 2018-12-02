@@ -36,6 +36,17 @@
 
     <string name="texto_valores">
         Valores
+
+    </string>
+
+    //Epg
+    <string name="historia_epg">
+       A EPG Impressões trabalha com diversos serviços de impressão; canecas, impressão de camisas, copos, convites, panfleto e muito mais. Estamos localizados em Pojuca, rua Alfredo Leite, Shangri-la, contate através do (71) 3645-1028, explore nosso aplicativo e fique à vontade."
+    </string>
+
+
+    <string name="historia_rede_sociais">
+       Acesse nossas redes sociais e fiquem por dentro de todas as novidades!!!
     </string>
 </resources>
 

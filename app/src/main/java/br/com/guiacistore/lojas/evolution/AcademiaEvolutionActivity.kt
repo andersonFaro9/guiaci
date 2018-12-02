@@ -18,7 +18,7 @@ import br.com.guiacistore.R
 import br.com.guiacistore.fragments.AcademiaEvolutionHistoriaFragment
 import br.com.guiacistore.fragments.AcademiaEvolutionPromocoesFragment
 import br.com.guiacistore.fragments.AcademiaEvolutionServicosFragment
-import br.com.guiacistore.interfaces.CallNumber
+import br.com.guiacistore.interfaces.ICallNumber
 import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.model.LojasFireBaseModel
@@ -29,7 +29,7 @@ import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 import kotlinx.android.synthetic.main.academia_evolution_fragment_servicos.*
 
-class AcademiaEvolutionActivity : AppCompatActivity(),  Invisible, IFirebase,CallNumber {
+class AcademiaEvolutionActivity : AppCompatActivity(),  Invisible, IFirebase,ICallNumber {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()

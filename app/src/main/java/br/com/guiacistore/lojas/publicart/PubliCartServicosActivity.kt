@@ -4,13 +4,13 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import br.com.guiacistore.R
 import br.com.guiacistore.adapter.publicart.ListaPublicartServicosAdapter
-import br.com.guiacistore.model.ListaDasLojasPublicartModel
+import br.com.guiacistore.model.ListaDeFotosModel
 import kotlinx.android.synthetic.main.activity_recycleview.*
 
 
 open class PubliCartServicosActivity : AppCompatActivity()  {
 
-    var list = ArrayList<ListaDasLojasPublicartModel>()
+    var list = ArrayList<ListaDeFotosModel>()
     var adapter = ListaPublicartServicosAdapter(this, list, list)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,12 +29,12 @@ open class PubliCartServicosActivity : AppCompatActivity()  {
 
 
     //Responsável por criar as categorias e mostrar as fotos
-    private fun  prepareList(list: ArrayList<ListaDasLojasPublicartModel>) {
+    private fun  prepareList(list: ArrayList<ListaDeFotosModel>) {
 
-        list.add(ListaDasLojasPublicartModel("", ""," Autoescola Caarapó ", R.drawable.publicart_primeira_foto))
-        list.add(ListaDasLojasPublicartModel("", "","Outubro Rosa na Caarapó", R.drawable.publicart_segunda_foto))
-        list.add(ListaDasLojasPublicartModel("Bar", "","Colchões Ortobom", R.drawable.publicart_terceira_foto))
-        list.add(ListaDasLojasPublicartModel("", "","Welson Saxofonista", R.drawable.publicart_quarta_foto))
+        list.add(ListaDeFotosModel("", ""," Autoescola Caarapó ", R.drawable.publicart_primeira_foto))
+        list.add(ListaDeFotosModel("", "","Outubro Rosa na Caarapó", R.drawable.publicart_segunda_foto))
+        list.add(ListaDeFotosModel("Bar", "","Colchões Ortobom", R.drawable.publicart_terceira_foto))
+        list.add(ListaDeFotosModel("", "","Welson Saxofonista", R.drawable.publicart_quarta_foto))
 
     }
 

@@ -17,7 +17,7 @@ import android.widget.ArrayAdapter
 import br.com.guiacistore.R
 import br.com.guiacistore.fragments.BiosInformaticaPromocoesFragment
 import br.com.guiacistore.fragments.BiosInformaticaServicosFragment
-import br.com.guiacistore.interfaces.CallNumber
+import br.com.guiacistore.interfaces.ICallNumber
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.model.LojasFireBaseModel
@@ -28,7 +28,7 @@ import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 import kotlinx.android.synthetic.main.bios_informatica_fragment_servicos.*
 
-class BiosInformaticaActivity : AppCompatActivity(),  Invisible, IFirebase,CallNumber {
+class BiosInformaticaActivity : AppCompatActivity(),  Invisible, IFirebase,ICallNumber {
 
     override val databaseInstance: FirebaseDatabase?
         get() = FirebaseDatabase.getInstance()

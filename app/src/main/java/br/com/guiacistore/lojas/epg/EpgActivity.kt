@@ -1,183 +1,69 @@
 package br.com.guiacistore.lojas.epg
-import android.Manifest
-import android.annotation.SuppressLint
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import android.support.v4.app.ActivityCompat
-import android.support.v4.content.ContextCompat
-import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import android.widget.ArrayAdapter
+import android.widget.ListView
 import br.com.guiacistore.R
-import br.com.guiacistore.fragments.EpgContatosFragment
-import br.com.guiacistore.fragments.EpgNovidadesFragment
-import br.com.guiacistore.fragments.EpgServicosFragment
-import br.com.guiacistore.interfaces.CallNumber
-import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.interfaces.Invisible
-import br.com.guiacistore.model.LojasFireBaseModel
-import com.google.firebase.database.*
-import com.ogaclejapan.smarttablayout.SmartTabLayout
-import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
-import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
-import kotlinx.android.synthetic.main.epg_fragment_servicos.*
+import br.com.guiacistore.adapter.epg.CustomListaSimplesEpgAdapter
+import br.com.guiacistore.extensions.verMapa
+import br.com.guiacistore.interfaces.ICallNumber
+import br.com.guiacistore.model.ListaCustomizadaModel
 
 
-class EpgActivity : AppCompatActivity(),  Invisible, IFirebase, CallNumber {
+class EpgActivity: AppCompatActivity(), ICallNumber {
 
-    override val databaseInstance: FirebaseDatabase?
-        get() = FirebaseDatabase.getInstance()
-
-
-    override val referenciaFirebase: DatabaseReference?
-        get() = databaseInstance?.getReference("clientes")
-
-
-    override fun doDatabaseInstance(id: Int): Boolean {
-
-        epgServicosProgressBar?.visibility = View.VISIBLE
-
-        referenciaFirebase?.child(id.toString())
-
-        referenciaFirebase?.addValueEventListener(object: ValueEventListener {
-
-            override fun onDataChange(dataSnapshot: DataSnapshot?) {
-
-                for (d in dataSnapshot?.children!!) {
-
-                    val cliente = d.getValue(LojasFireBaseModel::class.java)
-
-                    val listaApp  = listOf(
-
-                            cliente?.epg_servico1,cliente?.epg_servico2,
-                            cliente?.epg_servico3,cliente?.epg_servico4,
-                            cliente?.epg_servico5, cliente?.epg_servico6,
-                            cliente?.epg_servico7,cliente?.epg_servico8,
-                            cliente?.epg_servico9,cliente?.epg_servico10,
-                            cliente?.epg_servico11, cliente?.epg_servico12,
-                            cliente?.epg_servico13, cliente?.epg_servico14,
-                            cliente?.epg_servico15, cliente?.epg_servico16,
-                            cliente?.epg_servico17, cliente?.epg_servico18,
-                            cliente?.epg_servico19, cliente?.epg_servico20
-                    )
-
-                    val arrayAdapter : ArrayAdapter<String?> = ArrayAdapter(this@EpgActivity, android.R.layout.simple_list_item_1, listaApp)
-                    epg_servicos?.adapter = arrayAdapter //<- com as extensions
-
-                    epgServicosProgressBar?.visibility = View.INVISIBLE
-
-                }
-
-            }
-
-
-
-            override fun onCancelled(databaseError: DatabaseError?) {
-                Log.d("onCancelled", "error...", databaseError?.toException())
-
-
-            }
-
-        })
-
-        return true
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.epg_activity)
 
-        doDatabaseInstance(1)
+        val listView = findViewById<ListView>(R.id.listView)
 
-        setContentView(R.layout.loja_epg)
+        val listaCustomizadaModel: ArrayList<ListaCustomizadaModel> = ArrayList()
+
+        listaCustomizadaModel.add(ListaCustomizadaModel("EPG Impressões", R.drawable.ic_home_epg))
+        listaCustomizadaModel.add(ListaCustomizadaModel("Novidades", R.drawable.ic_novidades_epg))
+        listaCustomizadaModel.add(ListaCustomizadaModel("Serviços", R.drawable.ic_servicos_epg))
+        listaCustomizadaModel.add(ListaCustomizadaModel("Redes sociais", R.drawable.ic_rede_sociais_epg))
+
+        listView.adapter = CustomListaSimplesEpgAdapter(applicationContext, listaCustomizadaModel)
 
         supportActionBar?.title = "EPG Impressões"
 
-        // tira elevação da borda da actionbar
-        supportActionBar?.elevation = 0F
+        listView.setOnItemClickListener { adapterView, view, position, l ->
+            when (position) {
+                0 ->  startActivity(Intent(this, EpgHistoriaActivity::class.java))
+                1 ->  startActivity(Intent(this, EpgNovidadeActivity::class.java))
+                2 ->  startActivity(Intent(this, EpgServicosActivity::class.java))
+                3 ->  startActivity(Intent(this, EpgRedesSociaisActivity::class.java))
 
-        val adapter = FragmentPagerItemAdapter(
-                supportFragmentManager, FragmentPagerItems.with(this)
-                .add("CONTATOS",  EpgContatosFragment::class.java)
-                .add("SERVIÇOS",  EpgServicosFragment::class.java)
-                .add("NOVIDADES", EpgNovidadesFragment::class.java)
-
-                .create())
-
-        val viewPager = findViewById<View>(R.id.viewpager) as ViewPager
-
-        val viewPagerTab = findViewById<SmartTabLayout>(R.id.viewPagerTab)
-
-        viewPagerTab.setViewPager(viewPager)
-
-        viewPager.adapter = adapter
-
-        viewPagerTab.setViewPager(viewPager)
-
-
+            }
+        }
     }
-
-
-
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-
         menuInflater.inflate(R.menu.menu_main_loja_epg, menu)
         return true
-
     }
-
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when (item.itemId) {
-
-
             R.id.ic_phone -> {
-
                 callNumber()
                 return true
             }
+            R.id.ic_mapa -> {
+                verMapa(Uri.parse("https://goo.gl/maps/kByyFXc2kQA2"))
+                return true
+            }
         }
-
         return super.onOptionsItemSelected(item)
     }
-
-
-
     override fun callNumber() {
-        when {
-            ContextCompat.checkSelfPermission(EpgActivity@ this,
-                    Manifest.permission.CALL_PHONE)
-                    != PackageManager.PERMISSION_GRANTED -> if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                            Manifest.permission.CALL_PHONE)) {
-
-            } else {
-
-                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE), 42)
-            }
-            else -> callPhone()
-        }
-    }
-
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
-
-        when { requestCode == 42 && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED -> callPhone() }
-
-    }
-
-    @SuppressLint("MissingPermission")
-    fun callPhone(){
-
-        val callIntent = Intent(Intent.ACTION_CALL)
-            callIntent.data = Uri.parse("tel:96363518")
+        val callIntent = Intent(Intent.ACTION_DIAL)
+        callIntent.data = Uri.parse("tel:71 3645-1028")
         startActivity(callIntent)
     }
-
-
-
 }

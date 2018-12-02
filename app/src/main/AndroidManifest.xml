@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".GuiaciMainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
@@ -121,32 +121,32 @@
             android:name=".redesocial.EpgContatosRedesSociaisActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".lojas.blueway.BlueWayActivity"
-            android:parentActivityName=".lojas.blueway.BlueWayActivity"
+            android:name=".lojas.vintenovedejulhoescola.VinteNoveDeJulhoActivity"
+            android:parentActivityName=".lojas.vintenovedejulhoescola.VinteNoveDeJulhoActivity"
+            android:theme="@style/themeVinteNove" />
+        <activity
+            android:name=".lojas.vintenovedejulhoescola.VinteNoveDeJulhoParceirosActivity"
+            android:parentActivityName=".lojas.vintenovedejulhoescola.VinteNoveDeJulhoParceirosActivity"
             android:theme="@style/themeBlueWay" />
         <activity
-            android:name=".lojas.blueway.BlueWayParceirosActivity"
-            android:parentActivityName=".lojas.blueway.BlueWayActivity"
+            android:name=".lojas.vintenovedejulhoescola.VinteNoveDeJulhoMatriculasActivity"
+            android:parentActivityName=".lojas.vintenovedejulhoescola.VinteNoveDeJulhoMatriculasActivity"
             android:theme="@style/themeBlueWay" />
         <activity
-            android:name=".lojas.blueway.BlueWayMatriculasActivity"
-            android:parentActivityName=".lojas.blueway.BlueWayMatriculasActivity"
+            android:name=".lojas.vintenovedejulhoescola.VinteNoveDeJulhoContatosActivity"
+            android:parentActivityName=".lojas.vintenovedejulhoescola.VinteNoveDeJulhoContatosActivity"
             android:theme="@style/themeBlueWay" />
         <activity
-            android:name=".lojas.blueway.BlueWayContatosActivity"
-            android:parentActivityName=".lojas.blueway.BlueWayContatosActivity"
+            android:name=".lojas.blueway.VinteNoveDeJulhoHistoriaActivity"
+            android:parentActivityName=".lojas.blueway.VinteNoveDeJulhoHistoriaActivity"
             android:theme="@style/themeBlueWay" />
         <activity
-            android:name=".lojas.blueway.BlueWayRedesSociaisActivity"
-            android:parentActivityName=".lojas.blueway.BlueWayRedesSociaisActivity"
+            android:name=".lojas.vintenovedejulhoescola.VinteNoveDeJulhoFragmentsActivity"
+            android:parentActivityName=".lojas.vintenovedejulhoescola.VinteNoveDeJulhoActivity"
             android:theme="@style/themeBlueWay" />
         <activity
-            android:name=".lojas.blueway.BlueWayFragmentsActivity"
-            android:parentActivityName=".lojas.blueway.BlueWayActivity"
-            android:theme="@style/themeBlueWay" />
-        <activity
-            android:name=".lojas.blueway.BlueWayPromocoesActivity"
-            android:parentActivityName=".lojas.blueway.BlueWayPromocoesActivity"
+            android:name=".lojas.vintenovedejulhoescola.VinteNoveDeJulhoPromocoesActivity"
+            android:parentActivityName=".lojas.vintenovedejulhoescola.VinteNoveDeJulhoPromocoesActivity"
             android:theme="@style/themeBlueWay" />
 
         <activity
@@ -164,7 +164,48 @@
         <activity android:name=".lojas.publicart.fotos.PubliCartSegundaFotoActivity" android:theme="@style/colorPrimaryPubliCart" />
         <activity android:name=".lojas.publicart.fotos.PubliCartTerceiraFotoActivity" android:theme="@style/colorPrimaryPubliCart" />
         <activity android:name=".lojas.publicart.fotos.PubliCartQuartaFotoActivity" android:theme="@style/colorPrimaryPubliCart"/>
+        <activity android:name=".lojas.blueway.BlueWayActivity" android:theme="@style/themeBlueWay" android:parentActivityName=".lojas.blueway.BlueWayActivity"/>
+        <activity
+            android:name=".lojas.blueway.BlueWayFragmentsActivity"
+            android:parentActivityName=".lojas.blueway.BlueWayActivity"
+            android:theme="@style/themeBlueWay" />
 
+        <activity
+            android:name=".lojas.blueway.BlueWayMatriculasActivity"
+            android:parentActivityName=".lojas.blueway.BlueWayMatriculasActivity"
+            android:theme="@style/themeBlueWay" />
+        <activity
+            android:name=".lojas.blueway.BlueWayContatosActivity"
+            android:parentActivityName=".lojas.blueway.BlueWayContatosActivity"
+            android:theme="@style/themeBlueWay" />
+        <activity
+            android:name=".lojas.blueway.BlueWayRedesSociaisActivity"
+            android:parentActivityName=".lojas.blueway.BlueWayRedesSociaisActivity"
+            android:theme="@style/themeBlueWay" />
+
+        <activity
+            android:name=".lojas.blueway.BlueWayPromocoesActivity"
+            android:parentActivityName=".lojas.blueway.BlueWayPromocoesActivity"
+            android:theme="@style/themeBlueWay" />
+
+        <activity
+            android:name=".lojas.blueway.BlueWayParceirosActivity"
+            android:parentActivityName=".lojas.blueway.BlueWayActivity"
+            android:theme="@style/themeBlueWay" />
+
+        <activity android:parentActivityName=".lojas.epg.EpgActivity"
+            android:theme="@style/themeEpg" android:screenOrientation="portrait"
+            android:name=".lojas.epg.EpgRedesSociaisActivity" />
+
+
+        <activity android:parentActivityName=".lojas.epg.EpgNovidadeActivity" android:name=".lojas.epg.EpgNovidadeActivity"  android:theme="@style/themeEpg" />
+
+        <activity   android:theme="@style/themeEpgFotos" android:name=".lojas.epg.fotos.EpgPrimeiraFotoActivity" />
+        <activity android:name=".lojas.epg.fotos.EpgSegundaFotoActivity" android:theme="@style/themeEpgFotos" />
+        <activity android:name=".lojas.epg.fotos.EpgTerceiraFotoActivity" android:theme="@style/themeEpgFotos"/>
+        <activity android:name=".lojas.epg.fotos.EpgQuartaFotoActivity" android:theme="@style/themeEpgFotos"/>
+        <activity android:parentActivityName=".lojas.epg.EpgServicosActivity" android:name=".lojas.epg.EpgServicosActivity" android:theme="@style/themeEpg" />
+        <activity android:parentActivityName=".lojas.epg.EpgHistoriaActivity" android:theme="@style/themeEpg" android:name=".lojas.epg.EpgHistoriaActivity" />
 
     </application>
 

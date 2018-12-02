@@ -19,9 +19,9 @@ import br.com.guiacistore.fragments.SpeedNetHistoriaFragment
 import br.com.guiacistore.fragments.SpeedNetLinkDedicadoFragment
 import br.com.guiacistore.fragments.SpeedNetPlanosFragment
 import br.com.guiacistore.fragments.SpeedNetPromocoesFragment
-import br.com.guiacistore.interfaces.CallNumber
-import br.com.guiacistore.interfaces.Invisible
+import br.com.guiacistore.interfaces.ICallNumber
 import br.com.guiacistore.interfaces.IFirebase
+import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.model.LojasFireBaseModel
 import br.com.guiacistore.redesocial.SpeednetRedesSociaisActivity
 import com.google.firebase.database.*
@@ -34,7 +34,7 @@ import kotlinx.android.synthetic.main.speednet_fragment_planos.*
 
 
 class SpeedNetActivity : AppCompatActivity(),
-           Invisible, IFirebase, CallNumber {
+           Invisible, IFirebase, ICallNumber {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

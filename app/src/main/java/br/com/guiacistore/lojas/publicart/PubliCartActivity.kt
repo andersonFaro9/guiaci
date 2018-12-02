@@ -9,11 +9,11 @@ import android.widget.ListView
 import br.com.guiacistore.R
 import br.com.guiacistore.adapter.publicart.CustomListaSimplesPubliCartAdapter
 import br.com.guiacistore.extensions.verMapa
-import br.com.guiacistore.interfaces.CallNumber
+import br.com.guiacistore.interfaces.ICallNumber
 import br.com.guiacistore.model.ListaCustomizadaModel
 
 
- class PubliCartActivity : AppCompatActivity(),  CallNumber{
+ class PubliCartActivity : AppCompatActivity(),  ICallNumber{
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

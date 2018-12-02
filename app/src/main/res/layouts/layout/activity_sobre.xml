@@ -51,15 +51,16 @@
         <TextView
             android:id="@+id/text_telefone"
             android:layout_width="0dp"
-            android:layout_height="70dp"
+            android:layout_height="139dp"
 
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            android:text="Faça a propaganda de sua loja em nosso aplicativo. Ligue ou fale pelo Whatsapp no número 71-99687-7997."
+            android:layout_marginEnd="8dp"
+            android:text="Faça a propaganda de sua loja ou empresa em nosso aplicativo. Cobramos o valor de R$ 30,00 reais mensais para fazer a sua propaganda,
+             fale pelo Whatsapp: 71-99687-7997 e saiba mais."
             android:textAlignment="center"
             android:textColor="@color/album_title"
-            android:textSize="17dp"
+            android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"

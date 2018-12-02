@@ -2,48 +2,48 @@ package br.com.guiacistore.composicao
 
 import br.com.guiacistore.model.ListaSimplesCustomModel
 
-class ListaDeParceiros {
+class Parceiros {
 
-    val listaDeParceiros = ArrayList<ListaSimplesCustomModel>()
+    val lista = ArrayList<ListaSimplesCustomModel>()
 
     fun exibirParceirosDaBlueWay() {
 
         // Lista dos parceiros em Pojuca
 
         var listaDeparceirosDaBlueWay = ListaSimplesCustomModel("Unidade de Pojuca", "Tel: 99628-7958", "")
-        listaDeParceiros.add(listaDeparceirosDaBlueWay)
+        lista.add(listaDeparceirosDaBlueWay)
         listaDeparceirosDaBlueWay = ListaSimplesCustomModel("", "Academia Evolution", "")
-        listaDeParceiros.add(listaDeparceirosDaBlueWay)
+        lista.add(listaDeparceirosDaBlueWay)
 
         listaDeparceirosDaBlueWay = ListaSimplesCustomModel("", "Escola Surpresa", "")
-        listaDeParceiros.add(listaDeparceirosDaBlueWay)
+        lista.add(listaDeparceirosDaBlueWay)
 
         listaDeparceirosDaBlueWay = ListaSimplesCustomModel("", "Colégio 29 de Julho", "")
-        listaDeParceiros.add(listaDeparceirosDaBlueWay)
+        lista.add(listaDeparceirosDaBlueWay)
 
         listaDeparceirosDaBlueWay = ListaSimplesCustomModel("", "Escola Betel", "")
-        listaDeParceiros.add(listaDeparceirosDaBlueWay)
+        lista.add(listaDeparceirosDaBlueWay)
 
 //        Lista dos parceiros em Catu
 
         listaDeparceirosDaBlueWay = ListaSimplesCustomModel("Unidade de Catu", "Tel: 99694-6672", "")
-        listaDeParceiros.add(listaDeparceirosDaBlueWay)
+        lista.add(listaDeparceirosDaBlueWay)
         listaDeparceirosDaBlueWay = ListaSimplesCustomModel("", "Halliburton", "")
-        listaDeParceiros.add(listaDeparceirosDaBlueWay)
+        lista.add(listaDeparceirosDaBlueWay)
         listaDeparceirosDaBlueWay = ListaSimplesCustomModel("", "Escola Ágappe", "")
-        listaDeParceiros.add(listaDeparceirosDaBlueWay)
+        lista.add(listaDeparceirosDaBlueWay)
         listaDeparceirosDaBlueWay = ListaSimplesCustomModel("", "Escola Traços e Letras", "")
-        listaDeParceiros.add(listaDeparceirosDaBlueWay)
+        lista.add(listaDeparceirosDaBlueWay)
 
         listaDeparceirosDaBlueWay = ListaSimplesCustomModel("", "Escola da Tia Lia", "")
-        listaDeParceiros.add(listaDeparceirosDaBlueWay)
+        lista.add(listaDeparceirosDaBlueWay)
         listaDeparceirosDaBlueWay = ListaSimplesCustomModel("", "Escola da Tia Margô", "")
-        listaDeParceiros.add(listaDeparceirosDaBlueWay)
+        lista.add(listaDeparceirosDaBlueWay)
 
         listaDeparceirosDaBlueWay = ListaSimplesCustomModel("", "Colégio Athena", "")
-        listaDeParceiros.add(listaDeparceirosDaBlueWay)
+        lista.add(listaDeparceirosDaBlueWay)
         listaDeparceirosDaBlueWay = ListaSimplesCustomModel("", "Filhote de Ogro", "")
-        listaDeParceiros.add(listaDeparceirosDaBlueWay)
+        lista.add(listaDeparceirosDaBlueWay)
 
     }
 
@@ -52,10 +52,13 @@ class ListaDeParceiros {
         // Lista dos parceiros em Alagoinhas
 
         var  listaDeparceirosDaPubliCart = ListaSimplesCustomModel("Welson Saxofonista", "Tel: (75) 99878-1224", "")
-        listaDeParceiros.add(listaDeparceirosDaPubliCart)
+        lista.add(listaDeparceirosDaPubliCart)
 
         listaDeparceirosDaPubliCart = ListaSimplesCustomModel(" Centro de Treinamento Bruno Melo(CT das Águas)", "Tel: (71) 99735-7450", "")
-        listaDeParceiros.add(listaDeparceirosDaPubliCart)
+        lista.add(listaDeparceirosDaPubliCart)
 
     }
+
+
+
 }
