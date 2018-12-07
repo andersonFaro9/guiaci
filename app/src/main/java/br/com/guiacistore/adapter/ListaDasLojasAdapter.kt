@@ -25,7 +25,7 @@ import br.com.guiacistore.lojas.quadrangular.QuadrangularActivity
 import br.com.guiacistore.lojas.rosasaron.RosaDeSaronActivity
 import br.com.guiacistore.lojas.speednet.SpeedNetActivity
 import br.com.guiacistore.lojas.studioesound.StudioESoundActivity
-import br.com.guiacistore.model.ListaDasLojasModel
+import br.com.guiacistore.model.dados.ListaModel
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -34,13 +34,14 @@ import kotlin.collections.ArrayList
  * Created by faro on 9/22/17.
  */
 
+//Lista responsável pelas lojas e pela busca das lojas no aplicativo
 
-class ListaDasLojasAdapter(private val context: Context, private var list: List<ListaDasLojasModel>, private var baseList: List<ListaDasLojasModel>) :
+class ListaDasLojasAdapter(private val context: Context, private var list: List<ListaModel>, private var baseList: List<ListaModel>) :
         RecyclerView.Adapter<ListaDasLojasAdapter.ViewHolder>(), Filterable {
 
     override fun getFilter(): Filter {
         return object : Filter() {
-            var listShop = ArrayList<ListaDasLojasModel>()
+            var listShop = ArrayList<ListaModel>()
 
             override fun performFiltering(charSequence: CharSequence?): FilterResults {
                 val results = Filter.FilterResults()
@@ -51,7 +52,7 @@ class ListaDasLojasAdapter(private val context: Context, private var list: List<
                 } else {
 
                     getBaseList().filterTo(listShop) {
-                        it.name.toLowerCase(Locale.getDefault()).contains(charSequence)
+                        it.titulo.toLowerCase(Locale.getDefault()).contains(charSequence)
 
                     }
 
@@ -63,16 +64,16 @@ class ListaDasLojasAdapter(private val context: Context, private var list: List<
             }
 
             override fun publishResults(charSequence: CharSequence?, filterResults: FilterResults?) {
-                setList(list = filterResults?.values as List<ListaDasLojasModel>)
+                setList(list = filterResults?.values as List<ListaModel>)
                 notifyDataSetChanged()
             }
 
         }
     }
 
-    fun getBaseList(): List<ListaDasLojasModel> = baseList
+    fun getBaseList(): List<ListaModel> = baseList
 
-    fun setList(list: List<ListaDasLojasModel>) {
+    fun setList(list: List<ListaModel>) {
         this.list = list
     }
 
@@ -105,13 +106,13 @@ class ListaDasLojasAdapter(private val context: Context, private var list: List<
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        val album: ListaDasLojasModel = list.get(position)
+        val album: ListaModel = list.get(position)
 
-        holder.titleTextView?.text = album.name
+        holder.titleTextView?.text = album.titulo
 
-        holder.subtitleTextView?.text = album.subTitle
+        holder.subtitleTextView?.text = album.subTitulo
 
-        holder.thumbImageView?.setImageResource(album.thumbnail)
+        holder.thumbImageView?.setImageResource(album.imagem)
 
         holder.thumbImageView?.setOnClickListener {
 

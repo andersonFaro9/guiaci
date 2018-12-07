@@ -23,7 +23,11 @@ class PubliCartPrimeiraFotoActivity : AppCompatActivity(), IButtonOfCloseActivit
 
         atacher = PhotoViewAttacher(imageViewPublicart as ImageView?)
 
-        ic_botao_fechar.setOnClickListener { closeActivity()  }
+        ic_botao_fechar.setOnClickListener {
+
+            closeActivity()
+
+        }
 
         supportActionBar?.title = "Fotos"
 

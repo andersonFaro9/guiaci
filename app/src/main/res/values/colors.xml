@@ -18,9 +18,9 @@
     <color name="colorPrimaryQuadrangular">#8d02ff</color>
     <color name="colorPrimaryEsound">#828282</color>
     <color name="colorPrimaryInove">#2c4e58</color>
-    <color name="colorPrimaryEpg">#f4731d</color>
+    <color name="colorPrimaryEpg">#f5c919</color>
 
-    <color name="colorPrimaryEpgFotos">#000000</color>
+    <color name="colorPrimaryFundoFotos">#000000</color>
 
     <color name="colorPrimaryy">#F50057</color>
     <color name="colorPrimaryDark">#e0267d</color>

@@ -8,8 +8,8 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.LinearLayout
 import br.com.guiacistore.R
-import br.com.guiacistore.adapter.publicart.PubliCartParceirosAdapter
-import br.com.guiacistore.composicao.Parceiros
+import br.com.guiacistore.adapter.ParceirosAdapter
+import br.com.guiacistore.composicao.Servicos
 import br.com.guiacistore.lojas.blueway.RecyclerItemClickListener
 
 
@@ -23,11 +23,11 @@ class PublicartParceirosActivity : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.recView)
 
-        val parceirosPubliCart = Parceiros()
+        val parceirosPubliCart = Servicos()
 
         parceirosPubliCart.exibirParceirosDaPubliCart()
 
-        val adapter = PubliCartParceirosAdapter(parceirosPubliCart.lista)
+        val adapter = ParceirosAdapter(parceirosPubliCart.lista)
 
         supportActionBar?.title = "Publicart"
 
@@ -35,7 +35,7 @@ class PublicartParceirosActivity : AppCompatActivity() {
 
     }
 
-    private fun confiraListaRecycleView(adapter: PubliCartParceirosAdapter) {
+    private fun confiraListaRecycleView(adapter: ParceirosAdapter) {
 
         val layoutManager = LinearLayoutManager(applicationContext)
         recyclerView?.layoutManager = layoutManager

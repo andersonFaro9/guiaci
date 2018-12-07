@@ -9,12 +9,12 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import br.com.guiacistore.adapter.ListaDasLojasAdapter
-import br.com.guiacistore.model.ListaDasLojasModel
+import br.com.guiacistore.model.dados.ListaModel
 import kotlinx.android.synthetic.main.activity_recycleview.*
 
 open class GuiaciMainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
-    var list = ArrayList<ListaDasLojasModel>()
+    var list = ArrayList<ListaModel>()
     var adapter = ListaDasLojasAdapter(this, list, list)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,13 +24,6 @@ open class GuiaciMainActivity : AppCompatActivity(), SearchView.OnQueryTextListe
 
         prepareList(list)
 
-
-//        var mToolbar = findViewById<Toolbar>(R.id.mCustomToolbar)
-//        setSupportActionBar(mToolbar)
-
-
-        //supportActionBar?.setIcon(R.drawable.guiaci);
-
         recView.adapter = adapter
         recView.layoutManager = GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false)
 
@@ -38,21 +31,21 @@ open class GuiaciMainActivity : AppCompatActivity(), SearchView.OnQueryTextListe
 
 
 
-    private fun  prepareList(list: ArrayList<ListaDasLojasModel>) {
+    private fun  prepareList(list: ArrayList<ListaModel>) {
 
-        list.add(ListaDasLojasModel("Speednet", "Aqui tem internet para família inteira, com os melhores planos.", R.drawable.loja_speednet))
-        list.add(ListaDasLojasModel("Barbearia do Greg.", "Seu estilo passa primeiro por aqui.", R.drawable.loja_barbearia_greg))
-        list.add(ListaDasLojasModel("Job Sat.", "Vendas, instalação e manutenção de antenas.", R.drawable.loja_job_sat))
-        list.add(ListaDasLojasModel("Lili Doces & Cakes.", "Trabalhamos à pronta entrega e sob encomenda.", R.drawable.loja_lili_doces_cakes))
-        list.add(ListaDasLojasModel("Bios Informática e Papelaria", "Trazendo soluções para sua vida.", R.drawable.loja_bios_informatica))
-        list.add(ListaDasLojasModel("Publicart.", "Soluções em comunicação visual, conteúdo e entretenimento .", R.drawable.loja_publicart))
-        list.add(ListaDasLojasModel("Academia Evolution Fitness de Pojuca.", "Sua evolução começa agora!!.", R.drawable.loja_evolution))
-        list.add(ListaDasLojasModel("Igreja do Ev. Quadrangular de Pojuca.", "Vivendo em Cristo.", R.drawable.loja_quadrangular))
-        list.add(ListaDasLojasModel("Blue Way Idiomas", "Faça a diferença, faça Blue Way!.", R.drawable.loja_blueway))
-        list.add(ListaDasLojasModel("E Sound, sonorização.", "Casamento, aniversário e festa particular.", R.drawable.loja_esound))
-        list.add(ListaDasLojasModel("Igreja Batista Nacional Rosa de Saron.", " Graça e paz.", R.drawable.loja_rosa_saron))
-        list.add(ListaDasLojasModel("EPG Impressões.", " Impressão em camisas, canecas, cartões de visita e muito mais.", R.drawable.loja_epg))
-        list.add(ListaDasLojasModel("Inove.", "Fabricação, Montagem e Manutenção industrial.", R.drawable.loja_inove))
+        list.add(ListaModel("Speednet", "Aqui tem internet para família inteira, com os melhores planos.", "", R.drawable.loja_speednet))
+        list.add(ListaModel("Barbearia do Greg.", "Seu estilo passa primeiro por aqui.", "", R.drawable.loja_barbearia_greg))
+        list.add(ListaModel("Job Sat.", "Vendas, instalação e manutenção de antenas.", "", R.drawable.loja_job_sat))
+        list.add(ListaModel("Lili Doces & Cakes.", "Trabalhamos à pronta entrega e sob encomenda.", "", R.drawable.loja_lili_doces_cakes))
+        list.add(ListaModel("Bios Informática e Papelaria", "Trazendo soluções para sua vida.", "", R.drawable.loja_bios_informatica))
+        list.add(ListaModel("Publicart.", "Soluções em comunicação visual, conteúdo e entretenimento .", "", R.drawable.loja_publicart))
+        list.add(ListaModel("Academia Evolution Fitness de Pojuca.", "Sua evolução começa agora!!.", "", R.drawable.loja_evolution))
+        list.add(ListaModel("Igreja do Ev. Quadrangular de Pojuca.", "Vivendo em Cristo.", "", R.drawable.loja_quadrangular))
+        list.add(ListaModel("Blue Way Idiomas", "Faça a diferença, faça Blue Way!.", "", R.drawable.loja_blueway))
+        list.add(ListaModel("E Sound, sonorização.", "Casamento, aniversário e festa particular.", "", R.drawable.loja_esound))
+        list.add(ListaModel("Igreja Batista Nacional Rosa de Saron.", " Graça e paz.", "", R.drawable.loja_rosa_saron))
+        list.add(ListaModel("EPG Impressões.", " Impressão em camisas, canecas, cartões de visita e muito mais.", "", R.drawable.loja_epg))
+        list.add(ListaModel("Inove.", "Fabricação, Montagem e Manutenção industrial.", "", R.drawable.loja_inove))
 
 
     }

@@ -45,8 +45,15 @@
     </string>
 
 
+    <string name="historia_speednet">
+       Pioneira no uso de tecnologias inovadoras, e que sempre agiu dentro da legislação homologada pela Anatel, a SpeedNet Alliance é uma empresa brasileira fundada em outubro de 2012 com intuito imediato de suprir a carência de acesso à internet em Pojuca, na Bahia,
+       que contava somente com planos de velocidade de até 600Kbps e preços elevados. Assim nasceu a SpeedNet Alliance: à partir da certeza de criar um provedor de internet que atendesse às reais necessidades dos clientes.
+    </string>
+
+
+
     <string name="historia_rede_sociais">
-       Acesse nossas redes sociais e fiquem por dentro de todas as novidades!!!
+       Acesse nossas redes sociais e fique por dentro de todas as novidades!!!
     </string>
 </resources>
 

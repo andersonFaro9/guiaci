@@ -7,14 +7,13 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.ListView
 import br.com.guiacistore.R
-import br.com.guiacistore.adapter.epg.CustomListaSimplesEpgAdapter
+import br.com.guiacistore.adapter.ListaImagemTextoSimplesAdapter
 import br.com.guiacistore.extensions.verMapa
 import br.com.guiacistore.interfaces.ICallNumber
-import br.com.guiacistore.model.ListaCustomizadaModel
+import br.com.guiacistore.model.dados.ListaModel
 
 
 class EpgActivity: AppCompatActivity(), ICallNumber {
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,14 +21,14 @@ class EpgActivity: AppCompatActivity(), ICallNumber {
 
         val listView = findViewById<ListView>(R.id.listView)
 
-        val listaCustomizadaModel: ArrayList<ListaCustomizadaModel> = ArrayList()
+        val listaModel: ArrayList<ListaModel> = ArrayList()
 
-        listaCustomizadaModel.add(ListaCustomizadaModel("EPG Impressões", R.drawable.ic_home_epg))
-        listaCustomizadaModel.add(ListaCustomizadaModel("Novidades", R.drawable.ic_novidades_epg))
-        listaCustomizadaModel.add(ListaCustomizadaModel("Serviços", R.drawable.ic_servicos_epg))
-        listaCustomizadaModel.add(ListaCustomizadaModel("Redes sociais", R.drawable.ic_rede_sociais_epg))
+        listaModel.add(ListaModel("EPG Impressões", "", "", R.drawable.ic_home_epg))
+        listaModel.add(ListaModel("Novidades", "", "", R.drawable.ic_novidades_epg))
+        listaModel.add(ListaModel("Serviços", "", "", R.drawable.ic_servicos_epg))
+        listaModel.add(ListaModel("Redes sociais", "", "", R.drawable.ic_rede_sociais_epg))
 
-        listView.adapter = CustomListaSimplesEpgAdapter(applicationContext, listaCustomizadaModel)
+        listView.adapter = ListaImagemTextoSimplesAdapter(applicationContext, listaModel)
 
         supportActionBar?.title = "EPG Impressões"
 

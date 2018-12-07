@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import br.com.guiacistore.R
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.LojasFireBaseModel
+import br.com.guiacistore.model.banco.BancoDeDadosFireBaseModel
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.greg_barbearia_fragment_historia.*
 
@@ -47,7 +47,7 @@ class GregBarbeariaHistoriaFragment : Fragment(), IFirebase {
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasFireBaseModel::class.java)
+                    val cliente = d.getValue(BancoDeDadosFireBaseModel::class.java)
 
                     gregbarbearia_historia_da_empresa?.text = cliente?.gregbarbearia_historia_da_empresa
 

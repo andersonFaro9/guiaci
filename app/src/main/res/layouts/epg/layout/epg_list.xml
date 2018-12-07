@@ -8,7 +8,7 @@
     android:id="@+id/relativeLayout">
 
     <ImageView
-        android:id="@+id/images"
+        android:id="@+id/imagem"
         android:layout_width="39dp"
         android:layout_height="39dp"
         android:layout_marginStart="2dp"
@@ -26,7 +26,7 @@
         android:textColor="#56ae20"
         android:textSize="17sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/images"
+        app:layout_constraintStart_toEndOf="@+id/imagem"
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

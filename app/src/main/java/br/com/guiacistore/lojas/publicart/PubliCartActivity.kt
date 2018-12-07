@@ -7,13 +7,13 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.ListView
 import br.com.guiacistore.R
-import br.com.guiacistore.adapter.publicart.CustomListaSimplesPubliCartAdapter
+import br.com.guiacistore.adapter.ListaImagemTextoSimplesAdapter
 import br.com.guiacistore.extensions.verMapa
 import br.com.guiacistore.interfaces.ICallNumber
-import br.com.guiacistore.model.ListaCustomizadaModel
+import br.com.guiacistore.model.dados.ListaModel
 
 
- class PubliCartActivity : AppCompatActivity(),  ICallNumber{
+class PubliCartActivity : AppCompatActivity(),  ICallNumber{
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,15 +21,16 @@ import br.com.guiacistore.model.ListaCustomizadaModel
         setContentView(R.layout.publicart_activity)
 
         val listView = findViewById<ListView>(R.id.listView)
-        val listaCustomizadaModel: ArrayList<ListaCustomizadaModel> = ArrayList()
+        val listaModel: ArrayList<ListaModel> = ArrayList()
 
-        listaCustomizadaModel.add(ListaCustomizadaModel("A Publicart", R.drawable.ic_a_publi_cart))
-        listaCustomizadaModel.add(ListaCustomizadaModel("Nossos serviços", R.drawable.ic_a_publi_cart_servicos))
-        listaCustomizadaModel.add(ListaCustomizadaModel("Contatos e redes sociais", R.drawable.ic_phone_publicart_menu))
-        listaCustomizadaModel.add(ListaCustomizadaModel("Nossos parceiros", R.drawable.ic_a_publi_cart_parceiros))
-        listaCustomizadaModel.add(ListaCustomizadaModel("Novidades", R.drawable.ic_a_publi_cart_novidades))
 
-        listView.adapter = CustomListaSimplesPubliCartAdapter(applicationContext, listaCustomizadaModel)
+        listaModel.add(ListaModel("A Publicart", "", "", R.drawable.ic_a_publi_cart))
+        listaModel.add(ListaModel("Nossos serviços", "", "", R.drawable.ic_a_publi_cart_servicos))
+        listaModel.add(ListaModel("Contatos e redes sociais", "", "", R.drawable.ic_phone_publicart_menu))
+        listaModel.add(ListaModel("Nossos parceiros", "", "", R.drawable.ic_a_publi_cart_parceiros))
+        listaModel.add(ListaModel("Novidades", "", "", R.drawable.ic_a_publi_cart_novidades))
+
+        listView.adapter = ListaImagemTextoSimplesAdapter(applicationContext, listaModel)
 
         supportActionBar?.title = "Publicart"
 
@@ -41,7 +42,7 @@ import br.com.guiacistore.model.ListaCustomizadaModel
                 1 ->  startActivity(Intent(this, PubliCartServicosActivity::class.java))
                 2 ->  startActivity(Intent(this, PublicartContatosActivity::class.java))
                 3 ->  startActivity(Intent(this, PublicartParceirosActivity::class.java))
-                4 ->  startActivity(Intent(this, PublicartNovidadesActivity::class.java))
+                4 ->  startActivity(Intent(this, PubliCartNovidadesActivity::class.java))
 
             }
         }

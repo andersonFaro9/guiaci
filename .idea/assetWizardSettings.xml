@@ -50,7 +50,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/Applications/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material_design_icons/communication/ic_location_on_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/Applications/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material_design_icons/alert/ic_error_outline_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -61,13 +61,13 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="color" value="f51d44" />
-                            <entry key="height" value="40" />
-                            <entry key="opacityPercent" value="80" />
-                            <entry key="outputName" value="ic_rede_sociais_epg" />
+                            <entry key="color" value="5f9535" />
+                            <entry key="height" value="512" />
+                            <entry key="opacityPercent" value="97" />
+                            <entry key="outputName" value="ic_link_dedicado_speednet" />
                             <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="$USER_HOME$/Downloads/share-social-button-sketch.svg" />
-                            <entry key="width" value="40" />
+                            <entry key="sourceFile" value="$USER_HOME$/Desktop/http.svg" />
+                            <entry key="width" value="512" />
                           </map>
                         </option>
                       </PersistentState>

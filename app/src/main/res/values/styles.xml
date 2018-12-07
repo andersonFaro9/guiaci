@@ -59,8 +59,8 @@
 
     <style name="themeEpgFotos" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimaryEpgFotos</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryEpgFotos</item>
+        <item name="colorPrimary">@color/colorPrimaryFundoFotos</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryFundoFotos</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
@@ -82,8 +82,8 @@
 
     <style name="colorPrimaryFundoFoto" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimaryPubliCart</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryPubliCart</item>
+        <item name="colorPrimary">@color/colorPrimaryFundoFotos</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryFundoFotos</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 

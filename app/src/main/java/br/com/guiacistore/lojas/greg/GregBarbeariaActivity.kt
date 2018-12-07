@@ -22,7 +22,7 @@ import br.com.guiacistore.fragments.GregBarbeariaServicosFragment
 import br.com.guiacistore.interfaces.ICallNumber
 import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.interfaces.Invisible
-import br.com.guiacistore.model.LojasFireBaseModel
+import br.com.guiacistore.model.banco.BancoDeDadosFireBaseModel
 import br.com.guiacistore.redesocial.GregBarbeariaRedesSociaisActivity
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
@@ -53,7 +53,7 @@ class GregBarbeariaActivity : AppCompatActivity(),  Invisible, IFirebase,ICallNu
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(LojasFireBaseModel::class.java)
+                    val cliente = d.getValue(BancoDeDadosFireBaseModel::class.java)
 
                     val listaApp  = listOf(
                             //Mostra a lista de serviços da  Barbearia do Greg

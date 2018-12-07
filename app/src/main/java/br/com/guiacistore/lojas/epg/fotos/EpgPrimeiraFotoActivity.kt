@@ -12,16 +12,17 @@ import uk.co.senab.photoview.PhotoViewAttacher
 class EpgPrimeiraFotoActivity : AppCompatActivity(), IButtonOfCloseActivity {
 
     override fun closeActivity() { finish() }
-
     var atacher: PhotoViewAttacher? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.epg_primeira_foto)
 
-        val imageViewEpg = findViewById<View>(R.id.epg_primeira_foto)
+        val imageViewEpg1 = findViewById<View>(R.id.epg_primeira_foto)
 
-        atacher = PhotoViewAttacher(imageViewEpg as ImageView?)
+        atacher = PhotoViewAttacher(imageViewEpg1 as ImageView?)
+
 
         ic_botao_fechar.setOnClickListener { closeActivity()  }
 

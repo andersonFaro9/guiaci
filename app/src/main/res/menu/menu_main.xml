@@ -15,7 +15,7 @@
             android:name="android:actionMenuTextColor"
             android:textColorHighlight="@color/primary_material_dark"
             app:queryHint="telefone"
-            android:icon="@drawable/ic_contact_telefone"
+            android:icon="@drawable/ic_atencao"
             app:showAsAction="always"
             android:title=""
 

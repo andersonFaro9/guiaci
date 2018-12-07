@@ -12,8 +12,8 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.LinearLayout
 import br.com.guiacistore.R
-import br.com.guiacistore.adapter.epg.EpgServicosOferecidosAdapter
-import br.com.guiacistore.composicao.ServicosOferecidos
+import br.com.guiacistore.adapter.ServicosAdapter
+import br.com.guiacistore.composicao.Servicos
 import br.com.guiacistore.extensions.verMapa
 import br.com.guiacistore.interfaces.ICallNumber
 import br.com.guiacistore.lojas.blueway.RecyclerItemClickListener
@@ -29,11 +29,11 @@ class EpgServicosActivity : AppCompatActivity(), ICallNumber {
 
         recyclerView = findViewById(R.id.recView)
 
-        val servicosOferecidos = ServicosOferecidos()
+        val servicosOferecidos = Servicos()
 
         servicosOferecidos.exibirServicosDaEpg()
 
-        val adapter = EpgServicosOferecidosAdapter(servicosOferecidos.lista)
+        val adapter = ServicosAdapter(servicosOferecidos.lista)
 
         supportActionBar?.title = "Serviços"
 
@@ -41,7 +41,7 @@ class EpgServicosActivity : AppCompatActivity(), ICallNumber {
 
     }
 
-    private fun confiraListaRecycleView(adapter: EpgServicosOferecidosAdapter) {
+    private fun confiraListaRecycleView(adapter: ServicosAdapter) {
 
         val layoutManager = LinearLayoutManager(applicationContext)
         recyclerView?.layoutManager = layoutManager

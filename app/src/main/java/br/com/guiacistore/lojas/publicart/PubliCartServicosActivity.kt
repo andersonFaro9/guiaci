@@ -1,44 +1,101 @@
 package br.com.guiacistore.lojas.publicart
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.GridLayoutManager
+import android.support.v7.widget.DividerItemDecoration
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
+import android.widget.AdapterView
+import android.widget.LinearLayout
 import br.com.guiacistore.R
-import br.com.guiacistore.adapter.publicart.ListaPublicartServicosAdapter
-import br.com.guiacistore.model.ListaDeFotosModel
-import kotlinx.android.synthetic.main.activity_recycleview.*
+import br.com.guiacistore.adapter.ServicosAdapter
+import br.com.guiacistore.composicao.Servicos
+import br.com.guiacistore.extensions.verMapa
+import br.com.guiacistore.interfaces.ICallNumber
+import br.com.guiacistore.lojas.blueway.RecyclerItemClickListener
 
 
-open class PubliCartServicosActivity : AppCompatActivity()  {
+class PubliCartServicosActivity: AppCompatActivity(), ICallNumber {
 
-    var list = ArrayList<ListaDeFotosModel>()
-    var adapter = ListaPublicartServicosAdapter(this, list, list)
+    private var recyclerView: RecyclerView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycleview)
 
-        prepareList(list)
+        recyclerView = findViewById(R.id.recView)
 
-        recView.adapter = adapter
-        recView.layoutManager = GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false)
+        val servicosOferecidos = Servicos()
 
-        supportActionBar?.title = "Publicart"
+        servicosOferecidos.exibirServicosDaPubliCart()
+
+        val adapter = ServicosAdapter(servicosOferecidos.lista)
+
+        supportActionBar?.title = "Serviços"
+
+        confiraListaRecycleView(adapter)
 
     }
 
+    private fun confiraListaRecycleView(adapter: ServicosAdapter) {
 
-    //Responsável por criar as categorias e mostrar as fotos
-    private fun  prepareList(list: ArrayList<ListaDeFotosModel>) {
+        val layoutManager = LinearLayoutManager(applicationContext)
+        recyclerView?.layoutManager = layoutManager
+        recyclerView?.setHasFixedSize(true)
+        recyclerView?.addItemDecoration(DividerItemDecoration(this, LinearLayout.VERTICAL))
+        recyclerView?.adapter = adapter
 
-        list.add(ListaDeFotosModel("", ""," Autoescola Caarapó ", R.drawable.publicart_primeira_foto))
-        list.add(ListaDeFotosModel("", "","Outubro Rosa na Caarapó", R.drawable.publicart_segunda_foto))
-        list.add(ListaDeFotosModel("Bar", "","Colchões Ortobom", R.drawable.publicart_terceira_foto))
-        list.add(ListaDeFotosModel("", "","Welson Saxofonista", R.drawable.publicart_quarta_foto))
 
+        recyclerView?.addOnItemTouchListener(
+                RecyclerItemClickListener(
+                        applicationContext, recyclerView!!, object : RecyclerItemClickListener.OnItemClickListener {
+
+                    override fun onLongItemClick(view: View?, position: Int) {
+
+                    }
+
+                    override fun onItemClick(view: View, position: Int) {
+                        when {
+                            /*Aqui vc pode direcionar todas as activitys com os clicks*/
+                        }
+                    }
+
+                    override fun onItemClick(adapterView: AdapterView<*>, view: View, position: Int, l: Long) {
+
+                    }
+                }
+                )
+        )
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_main_loja_epg, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when (item.itemId) {
+            R.id.ic_phone -> {
+                callNumber()
+                return true
+            }
+            R.id.ic_mapa -> {
+                verMapa(Uri.parse("https://goo.gl/maps/kByyFXc2kQA2"))
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+    override fun callNumber() {
+        val callIntent = Intent(Intent.ACTION_DIAL)
+        callIntent.data = Uri.parse("tel:71 3645-1028")
+        startActivity(callIntent)
     }
 
 }
-
 
 
