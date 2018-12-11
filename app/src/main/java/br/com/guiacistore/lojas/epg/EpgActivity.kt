@@ -26,7 +26,7 @@ class EpgActivity: AppCompatActivity(), ICallNumber {
         listaModel.add(ListaModel("EPG Impressões", "", "", R.drawable.ic_home_epg))
         listaModel.add(ListaModel("Novidades", "", "", R.drawable.ic_novidades_epg))
         listaModel.add(ListaModel("Serviços", "", "", R.drawable.ic_servicos_epg))
-        listaModel.add(ListaModel("Redes sociais", "", "", R.drawable.ic_rede_sociais_epg))
+        listaModel.add(ListaModel("Redes sociais", "Participe", "", R.drawable.ic_rede_sociais_epg))
 
         listView.adapter = ListaImagemTextoSimplesAdapter(applicationContext, listaModel)
 

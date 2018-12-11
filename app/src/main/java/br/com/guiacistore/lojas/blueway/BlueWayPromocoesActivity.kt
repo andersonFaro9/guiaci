@@ -64,6 +64,6 @@ class BlueWayPromocoesActivity : AppCompatActivity(), IFirebase {
         super.onCreate(savedInstanceState)
         doDatabaseInstance(1)
         setContentView(R.layout.blue_way_activity_promocoes)
-        supportActionBar?.title = "Promoções Blue Way"
+        supportActionBar?.title = "Promoções"
     }
 }

@@ -21,7 +21,14 @@ import br.com.guiacistore.model.fotos.ListaDeFotosModel
 import kotlinx.android.synthetic.main.activity_recycleview.*
 
 
+fun Context.show() {
+
+}
+
+
+
 open class EpgNovidadeActivity : AppCompatActivity(), ICallNumber {
+
 
     class ListaDeNovidadesFotosAdapter(private val context: Context, private var list: List<ListaDeFotosModel>,
 
@@ -36,7 +43,6 @@ open class EpgNovidadeActivity : AppCompatActivity(), ICallNumber {
             var subTitulo: TextView? = null
 
             init {
-
                 tituloTop = itemView.findViewById(R.id.titleTop)
                 subTitulo = itemView.findViewById(R.id.subTitulo)
                 thumbImageView = itemView.findViewById(R.id.imagemCardView)

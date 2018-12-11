@@ -62,12 +62,12 @@
                           <map>
                             <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="5f9535" />
-                            <entry key="height" value="512" />
-                            <entry key="opacityPercent" value="97" />
-                            <entry key="outputName" value="ic_link_dedicado_speednet" />
+                            <entry key="height" value="120" />
+                            <entry key="opacityPercent" value="71" />
+                            <entry key="outputName" value="ic_barba_desenhada_jsbarbearia" />
                             <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="$USER_HOME$/Desktop/http.svg" />
-                            <entry key="width" value="512" />
+                            <entry key="sourceFile" value="$USER_HOME$/Desktop/young-male-short-irregular-hair-on-head-and-a-small-beard.svg" />
+                            <entry key="width" value="120" />
                           </map>
                         </option>
                       </PersistentState>

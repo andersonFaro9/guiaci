@@ -11,7 +11,6 @@ import br.com.guiacistore.R
 import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.model.banco.BancoDeDadosFireBaseModel
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.greg_barbearia_fragment_historia.*
 import kotlinx.android.synthetic.main.jobsat_fragment_historia.*
 
 
@@ -36,7 +35,7 @@ class JobSatHistoriaFragment : Fragment(), IFirebase {
 
     override fun doDatabaseInstance(id: Int): Boolean {
 
-            barbeariaGregHistoriaProgressBar?.visibility = View.VISIBLE
+            jobSatHistoriaProgressBar?.visibility = View.VISIBLE
 
 
         referenciaFirebase?.child(id.toString())

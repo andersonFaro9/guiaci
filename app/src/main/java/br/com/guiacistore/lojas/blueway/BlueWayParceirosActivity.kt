@@ -28,7 +28,7 @@ class BlueWayParceirosActivity : AppCompatActivity() {
 
         val adapter = ParceirosAdapter(parceirosBlueWay.lista)
 
-        supportActionBar?.title = "Servicos Blue Way"
+        supportActionBar?.title = "Parceiros"
 
         confiraListaRecycleView(adapter)
 

@@ -20,6 +20,10 @@ data class BancoDeDadosFireBaseModel(
         var gregbarbearia_servico6 : String?= null,
 
 
+        //jsbarbearia_promocoes
+        var jsbarbearia_promocoes: String?= null,
+
+
         //BlueWay Promoções
         var blue_way_promocoes: String?= null,
 

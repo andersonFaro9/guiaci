@@ -33,8 +33,8 @@ class SpeednetPlanosActivity: AppCompatActivity(), ICallNumber {
         listaModel.add(ListaModel("7 megas por R$80,00 reais", "Para redes sociais!", "", R.drawable.ic_7_megas_speednet))
         listaModel.add(ListaModel("10 megas por R$100,00 reais", "Para amantes de filmes!", "", R.drawable.ic_10_megas_speednet))
         listaModel.add(ListaModel("15 megas por R$125,00 reais", "Para navegar, assistir e jogar!", "", R.drawable.ic_15_megas_speednet))
-        listaModel.add(ListaModel("20 megas por R$80,00 reais", "Para assistir, navegar e fazer downloads!", "", R.drawable.ic_20_megas_speednet))
-        listaModel.add(ListaModel("Link dedicado", "Para empresas que necessitam de internet 24 horas com alta performance e confiabilidade!.", "", R.drawable.ic_link_dedicado_speednet))
+        listaModel.add(ListaModel("20 megas por R$150,00 reais", "Para assistir, navegar e fazer downloads!", "", R.drawable.ic_20_megas_speednet))
+        listaModel.add(ListaModel("Link dedicado (empresarial)", "Internet 24 horas com alta performance e confiabilidade!.", "", R.drawable.ic_link_dedicado_speednet))
 
         listView.adapter = ListaImagemTextoSimplesAdapter(applicationContext, listaModel)
 

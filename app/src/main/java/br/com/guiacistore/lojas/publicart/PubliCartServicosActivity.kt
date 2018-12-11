@@ -73,7 +73,7 @@ class PubliCartServicosActivity: AppCompatActivity(), ICallNumber {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_main_loja_epg, menu)
+        menuInflater.inflate(R.menu.menu_main_publicart, menu)
         return true
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -90,11 +90,14 @@ class PubliCartServicosActivity: AppCompatActivity(), ICallNumber {
         }
         return super.onOptionsItemSelected(item)
     }
+
     override fun callNumber() {
+
         val callIntent = Intent(Intent.ACTION_DIAL)
-        callIntent.data = Uri.parse("tel:71 3645-1028")
+        callIntent.data = Uri.parse("tel:75 9 99672401")
         startActivity(callIntent)
     }
+
 
 }
 

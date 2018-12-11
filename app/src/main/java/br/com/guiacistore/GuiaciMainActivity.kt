@@ -36,6 +36,7 @@ open class GuiaciMainActivity : AppCompatActivity(), SearchView.OnQueryTextListe
         list.add(ListaModel("Speednet", "Aqui tem internet para família inteira, com os melhores planos.", "", R.drawable.loja_speednet))
         list.add(ListaModel("Barbearia do Greg.", "Seu estilo passa primeiro por aqui.", "", R.drawable.loja_barbearia_greg))
         list.add(ListaModel("Job Sat.", "Vendas, instalação e manutenção de antenas.", "", R.drawable.loja_job_sat))
+        list.add(ListaModel("JS Barbearia à Domicilio.", "Atendemos no conforto do seu lar.", "", R.drawable.loja_js_barbearia))
         list.add(ListaModel("Lili Doces & Cakes.", "Trabalhamos à pronta entrega e sob encomenda.", "", R.drawable.loja_lili_doces_cakes))
         list.add(ListaModel("Bios Informática e Papelaria", "Trazendo soluções para sua vida.", "", R.drawable.loja_bios_informatica))
         list.add(ListaModel("Publicart.", "Soluções em comunicação visual, conteúdo e entretenimento .", "", R.drawable.loja_publicart))

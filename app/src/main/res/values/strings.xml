@@ -51,10 +51,34 @@
     </string>
 
 
+    <string name="cartao_fidelidade_greg">
+       De segunda-feira à quinta-feira, à cada 05 cortes, o sexto corte é "free", gratuito, aproveite,
+       ligue agora e saiba como adquirir seu "Cartão fidelidade"!
+    </string>
+
+
+    <string name="historia_greg">
+       A Barbearia do Greg foi fundada no ano de 2014 inicialmente com o nome Barbearia The Brothers.
+        Iniciamos um projeto onde queríamos um diferencial para melhor atendermos nossos amigos e clientes.
+        Nosso lema é primeiramente: Deus, foco, gratidão, honestidade, prosperidade e trabalho!.
+    </string>
+
+
+    <string name="historia_jsbarbearia">
+       A JS barbearia à Domicílio foi fundada em Agosto de 2018, cidade de Pojuca, Bahia, com objetivo de disponibilizar serviços diferenciados para o público masculino. Oferecemos à nossos clientes a oportunidade de receber um atendimento especializado, no conforto do seu lar, com preço justo.
+        Além disso, possuimos serviços específicos para idosos e pessoas com mobilidade física reduzida.
+    </string>
+
 
     <string name="historia_rede_sociais">
        Acesse nossas redes sociais e fique por dentro de todas as novidades!!!
     </string>
+
+
+    <string name="promocoes_jsbarbearia">
+        Aproveite nossas promoções para o dia dos pais, dia das crianças e ANIVERSARIANTES no dia do ATENDIMENTO.
+    </string>
+
 </resources>
 
 

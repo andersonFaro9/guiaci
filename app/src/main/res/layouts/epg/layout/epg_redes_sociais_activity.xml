@@ -1,49 +1,21 @@
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:background="#ffff"
+    android:paddingLeft="6dp"
+    android:paddingRight="6dp"
     android:id="@+id/relativeLayout">
 
-    <TextView
-        android:id="@+id/nossas_redes_sociais"
-        android:layout_width="0dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="4dp"
-        android:text="@string/historia_rede_sociais"
-        android:textAlignment="center"
-        android:textColor="@color/album_title"
-        android:textIsSelectable="true"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.375"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
     <ListView
+        android:layout_width="match_parent"
         android:id="@+id/listView"
-        android:layout_width="368dp"
-        android:layout_height="296dp"
-        android:layout_marginLeft="02dp"
-        android:layout_marginTop="100dp"
         android:scrollbars="none"
+        android:layout_margin="0dp"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>
 
-</ScrollView>
+</android.support.constraint.ConstraintLayout>

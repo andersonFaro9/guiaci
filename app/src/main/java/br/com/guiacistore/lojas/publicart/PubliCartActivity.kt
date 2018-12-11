@@ -84,7 +84,7 @@ class PubliCartActivity : AppCompatActivity(),  ICallNumber{
     override fun callNumber() {
 
         val callIntent = Intent(Intent.ACTION_DIAL)
-        callIntent.data = Uri.parse("tel:75999672401")
+        callIntent.data = Uri.parse("tel:75 9 99672401")
         startActivity(callIntent)
     }
 

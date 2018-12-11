@@ -29,7 +29,7 @@ class BlueWayActivity : AppCompatActivity(), ICallNumber {
             listaModel.add(ListaModel("Nossos parceiros", "", "", R.drawable.ic_parceiros_blue_way))
             listaModel.add(ListaModel("Promoções", "", "", R.drawable.ic_promocao))
             listaModel.add(ListaModel("Contatos", "", "", R.drawable.ic_contatos_blue_way))
-            listaModel.add(ListaModel("Redes Sociais", "", "", R.drawable.ic_redes_sociais_blue_way))
+            listaModel.add(ListaModel("Redes Sociais", "Participe de nossas redes sociais!", "", R.drawable.ic_redes_sociais_blue_way))
 
             listView.adapter = ListaImagemTextoSimplesAdapter(applicationContext, listaModel)
 

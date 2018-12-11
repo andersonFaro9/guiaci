@@ -9,6 +9,6 @@ class BlueWayMatriculasActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.blue_way_activity_matricula)
-        supportActionBar?.title = "Matrículas Blue Way"
+        supportActionBar?.title = "Matrículas"
     }
 }

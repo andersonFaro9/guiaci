@@ -28,19 +28,6 @@
     </style>
 
 
-    <style name="themeVinteNove" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimaryVinteNove</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryVinteNove</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
-
-
-
-
 
     <style name="themeInove" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
@@ -57,7 +44,14 @@
     </style>
 
 
-    <style name="themeEpgFotos" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="themeJsBarbearia" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryJsBarbearia</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryJsBarbearia</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="themeFotos" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimaryFundoFotos</item>
         <item name="colorPrimaryDark">@color/colorPrimaryFundoFotos</item>

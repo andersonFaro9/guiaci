@@ -18,8 +18,8 @@ android {
         ]
         minSdkVersion 21
         targetSdkVersion 27
-        versionCode 25
-        versionName "1.2.18"
+        versionCode 27
+        versionName "1.2.20"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         vectorDrawables.useSupportLibrary = true
@@ -53,14 +53,13 @@ android {
                             'src/main/res/layouts/epg',
                             'src/main/res/layouts/publicart',
                             'src/main/res/layouts/lili-doces-cakes',
-                            'src/main/res/layouts/barbearia-greg',
+                            'src/main/res/layouts/greg',
                             'src/main/res/layouts/blue-way',
                             'src/main/res/layouts/e-sound',
                             'src/main/res/layouts/inove',
                             'src/main/res/layouts/job-sat',
                             'src/main/res/layouts/rosa-saron',
-                            'src/main/res/layouts/vinte-nove-de-julho',
-                            'src/main/res/layouts/unopar-pojuca',
+                            'src/main/res/layouts/jsbarbearia',
                             'src/main/res/layouts',
                             'src/main/res'
                     ]

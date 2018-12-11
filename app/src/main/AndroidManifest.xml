@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.ACTION_DIAL" />
 
     <application
+
         android:name=".CustomAplication"
         android:allowBackup="true"
         android:icon="@mipmap/guiaci"
@@ -17,6 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+
             android:name=".SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/theme_splash">
@@ -24,6 +26,7 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
         <activity
@@ -55,8 +58,8 @@
             android:parentActivityName=".lojas.quadrangular.QuadrangularActivity"
             android:theme="@style/themeQuadrangular" />
         <activity
-            android:name=".lojas.greg.GregBarbeariaActivity"
-            android:parentActivityName=".lojas.greg.GregBarbeariaActivity"
+            android:name=".lojas.greg.GregActivity"
+            android:parentActivityName=".lojas.greg.GregActivity"
             android:theme="@style/themeGreg" />
         <activity
             android:name=".lojas.jobsat.JobSatActivity"
@@ -118,8 +121,7 @@
             android:name=".redesocial.InoveRedesSociaisActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".redesocial.EpgContatosRedesSociaisActivity"
-            android:screenOrientation="portrait" />
+            android:name=".redesocial.EpgContatosRedesSociaisActivity" />
 
 
         <activity
@@ -139,9 +141,9 @@
 
         <activity android:theme="@style/colorPrimaryFundoFoto"  android:name=".lojas.publicart.fotos.PubliCartPrimeiraFotoActivity" />
 
-        <activity android:name=".lojas.publicart.fotos.PubliCartSegundaFotoActivity" android:theme="@style/themeEpgFotos" />
-        <activity android:name=".lojas.publicart.fotos.PubliCartTerceiraFotoActivity" android:theme="@style/themeEpgFotos" />
-        <activity android:name=".lojas.publicart.fotos.PubliCartQuartaFotoActivity" android:theme="@style/themeEpgFotos"/>
+        <activity android:name=".lojas.publicart.fotos.PubliCartSegundaFotoActivity" android:theme="@style/themeFotos" />
+        <activity android:name=".lojas.publicart.fotos.PubliCartTerceiraFotoActivity" android:theme="@style/themeFotos" />
+        <activity android:name=".lojas.publicart.fotos.PubliCartQuartaFotoActivity" android:theme="@style/themeFotos"/>
 
         <activity android:name=".lojas.blueway.BlueWayActivity" android:theme="@style/themeBlueWay" android:parentActivityName=".lojas.blueway.BlueWayActivity"/>
         <activity
@@ -179,16 +181,39 @@
 
         <activity android:parentActivityName=".lojas.epg.EpgNovidadeActivity" android:name=".lojas.epg.EpgNovidadeActivity"  android:theme="@style/themeEpg" />
 
-        <activity   android:theme="@style/themeEpgFotos" android:name=".lojas.epg.fotos.EpgPrimeiraFotoActivity" />
-        <activity android:name=".lojas.epg.fotos.EpgSegundaFotoActivity" android:theme="@style/themeEpgFotos" />
-        <activity android:name=".lojas.epg.fotos.EpgTerceiraFotoActivity" android:theme="@style/themeEpgFotos"/>
-        <activity android:name=".lojas.epg.fotos.EpgQuartaFotoActivity" android:theme="@style/themeEpgFotos"/>
+        <activity   android:theme="@style/themeFotos" android:name=".lojas.epg.fotos.EpgPrimeiraFotoActivity" />
+        <activity android:name=".lojas.epg.fotos.EpgSegundaFotoActivity" android:theme="@style/themeFotos" />
+        <activity android:name=".lojas.epg.fotos.EpgTerceiraFotoActivity" android:theme="@style/themeFotos"/>
+        <activity android:name=".lojas.epg.fotos.EpgQuartaFotoActivity" android:theme="@style/themeFotos"/>
         <activity android:parentActivityName=".lojas.epg.EpgServicosActivity" android:name=".lojas.epg.EpgServicosActivity" android:theme="@style/themeEpg" />
         <activity android:parentActivityName=".lojas.epg.EpgHistoriaActivity" android:theme="@style/themeEpg" android:name=".lojas.epg.EpgHistoriaActivity" />
         <activity android:parentActivityName=".lojas.speednet.SpeednetHistoriaActivity" android:name=".lojas.speednet.SpeednetHistoriaActivity" android:theme="@style/themeSpeednet"  />
         <activity  android:parentActivityName=".lojas.speednet.SpeednetPlanosActivity" android:name=".lojas.speednet.SpeednetPlanosActivity"  android:theme="@style/themeSpeednet"/>
         <activity android:parentActivityName=".lojas.speednet.SpeednetPromocoesActivity" android:name=".lojas.speednet.SpeednetPromocoesActivity" android:theme="@style/themeSpeednet" />
         <activity android:parentActivityName=".lojas.speednet.SpeednetRedesSociaisActivity" android:name=".lojas.speednet.SpeednetRedesSociaisActivity" android:theme="@style/themeSpeednet" />
+
+        <activity android:parentActivityName=".lojas.greg.GregHistoriaActivity" android:name=".lojas.greg.GregHistoriaActivity"  android:theme="@style/themeGreg"/>
+        <activity android:parentActivityName=".lojas.greg.GregCortesValoresActivity"  android:name=".lojas.greg.GregCortesValoresActivity" android:theme="@style/themeGreg" />
+        <activity android:parentActivityName=".lojas.greg.GregCartaoFidelidadeActivity"  android:name=".lojas.greg.GregCartaoFidelidadeActivity"  android:theme="@style/themeGreg"/>
+        <activity android:parentActivityName=".lojas.greg.GregRedesSociaisActivity" android:name=".lojas.greg.GregRedesSociaisActivity"  android:theme="@style/themeGreg"/>
+        <activity android:parentActivityName=".lojas.greg.GregPromocoesActivity" android:name=".lojas.greg.GregPromocoesActivity"   android:theme="@style/themeGreg"/>
+        <activity android:theme="@style/themeGreg" android:parentActivityName=".lojas.greg.GregNovidadeActivity" android:name=".lojas.greg.GregNovidadeActivity" />
+        <activity android:theme="@style/themeFotos"  android:name=".lojas.greg.fotos.GregPrimeiraFotoActivity" />
+        <activity android:theme="@style/themeFotos" android:name=".lojas.greg.fotos.GregSegundaFotoActivity" />
+        <activity android:theme="@style/themeFotos" android:name=".lojas.greg.fotos.GregTerceiraFotoActivity" />
+        <activity android:theme="@style/themeFotos" android:name=".lojas.greg.fotos.GregQuartaFotoActivity" />
+
+        <activity android:parentActivityName=".lojas.jsbarbearia.JsBarbeariaActivity" android:theme="@style/themeJsBarbearia" android:name=".lojas.jsbarbearia.JsBarbeariaActivity" />
+        <activity android:parentActivityName=".lojas.jsbarbearia.JsBarbeariaHistoriaActivity" android:name=".lojas.jsbarbearia.JsBarbeariaHistoriaActivity"  android:theme="@style/themeJsBarbearia" />
+        <activity android:parentActivityName=".lojas.jsbarbearia.JsBarbeariaServicosActivity" android:name=".lojas.jsbarbearia.JsBarbeariaServicosActivity"  android:theme="@style/themeJsBarbearia" />
+        <activity android:parentActivityName=".lojas.jsbarbearia.JsBarbeariaNovidadeActivity" android:name=".lojas.jsbarbearia.JsBarbeariaNovidadeActivity"  android:theme="@style/themeJsBarbearia" />
+        <activity android:parentActivityName=".lojas.jsbarbearia.JsBarbeariaPromocoesActivity" android:name=".lojas.jsbarbearia.JsBarbeariaPromocoesActivity"  android:theme="@style/themeJsBarbearia" />
+        <activity android:parentActivityName=".lojas.jsbarbearia.JsBarbeariaRedesSociaisActivity" android:name=".lojas.jsbarbearia.JsBarbeariaRedesSociaisActivity"  android:theme="@style/themeJsBarbearia"/>
+        <activity android:theme="@style/colorPrimaryFundoFoto" android:name=".lojas.jsbarbearia.fotos.JsBarbeariaPrimeiraFotoActivity" />
+        <activity android:theme="@style/colorPrimaryFundoFoto" android:name=".lojas.jsbarbearia.fotos.JsBarbeariaSegundaFotoActivity" />
+        <activity android:theme="@style/colorPrimaryFundoFoto" android:name=".lojas.jsbarbearia.fotos.JsBarbeariaTerceiraFotoActivity" />
+        <activity android:theme="@style/colorPrimaryFundoFoto" android:name=".lojas.jsbarbearia.fotos.JsBarbeariaQuartaFotoActivity" />
+
 
 
     </application>

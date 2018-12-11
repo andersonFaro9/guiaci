@@ -22,6 +22,8 @@
 
     <color name="colorPrimaryFundoFotos">#000000</color>
 
+    <color name="colorPrimaryJsBarbearia">#bc3e3e</color>
+
     <color name="colorPrimaryy">#F50057</color>
     <color name="colorPrimaryDark">#e0267d</color>
     <color name="colorAccent">#ff4069</color>

@@ -16,53 +16,6 @@ import br.com.guiacistore.model.dados.ListaModel
 class EpgRedesSociaisActivity: AppCompatActivity(), ICallNumber {
 
 
-//    inner class ListaComImagemETextoAdapter(var context: Context, var listaModel:ArrayList<ListaModel>) : BaseAdapter() {
-//
-//        override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-//
-//            val view: View?
-//            val viewHolder: ViewHolder
-//
-//            if (convertView == null) {
-//                val layout = LayoutInflater.from(context)
-//                view = layout.inflate(R.layout.lista_layout_imagem_texto, parent, false)
-//                viewHolder = ViewHolder(view)
-//                view.tag = viewHolder
-//
-//            } else {
-//                view = convertView
-//                viewHolder = view.tag as ViewHolder
-//            }
-//
-//            val lista: ListaModel = getItem(position) as ListaModel
-//            viewHolder.textName?.text = lista.titulo
-//            viewHolder.imageView?.setImageResource(lista.imagem)
-//
-//            return view as View
-//        }
-//
-//        override fun getItem(position: Int): Any {
-//
-//            return listaModel.get(position)
-//        }
-//
-//
-//        override fun getItemId(position: Int): Long {
-//            return position.toLong()
-//        }
-//
-//
-//        override fun getCount(): Int {
-//
-//            return listaModel.count()
-//
-//        }
-//
-//    }
-
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.epg_redes_sociais_activity)

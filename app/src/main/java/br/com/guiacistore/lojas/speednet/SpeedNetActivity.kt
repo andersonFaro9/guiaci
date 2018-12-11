@@ -30,7 +30,7 @@ class SpeedNetActivity: AppCompatActivity(), ICallNumber {
         listaModel.add(ListaModel("Planos", "", "", R.drawable.ic_planos_speednet))
         listaModel.add(ListaModel("Promoções", "", "", R.drawable.ic_promocoes_speednet))
         listaModel.add(ListaModel("Novidades", "", "", R.drawable.ic_novidades_speednet))
-        listaModel.add(ListaModel("Redes sociais", "", "", R.drawable.ic_redes_sociais_speednet))
+        listaModel.add(ListaModel("Redes sociais", "Participe de nossas redes sociais!", "", R.drawable.ic_redes_sociais_speednet))
 
         listView.adapter = ListaImagemTextoSimplesAdapter(applicationContext, listaModel)
 
