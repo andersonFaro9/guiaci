@@ -6,10 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import br.com.guiacistore.R
-import br.com.guiacistore.adapter.ListaImagemTextoSimplesAdapter
 import br.com.guiacistore.interfaces.ICallNumber
-import br.com.guiacistore.model.dados.ListaModel
-import kotlinx.android.synthetic.main.jsbarbearia_redesocial.*
 
 
 class JsBarbeariaRedesSociaisActivity: AppCompatActivity(), ICallNumber {
@@ -20,15 +17,7 @@ class JsBarbeariaRedesSociaisActivity: AppCompatActivity(), ICallNumber {
 
         supportActionBar?.title = "Redes sociais"
 
-       // val listView = findViewById<ListView>(R.id.listView)
-
-        val listaModel: ArrayList<ListaModel> = ArrayList()
-
-        listaModel.add(ListaModel("/jsbarbeariaadomicilio/", "", "", R.drawable.ic_rede_social_facebook))
-        listaModel.add(ListaModel("Zap: (71) 9.9628-2113", "", "", R.drawable.ic_telefone))
-        listaModel.add(ListaModel("/js_barbearia_a_domicilio/", "", "", R.drawable.ic_rede_social_instagram))
-
-        listView.adapter = ListaImagemTextoSimplesAdapter(applicationContext, listaModel)
+        mostraRedesSociais()
 
     }
 

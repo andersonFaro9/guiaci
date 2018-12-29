@@ -77,10 +77,7 @@
             android:name=".lojas.evolution.AcademiaEvolutionActivity"
             android:parentActivityName=".lojas.evolution.AcademiaEvolutionActivity"
             android:theme="@style/themeEvolution" />
-        <activity
-            android:name=".lojas.studioesound.StudioESoundActivity"
-            android:parentActivityName=".lojas.studioesound.StudioESoundActivity"
-            android:theme="@style/themeEsound" />
+
         <activity
             android:name=".lojas.rosasaron.RosaDeSaronActivity"
             android:parentActivityName=".lojas.rosasaron.RosaDeSaronActivity"
@@ -93,12 +90,7 @@
             android:name=".lojas.epg.EpgActivity"
             android:parentActivityName=".lojas.epg.EpgActivity"
             android:theme="@style/themeEpg" />
-        <activity
-            android:name=".redesocial.SpeednetRedesSociaisActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".redesocial.GregBarbeariaRedesSociaisActivity"
-            android:screenOrientation="portrait" />
+
         <activity
             android:name=".redesocial.IgrejaQuadrangularRedesSociaisActivity"
             android:screenOrientation="portrait" />
@@ -120,8 +112,6 @@
         <activity
             android:name=".redesocial.InoveRedesSociaisActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".redesocial.EpgContatosRedesSociaisActivity" />
 
 
         <activity
@@ -213,7 +203,23 @@
         <activity android:theme="@style/colorPrimaryFundoFoto" android:name=".lojas.jsbarbearia.fotos.JsBarbeariaSegundaFotoActivity" />
         <activity android:theme="@style/colorPrimaryFundoFoto" android:name=".lojas.jsbarbearia.fotos.JsBarbeariaTerceiraFotoActivity" />
         <activity android:theme="@style/colorPrimaryFundoFoto" android:name=".lojas.jsbarbearia.fotos.JsBarbeariaQuartaFotoActivity" />
+        <activity android:theme="@style/themeSpeednet" android:parentActivityName=".lojas.speednet.SpeedNetEnderecoActivity" android:name=".lojas.speednet.SpeedNetEnderecoActivity" />
+        <activity  android:theme="@style/themeGreg" android:name=".lojas.greg.GregBarbeariaEnderecoActivity" android:parentActivityName=".lojas.greg.GregBarbeariaEnderecoActivity" />
+        <activity  android:theme="@style/themeEpg" android:name=".lojas.epg.EpgImpressoesEnderecoActivity" android:parentActivityName=".lojas.epg.EpgImpressoesEnderecoActivity" />
+        <activity android:name=".lojas.blueway.BlueWayEnderecoActivity" android:theme="@style/themeBlueWay" android:parentActivityName=".lojas.blueway.BlueWayEnderecoActivity"  />
+        <activity android:name=".lojas.publicart.PublicartEnderecoActivity" android:theme="@style/colorPrimaryPubliCart" android:parentActivityName=".lojas.publicart.PublicartEnderecoActivity" />
+        <activity android:parentActivityName=".lojas.evolution.EvolutionHistoriaAcvity"   android:theme="@style/themeEvolution" android:name=".lojas.evolution.EvolutionHistoriaAcvity" />
+        <activity android:parentActivityName=".lojas.evolution.EvolutionServicosActivity" android:theme="@style/themeEvolution"  android:name=".lojas.evolution.EvolutionServicosActivity" />
+        <activity android:parentActivityName=".lojas.evolution.EvolutionPromocoesActivity" android:theme="@style/themeEvolution" android:name=".lojas.evolution.EvolutionPromocoesActivity" />
+        <activity android:parentActivityName=".lojas.evolution.EvolutionNovidadeActivity" android:theme="@style/themeEvolution" android:name=".lojas.evolution.EvolutionNovidadeActivity" />
+        <activity android:parentActivityName=".lojas.evolution.EvolutionRedesSociaisActivity" android:theme="@style/themeEvolution" android:name=".lojas.evolution.EvolutionRedesSociaisActivity" />
+        <activity  android:theme="@style/themeEvolution" android:name=".lojas.evolution.fotos.EvolutionPrimeiraFotoActivity" />
+        <activity  android:theme="@style/themeEvolution" android:name=".lojas.evolution.fotos.EvolutionSegundaFotoActivity" />
+        <activity  android:theme="@style/themeEvolution" android:name=".lojas.evolution.fotos.EvolutionTerceiraFotoActivity" />
+        <activity  android:theme="@style/themeEvolution" android:name=".lojas.evolution.fotos.EvolutionQuartaFotoActivity" />
+        <activity android:parentActivityName=".lojas.evolution.EvolutionEnderecoActivity"  android:theme="@style/themeEvolution" android:name=".lojas.evolution.EvolutionEnderecoActivity" />
 
+        <activity android:parentActivityName=".sem_conexao.ConexaoComInternet" android:theme="@style/themeEvolution" android:name=".sem_conexao.ConexaoComInternet" />
 
 
     </application>

@@ -1,0 +1,45 @@
+
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="05dp"
+    android:id="@+id/relativeLayout">
+
+    <ImageView
+        android:id="@+id/imagem"
+        android:layout_width="43dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="298dp"
+        android:layout_height="29dp"
+        android:paddingStart="11dp"
+        android:layout_marginTop="22dp"
+        android:textColor="#79080707"
+        android:textSize="15sp"
+        android:text=""
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imagem"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitulo"
+        android:layout_width="331dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="4dp"
+        android:textAlignment="viewStart"
+        android:textColor="#79080707"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@+id/imagem"
+        app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+</android.support.constraint.ConstraintLayout>

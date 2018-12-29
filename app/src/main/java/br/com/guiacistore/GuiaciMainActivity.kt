@@ -43,7 +43,6 @@ open class GuiaciMainActivity : AppCompatActivity(), SearchView.OnQueryTextListe
         list.add(ListaModel("Academia Evolution Fitness de Pojuca.", "Sua evolução começa agora!!.", "", R.drawable.loja_evolution))
         list.add(ListaModel("Igreja do Ev. Quadrangular de Pojuca.", "Vivendo em Cristo.", "", R.drawable.loja_quadrangular))
         list.add(ListaModel("Blue Way Idiomas", "Faça a diferença, faça Blue Way!.", "", R.drawable.loja_blueway))
-        list.add(ListaModel("E Sound, sonorização.", "Casamento, aniversário e festa particular.", "", R.drawable.loja_esound))
         list.add(ListaModel("Igreja Batista Nacional Rosa de Saron.", " Graça e paz.", "", R.drawable.loja_rosa_saron))
         list.add(ListaModel("EPG Impressões.", " Impressão em camisas, canecas, cartões de visita e muito mais.", "", R.drawable.loja_epg))
         list.add(ListaModel("Inove.", "Fabricação, Montagem e Manutenção industrial.", "", R.drawable.loja_inove))

@@ -6,10 +6,8 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import br.com.guiacistore.R
-import br.com.guiacistore.R.id.listView
-import br.com.guiacistore.adapter.ListaImagemTextoSimplesAdapter
+import br.com.guiacistore.extensions_geral.exibirMensagem
 import br.com.guiacistore.interfaces.ICallNumber
-import br.com.guiacistore.model.dados.ListaModel
 import kotlinx.android.synthetic.main.js_barbearia_activity.*
 
 
@@ -19,37 +17,34 @@ class JsBarbeariaActivity: AppCompatActivity(), ICallNumber {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.js_barbearia_activity)
 
-        //val listView = findViewById<ListView>(R.id.listView)
-
-        val listaModel: ArrayList<ListaModel> = ArrayList()
-
-        listaModel.add(ListaModel("JS Barbearia à Domicílio", "", "", R.drawable.ic_historia_jsbarbearia))
-        listaModel.add(ListaModel("Serviços", " Atendimento especial para idosos e pessoas com mobilidade física reduzida!.", "", R.drawable.ic_servicos_jsbarbearia))
-        listaModel.add(ListaModel("Novidades", "", "", R.drawable.ic_novidades_jsbarbearia))
-        listaModel.add(ListaModel("Promoções", "Belas promoções", "", R.drawable.ic_promocoes_jsbarbearia))
-        listaModel.add(ListaModel("Contatos e Redes sociais", "Participe de nossas redes sociais!", "", R.drawable.ic_rede_sociais_jsbarbearia))
-
-
-        listView.adapter = ListaImagemTextoSimplesAdapter(applicationContext, listaModel)
-
         supportActionBar?.title = "JS Barbearia à Domicílio"
+
+        mostraServicosOferecidos()
+
+        exibirMensagem("Atendimento especial para idosos e pessoas com mobilidade fisíca reduzida!")
 
         listView.setOnItemClickListener { adapterView, view, position, l ->
 
-            when (position) {
-                0 ->  startActivity(Intent(this, JsBarbeariaHistoriaActivity::class.java))
-                1 ->  startActivity(Intent(this, JsBarbeariaServicosActivity::class.java))
-                2 ->  startActivity(Intent(this, JsBarbeariaNovidadeActivity::class.java))
-                3 ->  startActivity(Intent(this, JsBarbeariaPromocoesActivity::class.java))
-                4 ->  startActivity(Intent(this, JsBarbeariaRedesSociaisActivity::class.java))
+
+            when {
+                position == 0 ->  startActivity(Intent(this, JsBarbeariaHistoriaActivity::class.java))
+                position == 1 ->  startActivity(Intent(this, JsBarbeariaServicosActivity::class.java))
+                position == 2 ->  startActivity(Intent(this, JsBarbeariaNovidadeActivity::class.java))
+                position == 3 ->  startActivity(Intent(this, JsBarbeariaPromocoesActivity::class.java))
+                position == 4 ->  startActivity(Intent(this, JsBarbeariaRedesSociaisActivity::class.java))
 
             }
         }
     }
+
+
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_main_loja_jsbarbearia, menu)
         return true
     }
+
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when (item.itemId) {

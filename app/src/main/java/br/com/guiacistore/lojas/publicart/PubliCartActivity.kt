@@ -5,12 +5,10 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.ListView
 import br.com.guiacistore.R
-import br.com.guiacistore.adapter.ListaImagemTextoSimplesAdapter
-import br.com.guiacistore.extensions.verMapa
 import br.com.guiacistore.interfaces.ICallNumber
-import br.com.guiacistore.model.dados.ListaModel
+import br.com.guiacistore.lojas.publicart.extensions.mostraServicosOferecidos
+import kotlinx.android.synthetic.main.publicart_activity.*
 
 
 class PubliCartActivity : AppCompatActivity(),  ICallNumber{
@@ -20,19 +18,8 @@ class PubliCartActivity : AppCompatActivity(),  ICallNumber{
         super.onCreate(savedInstanceState)
         setContentView(R.layout.publicart_activity)
 
-        val listView = findViewById<ListView>(R.id.listView)
-        val listaModel: ArrayList<ListaModel> = ArrayList()
-
-
-        listaModel.add(ListaModel("A Publicart", "", "", R.drawable.ic_a_publi_cart))
-        listaModel.add(ListaModel("Nossos serviços", "", "", R.drawable.ic_a_publi_cart_servicos))
-        listaModel.add(ListaModel("Contatos e redes sociais", "", "", R.drawable.ic_phone_publicart_menu))
-        listaModel.add(ListaModel("Nossos parceiros", "", "", R.drawable.ic_a_publi_cart_parceiros))
-        listaModel.add(ListaModel("Novidades", "", "", R.drawable.ic_a_publi_cart_novidades))
-
-        listView.adapter = ListaImagemTextoSimplesAdapter(applicationContext, listaModel)
-
         supportActionBar?.title = "Publicart"
+        mostraServicosOferecidos()
 
         listView.setOnItemClickListener {
 
@@ -69,7 +56,7 @@ class PubliCartActivity : AppCompatActivity(),  ICallNumber{
 
             R.id.ic_mapa_publi_cart -> {
 
-                verMapa(Uri.parse("https://goo.gl/maps/Cu1JkvVYymk"))
+                startActivity(Intent(this, PublicartEnderecoActivity::class.java))
 
                 return true
             }

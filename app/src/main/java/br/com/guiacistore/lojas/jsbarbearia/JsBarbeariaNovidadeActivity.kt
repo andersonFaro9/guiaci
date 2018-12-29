@@ -24,14 +24,14 @@ import kotlinx.android.synthetic.main.activity_recycleview.*
 open class JsBarbeariaNovidadeActivity : AppCompatActivity(), ICallNumber {
 
     var list = ArrayList<ListaDeFotosModel>()
-    var adapter = ListaDeNovidadesFotosAdapter(this, list, list)
+    var adapter = ListaDeNovidadesFotosAdapter(this, list)
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycleview)
 
-        prepareList(list)
+        mostraFotos(list)
 
         recView.adapter = adapter
         recView.layoutManager = GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false)
@@ -42,7 +42,7 @@ open class JsBarbeariaNovidadeActivity : AppCompatActivity(), ICallNumber {
 
 
     //Responsável por criar as categorias e mostrar as fotos
-    private fun  prepareList(list: ArrayList<ListaDeFotosModel>) {
+    private fun  mostraFotos(list: ArrayList<ListaDeFotosModel>) {
 
         list.add(ListaDeFotosModel("", "", "Corte Social",
                 R.drawable.jsbarbearia_primeira_foto))
@@ -83,9 +83,7 @@ open class JsBarbeariaNovidadeActivity : AppCompatActivity(), ICallNumber {
 
 
 
-    class ListaDeNovidadesFotosAdapter(private val context: Context, private var list: List<ListaDeFotosModel>,
-
-                                       private var baseList: List<ListaDeFotosModel>) :
+     class ListaDeNovidadesFotosAdapter(private val context: Context, private var list: List<ListaDeFotosModel>) :
 
             RecyclerView.Adapter<ListaDeNovidadesFotosAdapter.ViewHolder>() {
 
@@ -98,7 +96,7 @@ open class JsBarbeariaNovidadeActivity : AppCompatActivity(), ICallNumber {
             init {
                 tituloTop = itemView.findViewById(R.id.titleTop)
                 subTitulo = itemView.findViewById(R.id.subTitulo)
-                thumbImageView = itemView.findViewById(R.id.imagemCardView)
+                thumbImageView = itemView.findViewById(R.id.imagemNovidade)
             }
         }
 
@@ -106,7 +104,7 @@ open class JsBarbeariaNovidadeActivity : AppCompatActivity(), ICallNumber {
 
 
             val view: View = LayoutInflater.from(parent.context).inflate(R.layout.lista_layout_novidades, parent, false);
-            val card = view.findViewById<CardView>(R.id.card_view) as CardView
+            val card = view.findViewById<CardView>(R.id.card_view)
 
             card.maxCardElevation = 1.0F;
             card.radius = 1.0F;
@@ -117,11 +115,11 @@ open class JsBarbeariaNovidadeActivity : AppCompatActivity(), ICallNumber {
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-            val epgFotosModel: ListaDeFotosModel = list.get(position)
+            val listaDeFotosModel: ListaDeFotosModel = list.get(position)
 
-            holder.tituloTop?.text = epgFotosModel.tituloDoTopo
-            holder.subTitulo?.text = epgFotosModel.subTitulo
-            holder.thumbImageView?.setImageResource(epgFotosModel.imagem)
+            holder.tituloTop?.text = listaDeFotosModel.tituloDoTopo
+            holder.subTitulo?.text = listaDeFotosModel.subTitulo
+            holder.thumbImageView?.setImageResource(listaDeFotosModel.imagem)
 
             holder.thumbImageView?.setOnClickListener{
 

@@ -20,12 +20,11 @@ import br.com.guiacistore.lojas.greg.GregActivity
 import br.com.guiacistore.lojas.inove.InoveActivity
 import br.com.guiacistore.lojas.jobsat.JobSatActivity
 import br.com.guiacistore.lojas.jsbarbearia.JsBarbeariaActivity
-import br.com.guiacistore.lojas.lilidoces.LiliDocesCakesActivity
+
 import br.com.guiacistore.lojas.publicart.PubliCartActivity
 import br.com.guiacistore.lojas.quadrangular.QuadrangularActivity
 import br.com.guiacistore.lojas.rosasaron.RosaDeSaronActivity
 import br.com.guiacistore.lojas.speednet.SpeedNetActivity
-import br.com.guiacistore.lojas.studioesound.StudioESoundActivity
 import br.com.guiacistore.model.dados.ListaModel
 import java.util.*
 import kotlin.collections.ArrayList
@@ -89,7 +88,7 @@ class ListaDasLojasAdapter(private val context: Context, private var list: List<
         init {
             titleTextView = itemView.findViewById(R.id.title)
             subtitleTextView = itemView.findViewById(R.id.subtituloItem)
-            thumbImageView = itemView.findViewById(R.id.imagemCardView)
+            thumbImageView = itemView.findViewById(R.id.imagemNovidade)
         }
     }
 
@@ -122,16 +121,15 @@ class ListaDasLojasAdapter(private val context: Context, private var list: List<
                 1 ->  context.startActivity(Intent(context, GregActivity::class.java ))
                 2 ->  context.startActivity(Intent(context, JobSatActivity::class.java ))
                 3 ->  context.startActivity(Intent(context, JsBarbeariaActivity::class.java ))
-                4 ->  context.startActivity(Intent(context, LiliDocesCakesActivity::class.java ))
+                //4 ->  context.startActivity(Intent(context, LiliDocesCakesActivity::class.java ))
                 5 ->  context.startActivity(Intent(context, BiosInformaticaActivity::class.java ))
                 6 ->  context.startActivity(Intent(context, PubliCartActivity::class.java ))
                 7 ->  context.startActivity(Intent(context, AcademiaEvolutionActivity::class.java ))
                 8 ->  context.startActivity(Intent(context, QuadrangularActivity::class.java ))
                 9 ->  context.startActivity(Intent(context, BlueWayActivity::class.java ))
-                10 ->  context.startActivity(Intent(context, StudioESoundActivity::class.java))
-                11 -> context.startActivity(Intent(context, RosaDeSaronActivity::class.java))
-                12 -> context.startActivity(Intent(context, EpgActivity::class.java))
-                13 -> context.startActivity(Intent(context, InoveActivity::class.java))
+                10 -> context.startActivity(Intent(context, RosaDeSaronActivity::class.java))
+                11 -> context.startActivity(Intent(context, EpgActivity::class.java))
+                12 -> context.startActivity(Intent(context, InoveActivity::class.java))
 
 
             }

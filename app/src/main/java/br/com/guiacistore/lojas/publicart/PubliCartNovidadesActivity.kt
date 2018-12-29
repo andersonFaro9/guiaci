@@ -1,18 +1,17 @@
 package br.com.guiacistore.lojas.publicart
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.CardView
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import br.com.guiacistore.R
-import br.com.guiacistore.extensions.verMapa
-import br.com.guiacistore.interfaces.ICallNumber
 import br.com.guiacistore.lojas.publicart.fotos.PubliCartPrimeiraFotoActivity
 import br.com.guiacistore.lojas.publicart.fotos.PubliCartQuartaFotoActivity
 import br.com.guiacistore.lojas.publicart.fotos.PubliCartSegundaFotoActivity
@@ -22,7 +21,7 @@ import kotlinx.android.synthetic.main.activity_recycleview.*
 
 
 
-open class PubliCartNovidadesActivity : AppCompatActivity() , ICallNumber {
+open class PubliCartNovidadesActivity : AppCompatActivity()  {
 
 
 
@@ -40,7 +39,7 @@ open class PubliCartNovidadesActivity : AppCompatActivity() , ICallNumber {
 
                 tituloTop = itemView.findViewById(R.id.titleTop)
                 subTitulo = itemView.findViewById(R.id.subTitulo)
-                thumbImageView = itemView.findViewById(R.id.imagemCardView)
+                thumbImageView = itemView.findViewById(R.id.imagemNovidade)
             }
         }
 
@@ -121,31 +120,7 @@ open class PubliCartNovidadesActivity : AppCompatActivity() , ICallNumber {
     }
 
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_main_publicart, menu)
-        return true
-    }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        when (item.itemId) {
-            R.id.ic_phone -> {
-                callNumber()
-                return true
-            }
-            R.id.ic_mapa -> {
-                verMapa(Uri.parse("https://goo.gl/maps/kByyFXc2kQA2"))
-                return true
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
-    override fun callNumber() {
-
-        val callIntent = Intent(Intent.ACTION_DIAL)
-        callIntent.data = Uri.parse("tel:75 9 99672401")
-        startActivity(callIntent)
-    }
 
 
 }

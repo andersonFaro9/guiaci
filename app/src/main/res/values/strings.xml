@@ -11,10 +11,19 @@
 
     //EVOLUTION
     <string name="historia_academia_evolution">
-       Nascemos da ideia de trazer para Pojuca um novo conceito de academia. Em março de 2015 nasce a Evolution com a proposta de ser uma academia que cuida dos seus alunos de proporcionar resultados positivos na saúde, no corpo  e na mente. Temos a melhor infraestrutura com ambiente arejado, bem ventilado, e iluminado naturalmente, além de uma visão privilegiada. Nossos horários de funcionamento: A Nossa matriz localizada no bairro Inocope, rua J, n20, ao lado da delegacia funciona das 05:00hs às 21:00hs da noite e nossa filial no bairro da Star, funciona das 05:00hs ao meio-dia e das 13:00hs até às 20:30hs da noite. "
+       Nascemos da ideia de trazer para Pojuca, um novo conceito de academia.
+       Tivemos início em março de 2015, com a proposta de sermos uma academia que cuida dos seus alunos, e que propociona resultados positivos à saúde do corpo e mente.
+        Temos a melhor infraestrutura, ambiente arejado, ventilado, e iluminado naturalmente, com visão privilegiada.
+        Nossos horários de funcionamento: Nossa matriz no bairro Inocope, rua J, 20, do lado da delegacia funciona das 05:00hs às 21:00hs da noite e a filial, no bairro da Star, das 05:00hs ao meio-dia, e das 13:00hs até às 20:30hs da noite."
     </string>
 
+    <string name="mapa_evolution1">
+        R. da Star, 30, Pojuca - BA, 48120-000
+    </string>
 
+    <string name="mapa_evolution2">
+        Praça Mário Improta, s/n, px a rotatória da delegacia, Pojuca - BA, 48120-000
+    </string>
 
     //PUBLICART
     <string name="missao_publicart">
@@ -45,8 +54,34 @@
     </string>
 
 
+    <string name="mapa_speednet">
+       R. Antônio Motta, 182, Pojuca - BA, 48120-000
+    </string>
+
+    <string name="mapa_publicart">
+        Rua Conselheiro Couto, 169 Centro, Alagoinhas, Bahia, Brazil
+    </string>
+
+
+    <string name="mapa_blue_way">
+       Praça Alm. Vasconcelos, 115-119, Pojuca - BA, 48120-000
+    </string>
+
+
+    <string name="mapa_epg">
+       Rua Dr. Alfredo Leite, SALA, Changrila, Pojuca - BA, CEP: 48120-000
+    </string>
+
+
+    <string name="mapa_greg">
+       Rua Antônio Batista, 48.120-000, Pojuca, Bahia
+    </string>
+
+
+    R. Antônio Motta, 182, Pojuca - BA, 48.120-000
+
     <string name="historia_speednet">
-       Pioneira no uso de tecnologias inovadoras, e que sempre agiu dentro da legislação homologada pela Anatel, a SpeedNet Alliance é uma empresa brasileira fundada em outubro de 2012 com intuito imediato de suprir a carência de acesso à internet em Pojuca, na Bahia,
+       Pioneira no uso de tecnologias inovadoras, e que sempre agiu dentro da legislação homologada pela Anatel, a SpeedNet Alliance é uma empresa brasileira fundada em outubro de 2012 com intuito imediato de suprir a carência de acesso à internet em Pojuca, na bahia,
        que contava somente com planos de velocidade de até 600Kbps e preços elevados. Assim nasceu a SpeedNet Alliance: à partir da certeza de criar um provedor de internet que atendesse às reais necessidades dos clientes.
     </string>
 

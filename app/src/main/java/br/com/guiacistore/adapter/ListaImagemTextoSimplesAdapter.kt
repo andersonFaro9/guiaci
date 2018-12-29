@@ -5,12 +5,27 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.ImageView
+import android.widget.TextView
 import br.com.guiacistore.R
 import br.com.guiacistore.model.dados.ListaModel
+
+
+//Lista com titulo e subTitulo e imagem
 
 open class ListaImagemTextoSimplesAdapter(var context: Context, var listaModel:ArrayList<ListaModel>)
 
     : BaseAdapter() {
+
+
+    class ViewHolder(row: View?) {
+
+        var textName: TextView? = row?.findViewById(R.id.titulo) as TextView
+        var imageView: ImageView? =  row?.findViewById(R.id.imagem) as ImageView
+        var subtitulo : TextView? =  row?.findViewById(R.id.subtitulo) as TextView
+
+
+    }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
 
@@ -37,8 +52,11 @@ open class ListaImagemTextoSimplesAdapter(var context: Context, var listaModel:A
         viewHolder.imageView?.setImageResource(lista.imagem)
 
 
+
         return view as View
     }
+
+
 
     override fun getItem(position: Int): Any {
 

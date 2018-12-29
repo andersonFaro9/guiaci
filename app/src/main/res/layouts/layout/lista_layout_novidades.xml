@@ -36,7 +36,7 @@
 
 
             <ImageView
-                android:id="@+id/imagemCardView"
+                android:id="@+id/imagemNovidade"
                 android:layout_width="match_parent"
                 android:layout_marginTop="80dp"
                 android:layout_height="@dimen/album_cover_height"
@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/imagemCardView"
+                android:layout_below="@+id/imagemNovidade"
                 android:paddingBottom="@dimen/songs_count_padding_bottom"
                 android:paddingLeft="8dp"
                 android:paddingRight="@dimen/album_title_padding"
