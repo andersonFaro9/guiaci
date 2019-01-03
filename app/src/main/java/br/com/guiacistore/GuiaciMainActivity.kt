@@ -8,6 +8,7 @@ import android.support.v7.widget.SearchView
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import br.com.guiacistore.R.id.recView
 import br.com.guiacistore.adapter.ListaDasLojasAdapter
 import br.com.guiacistore.model.dados.ListaModel
 import kotlinx.android.synthetic.main.activity_recycleview.*

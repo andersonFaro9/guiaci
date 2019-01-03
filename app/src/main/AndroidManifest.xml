@@ -220,6 +220,17 @@
         <activity android:parentActivityName=".lojas.evolution.EvolutionEnderecoActivity"  android:theme="@style/themeEvolution" android:name=".lojas.evolution.EvolutionEnderecoActivity" />
 
         <activity android:parentActivityName=".sem_conexao.ConexaoComInternet" android:theme="@style/themeEvolution" android:name=".sem_conexao.ConexaoComInternet" />
+        <activity android:parentActivityName=".lojas.lilidoces.LiliDocesTortasServicosActivity"  android:name=".lojas.lilidoces.LiliDocesTortasServicosActivity"
+            android:theme="@style/themeDocesCake"  />
+        <activity android:theme="@style/themeDocesCake" android:parentActivityName=".lojas.lilidoces.LiliHistoriaActivity"  android:name=".lojas.lilidoces.LiliHistoriaActivity" />
+        <activity android:parentActivityName=".lojas.lilidoces.LiliPromocoesActivity"  android:theme="@style/themeDocesCake" android:name=".lojas.lilidoces.LiliPromocoesActivity" />
+        <activity android:theme="@style/themeDocesCake" android:parentActivityName=".lojas.lilidoces.LiliContatosRedesSociaisActivity" android:name=".lojas.lilidoces.LiliContatosRedesSociaisActivity" />
+        <activity android:theme="@style/themeDocesCake"   android:parentActivityName=".lojas.lilidoces.LiliFotosActivity"  android:name=".lojas.lilidoces.LiliFotosActivity" />
+        <activity android:theme="@style/themeFotos"   android:name=".lojas.lilidoces.fotos.LiliSegundaFotoActivity" />
+        <activity android:theme="@style/themeFotos"  android:name=".lojas.lilidoces.fotos.LiliTerceiraFotoActivity" />
+        <activity android:theme="@style/themeFotos"  android:name=".lojas.lilidoces.fotos.LiliQuartaFotoActivity" />
+        <activity android:theme="@style/themeFotos" android:name=".lojas.lilidoces.fotos.LiliPrimeiraFotoActivity" />
+        <activity android:name=".lojas.evolution.EvolutionFotosActivity" />
 
 
     </application>

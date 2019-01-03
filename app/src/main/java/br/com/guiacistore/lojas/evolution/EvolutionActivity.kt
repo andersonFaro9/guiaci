@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import br.com.guiacistore.R
+import br.com.guiacistore.extensions_geral.exibirMensagem
 import br.com.guiacistore.interfaces.ICallNumber
 import kotlinx.android.synthetic.main.evolution_activity.*
 
@@ -29,7 +30,7 @@ class AcademiaEvolutionActivity : AppCompatActivity(), ICallNumber{
                 position == 0 ->  startActivity(Intent(this, EvolutionHistoriaAcvity::class.java))
                 position == 1 ->  startActivity(Intent(this, EvolutionServicosActivity::class.java))
                 position == 2 ->  startActivity(Intent(this, EvolutionPromocoesActivity::class.java))
-                position == 3 ->  startActivity(Intent(this, EvolutionNovidadeActivity::class.java))
+                position == 3 ->  exibirMensagem("Em breve")
                 position == 4 ->  startActivity(Intent(this, EvolutionRedesSociaisActivity::class.java))
 
             }

@@ -14,20 +14,12 @@ import br.com.guiacistore.extensions_geral.exibirMensagem
 import br.com.guiacistore.funcional.mostrarPromocao
 import br.com.guiacistore.interfaces.IConexaoComInternet
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.banco.BancoDeDadosFireBaseModel
+import br.com.guiacistore.model.banco.BancoDeDados
 import br.com.guiacistore.model.dados.ListaModel
 import br.com.guiacistore.sem_conexao.ConexaoComInternet
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.evolution_activity_promocoes.*
 import java.util.*
-
-
-
-
-
-
-
-
 
 
 class EvolutionPromocoesActivity: AppCompatActivity(), IFirebase, IConexaoComInternet {
@@ -85,7 +77,7 @@ class EvolutionPromocoesActivity: AppCompatActivity(), IFirebase, IConexaoComInt
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(BancoDeDadosFireBaseModel::class.java)
+                    val cliente = d.getValue(BancoDeDados::class.java)
 
                     with(listaModel) {
                         add(ListaModel(mostrarPromocao(cliente?.academia_evolution_promocao_1.toString()), "", "", R.drawable.ok_evolution))

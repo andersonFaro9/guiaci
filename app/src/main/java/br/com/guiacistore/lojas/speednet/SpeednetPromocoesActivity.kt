@@ -6,7 +6,7 @@ import android.util.Log
 import android.view.View
 import br.com.guiacistore.R
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.banco.BancoDeDadosFireBaseModel
+import br.com.guiacistore.model.banco.BancoDeDados
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.speednet_activity_promocoes.*
 
@@ -38,7 +38,7 @@ class SpeednetPromocoesActivity : AppCompatActivity(), IFirebase {
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(BancoDeDadosFireBaseModel::class.java)
+                    val cliente = d.getValue(BancoDeDados::class.java)
 
                             speednet_promocoes?.text = cliente?.speednet_promocoes
 

@@ -20,7 +20,7 @@ import br.com.guiacistore.fragments.BiosInformaticaServicosFragment
 import br.com.guiacistore.interfaces.ICallNumber
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.banco.BancoDeDadosFireBaseModel
+import br.com.guiacistore.model.banco.BancoDeDados
 import br.com.guiacistore.redesocial.BiosInformaticaRedesSociaisActivity
 import com.google.firebase.database.*
 import com.ogaclejapan.smarttablayout.SmartTabLayout
@@ -50,7 +50,7 @@ class BiosInformaticaActivity : AppCompatActivity(),  Invisible, IFirebase,ICall
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(BancoDeDadosFireBaseModel::class.java)
+                    val cliente = d.getValue(BancoDeDados::class.java)
 
                     val listaApp  = listOf(
                             //Mostra a lista de serviços da  Barbearia do Greg

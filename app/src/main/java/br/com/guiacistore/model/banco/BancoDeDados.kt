@@ -5,7 +5,7 @@ package br.com.guiacistore.model.banco
     Responsável pelos dados das lojas que precisam atualizar em tempo real do firebase
 
  */
-data class BancoDeDadosFireBaseModel(
+data class BancoDeDados(
 
 
         var publicartNovidades: String?= null,
@@ -95,6 +95,7 @@ data class BancoDeDadosFireBaseModel(
         var lili_doces_cakes_produto_7: String?= null,
         var lili_doces_cakes_produto_8: String?= null,
         var lili_doces_cakes_produto_9: String?= null,
+
 
 
 

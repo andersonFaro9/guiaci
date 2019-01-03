@@ -15,7 +15,7 @@ fun AcademiaEvolutionActivity.mostrarServicosOferecidos() {
         listaModel.add(ListaModel("História", "", "", R.drawable.ic_evolution_home) )
         listaModel.add(ListaModel("Serviços", "", "", R.drawable.ic_evolution_servicos) )
         listaModel.add(ListaModel("Promoções", "", "", R.drawable.ic_evolution_promocoes) )
-        listaModel.add(ListaModel("Novidades", "", "", R.drawable.ic_evolution_novidades) )
+        listaModel.add(ListaModel("Fotos", "", "", R.drawable.ic_evolution_novidades) )
         listaModel.add(ListaModel("Contato e redes sociais", "", "", R.drawable.ic_evolution_rede_social) )
 
         listView.adapter = ListaImagemTextoSimplesAdapter(applicationContext, listaModel)

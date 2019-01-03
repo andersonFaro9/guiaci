@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import br.com.guiacistore.R
 import br.com.guiacistore.interfaces.IFirebase
-import br.com.guiacistore.model.banco.BancoDeDadosFireBaseModel
+import br.com.guiacistore.model.banco.BancoDeDados
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.rosa_saron_fragment_historia.*
 
@@ -36,7 +36,7 @@ class RosaDeSaronHistoriaFragment : Fragment(), IFirebase {
 
                 for (d in dataSnapshot?.children!!) {
 
-                    val cliente = d.getValue(BancoDeDadosFireBaseModel::class.java)
+                    val cliente = d.getValue(BancoDeDados::class.java)
                     rosa_de_saron_historia?.text =  cliente?.rosa_de_saron_historia
 
                     rosaDeSaronHistoriaProgressBar?.visibility = View.INVISIBLE

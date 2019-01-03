@@ -11,7 +11,7 @@
 
 
     <ImageView
-        android:id="@+id/epg_primeira_foto"
+        android:id="@+id/lili_primeira_foto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="4dp"

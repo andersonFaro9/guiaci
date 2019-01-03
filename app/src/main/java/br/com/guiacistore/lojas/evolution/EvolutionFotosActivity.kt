@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.activity_recycleview.*
 
 
 
-open class EvolutionNovidadeActivity : AppCompatActivity() {
+open class EvolutionFotosActivity : AppCompatActivity() {
 
 
     class ListaDeNovidadesFotosAdapter(private val context: Context, private var list: List<ListaDeFotosModel>) :
