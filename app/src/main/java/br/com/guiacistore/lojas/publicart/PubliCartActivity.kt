@@ -48,7 +48,7 @@ class PubliCartActivity : AppCompatActivity(),  ICallNumber{
 
         when (item.itemId) {
 
-            R.id.ic_phone -> {
+            R.id.ic_mapa -> {
 
                 callNumber()
                 return true

@@ -4,7 +4,7 @@
     tools:context="br.com.guiacistore.lojas.Main2Activity">
 
     <item
-        android:id="@+id/ic_phone"
+        android:id="@+id/ic_telefone"
         android:name="android:actionMenuTextColor"
         android:textColorHighlight="@color/colorPrimary"
         app:queryHint="telefone"

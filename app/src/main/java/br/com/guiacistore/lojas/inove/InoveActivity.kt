@@ -138,7 +138,7 @@ class InoveActivity : AppCompatActivity(),  Invisible, IFirebase, ICallNumber {
 
 
 
-            R.id.ic_phone -> {
+            R.id.ic_mapa -> {
 
                 callNumber()
                 return true

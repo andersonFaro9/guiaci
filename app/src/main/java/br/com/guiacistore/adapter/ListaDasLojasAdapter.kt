@@ -18,7 +18,6 @@ import br.com.guiacistore.lojas.epg.EpgActivity
 import br.com.guiacistore.lojas.evolution.AcademiaEvolutionActivity
 import br.com.guiacistore.lojas.greg.GregActivity
 import br.com.guiacistore.lojas.inove.InoveActivity
-import br.com.guiacistore.lojas.jobsat.JobSatActivity
 import br.com.guiacistore.lojas.jsbarbearia.JsBarbeariaActivity
 import br.com.guiacistore.lojas.lilidoces.LiliDocesCakesActivity
 
@@ -65,7 +64,7 @@ class ListaDasLojasAdapter(private val context: Context, private var list: List<
             }
 
             override fun publishResults(charSequence: CharSequence?, filterResults: FilterResults?) {
-                setList(list = filterResults?.values as List<ListaModel>)
+                setList(list = filterResults?.values as List< ListaModel>)
                 notifyDataSetChanged()
             }
 
@@ -120,17 +119,16 @@ class ListaDasLojasAdapter(private val context: Context, private var list: List<
             when (position) {
                 0 ->  context.startActivity(Intent(context, SpeedNetActivity::class.java))
                 1 ->  context.startActivity(Intent(context, GregActivity::class.java ))
-                2 ->  context.startActivity(Intent(context, JobSatActivity::class.java ))
-                3 ->  context.startActivity(Intent(context, JsBarbeariaActivity::class.java ))
-                4 ->  context.startActivity(Intent(context, LiliDocesCakesActivity::class.java ))
-                5 ->  context.startActivity(Intent(context, BiosInformaticaActivity::class.java ))
-                6 ->  context.startActivity(Intent(context, PubliCartActivity::class.java ))
-                7 ->  context.startActivity(Intent(context, AcademiaEvolutionActivity::class.java ))
-                8 ->  context.startActivity(Intent(context, QuadrangularActivity::class.java ))
-                9 ->  context.startActivity(Intent(context, BlueWayActivity::class.java ))
-                10 -> context.startActivity(Intent(context, RosaDeSaronActivity::class.java))
-                11 -> context.startActivity(Intent(context, EpgActivity::class.java))
-                12 -> context.startActivity(Intent(context, InoveActivity::class.java))
+                2 ->  context.startActivity(Intent(context, JsBarbeariaActivity::class.java ))
+                3 ->  context.startActivity(Intent(context, LiliDocesCakesActivity::class.java ))
+                4 ->  context.startActivity(Intent(context, BiosInformaticaActivity::class.java ))
+                5 ->  context.startActivity(Intent(context, PubliCartActivity::class.java ))
+                6 ->  context.startActivity(Intent(context, AcademiaEvolutionActivity::class.java ))
+                7 ->  context.startActivity(Intent(context, QuadrangularActivity::class.java ))
+                8 ->  context.startActivity(Intent(context, BlueWayActivity::class.java ))
+                9 -> context.startActivity(Intent(context, RosaDeSaronActivity::class.java))
+                10 -> context.startActivity(Intent(context, EpgActivity::class.java))
+                11 -> context.startActivity(Intent(context, InoveActivity::class.java))
 
 
             }

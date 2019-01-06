@@ -18,6 +18,22 @@
     </string>
 
 
+    //HISTORIA QUADRANGULAR
+    <string name="quadrangular_historia">
+       A Igreja do Evangelho Quadrangular em Pojuca na Bahia, foi reaberta em 21 de setembro de 2000, sob a direção do pastor Osvaldo Sousa e sua esposa, a Pastora Grace Kele.
+        No início tiveram um grande desafio: além de propagar a palavra de Deus e o evangelho Quadrangular, ocupavam-se na construção do templo!.
+        Hoje, além da igreja central, A IEQ de Pojuca conta com a sua congregação localizada no bairro das Palmeiras com templo próprio.
+    </string>
+
+    <string name="quadrangular_cultos_celulas">
+       Nossos cultos acontecem às quartas-feiras às 19:30 hs e aos domingos às 18:30 hs, exceto no segundo domingo do mês que começa as 18:00 horas.
+        Vemos desenvolvendo um trabalho chamado de: Trilho do Crescimento, que é a implantação da visão em células, onde formamos nossa primeira turma na escola de líderes, que já funciona com células espalhadas pela cidade, e ocorre todas as quintas-feira!
+    </string>
+
+    <string name="mapa_quadrangular">
+       Rua Juracy Magalhães, 1092, Pojuca - BA
+    </string>
+
     //LILI DOCES E CAKES
     <string name="historia_lili">
       Tudo começou em 20 de agosto de 2016, quando decidi fazer um bolo decorado e ver como ficaria. Sempre tive uma paixão por doces e falava: Quando eu tiver um filho vou me dedicar o máximo para fazer o meu melhor, e descobri que seria uma menina, aumentando ainda mais minha paixão por doces.
@@ -29,6 +45,11 @@
     <string name="mapa_evolution1">
         R. da Star, 30, Pojuca - BA, 48120-000
     </string>
+
+    <string name="mapa_bios">
+        Rua Antonio Mota, 182, cep: 48120000, Pojuca
+    </string>
+
 
     <string name="mapa_evolution2">
         Praça Mário Improta, s/n, px a rotatória da delegacia, Pojuca - BA, 48120-000

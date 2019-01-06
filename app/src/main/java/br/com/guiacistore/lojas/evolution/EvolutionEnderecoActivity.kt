@@ -17,7 +17,7 @@ class EvolutionEnderecoActivity: AppCompatActivity() {
 
         supportActionBar?.title = "Endereço"
 
-        texto_primeiro_endereco_evolution.setOnClickListener {
+        texto_endereco_quadrangular.setOnClickListener {
 
             verMapa(Uri.parse("https://goo.gl/maps/BZkXTkab9WQ2"))
 
@@ -29,7 +29,7 @@ class EvolutionEnderecoActivity: AppCompatActivity() {
             verMapa(Uri.parse("https://goo.gl/maps/1oH4C4mwoi42"))
         }
 
-        ic_endereco_evolution1.setOnClickListener {
+        ic_endereco_quadrangular.setOnClickListener {
             verMapa(Uri.parse("https://goo.gl/maps/BZkXTkab9WQ2"))
         }
 

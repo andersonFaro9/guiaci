@@ -76,3 +76,4 @@ open class ListaImagemTextoSimplesAdapter(var context: Context, var listaModel:A
     }
 
 }
+

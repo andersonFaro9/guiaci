@@ -24,7 +24,7 @@ class GregBarbeariaEnderecoActivity: AppCompatActivity() {
         }
 
 
-        ic_endereco_evolution1.setOnClickListener {
+        ic_endereco_quadrangular.setOnClickListener {
 
             verMapa(Uri.parse("https://goo.gl/maps/KZVfbNN4UnN2"))
         }

@@ -48,7 +48,7 @@ class JsBarbeariaActivity: AppCompatActivity(), ICallNumber {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when (item.itemId) {
-            R.id.ic_phone -> {
+            R.id.ic_mapa -> {
                 callNumber()
                 return true
             }

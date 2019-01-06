@@ -2,6 +2,7 @@ package br.com.guiacistore.lojas.evolution
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import br.com.guiacistore.R
+import br.com.guiacistore.lojas.evolution.extensions.mostrarRedesSociais
 
 
 class EvolutionRedesSociaisActivity: AppCompatActivity() {

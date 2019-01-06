@@ -210,8 +210,7 @@
         <activity android:name=".lojas.publicart.PublicartEnderecoActivity" android:theme="@style/colorPrimaryPubliCart" android:parentActivityName=".lojas.publicart.PublicartEnderecoActivity" />
         <activity android:parentActivityName=".lojas.evolution.EvolutionHistoriaAcvity"   android:theme="@style/themeEvolution" android:name=".lojas.evolution.EvolutionHistoriaAcvity" />
         <activity android:parentActivityName=".lojas.evolution.EvolutionServicosActivity" android:theme="@style/themeEvolution"  android:name=".lojas.evolution.EvolutionServicosActivity" />
-        <activity android:parentActivityName=".lojas.evolution.EvolutionPromocoesActivity" android:theme="@style/themeEvolution" android:name=".lojas.evolution.EvolutionPromocoesActivity" />
-        <activity android:parentActivityName=".lojas.evolution.EvolutionNovidadeActivity" android:theme="@style/themeEvolution" android:name=".lojas.evolution.EvolutionNovidadeActivity" />
+        <activity android:screenOrientation="portrait" android:parentActivityName=".lojas.evolution.EvolutionPromocoesActivity" android:theme="@style/themeEvolution" android:name=".lojas.evolution.EvolutionPromocoesActivity" />
         <activity android:parentActivityName=".lojas.evolution.EvolutionRedesSociaisActivity" android:theme="@style/themeEvolution" android:name=".lojas.evolution.EvolutionRedesSociaisActivity" />
         <activity  android:theme="@style/themeEvolution" android:name=".lojas.evolution.fotos.EvolutionPrimeiraFotoActivity" />
         <activity  android:theme="@style/themeEvolution" android:name=".lojas.evolution.fotos.EvolutionSegundaFotoActivity" />
@@ -219,7 +218,7 @@
         <activity  android:theme="@style/themeEvolution" android:name=".lojas.evolution.fotos.EvolutionQuartaFotoActivity" />
         <activity android:parentActivityName=".lojas.evolution.EvolutionEnderecoActivity"  android:theme="@style/themeEvolution" android:name=".lojas.evolution.EvolutionEnderecoActivity" />
 
-        <activity android:parentActivityName=".sem_conexao.ConexaoComInternet" android:theme="@style/themeEvolution" android:name=".sem_conexao.ConexaoComInternet" />
+        <activity android:theme="@style/themeConexao" android:name=".sem_conexao.ConexaoComInternet" />
         <activity android:parentActivityName=".lojas.lilidoces.LiliDocesTortasServicosActivity"  android:name=".lojas.lilidoces.LiliDocesTortasServicosActivity"
             android:theme="@style/themeDocesCake"  />
         <activity android:theme="@style/themeDocesCake" android:parentActivityName=".lojas.lilidoces.LiliHistoriaActivity"  android:name=".lojas.lilidoces.LiliHistoriaActivity" />
@@ -231,6 +230,17 @@
         <activity android:theme="@style/themeFotos"  android:name=".lojas.lilidoces.fotos.LiliQuartaFotoActivity" />
         <activity android:theme="@style/themeFotos" android:name=".lojas.lilidoces.fotos.LiliPrimeiraFotoActivity" />
         <activity android:name=".lojas.evolution.EvolutionFotosActivity" />
+        <activity android:parentActivityName=".lojas.quadrangular.QuadrangularHistoriaActivity" android:theme="@style/themeQuadrangular" android:name=".lojas.quadrangular.QuadrangularHistoriaActivity" />
+        <activity android:parentActivityName=".lojas.quadrangular.QuadrangularCultoCelulasActivity"  android:theme="@style/themeQuadrangular"  android:name=".lojas.quadrangular.QuadrangularCultoCelulasActivity" />
+        <activity android:parentActivityName=".lojas.quadrangular.QuadrangularPastorActivity"  android:theme="@style/themeQuadrangular" android:name=".lojas.quadrangular.QuadrangularPastorActivity" />
+        <activity android:parentActivityName=".lojas.quadrangular.QuadrangularFotosActivity"  android:theme="@style/themeQuadrangular"  android:name=".lojas.quadrangular.QuadrangularFotosActivity" />
+        <activity android:parentActivityName=".lojas.quadrangular.QuadrangularRedeSocialActivity"  android:name=".lojas.quadrangular.QuadrangularRedeSocialActivity" android:theme="@style/themeQuadrangular" />
+        <activity android:parentActivityName=".lojas.quadrangular.QuadrangularEnderecoActivity" android:theme="@style/themeQuadrangular" android:name=".lojas.quadrangular.QuadrangularEnderecoActivity" />
+        <activity android:parentActivityName=".lojas.biosinformatica.BiosInformaticaFotosActivity"  android:name=".lojas.biosinformatica.BiosInformaticaFotosActivity"  android:theme="@style/themeBios"/>
+        <activity android:parentActivityName=".lojas.biosinformatica.BiosInformaticaServicosActivity"  android:name=".lojas.biosinformatica.BiosInformaticaServicosActivity" android:theme="@style/themeBios" />
+        <activity android:parentActivityName=".lojas.biosinformatica.BiosInformaticaPromocoesActivity"  android:name=".lojas.biosinformatica.BiosInformaticaPromocoesActivity" android:theme="@style/themeBios" />
+        <activity android:parentActivityName=".lojas.biosinformatica.BiosInformaticaEnderecoActivity" android:name=".lojas.biosinformatica.BiosInformaticaEnderecoActivity" android:theme="@style/themeBios" />
+        <activity android:parentActivityName=".lojas.biosinformatica.BiosInformaticaRedesSociaisActivity" android:name=".lojas.biosinformatica.BiosInformaticaRedesSociaisActivity"  android:theme="@style/themeBios"/>
 
 
     </application>

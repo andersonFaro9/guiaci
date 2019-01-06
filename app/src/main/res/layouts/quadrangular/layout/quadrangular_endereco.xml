@@ -1,0 +1,64 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="6dp"
+    android:paddingRight="6dp"
+    android:id="@+id/relativeLayout">
+
+    <TextView
+        android:id="@+id/texto_endereco_quadrangular"
+        android:layout_width="194dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/mapa_quadrangular"
+        android:textAlignment="textStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoCliqueMapaPrimeiroEndereco" />
+
+
+
+
+    <ImageView
+        android:id="@+id/ic_endereco_quadrangular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/texto_endereco_quadrangular"
+        app:layout_constraintTop_toBottomOf="@+id/textoCliqueMapaPrimeiroEndereco"
+        app:srcCompat="@drawable/ic_endereco" />
+
+
+
+    <TextView
+        android:id="@+id/textoCliqueMapaPrimeiroEndereco"
+        android:layout_width="194dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:text="Para ver o mapa clique no endereço"
+        android:textAlignment="textEnd"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+        android:textColor="#00B2EE"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
+
+</ScrollView>

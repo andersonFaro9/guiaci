@@ -37,7 +37,7 @@ class BlueWayParceirosActivity: AppCompatActivity(), ICallNumber {
 
         when {
 
-            item.itemId == R.id.ic_phone -> {
+            item.itemId == R.id.ic_mapa -> {
                 callNumber()
                 return true
             }

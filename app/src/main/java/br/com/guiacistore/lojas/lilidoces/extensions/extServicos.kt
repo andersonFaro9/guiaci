@@ -31,8 +31,8 @@ fun LiliDocesTortasServicosActivity.mostrarServicos() {
     val listaModel: ArrayList<ListaModel> = ArrayList()
 
     listaModel.add(ListaModel("Tortellete Gourmet(criação nossa).", "", "", R.drawable.ic_tortellete_lili) )
-    listaModel.add(ListaModel("Tortas de vitrine.", "Aproveite nossas delícias", "", R.drawable.ic_torta_vitrine_lili) )
-    listaModel.add(ListaModel("Bolos Personalizados.", " Do seu jeitinho", "", R.drawable.ic_torta_personalizada_lili) )
+    listaModel.add(ListaModel("Tortas de vitrine.", "", "", R.drawable.ic_torta_vitrine_lili) )
+    listaModel.add(ListaModel("Bolos Personalizados.", "", "", R.drawable.ic_torta_personalizada_lili) )
     listaModel.add(ListaModel("Bolotones.", "", "", R.drawable.ic_bolotone_lili) )
     listaModel.add(ListaModel("Brownie, o mais top da doceria.", "", "", R.drawable.ic_brownie_lili) )
     listaModel.add(ListaModel("Cupcakes.", "", "", R.drawable.ic_cupcake_lili) )

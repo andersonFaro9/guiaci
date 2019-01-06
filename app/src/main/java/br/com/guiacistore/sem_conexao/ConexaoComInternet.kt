@@ -14,7 +14,7 @@ class ConexaoComInternet : AppCompatActivity(), IConexaoComInternet {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        supportActionBar?.title = "Promoções"
+        supportActionBar?.title = "Sem conexão"
 
         setContentView(R.layout.sem_conexao)
 

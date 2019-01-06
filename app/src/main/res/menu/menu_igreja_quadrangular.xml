@@ -3,15 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="br.com.guiacistore.Main2Activity">
 
-
     <item
-        android:id="@+id/ic_menu"
+        android:id="@+id/ic_mapa"
         android:name="android:actionMenuTextColor"
-        app:queryHint="menu"
-        android:icon="@drawable/ic_menu_24dp"
-        app:showAsAction="never"
-        android:title="Redes sociais"
+        app:queryHint="telefone"
+        android:icon="@drawable/ic_mapa_quadrangular_menu"
+        app:showAsAction="always"
+        android:title=""
 
         />
+
+
 
 </menu>

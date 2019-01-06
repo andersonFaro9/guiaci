@@ -98,6 +98,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="themeConexao" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryconexao</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryconexao</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
 
     <style name="themeEvolution" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->

@@ -8,6 +8,7 @@ import android.view.MenuItem
 import br.com.guiacistore.R
 import br.com.guiacistore.extensions_geral.exibirMensagem
 import br.com.guiacistore.interfaces.ICallNumber
+import br.com.guiacistore.lojas.evolution.extensions.mostrarServicosOferecidos
 import kotlinx.android.synthetic.main.evolution_activity.*
 
 class AcademiaEvolutionActivity : AppCompatActivity(), ICallNumber{
@@ -46,18 +47,21 @@ class AcademiaEvolutionActivity : AppCompatActivity(), ICallNumber{
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        when (item.itemId) {
+        when  {
 
-            R.id.ic_phone -> {
-                callNumber()
-                return true
-            }
-
-            R.id.ic_mapa -> {
+            item.itemId == R.id.ic_mapa -> {
                 startActivity(Intent(this, EvolutionEnderecoActivity::class.java))
                 return true
             }
+
+            item.itemId == R.id.ic_telefone -> {
+                callNumber()
+                return true
+            }
         }
+
+
+
         return super.onOptionsItemSelected(item)
     }
 

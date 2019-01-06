@@ -21,7 +21,6 @@ import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.evolution_activity_promocoes.*
 import java.util.*
 
-
 class EvolutionPromocoesActivity: AppCompatActivity(), IFirebase, IConexaoComInternet {
 
     override val databaseInstance: FirebaseDatabase?
