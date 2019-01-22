@@ -212,24 +212,25 @@
         <activity android:parentActivityName=".lojas.evolution.EvolutionServicosActivity" android:theme="@style/themeEvolution"  android:name=".lojas.evolution.EvolutionServicosActivity" />
         <activity android:screenOrientation="portrait" android:parentActivityName=".lojas.evolution.EvolutionPromocoesActivity" android:theme="@style/themeEvolution" android:name=".lojas.evolution.EvolutionPromocoesActivity" />
         <activity android:parentActivityName=".lojas.evolution.EvolutionRedesSociaisActivity" android:theme="@style/themeEvolution" android:name=".lojas.evolution.EvolutionRedesSociaisActivity" />
-        <activity  android:theme="@style/themeEvolution" android:name=".lojas.evolution.fotos.EvolutionPrimeiraFotoActivity" />
-        <activity  android:theme="@style/themeEvolution" android:name=".lojas.evolution.fotos.EvolutionSegundaFotoActivity" />
-        <activity  android:theme="@style/themeEvolution" android:name=".lojas.evolution.fotos.EvolutionTerceiraFotoActivity" />
-        <activity  android:theme="@style/themeEvolution" android:name=".lojas.evolution.fotos.EvolutionQuartaFotoActivity" />
+        <activity  android:theme="@style/themeFotos"  android:name=".lojas.evolution.fotos.EvolutionPrimeiraFotoActivity" />
+        <activity  android:theme="@style/themeFotos"  android:name=".lojas.evolution.fotos.EvolutionSegundaFotoActivity" />
+        <activity  android:theme="@style/themeFotos"  android:name=".lojas.evolution.fotos.EvolutionTerceiraFotoActivity" />
+        <activity  android:theme="@style/themeFotos"  android:name=".lojas.evolution.fotos.EvolutionQuartaFotoActivity" />
         <activity android:parentActivityName=".lojas.evolution.EvolutionEnderecoActivity"  android:theme="@style/themeEvolution" android:name=".lojas.evolution.EvolutionEnderecoActivity" />
 
         <activity android:theme="@style/themeConexao" android:name=".sem_conexao.ConexaoComInternet" />
-        <activity android:parentActivityName=".lojas.lilidoces.LiliDocesTortasServicosActivity"  android:name=".lojas.lilidoces.LiliDocesTortasServicosActivity"
+        <activity android:parentActivityName=".lojas.lilidoces.LiliDocesTortasServicosActivity"
+            android:name=".lojas.lilidoces.LiliDocesTortasServicosActivity"
             android:theme="@style/themeDocesCake"  />
         <activity android:theme="@style/themeDocesCake" android:parentActivityName=".lojas.lilidoces.LiliHistoriaActivity"  android:name=".lojas.lilidoces.LiliHistoriaActivity" />
         <activity android:parentActivityName=".lojas.lilidoces.LiliPromocoesActivity"  android:theme="@style/themeDocesCake" android:name=".lojas.lilidoces.LiliPromocoesActivity" />
         <activity android:theme="@style/themeDocesCake" android:parentActivityName=".lojas.lilidoces.LiliContatosRedesSociaisActivity" android:name=".lojas.lilidoces.LiliContatosRedesSociaisActivity" />
-        <activity android:theme="@style/themeDocesCake"   android:parentActivityName=".lojas.lilidoces.LiliFotosActivity"  android:name=".lojas.lilidoces.LiliFotosActivity" />
-        <activity android:theme="@style/themeFotos"   android:name=".lojas.lilidoces.fotos.LiliSegundaFotoActivity" />
+        <activity android:theme="@style/themeDocesCake" android:parentActivityName=".lojas.lilidoces.LiliFotosActivity"  android:name=".lojas.lilidoces.LiliFotosActivity" />
+        <activity android:theme="@style/themeFotos"  android:name=".lojas.lilidoces.fotos.LiliSegundaFotoActivity" />
         <activity android:theme="@style/themeFotos"  android:name=".lojas.lilidoces.fotos.LiliTerceiraFotoActivity" />
         <activity android:theme="@style/themeFotos"  android:name=".lojas.lilidoces.fotos.LiliQuartaFotoActivity" />
-        <activity android:theme="@style/themeFotos" android:name=".lojas.lilidoces.fotos.LiliPrimeiraFotoActivity" />
-        <activity android:name=".lojas.evolution.EvolutionFotosActivity" />
+        <activity android:theme="@style/themeFotos"  android:name=".lojas.lilidoces.fotos.LiliPrimeiraFotoActivity" />
+        <activity android:parentActivityName=".lojas.evolution.EvolutionFotosActivity" android:theme="@style/themeEvolution"  android:name=".lojas.evolution.EvolutionFotosActivity" />
         <activity android:parentActivityName=".lojas.quadrangular.QuadrangularHistoriaActivity" android:theme="@style/themeQuadrangular" android:name=".lojas.quadrangular.QuadrangularHistoriaActivity" />
         <activity android:parentActivityName=".lojas.quadrangular.QuadrangularCultoCelulasActivity"  android:theme="@style/themeQuadrangular"  android:name=".lojas.quadrangular.QuadrangularCultoCelulasActivity" />
         <activity android:parentActivityName=".lojas.quadrangular.QuadrangularPastorActivity"  android:theme="@style/themeQuadrangular" android:name=".lojas.quadrangular.QuadrangularPastorActivity" />

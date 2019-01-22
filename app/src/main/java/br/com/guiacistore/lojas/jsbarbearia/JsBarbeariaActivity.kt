@@ -48,7 +48,7 @@ class JsBarbeariaActivity: AppCompatActivity(), ICallNumber {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when (item.itemId) {
-            R.id.ic_mapa -> {
+            R.id.ic_telefone -> {
                 callNumber()
                 return true
             }
@@ -60,7 +60,7 @@ class JsBarbeariaActivity: AppCompatActivity(), ICallNumber {
 
     override fun callNumber() {
         val callIntent = Intent(Intent.ACTION_DIAL)
-        callIntent.data = Uri.parse( "tel: 71 9628-2113")
+        callIntent.data = Uri.parse( "tel: 71 99628-2113")
         startActivity(callIntent)
     }
 }

@@ -17,9 +17,9 @@ class EvolutionTerceiraFotoActivity : AppCompatActivity(), IButtonOfCloseActivit
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.epg_primeira_foto)
+        setContentView(R.layout.evolution_terceira_foto)
 
-        val imageViewEpg1 = findViewById<View>(R.id.lili_primeira_foto)
+        val imageViewEpg1 = findViewById<View>(R.id.evolution_terceira_foto)
 
         atacher = PhotoViewAttacher(imageViewEpg1 as ImageView?)
 

@@ -43,7 +43,7 @@ class GregActivity: AppCompatActivity(), ICallNumber {
 
         when (item.itemId) {
 
-            R.id.ic_mapa -> {
+            R.id.ic_telefone -> {
                 callNumber()
                 return true
             }

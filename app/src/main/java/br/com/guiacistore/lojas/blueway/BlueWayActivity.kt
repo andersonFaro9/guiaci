@@ -44,7 +44,7 @@ class BlueWayActivity : AppCompatActivity(), ICallNumber {
 
         override fun onOptionsItemSelected(item: MenuItem): Boolean {
             when (item.itemId) {
-                R.id.ic_mapa -> {
+                R.id.ic_telefone -> {
                     callNumber()
                     return true
                 }
@@ -60,7 +60,7 @@ class BlueWayActivity : AppCompatActivity(), ICallNumber {
 
         override fun callNumber() {
             val callIntent = Intent(Intent.ACTION_DIAL)
-            callIntent.data = Uri.parse("tel:71 9627-1187")
+            callIntent.data = Uri.parse("tel: 99627-1187")
             startActivity(callIntent)
         }
 

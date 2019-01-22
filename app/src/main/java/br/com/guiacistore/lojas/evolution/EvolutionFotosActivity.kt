@@ -96,7 +96,7 @@ open class EvolutionFotosActivity : AppCompatActivity() {
         recView.adapter = adapter
         recView.layoutManager = GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false)
 
-        supportActionBar?.title = "Novidades"
+        supportActionBar?.title = "Fotos"
 
     }
 
@@ -104,18 +104,18 @@ open class EvolutionFotosActivity : AppCompatActivity() {
     //Responsável por criar as categorias e mostrar as fotos
     private fun  prepareList(list: ArrayList<ListaDeFotosModel>) {
 
-        list.add(ListaDeFotosModel("", "", "Cabelo poupador",
-                R.drawable.greg_primeira_foto))
+        list.add(ListaDeFotosModel("", "", "Queima de calorias",
+                R.drawable.evolution_primeira_foto))
 
-        list.add(ListaDeFotosModel("", "", "Degradê navalhado! ",
-                R.drawable.greg_segunda_foto))
+        list.add(ListaDeFotosModel("", "", "Aumento da resistência física e queima de gordura! ",
+                R.drawable.evolution_segunda_foto))
 
-        list.add(ListaDeFotosModel("", "", "Moicano americano! ",
-                R.drawable.greg_terceira_foto))
+        list.add(ListaDeFotosModel("", "", "Deixa os ossos fortes! ",
+                R.drawable.evolution_terceira_foto))
 
 
-        list.add(ListaDeFotosModel(" ", "", "Freestyle com nudred spong! ",
-                R.drawable.greg_quarta_foto))
+        list.add(ListaDeFotosModel(" ", "", " Exercicios diários",
+                R.drawable.evolution_quarta_foto))
 
     }
 

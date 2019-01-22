@@ -33,12 +33,4 @@ class SpeedNetEnderecoActivity: AppCompatActivity() {
 
     }
 
-
-
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_main_loja_epg, menu)
-        return true
-    }
-
 }

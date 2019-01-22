@@ -16,8 +16,6 @@ import android.view.View
 import android.widget.ArrayAdapter
 import br.com.guiacistore.R
 import br.com.guiacistore.extensions_geral.exibirMensagem
-import br.com.guiacistore.fragments.BiosInformaticaPromocoesFragment
-import br.com.guiacistore.fragments.BiosInformaticaServicosFragment
 import br.com.guiacistore.interfaces.ICallNumber
 import br.com.guiacistore.interfaces.Invisible
 import br.com.guiacistore.interfaces.IFirebase
@@ -84,7 +82,7 @@ class BiosInformaticaActivity : AppCompatActivity(), ICallNumber{
 
     override fun callNumber() {
         val callIntent = Intent(Intent.ACTION_DIAL)
-        callIntent.data = Uri.parse( "tel: 71 3645-5134")
+        callIntent.data = Uri.parse( "tel:  3645-5134")
         startActivity(callIntent)
     }
 
