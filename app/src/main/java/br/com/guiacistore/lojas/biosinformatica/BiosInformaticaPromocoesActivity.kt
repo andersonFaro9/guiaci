@@ -19,7 +19,6 @@ import br.com.guiacistore.model.dados.ListaModel
 import br.com.guiacistore.sem_conexao.ConexaoComInternet
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.bios_activity_promocoes.*
-import kotlinx.android.synthetic.main.lili_promocoes_activity.*
 
 import java.util.*
 
@@ -64,6 +63,7 @@ class BiosInformaticaPromocoesActivity: AppCompatActivity(), IFirebase, IConexao
     override fun doDatabaseInstance(id: Int): Boolean {
 
         referenciaFirebase?.child(id.toString())
+
 
         referenciaFirebase?.addValueEventListener(object: ValueEventListener {
 

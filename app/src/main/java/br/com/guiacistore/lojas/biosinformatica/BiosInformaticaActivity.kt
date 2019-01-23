@@ -5,28 +5,21 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import android.support.v4.app.ActivityCompat
-import android.support.v4.content.ContextCompat
-import android.support.v4.view.ViewPager
+
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
+
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.ArrayAdapter
+
 import br.com.guiacistore.R
 import br.com.guiacistore.extensions_geral.exibirMensagem
 import br.com.guiacistore.interfaces.ICallNumber
-import br.com.guiacistore.interfaces.Invisible
-import br.com.guiacistore.interfaces.IFirebase
+
 import br.com.guiacistore.lojas.biosinformatica.extensions.mostrarServicosOferecidos
-import br.com.guiacistore.model.banco.BancoDeDados
-import com.google.firebase.database.*
-import com.ogaclejapan.smarttablayout.SmartTabLayout
-import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
-import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
+
 import kotlinx.android.synthetic.main.bios_activity.*
-import kotlinx.android.synthetic.main.bios_informatica_fragment_servicos.*
+
 
 class BiosInformaticaActivity : AppCompatActivity(), ICallNumber{
 

@@ -29,7 +29,7 @@ class JsBarbeariaActivity: AppCompatActivity(), ICallNumber {
             when {
                 position == 0 ->  startActivity(Intent(this, JsBarbeariaHistoriaActivity::class.java))
                 position == 1 ->  startActivity(Intent(this, JsBarbeariaServicosActivity::class.java))
-                position == 2 ->  startActivity(Intent(this, JsBarbeariaNovidadeActivity::class.java))
+                position == 2 ->  startActivity(Intent(this, JsBarbeariaFotosActivity::class.java))
                 position == 3 ->  startActivity(Intent(this, JsBarbeariaPromocoesActivity::class.java))
                 position == 4 ->  startActivity(Intent(this, JsBarbeariaRedesSociaisActivity::class.java))
 

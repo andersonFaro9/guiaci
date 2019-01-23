@@ -79,13 +79,13 @@ class EvolutionPromocoesActivity: AppCompatActivity(), IFirebase, IConexaoComInt
                     val cliente = d.getValue(BancoDeDados::class.java)
 
                     with(listaModel) {
-                        add(ListaModel(mostrarPromocao(cliente?.academia_evolution_promocao_1.toString()), "", "", R.drawable.ok_evolution))
+                        add(ListaModel(mostrarPromocao(cliente?.academia_evolution_promocao_1.toString()), "", "", R.drawable.ok_promocao))
 
-                        add(ListaModel(mostrarPromocao(cliente?.academia_evolution_promocao_2.toString()), "", "", R.drawable.ok_evolution))
+                        add(ListaModel(mostrarPromocao(cliente?.academia_evolution_promocao_2.toString()), "", "", R.drawable.ok_promocao))
 
-                        add(ListaModel(mostrarPromocao(cliente?.academia_evolution_promocao_3.toString()), "", "", R.drawable.ok_evolution))
+                        add(ListaModel(mostrarPromocao(cliente?.academia_evolution_promocao_3.toString()), "", "", R.drawable.ok_promocao))
 
-                        add(ListaModel(mostrarPromocao(cliente?.academia_evolution_promocao_4.toString()), "", "", R.drawable.ok_evolution))
+                        add(ListaModel(mostrarPromocao(cliente?.academia_evolution_promocao_4.toString()), "", "", R.drawable.ok_promocao))
 
                         listView.adapter = ListaPromocoesImagemTextoSimplesAdapter(applicationContext, listaModel)
                     }

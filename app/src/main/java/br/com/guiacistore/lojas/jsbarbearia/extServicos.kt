@@ -13,7 +13,7 @@ fun JsBarbeariaActivity.mostraServicosOferecidos() {
 
     listaModel.add(ListaModel("JS Barbearia à Domicílio", "", "", R.drawable.ic_historia_jsbarbearia))
     listaModel.add(ListaModel("Serviços", " ", "", R.drawable.ic_servicos_jsbarbearia))
-    listaModel.add(ListaModel("Novidades", "", "", R.drawable.ic_novidades_jsbarbearia))
+    listaModel.add(ListaModel("Fotos", "", "", R.drawable.ic_novidades_jsbarbearia))
     listaModel.add(ListaModel("Promoções", "Belas promoções", "", R.drawable.ic_promocoes_jsbarbearia))
     listaModel.add(ListaModel("Contatos e Redes sociais", "Participe de nossas redes sociais!", "", R.drawable.ic_rede_sociais_jsbarbearia))
 

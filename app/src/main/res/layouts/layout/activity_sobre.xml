@@ -18,9 +18,9 @@
             android:id="@+id/seu_negocio"
             android:layout_width="259dp"
             android:layout_height="39dp"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="44dp"
+            android:layout_marginEnd="8dp"
             android:text="Guiaci"
             android:textAlignment="center"
             android:textColor="@color/album_title"
@@ -37,8 +37,8 @@
             android:layout_height="80dp"
 
             android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
             android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
             android:background="@android:color/transparent"
             android:foregroundGravity="center"
             android:scaleType="fitCenter"
@@ -50,19 +50,16 @@
 
         <TextView
             android:id="@+id/text_telefone"
-            android:layout_width="0dp"
-            android:layout_height="139dp"
-
-            android:layout_marginStart="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="121dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
-            android:text="Faça a propaganda de sua loja ou empresa em nosso aplicativo. Cobramos o valor de R$ 30,00 reais mensais para fazer a sua propaganda,
-             fale pelo Whatsapp: 71-99687-7997 e saiba mais."
+            android:text="@string/sobre"
             android:textAlignment="center"
             android:textColor="@color/album_title"
-            android:textSize="16dp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.561"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/splash_guia_city" />
 

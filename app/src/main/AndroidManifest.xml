@@ -13,7 +13,7 @@
 
         android:name=".CustomAplication"
         android:allowBackup="true"
-        android:icon="@mipmap/guiaci"
+        android:icon="@mipmap/ic_guiaci"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -196,7 +196,7 @@
         <activity android:parentActivityName=".lojas.jsbarbearia.JsBarbeariaActivity" android:theme="@style/themeJsBarbearia" android:name=".lojas.jsbarbearia.JsBarbeariaActivity" />
         <activity android:parentActivityName=".lojas.jsbarbearia.JsBarbeariaHistoriaActivity" android:name=".lojas.jsbarbearia.JsBarbeariaHistoriaActivity"  android:theme="@style/themeJsBarbearia" />
         <activity android:parentActivityName=".lojas.jsbarbearia.JsBarbeariaServicosActivity" android:name=".lojas.jsbarbearia.JsBarbeariaServicosActivity"  android:theme="@style/themeJsBarbearia" />
-        <activity android:parentActivityName=".lojas.jsbarbearia.JsBarbeariaNovidadeActivity" android:name=".lojas.jsbarbearia.JsBarbeariaNovidadeActivity"  android:theme="@style/themeJsBarbearia" />
+        <activity android:parentActivityName=".lojas.jsbarbearia.JsBarbeariaFotosActivity" android:name=".lojas.jsbarbearia.JsBarbeariaFotosActivity"  android:theme="@style/themeJsBarbearia" />
         <activity android:parentActivityName=".lojas.jsbarbearia.JsBarbeariaPromocoesActivity" android:name=".lojas.jsbarbearia.JsBarbeariaPromocoesActivity"  android:theme="@style/themeJsBarbearia" />
         <activity android:parentActivityName=".lojas.jsbarbearia.JsBarbeariaRedesSociaisActivity" android:name=".lojas.jsbarbearia.JsBarbeariaRedesSociaisActivity"  android:theme="@style/themeJsBarbearia"/>
         <activity android:theme="@style/colorPrimaryFundoFoto" android:name=".lojas.jsbarbearia.fotos.JsBarbeariaPrimeiraFotoActivity" />

@@ -21,22 +21,7 @@ class JsBarbeariaRedesSociaisActivity: AppCompatActivity(), ICallNumber {
 
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_main_loja_jsbarbearia, menu)
-        return true
-    }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-        when (item.itemId) {
-            R.id.ic_mapa -> {
-                callNumber()
-                return true
-            }
-
-        }
-        return super.onOptionsItemSelected(item)
-    }
 
 
 

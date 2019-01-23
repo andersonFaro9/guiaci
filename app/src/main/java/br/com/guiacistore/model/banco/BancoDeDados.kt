@@ -21,7 +21,11 @@ data class BancoDeDados(
 
 
         //jsbarbearia_promocoes
-        var jsbarbearia_promocoes: String?= null,
+        var jsbarbearia_promocoes1: String?= null,
+        var jsbarbearia_promocoes2: String?= null,
+        var jsbarbearia_promocoes3: String?= null,
+        var jsbarbearia_promocoes4: String?= null,
+        var jsbarbearia_promocoes5: String?= null,
 
 
         //BlueWay Promoções
