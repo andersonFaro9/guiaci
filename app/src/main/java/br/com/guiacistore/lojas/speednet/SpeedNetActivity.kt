@@ -58,7 +58,7 @@ class SpeedNetActivity: AppCompatActivity(), ICallNumber {
 
     override fun callNumber() {
         val callIntent = Intent(Intent.ACTION_DIAL)
-        callIntent.data = Uri.parse("tel: 36455134")
+        callIntent.data = Uri.parse("tel: 35120908")
         startActivity(callIntent)
     }
 }
