@@ -5,7 +5,7 @@ package br.com.guiacistore.model.fotos
  */
 
 
-class ListaDeFotosModel (val nome : String, val tituloDoTopo : String, val subTitulo: String, val imagem : Int)
+class ListaDeFotosModel (val nome : String, val tituloDaFoto : String, val subTitulo: String, val imagem : Int)
 
 
 

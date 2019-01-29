@@ -6,7 +6,7 @@ package br.com.guiacistore.model.dados
 
 data class ListaModel (
 
-        val titulo: String, val subTitulo: String, val detalhes: String, val imagem: Int
+        val titulo: String, val subTitulo: String, val detalhes: Int, val imagem: Int
 
 )
 

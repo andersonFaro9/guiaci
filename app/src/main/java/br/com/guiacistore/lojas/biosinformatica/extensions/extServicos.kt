@@ -19,10 +19,10 @@ fun BiosInformaticaActivity.mostrarServicosOferecidos() {
 
         val listaModel: ArrayList<ListaModel> = ArrayList()
 
-        listaModel.add(ListaModel("Serviços", "", "", R.drawable.ic_servicos_bios) )
-        listaModel.add(ListaModel("Promoções", "", "", R.drawable.ic_promocoes_bios) )
-        listaModel.add(ListaModel("Fotos", "", "", R.drawable.ic_fotos_bios) )
-        listaModel.add(ListaModel("Contato e redes sociais", "", "", R.drawable.ic_rede_social_bios) )
+        listaModel.add(ListaModel("Serviços", "", 0, R.drawable.ic_servicos_bios) )
+        listaModel.add(ListaModel("Promoções", "", 0, R.drawable.ic_promocoes_bios) )
+        listaModel.add(ListaModel("Fotos", "", 0, R.drawable.ic_fotos_bios) )
+        listaModel.add(ListaModel("Contato e redes sociais", "", 0, R.drawable.ic_rede_social_bios) )
 
         listView.adapter = ListaImagemTextoSimplesAdapter(applicationContext, listaModel)
 
@@ -35,12 +35,12 @@ fun BiosInformaticaServicosActivity.mostrarServicos() {
 
     val listaModel: ArrayList<ListaModel> = ArrayList()
 
-    listaModel.add(ListaModel("Manutenção ", "Faça a manutenção de seu computador", "", 0) )
-    listaModel.add(ListaModel("Impressoras", "Fazemos a sua manutenção", "", 0) )
-    listaModel.add(ListaModel("Câmeras de segurança", "Instalamos sua câmera", "",0) )
-    listaModel.add(ListaModel("Alarmes", "Instalamos seu alarme", "", 0) )
-    listaModel.add(ListaModel("Cartuchos e toner", "Faça sua recarga", "", 0) )
-    listaModel.add(ListaModel("Papelaria", "Faça sua encadernação e plastificação", "", 0) )
+    listaModel.add(ListaModel("Manutenção ", "Faça a manutenção de seu computador", 0, 0) )
+    listaModel.add(ListaModel("Impressoras", "Fazemos a sua manutenção", 0, 0) )
+    listaModel.add(ListaModel("Câmeras de segurança", "Instalamos sua câmera", 0,0) )
+    listaModel.add(ListaModel("Alarmes", "Instalamos seu alarme", 0, 0) )
+    listaModel.add(ListaModel("Cartuchos e toner", "Faça sua recarga", 0, 0) )
+    listaModel.add(ListaModel("Papelaria", "Faça sua encadernação e plastificação", 0, 0) )
     listView.adapter = ListaSimplesTextoSemImagemAdapter(applicationContext, listaModel)
 
 }
@@ -52,9 +52,9 @@ fun BiosInformaticaRedesSociaisActivity.mostrarRedesSociais() {
 
     val listaModel: ArrayList<ListaModel> = ArrayList()
 
-    listaModel.add(ListaModel("biosinformaticaepapelaria/", "", "", R.drawable.ic_facebook) )
-    listaModel.add(ListaModel("biosinformaticaepapelaria/", "", "", R.drawable.ic_instagram) )
-    listaModel.add(ListaModel("(71) 3645-5134", "", "", R.drawable.ic_telefone) )
+    listaModel.add(ListaModel("biosinformaticaepapelaria/", "", 0, R.drawable.ic_facebook) )
+    listaModel.add(ListaModel("biosinformaticaepapelaria/", "", 0, R.drawable.ic_instagram) )
+    listaModel.add(ListaModel("(71) 3645-5134", "", 0, R.drawable.ic_telefone) )
 
 
     listView.adapter = ListaImagemTextoSimplesAdapter(applicationContext, listaModel)

@@ -23,6 +23,15 @@
     </string>
 
 
+    //AUTO ESCOLA FRANCA
+    <string name="historia_auto_escola_franca">
+       Nascemos da ideia de trazer para Pojuca, um novo conceito de academia.
+       Tivemos início em março de 2015, com a proposta de sermos uma academia que cuida dos seus alunos, e que propociona resultados positivos à saúde do corpo e mente.
+        Temos a melhor infraestrutura, ambiente arejado, ventilado, e iluminado naturalmente, com visão privilegiada.
+        Nossos horários de funcionamento: Nossa matriz no bairro Inocope, rua J, 20, do lado da delegacia funciona das 05:00hs às 21:00hs da noite e a filial, no bairro da Star, das 05:00hs ao meio-dia, e das 13:00hs até às 20:30hs da noite."
+    </string>
+
+
     //HISTORIA QUADRANGULAR
     <string name="quadrangular_historia">
        A Igreja do Evangelho Quadrangular em Pojuca na Bahia, foi reaberta em 21 de setembro de 2000, sob a direção do pastor Osvaldo Sousa e sua esposa, a Pastora Grace Kele.
@@ -49,6 +58,10 @@
 
     <string name="mapa_evolution1">
         R. da Star, 30, Pojuca - BA, 48120-000
+    </string>
+
+    <string name="mapa_auto_escola_franca">
+         Rua Antônio Mota, s/n, Centro de Pojuca - BA
     </string>
 
     <string name="mapa_bios">

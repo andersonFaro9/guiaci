@@ -1,7 +1,6 @@
 package br.com.guiacistore.lojas.jsbarbearia
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.CardView
@@ -11,7 +10,6 @@ import android.view.*
 import android.widget.ImageView
 import android.widget.TextView
 import br.com.guiacistore.R
-import br.com.guiacistore.interfaces.ICallNumber
 import br.com.guiacistore.lojas.jsbarbearia.fotos.JsBarbeariaPrimeiraFotoActivity
 import br.com.guiacistore.lojas.jsbarbearia.fotos.JsBarbeariaQuartaFotoActivity
 import br.com.guiacistore.lojas.jsbarbearia.fotos.JsBarbeariaSegundaFotoActivity
@@ -69,16 +67,16 @@ open class JsBarbeariaFotosActivity : AppCompatActivity() {
             var subTitulo: TextView? = null
 
             init {
-                tituloTop = itemView.findViewById(R.id.titleTop)
+                tituloTop = itemView.findViewById(R.id.titulo)
                 subTitulo = itemView.findViewById(R.id.subTitulo)
-                thumbImageView = itemView.findViewById(R.id.imagemNovidade)
+                thumbImageView = itemView.findViewById(R.id.foto)
             }
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, type: Int): ViewHolder {
 
 
-            val view: View = LayoutInflater.from(parent.context).inflate(R.layout.lista_layout_novidades, parent, false);
+            val view: View = LayoutInflater.from(parent.context).inflate(R.layout.lista_layout_fotos, parent, false);
             val card = view.findViewById<CardView>(R.id.card_view)
 
             card.maxCardElevation = 1.0F;
@@ -92,7 +90,7 @@ open class JsBarbeariaFotosActivity : AppCompatActivity() {
 
             val listaDeFotosModel: ListaDeFotosModel = list.get(position)
 
-            holder.tituloTop?.text = listaDeFotosModel.tituloDoTopo
+            holder.tituloTop?.text = listaDeFotosModel.tituloDaFoto
             holder.subTitulo?.text = listaDeFotosModel.subTitulo
             holder.thumbImageView?.setImageResource(listaDeFotosModel.imagem)
 

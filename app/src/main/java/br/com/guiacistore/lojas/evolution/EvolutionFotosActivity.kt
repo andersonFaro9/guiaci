@@ -24,27 +24,27 @@ import kotlinx.android.synthetic.main.activity_recycleview.*
 open class EvolutionFotosActivity : AppCompatActivity() {
 
 
-    class ListaDeNovidadesFotosAdapter(private val context: Context, private var list: List<ListaDeFotosModel>) :
+    class ListaDeFotosAdapter(private val context: Context, private var list: List<ListaDeFotosModel>) :
 
-            RecyclerView.Adapter<ListaDeNovidadesFotosAdapter.ViewHolder>() {
+            RecyclerView.Adapter<ListaDeFotosAdapter.ViewHolder>() {
 
         class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-            var tituloTop: TextView? = null
-            var thumbImageView: ImageView? = null
+            var titulo: TextView? = null
+            var foto: ImageView? = null
             var subTitulo: TextView? = null
 
             init {
-                tituloTop = itemView.findViewById(R.id.titleTop)
+                titulo = itemView.findViewById(R.id.titulo)
                 subTitulo = itemView.findViewById(R.id.subTitulo)
-                thumbImageView = itemView.findViewById(R.id.imagemNovidade)
+                foto = itemView.findViewById(R.id.foto)
             }
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, type: Int): ViewHolder {
 
 
-            val view: View = LayoutInflater.from(parent.context).inflate(R.layout.lista_layout_novidades, parent, false);
+            val view: View = LayoutInflater.from(parent.context).inflate(R.layout.lista_layout_fotos, parent, false);
             val card = view.findViewById<CardView>(R.id.card_view) as CardView
 
             card.maxCardElevation = 1.0F;
@@ -58,11 +58,11 @@ open class EvolutionFotosActivity : AppCompatActivity() {
 
             val listaDeFotosModel: ListaDeFotosModel = list.get(position)
 
-            holder.tituloTop?.text = listaDeFotosModel.tituloDoTopo
+            holder.titulo?.text = listaDeFotosModel.tituloDaFoto
             holder.subTitulo?.text = listaDeFotosModel.subTitulo
-            holder.thumbImageView?.setImageResource(listaDeFotosModel.imagem)
+            holder.foto?.setImageResource(listaDeFotosModel.imagem)
 
-            holder.thumbImageView?.setOnClickListener{
+            holder.foto?.setOnClickListener{
 
                 //Envia para as telas de fotos de serviços dos clientes
 
@@ -84,7 +84,7 @@ open class EvolutionFotosActivity : AppCompatActivity() {
 
 
     var list = ArrayList<ListaDeFotosModel>()
-    var adapter = ListaDeNovidadesFotosAdapter(this, list)
+    var adapter = ListaDeFotosAdapter(this, list)
 
     override fun onCreate(savedInstanceState: Bundle?) {
 

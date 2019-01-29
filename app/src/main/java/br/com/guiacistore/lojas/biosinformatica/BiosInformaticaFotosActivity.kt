@@ -35,16 +35,16 @@ open class BiosInformaticaFotosActivity : AppCompatActivity() {
             var subTitulo: TextView? = null
 
             init {
-                tituloTop = itemView.findViewById(R.id.titleTop)
+                tituloTop = itemView.findViewById(R.id.titulo)
                 subTitulo = itemView.findViewById(R.id.subTitulo)
-                thumbImageView = itemView.findViewById(R.id.imagemNovidade)
+                thumbImageView = itemView.findViewById(R.id.foto)
             }
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, type: Int): ViewHolder {
 
 
-            val view: View = LayoutInflater.from(parent.context).inflate(R.layout.lista_layout_novidades, parent, false);
+            val view: View = LayoutInflater.from(parent.context).inflate(R.layout.lista_layout_fotos, parent, false);
             val card = view.findViewById<CardView>(R.id.card_view) as CardView
 
             card.maxCardElevation = 1.0F;
@@ -58,7 +58,7 @@ open class BiosInformaticaFotosActivity : AppCompatActivity() {
 
             val listaDeFotosModel: ListaDeFotosModel = list.get(position)
 
-            holder.tituloTop?.text = listaDeFotosModel.tituloDoTopo
+            holder.tituloTop?.text = listaDeFotosModel.tituloDaFoto
             holder.subTitulo?.text = listaDeFotosModel.subTitulo
             holder.thumbImageView?.setImageResource(listaDeFotosModel.imagem)
 

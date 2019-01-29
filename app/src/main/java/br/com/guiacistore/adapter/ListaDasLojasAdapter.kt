@@ -12,6 +12,7 @@ import android.widget.Filterable
 import android.widget.ImageView
 import android.widget.TextView
 import br.com.guiacistore.R
+import br.com.guiacistore.lojas.auto_escola_franca.AutoEscolaFrancaActivity
 import br.com.guiacistore.lojas.biosinformatica.BiosInformaticaActivity
 import br.com.guiacistore.lojas.blueway.BlueWayActivity
 import br.com.guiacistore.lojas.epg.EpgActivity
@@ -26,6 +27,7 @@ import br.com.guiacistore.lojas.quadrangular.QuadrangularActivity
 import br.com.guiacistore.lojas.rosasaron.RosaDeSaronActivity
 import br.com.guiacistore.lojas.speednet.SpeedNetActivity
 import br.com.guiacistore.model.dados.ListaModel
+import br.com.guiacistore.redesocial.IgrejaRosaDeSaronRedesSociaisActivity
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -36,7 +38,8 @@ import kotlin.collections.ArrayList
 
 //Lista responsável pelas lojas e pela busca das lojas no aplicativo
 
-class ListaDasLojasAdapter(private val context: Context, private var list: List<ListaModel>, private var baseList: List<ListaModel>) :
+class ListaDasLojasAdapter(private val context: Context, private var list: List<ListaModel>,
+                           private var baseList: List<ListaModel>) :
         RecyclerView.Adapter<ListaDasLojasAdapter.ViewHolder>(), Filterable {
 
     override fun getFilter(): Filter {
@@ -88,7 +91,7 @@ class ListaDasLojasAdapter(private val context: Context, private var list: List<
         init {
             titleTextView = itemView.findViewById(R.id.title)
             subtitleTextView = itemView.findViewById(R.id.subtituloItem)
-            thumbImageView = itemView.findViewById(R.id.imagemNovidade)
+            thumbImageView = itemView.findViewById(R.id.foto)
         }
     }
 
@@ -122,13 +125,15 @@ class ListaDasLojasAdapter(private val context: Context, private var list: List<
                 2 ->  context.startActivity(Intent(context, JsBarbeariaActivity::class.java ))
                 3 ->  context.startActivity(Intent(context, LiliDocesCakesActivity::class.java ))
                 4 ->  context.startActivity(Intent(context, BiosInformaticaActivity::class.java ))
-                5 ->  context.startActivity(Intent(context, PubliCartActivity::class.java ))
-                6 ->  context.startActivity(Intent(context, AcademiaEvolutionActivity::class.java ))
-                7 ->  context.startActivity(Intent(context, QuadrangularActivity::class.java ))
-                8 ->  context.startActivity(Intent(context, BlueWayActivity::class.java ))
-                9 -> context.startActivity(Intent(context, RosaDeSaronActivity::class.java))
-                10 -> context.startActivity(Intent(context, EpgActivity::class.java))
-                11 -> context.startActivity(Intent(context, InoveActivity::class.java))
+                5 ->  context.startActivity(Intent(context, AutoEscolaFrancaActivity::class.java ))
+                6 ->  context.startActivity(Intent(context, InoveActivity::class.java ))
+                7 ->  context.startActivity(Intent(context, PubliCartActivity::class.java ))
+                8 ->   context.startActivity(Intent(context, AcademiaEvolutionActivity::class.java))
+                9 ->  context.startActivity(Intent(context, BlueWayActivity::class.java ))
+                10 -> context.startActivity(Intent(context, QuadrangularActivity::class.java))
+                11 -> context.startActivity(Intent(context, RosaDeSaronActivity::class.java))
+                12 -> context.startActivity(Intent(context, EpgActivity::class.java))
+
 
 
             }

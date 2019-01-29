@@ -7,7 +7,12 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
+    </style>
 
+    <style name="themeAutoEscolaFranca" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimaryAutoEscolaFranca</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryAutoEscolaFranca</item>
     </style>
 
 
@@ -18,6 +23,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!--<style name="themeJobSat" parent="Theme.AppCompat.Light.DarkActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/colorPrimaryJobSat</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryJobSat</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--</style>-->
 
 
     <style name="themeBlueWay" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -91,12 +102,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="themeJobSat" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimaryJobSat</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryJobSat</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
+
 
     <style name="themeConexao" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->

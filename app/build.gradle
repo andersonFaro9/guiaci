@@ -69,8 +69,8 @@ android {
                             'src/main/res/layouts/lili-doces-cakes',
                             'src/main/res/layouts/greg',
                             'src/main/res/layouts/blue-way',
-                            'src/main/res/layouts/e-sound',
                             'src/main/res/layouts/inove',
+                            'src/main/res/layouts/auto-escola-franca',
                             'src/main/res/layouts/rosa-saron',
                             'src/main/res/layouts/jsbarbearia',
                             'src/main/res/layouts',
@@ -83,13 +83,13 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.google.firebase:firebase-database:11.8.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:design:28.0.0'
     implementation 'com.google.firebase:firebase-core:16.0.6'
-    implementation 'com.android.support:cardview-v7:27.1.1'
-    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.onesignal:OneSignal:[3.9.2, 3.99.99]'
     implementation 'com.android.support:support-fragment:27.1.1'

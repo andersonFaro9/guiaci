@@ -15,11 +15,11 @@ fun LiliDocesCakesActivity.mostrarServicosOferecidos() {
 
     val listaModel: ArrayList<ListaModel> = ArrayList()
 
-    listaModel.add(ListaModel("História", "", "", R.drawable.ic_home_lili))
-    listaModel.add(ListaModel("Doces e Tortas", "", "", R.drawable.ic_torta_lili))
-    listaModel.add(ListaModel("Promoções", "", "", R.drawable.ic_promocoes_lili))
-    listaModel.add(ListaModel("Fotos", "Saboreie nossas delícias", "", R.drawable.ic_fotos_lili))
-    listaModel.add(ListaModel("Redes sociais", "Participe", "", R.drawable.ic_rede_social_lili))
+    listaModel.add(ListaModel("História", "", 0, R.drawable.ic_home_lili))
+    listaModel.add(ListaModel("Doces e Tortas", "", 0, R.drawable.ic_torta_lili))
+    listaModel.add(ListaModel("Promoções", "", 0, R.drawable.ic_promocoes_lili))
+    listaModel.add(ListaModel("Fotos", "Saboreie nossas delícias", 0, R.drawable.ic_fotos_lili))
+    listaModel.add(ListaModel("Redes sociais", "Participe", 0, R.drawable.ic_rede_social_lili))
 
     listView.adapter = ListaImagemTextoSimplesAdapter(applicationContext, listaModel)
 }
@@ -30,12 +30,12 @@ fun LiliDocesTortasServicosActivity.mostrarServicos() {
 
     val listaModel: ArrayList<ListaModel> = ArrayList()
 
-    listaModel.add(ListaModel("Tortellete Gourmet(criação nossa).", "", "", R.drawable.ic_tortellete_lili) )
-    listaModel.add(ListaModel("Tortas de vitrine.", "", "", R.drawable.ic_torta_vitrine_lili) )
-    listaModel.add(ListaModel("Bolos Personalizados.", "", "", R.drawable.ic_torta_personalizada_lili) )
-    listaModel.add(ListaModel("Bolotones.", "", "", R.drawable.ic_bolotone_lili) )
-    listaModel.add(ListaModel("Brownie, o mais top da doceria.", "", "", R.drawable.ic_brownie_lili) )
-    listaModel.add(ListaModel("Cupcakes.", "", "", R.drawable.ic_cupcake_lili) )
+    listaModel.add(ListaModel("Tortellete Gourmet(criação nossa).", "", 0, R.drawable.ic_tortellete_lili) )
+    listaModel.add(ListaModel("Tortas de vitrine.", "", 0, R.drawable.ic_torta_vitrine_lili) )
+    listaModel.add(ListaModel("Bolos Personalizados.", "", 0, R.drawable.ic_torta_personalizada_lili) )
+    listaModel.add(ListaModel("Bolotones.", "", 0, R.drawable.ic_bolotone_lili) )
+    listaModel.add(ListaModel("Brownie, o mais top da doceria.", "", 0, R.drawable.ic_brownie_lili) )
+    listaModel.add(ListaModel("Cupcakes.", "", 0, R.drawable.ic_cupcake_lili) )
 
     listView.adapter = ListaImagemTextoSimplesAdapter(applicationContext, listaModel)
 
@@ -47,9 +47,9 @@ fun LiliContatosRedesSociaisActivity.mostrarRedesSociais() {
 
     val listaModel: ArrayList<ListaModel> = ArrayList()
 
-    listaModel.add(ListaModel("Lilli-Doces-e-Cakes/", "", "", R.drawable.ic_facebook) )
-    listaModel.add(ListaModel("lilidocesecakes/", "", "", R.drawable.ic_instagram) )
-    listaModel.add(ListaModel("(71) 98810-4762", "", "", R.drawable.ic_telefone) )
+    listaModel.add(ListaModel("Lilli-Doces-e-Cakes/", "", 0, R.drawable.ic_facebook) )
+    listaModel.add(ListaModel("lilidocesecakes/", "", 0, R.drawable.ic_instagram) )
+    listaModel.add(ListaModel("(71) 98810-4762", "", 0, R.drawable.ic_telefone) )
 
 
     listView.adapter = ListaImagemTextoSimplesAdapter(applicationContext, listaModel)

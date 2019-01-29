@@ -15,12 +15,12 @@ fun BlueWayActivity.mostraServicosOferecidos() {
 
     val listaModel: ArrayList<ListaModel> = ArrayList()
 
-    listaModel.add(ListaModel("Blue Way Idiomas", "", "", R.drawable.ic_a_blue_way))
-    listaModel.add(ListaModel("Matrículas", "", "", R.drawable.ic_matricula_blue_way))
-    listaModel.add(ListaModel("Nossos parceiros", "", "", R.drawable.ic_parceiros_blue_way))
-    listaModel.add(ListaModel("Promoções", "", "", R.drawable.ic_promocao))
-    listaModel.add(ListaModel("Contatos", "", "", R.drawable.ic_contatos_blue_way))
-    listaModel.add(ListaModel("Redes Sociais", "Participe!", "", R.drawable.ic_redes_sociais_blue_way))
+    listaModel.add(ListaModel("Blue Way Idiomas", "", 0, R.drawable.ic_a_blue_way))
+    listaModel.add(ListaModel("Matrículas", "", 0, R.drawable.ic_matricula_blue_way))
+    listaModel.add(ListaModel("Nossos parceiros", "", 0, R.drawable.ic_parceiros_blue_way))
+    listaModel.add(ListaModel("Promoções", "", 0, R.drawable.ic_promocao))
+    listaModel.add(ListaModel("Contatos", "", 0, R.drawable.ic_contatos_blue_way))
+    listaModel.add(ListaModel("Redes Sociais", "Participe!", 0, R.drawable.ic_redes_sociais_blue_way))
 
     listView.adapter = ListaImagemTextoSimplesAdapter(applicationContext, listaModel)
 
@@ -34,24 +34,24 @@ fun BlueWayParceirosActivity.exibirParceiros() {
 
     val listaModel: ArrayList<ListaModel> = ArrayList()
 
-    listaModel.add(ListaModel("Unidade de Pojuca", "Tel: 99628-7958", "", 0) )
+    listaModel.add(ListaModel("Unidade de Pojuca", "Tel: 99628-7958", 0, 0) )
 
-    listaModel.add(ListaModel("", "Academia Evolution", "", 0) )
-    listaModel.add(ListaModel("", "Escola Surpresa", "", 0) )
-    listaModel.add(ListaModel("", "Colégio 29 de Julho", "", 0) )
-    listaModel.add(ListaModel("", "Escola Betel", "", 0) )
+    listaModel.add(ListaModel("", "Academia Evolution", 0, 0) )
+    listaModel.add(ListaModel("", "Escola Surpresa", 0, 0) )
+    listaModel.add(ListaModel("", "Colégio 29 de Julho", 0, 0) )
+    listaModel.add(ListaModel("", "Escola Betel", 0, 0) )
 
 
-    listaModel.add(ListaModel("Unidade de Catu", "Tel: 99694-6672", "", 0) )
+    listaModel.add(ListaModel("Unidade de Catu", "Tel: 99694-6672", 0, 0) )
 
-    listaModel.add(ListaModel("", "Halliburton", "", 0) )
-    listaModel.add(ListaModel("", "Escola Ágappe", "", 0) )
-    listaModel.add(ListaModel("", "Escola Traços e Letras", "", 0) )
+    listaModel.add(ListaModel("", "Halliburton", 0, 0) )
+    listaModel.add(ListaModel("", "Escola Ágappe", 0, 0) )
+    listaModel.add(ListaModel("", "Escola Traços e Letras", 0, 0) )
 
-    listaModel.add(ListaModel("", "Escola da Tia Lia", "", 0) )
-    listaModel.add(ListaModel("", "Escola da Tia Margô", "", 0) )
-    listaModel.add(ListaModel("", "Colégio Athena", "", 0) )
-    listaModel.add(ListaModel("", "Filhote de Ogro", "", 0) )
+    listaModel.add(ListaModel("", "Escola da Tia Lia", 0, 0) )
+    listaModel.add(ListaModel("", "Escola da Tia Margô", 0, 0) )
+    listaModel.add(ListaModel("", "Colégio Athena", 0, 0) )
+    listaModel.add(ListaModel("", "Filhote de Ogro", 0, 0) )
 
 
 
@@ -70,9 +70,9 @@ fun BlueWayRedesSociaisActivity.mostraRedesSociais() {
 
     val listaModel: ArrayList<ListaModel> = ArrayList()
 
-    listaModel.add(ListaModel("/idiomasblueway/", "", "", R.drawable.ic_rede_social_facebook))
-    listaModel.add(ListaModel("Zap: (71) 99648-1470", "", "", R.drawable.ic_telefone))
-    listaModel.add(ListaModel("/bluewayidiomas/", "", "", R.drawable.ic_rede_social_instagram))
+    listaModel.add(ListaModel("/idiomasblueway/", "", 0, R.drawable.ic_rede_social_facebook))
+    listaModel.add(ListaModel("Zap: (71) 99648-1470", "", 0, R.drawable.ic_telefone))
+    listaModel.add(ListaModel("/bluewayidiomas/", "", 0, R.drawable.ic_rede_social_instagram))
 
     listView.adapter = ListaImagemTextoSimplesAdapter(applicationContext, listaModel)
 }

@@ -61,10 +61,7 @@
             android:name=".lojas.greg.GregActivity"
             android:parentActivityName=".lojas.greg.GregActivity"
             android:theme="@style/themeGreg" />
-        <activity
-            android:name=".lojas.jobsat.JobSatActivity"
-            android:parentActivityName=".lojas.jobsat.JobSatActivity"
-            android:theme="@style/themeJobSat" />
+
         <activity
             android:name=".lojas.publicart.PubliCartActivity"
             android:parentActivityName=".lojas.publicart.PubliCartActivity"
@@ -91,21 +88,7 @@
             android:parentActivityName=".lojas.epg.EpgActivity"
             android:theme="@style/themeEpg" />
 
-        <activity
-            android:name=".redesocial.IgrejaQuadrangularRedesSociaisActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".redesocial.JobSatRedesSociaisActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".redesocial.LiliDocesCakesRedesSociaisActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".redesocial.AcademiaEvolutionRedesSociaisActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".redesocial.BiosInformaticaRedesSociaisActivity"
-            android:screenOrientation="portrait" />
+
         <activity
             android:name=".redesocial.IgrejaRosaDeSaronRedesSociaisActivity"
             android:screenOrientation="portrait" />
@@ -113,6 +96,10 @@
             android:name=".redesocial.InoveRedesSociaisActivity"
             android:screenOrientation="portrait" />
 
+        <!--<activity-->
+            <!--android:name=".lojas.jobsat.JobSatActivity"-->
+            <!--android:parentActivityName=".lojas.jobsat.JobSatActivity"-->
+            <!--android:theme="@style/themeJobSat" />-->
 
         <activity
             android:name=".lojas.publicart.PublicartParceirosActivity"
@@ -242,6 +229,13 @@
         <activity android:parentActivityName=".lojas.biosinformatica.BiosInformaticaPromocoesActivity"  android:name=".lojas.biosinformatica.BiosInformaticaPromocoesActivity" android:theme="@style/themeBios" />
         <activity android:parentActivityName=".lojas.biosinformatica.BiosInformaticaEnderecoActivity" android:name=".lojas.biosinformatica.BiosInformaticaEnderecoActivity" android:theme="@style/themeBios" />
         <activity android:parentActivityName=".lojas.biosinformatica.BiosInformaticaRedesSociaisActivity" android:name=".lojas.biosinformatica.BiosInformaticaRedesSociaisActivity"  android:theme="@style/themeBios"/>
+        <activity android:parentActivityName=".lojas.auto_escola_franca.AutoEscolaFrancaActivity" android:name=".lojas.auto_escola_franca.AutoEscolaFrancaActivity" android:theme="@style/themeAutoEscolaFranca" />
+        <activity android:parentActivityName=".lojas.auto_escola_franca.AutoEscolaFrancaEnderecoActivity" android:name=".lojas.auto_escola_franca.AutoEscolaFrancaEnderecoActivity"  android:theme="@style/themeAutoEscolaFranca" />
+        <activity  android:parentActivityName=".lojas.auto_escola_franca.AutoEscolaFrancaFotosActivity"  android:name=".lojas.auto_escola_franca.AutoEscolaFrancaFotosActivity"     android:theme="@style/themeAutoEscolaFranca" />
+        <activity  android:parentActivityName=".lojas.auto_escola_franca.AutoEscolaFrancaPromocoesActivity" android:name=".lojas.auto_escola_franca.AutoEscolaFrancaPromocoesActivity" android:theme="@style/themeAutoEscolaFranca" />
+        <activity android:parentActivityName=".lojas.auto_escola_franca.AutoEscolaFrancaHistoriaActivity" android:name=".lojas.auto_escola_franca.AutoEscolaFrancaHistoriaActivity"  android:theme="@style/themeAutoEscolaFranca" />
+        <activity android:parentActivityName=".lojas.auto_escola_franca.AutoEscolaFrancaRedesSociaisActivity" android:name=".lojas.auto_escola_franca.AutoEscolaFrancaRedesSociaisActivity"  android:theme="@style/themeAutoEscolaFranca" />
+        <activity android:parentActivityName=".lojas.auto_escola_franca.AutoEscolaFrancaServicosActivity" android:name=".lojas.auto_escola_franca.AutoEscolaFrancaServicosActivity"  android:theme="@style/themeAutoEscolaFranca" />
 
 
     </application>

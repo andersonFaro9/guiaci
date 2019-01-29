@@ -19,8 +19,8 @@
 
     <TextView
         android:id="@+id/titulo"
-        android:layout_width="308dp"
-        android:layout_height="40dp"
+        android:layout_width="616dp"
+        android:layout_height="38dp"
         android:layout_marginTop="22dp"
         android:paddingStart="11dp"
         android:text=""
@@ -33,13 +33,23 @@
     <TextView
         android:id="@+id/subtitulo"
         android:layout_width="331dp"
-        android:layout_height="45dp"
+        android:layout_height="35dp"
         android:layout_marginStart="13dp"
         android:layout_marginTop="4dp"
+        android:text=""
         android:textAlignment="viewStart"
         android:textColor="#79080707"
         android:textSize="13sp"
         app:layout_constraintStart_toEndOf="@+id/imagem"
         app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+    <ImageView
+        android:id="@+id/detalhes"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

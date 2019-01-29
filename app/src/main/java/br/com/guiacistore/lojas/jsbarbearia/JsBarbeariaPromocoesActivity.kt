@@ -77,14 +77,14 @@ class JsBarbeariaPromocoesActivity : AppCompatActivity(),  IFirebase, IConexaoCo
 
                     val cliente = d.getValue(BancoDeDados::class.java)
                     with(listaModel) {
-                        add(br.com.guiacistore.model.dados.ListaModel(br.com.guiacistore.funcional.mostrarPromocao(cliente?.jsbarbearia_promocoes1.toString()), "", "", br.com.guiacistore.R.drawable.ok_promocao))
+                        add(br.com.guiacistore.model.dados.ListaModel(br.com.guiacistore.funcional.mostrarPromocao(cliente?.jsbarbearia_promocoes1.toString()), "", 0, br.com.guiacistore.R.drawable.ok_promocao))
 
-                        add(br.com.guiacistore.model.dados.ListaModel(br.com.guiacistore.funcional.mostrarPromocao(cliente?.jsbarbearia_promocoes2.toString()), "", "", br.com.guiacistore.R.drawable.ok_promocao))
+                        add(br.com.guiacistore.model.dados.ListaModel(br.com.guiacistore.funcional.mostrarPromocao(cliente?.jsbarbearia_promocoes2.toString()), "", 0, br.com.guiacistore.R.drawable.ok_promocao))
 
-                        add(br.com.guiacistore.model.dados.ListaModel(br.com.guiacistore.funcional.mostrarPromocao(cliente?.jsbarbearia_promocoes3.toString()), "", "", br.com.guiacistore.R.drawable.ok_promocao))
+                        add(br.com.guiacistore.model.dados.ListaModel(br.com.guiacistore.funcional.mostrarPromocao(cliente?.jsbarbearia_promocoes3.toString()), "", 0, br.com.guiacistore.R.drawable.ok_promocao))
 
-                        add(br.com.guiacistore.model.dados.ListaModel(br.com.guiacistore.funcional.mostrarPromocao(cliente?.jsbarbearia_promocoes4.toString()), "", "", br.com.guiacistore.R.drawable.ok_promocao))
-                        add(br.com.guiacistore.model.dados.ListaModel(br.com.guiacistore.funcional.mostrarPromocao(cliente?.jsbarbearia_promocoes5.toString()), "", "", br.com.guiacistore.R.drawable.ok_promocao))
+                        add(br.com.guiacistore.model.dados.ListaModel(br.com.guiacistore.funcional.mostrarPromocao(cliente?.jsbarbearia_promocoes4.toString()), "", 0, br.com.guiacistore.R.drawable.ok_promocao))
+                        add(br.com.guiacistore.model.dados.ListaModel(br.com.guiacistore.funcional.mostrarPromocao(cliente?.jsbarbearia_promocoes5.toString()), "", 0, br.com.guiacistore.R.drawable.ok_promocao))
 
                         listView.adapter = br.com.guiacistore.adapter.ListaPromocoesImagemTextoSimplesAdapter(applicationContext, listaModel)
                     }

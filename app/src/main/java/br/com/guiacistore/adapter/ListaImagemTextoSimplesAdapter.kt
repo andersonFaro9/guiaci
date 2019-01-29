@@ -20,9 +20,10 @@ open class ListaImagemTextoSimplesAdapter(var context: Context, var listaModel:A
 
     class ViewHolder(row: View?) {
 
-        var textName: TextView? = row?.findViewById(R.id.titulo) as TextView
-        var imageView: ImageView? =  row?.findViewById(R.id.imagem) as ImageView
-        var subtitulo : TextView? =  row?.findViewById(R.id.subtitulo) as TextView
+        var textName = row?.findViewById(R.id.titulo) as TextView
+        var imageView =  row?.findViewById(R.id.imagem) as ImageView
+        var subtitulo = row?.findViewById(R.id.subtitulo) as TextView
+        var detalhes =  row?.findViewById(R.id.detalhes) as ImageView
 
 
     }
@@ -47,9 +48,11 @@ open class ListaImagemTextoSimplesAdapter(var context: Context, var listaModel:A
         }
 
         val lista: ListaModel = getItem(position) as ListaModel
-        viewHolder.textName?.text = lista.titulo
-        viewHolder.subtitulo?.text = lista.subTitulo
-        viewHolder.imageView?.setImageResource(lista.imagem)
+        viewHolder.textName.text = lista.titulo
+        viewHolder.subtitulo.text = lista.subTitulo
+        viewHolder.detalhes.setImageResource(lista.detalhes)
+        viewHolder.imageView.setImageResource(lista.imagem)
+
 
 
 

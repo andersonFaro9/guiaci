@@ -15,11 +15,11 @@ fun PubliCartActivity.mostraServicosOferecidos() {
     val listaModel: ArrayList<ListaModel> = ArrayList()
 
 
-    listaModel.add(ListaModel("A Publicart", "", "", R.drawable.ic_a_publi_cart))
-    listaModel.add(ListaModel("Nossos serviços", "", "", R.drawable.ic_a_publi_cart_servicos))
-    listaModel.add(ListaModel("Contatos e redes sociais", "", "", R.drawable.ic_phone_publicart_menu))
-    listaModel.add(ListaModel("Nossos parceiros", "", "", R.drawable.ic_a_publi_cart_parceiros))
-    listaModel.add(ListaModel("Novidades", "", "", R.drawable.ic_a_publi_cart_novidades))
+    listaModel.add(ListaModel("A Publicart", "", 0, R.drawable.ic_a_publi_cart))
+    listaModel.add(ListaModel("Nossos serviços", "", 0, R.drawable.ic_a_publi_cart_servicos))
+    listaModel.add(ListaModel("Contatos e redes sociais", "", 0, R.drawable.ic_phone_publicart_menu))
+    listaModel.add(ListaModel("Nossos parceiros", "", 0, R.drawable.ic_a_publi_cart_parceiros))
+    listaModel.add(ListaModel("Novidades", "", 0, R.drawable.ic_a_publi_cart_novidades))
 
     listView.adapter = ListaImagemTextoSimplesAdapter(applicationContext, listaModel)
 
@@ -34,10 +34,10 @@ fun PublicartParceirosActivity.mostrarParceiros () {
     val listaModel: ArrayList<ListaModel> = ArrayList()
 
 
-    listaModel.add( ListaModel("Welson Saxofonista", "Tel: (75) 99878-1224", "", 0) )
+    listaModel.add( ListaModel("Welson Saxofonista", "Tel: (75) 99878-1224", 0, 0) )
 
 
-    listaModel.add (ListaModel(" C. de Treinamento Bruno Melo(CT das Águas)", "Tel: (71) 99735-7450", "", 0) )
+    listaModel.add (ListaModel(" C. de Treinamento Bruno Melo(CT das Águas)", "Tel: (71) 99735-7450", 0, 0) )
 
     listView.adapter = ListaSimplesTextoSemImagemAdapter(applicationContext, listaModel)
 }
@@ -52,11 +52,11 @@ fun PubliCartServicosActivity.mostraServicos () {
 
     val listaModel: ArrayList<ListaModel> = ArrayList()
 
-    listaModel.add( ListaModel("Comunicação Visual", "A comunicação, os detalhes e cores ficam ainda mais bonito!", "", 0) )
+    listaModel.add( ListaModel("Comunicação Visual", "A comunicação, os detalhes e cores ficam ainda mais bonito!", 0, 0) )
 
-    listaModel.add( ListaModel(" Propaganda", "Sua propaganda com profissionais de verdade", "", 0) )
+    listaModel.add( ListaModel(" Propaganda", "Sua propaganda com profissionais de verdade", 0, 0) )
 
-    listaModel.add( ListaModel(" Redes sociais", "O mundo é digital e todos estão nas redes sociais", "", 0) )
+    listaModel.add( ListaModel(" Redes sociais", "O mundo é digital e todos estão nas redes sociais", 0, 0) )
 
     listView.adapter = ListaSimplesTextoSemImagemAdapter(applicationContext, listaModel)
 }

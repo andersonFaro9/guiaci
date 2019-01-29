@@ -8,7 +8,6 @@ import android.support.v7.widget.SearchView
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import br.com.guiacistore.R.id.recView
 import br.com.guiacistore.adapter.ListaDasLojasAdapter
 import br.com.guiacistore.model.dados.ListaModel
 import kotlinx.android.synthetic.main.activity_recycleview.*
@@ -30,24 +29,21 @@ open class GuiaciMainActivity : AppCompatActivity(), SearchView.OnQueryTextListe
 
     }
 
-
-
     private fun  prepareList(list: ArrayList<ListaModel>) {
 
-        list.add(ListaModel("Speednet", "Aqui tem internet para família inteira, com os melhores planos.", "", R.drawable.loja_speednet))
-        list.add(ListaModel("Barbearia do Greg.", "Seu estilo passa primeiro por aqui.", "", R.drawable.loja_barbearia_greg))
-        list.add(ListaModel("JS Barbearia à Domicilio.", "Atendemos no conforto do seu lar.", "", R.drawable.loja_js_barbearia))
-        list.add(ListaModel("Lili Doces & Cakes.", "Trabalhamos à pronta entrega e sob encomenda.", "", R.drawable.loja_lili_doces_cakes))
-        list.add(ListaModel("Bios Informática e Papelaria", "Trazendo soluções para sua vida.", "", R.drawable.loja_bios_informatica))
-        list.add(ListaModel("Publicart.", "Soluções em comunicação visual, conteúdo e entretenimento .", "", R.drawable.loja_publicart))
-        list.add(ListaModel("Academia Evolution Fitness de Pojuca.", "Sua evolução começa agora!!.", "", R.drawable.loja_evolution))
-        list.add(ListaModel("Igreja do Ev. Quadrangular de Pojuca.", "Vivendo em Cristo.", "", R.drawable.loja_quadrangular))
-        list.add(ListaModel("Blue Way Idiomas", "Faça a diferença, faça Blue Way!.", "", R.drawable.loja_blueway))
-        list.add(ListaModel("Igreja Batista Nacional Rosa de Saron.", " Graça e paz.", "", R.drawable.loja_rosa_saron))
-        list.add(ListaModel("EPG Impressões.", " Impressão em camisas, canecas, cartões de visita e muito mais.", "", R.drawable.loja_epg))
-        list.add(ListaModel("Inove.", "Fabricação, Montagem e Manutenção industrial.", "", R.drawable.loja_inove))
-
-
+        list.add(ListaModel("Speednet", "Aqui tem internet para família inteira, com os melhores planos.", 0, R.drawable.loja_speednet))
+        list.add(ListaModel("Barbearia do Greg.", "Seu estilo passa primeiro por aqui.", 0, R.drawable.loja_barbearia_greg))
+        list.add(ListaModel("JS Barbearia à Domicilio.", "Atendemos no conforto do seu lar.", 0, R.drawable.loja_js_barbearia))
+        list.add(ListaModel("Lili Doces & Cakes.", "Trabalhamos à pronta entrega e sob encomenda.", 0, R.drawable.loja_lili_doces_cakes))
+        list.add(ListaModel("Bios Informática e Papelaria", "Trazendo soluções para sua vida.", 0, R.drawable.loja_bios_informatica))
+        list.add(ListaModel("Auto Escola França", "Centro de Formação de Condutores",0,R.drawable.loja_auto_escola_franca))
+        list.add(ListaModel("Inove.", "Fabricação, Montagem e Manutenção industrial.", 0, R.drawable.loja_inove))
+        list.add(ListaModel("Publicart.", "Soluções em comunicação visual, conteúdo e entretenimento .", 0, R.drawable.loja_publicart))
+        list.add(ListaModel("Academia Evolution Fitness de Pojuca.", "Sua evolução começa agora!!.", 0, R.drawable.loja_evolution))
+        list.add(ListaModel("Blue Way Idiomas", "Faça a diferença, faça Blue Way!.", 0, R.drawable.loja_blueway))
+        list.add(ListaModel("Igreja do Ev. Quadrangular de Pojuca.", "Vivendo em Cristo.", 0, R.drawable.loja_quadrangular))
+        list.add(ListaModel("Igreja Batista Nacional Rosa de Saron.", " Graça e paz.", 0, R.drawable.loja_rosa_saron))
+        list.add(ListaModel("EPG Impressões.", "Impressão em camisas, canecas, cartões de visita e muito mais.", 0, R.drawable.loja_epg))
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
