@@ -12,6 +12,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import br.com.guiacistore.R
+import br.com.guiacistore.lojas.auto_escola_franca.fotos.AutoEscolaFrancaPrimeiraFotoActivity
+import br.com.guiacistore.lojas.auto_escola_franca.fotos.AutoEscolaFrancaQuartaFotoActivity
+import br.com.guiacistore.lojas.auto_escola_franca.fotos.AutoEscolaFrancaSegundaFotoActivity
+import br.com.guiacistore.lojas.auto_escola_franca.fotos.AutoEscolaFrancaTerceiraFotoActivity
 import br.com.guiacistore.lojas.evolution.fotos.EvolutionPrimeiraFotoActivity
 import br.com.guiacistore.lojas.evolution.fotos.EvolutionQuartaFotoActivity
 import br.com.guiacistore.lojas.evolution.fotos.EvolutionSegundaFotoActivity
@@ -67,10 +71,10 @@ open class AutoEscolaFrancaFotosActivity : AppCompatActivity() {
                 //Envia para as telas de fotos de serviços dos clientes
 
                 when (position) {
-                    0 ->  context.startActivity(Intent(context, EvolutionPrimeiraFotoActivity::class.java ))
-                    1 ->  context.startActivity(Intent(context, EvolutionSegundaFotoActivity::class.java ))
-                    2 ->  context.startActivity(Intent(context, EvolutionTerceiraFotoActivity::class.java ))
-                    3 ->  context.startActivity(Intent(context, EvolutionQuartaFotoActivity::class.java ))
+                    0 ->  context.startActivity(Intent(context, AutoEscolaFrancaPrimeiraFotoActivity::class.java ))
+                    1 ->  context.startActivity(Intent(context, AutoEscolaFrancaSegundaFotoActivity::class.java ))
+                    2 ->  context.startActivity(Intent(context, AutoEscolaFrancaTerceiraFotoActivity::class.java ))
+                    3 ->  context.startActivity(Intent(context, AutoEscolaFrancaQuartaFotoActivity::class.java ))
                 }
             }
 
@@ -104,18 +108,18 @@ open class AutoEscolaFrancaFotosActivity : AppCompatActivity() {
     //Responsável por criar as categorias e mostrar as fotos
     private fun  prepareList(list: ArrayList<ListaDeFotosModel>) {
 
-        list.add(ListaDeFotosModel("", "", "Queima de calorias",
-                R.drawable.evolution_primeira_foto))
+        list.add(ListaDeFotosModel("", "", "Pronto para começar?",
+                R.drawable.franca_primeira_foto))
 
-        list.add(ListaDeFotosModel("", "", "Aumento da resistência física e queima de gordura! ",
-                R.drawable.evolution_segunda_foto))
+        list.add(ListaDeFotosModel("", "", "Á sua disposição! ",
+                R.drawable.franca_segunda_foto))
 
-        list.add(ListaDeFotosModel("", "", "Deixa os ossos fortes! ",
-                R.drawable.evolution_terceira_foto))
+        list.add(ListaDeFotosModel("", "", "Sua primeira CNH é aqui! ",
+                R.drawable.franca_terceira_foto))
 
 
-        list.add(ListaDeFotosModel(" ", "", " Exercicios diários",
-                R.drawable.evolution_quarta_foto))
+        list.add(ListaDeFotosModel(" ", "", " O CNH de sua moto",
+                R.drawable.franca_quarta_foto))
 
     }
 

@@ -41,9 +41,9 @@ open class GuiaciMainActivity : AppCompatActivity(), SearchView.OnQueryTextListe
         list.add(ListaModel("Publicart.", "Soluções em comunicação visual, conteúdo e entretenimento .", 0, R.drawable.loja_publicart))
         list.add(ListaModel("Academia Evolution Fitness de Pojuca.", "Sua evolução começa agora!!.", 0, R.drawable.loja_evolution))
         list.add(ListaModel("Blue Way Idiomas", "Faça a diferença, faça Blue Way!.", 0, R.drawable.loja_blueway))
-        list.add(ListaModel("Igreja do Ev. Quadrangular de Pojuca.", "Vivendo em Cristo.", 0, R.drawable.loja_quadrangular))
+        list.add(ListaModel("Igreja do Ev. Quadrangular de Pojuca.", "Paz seja convosco.", 0, R.drawable.loja_quadrangular))
         list.add(ListaModel("Igreja Batista Nacional Rosa de Saron.", " Graça e paz.", 0, R.drawable.loja_rosa_saron))
-        list.add(ListaModel("EPG Impressões.", "Impressão em camisas, canecas, cartões de visita e muito mais.", 0, R.drawable.loja_epg))
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

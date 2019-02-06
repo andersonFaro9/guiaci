@@ -33,6 +33,7 @@ class AutoEscolaFrancaActivity : AppCompatActivity(), ICallNumber{
                 position == 2 ->  startActivity(Intent(this, AutoEscolaFrancaPromocoesActivity::class.java))
                 position == 3 ->  startActivity(Intent(this, AutoEscolaFrancaFotosActivity::class.java))
                 position == 4 ->  startActivity(Intent(this, AutoEscolaFrancaEnderecoActivity::class.java))
+                position == 5 ->  startActivity(Intent(this, AutoEscolaFrancaRedesSociaisActivity::class.java))
 
             }
         }
@@ -42,7 +43,7 @@ class AutoEscolaFrancaActivity : AppCompatActivity(), ICallNumber{
 
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_main_loja_evolution, menu)
+        menuInflater.inflate(R.menu.menu_main_loja_auto_escola_franca, menu)
         return true
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

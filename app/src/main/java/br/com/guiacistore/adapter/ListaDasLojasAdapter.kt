@@ -132,9 +132,6 @@ class ListaDasLojasAdapter(private val context: Context, private var list: List<
                 9 ->  context.startActivity(Intent(context, BlueWayActivity::class.java ))
                 10 -> context.startActivity(Intent(context, QuadrangularActivity::class.java))
                 11 -> context.startActivity(Intent(context, RosaDeSaronActivity::class.java))
-                12 -> context.startActivity(Intent(context, EpgActivity::class.java))
-
-
 
             }
 

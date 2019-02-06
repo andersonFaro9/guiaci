@@ -32,8 +32,8 @@ android {
         ]
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 33
-        versionName "1.2.26"
+        versionCode 36
+        versionName "1.2.29"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         vectorDrawables.useSupportLibrary = true
@@ -73,6 +73,7 @@ android {
                             'src/main/res/layouts/auto-escola-franca',
                             'src/main/res/layouts/rosa-saron',
                             'src/main/res/layouts/jsbarbearia',
+                            'src/main/res/layouts/restaurante-carneiro',
                             'src/main/res/layouts',
                             'src/main/res'
                     ]

@@ -9,9 +9,7 @@ import android.util.Log
 import android.view.View
 import android.widget.ListView
 import br.com.guiacistore.R
-import br.com.guiacistore.adapter.ListaPromocoesImagemTextoSimplesAdapter
 import br.com.guiacistore.extensions_geral.exibirMensagem
-import br.com.guiacistore.funcional.mostrarPromocao
 import br.com.guiacistore.interfaces.IConexaoComInternet
 import br.com.guiacistore.interfaces.IFirebase
 import br.com.guiacistore.model.banco.BancoDeDados
@@ -19,7 +17,6 @@ import br.com.guiacistore.model.dados.ListaModel
 import br.com.guiacistore.sem_conexao.ConexaoComInternet
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.auto_escola_franca_activity_promocoes.*
-import kotlinx.android.synthetic.main.evolution_activity_promocoes.*
 import java.util.*
 
 class AutoEscolaFrancaPromocoesActivity: AppCompatActivity(), IFirebase, IConexaoComInternet {
@@ -28,7 +25,7 @@ class AutoEscolaFrancaPromocoesActivity: AppCompatActivity(), IFirebase, IConexa
         get() = FirebaseDatabase.getInstance()
 
     override val referenciaFirebase: DatabaseReference?
-        get() = databaseInstance?.getReference("clientes")
+        get() = databaseInstance?.getReference("lojas")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,7 +66,6 @@ class AutoEscolaFrancaPromocoesActivity: AppCompatActivity(), IFirebase, IConexa
 
             override fun onDataChange(dataSnapshot: DataSnapshot?) {
 
-
                 val listView = findViewById<ListView>(R.id.listView)
 
                 val listaModel: ArrayList<ListaModel> = ArrayList()
@@ -78,26 +74,13 @@ class AutoEscolaFrancaPromocoesActivity: AppCompatActivity(), IFirebase, IConexa
 
                     val cliente = d.getValue(BancoDeDados::class.java)
 
-                    with(listaModel) {
-                        add(ListaModel(mostrarPromocao(cliente?.auto_escola_franca_promocao_1.toString()), "", 0, R.drawable.ok_promocao))
-
-                        add(ListaModel(mostrarPromocao(cliente?.auto_escola_franca_promocao_2.toString()), "", 0, R.drawable.ok_promocao))
-
-                        add(ListaModel(mostrarPromocao(cliente?.auto_escola_franca_promocao_3.toString()), "", 0, R.drawable.ok_promocao))
-
-                        add(ListaModel(mostrarPromocao(cliente?.auto_escola_franca_promocao_4.toString()), "", 0, R.drawable.ok_promocao))
-
-                        listView.adapter = ListaPromocoesImagemTextoSimplesAdapter(applicationContext, listaModel)
+                    with(listaModel){
+                        auto_escola_franca_promocao?.text = cliente?.auto_escola_franca_promocao
                     }
 
                     auto_escola_franca_progressBar?.visibility = View.INVISIBLE
 
-
-
-
                 }
-
-
            }
 
 

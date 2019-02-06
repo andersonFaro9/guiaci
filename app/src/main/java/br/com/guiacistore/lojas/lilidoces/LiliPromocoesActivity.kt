@@ -43,7 +43,7 @@ class LiliPromocoesActivity : AppCompatActivity(), IFirebase, IConexaoComInterne
         get() = FirebaseDatabase.getInstance()
 
     override val referenciaFirebase: DatabaseReference?
-        get() = databaseInstance?.getReference("clientes")
+        get() = databaseInstance?.getReference("lojas")
 
 
     override fun doDatabaseInstance(id: Int): Boolean {

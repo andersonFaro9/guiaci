@@ -29,7 +29,13 @@ data class BancoDeDados(
 
 
         //BlueWay Promoções
-        var blue_way_promocoes: String?= null,
+        var blue_way_promocao1: String?= null,
+        var blue_way_promocao2: String?= null,
+        var blue_way_promocao3: String?= null,
+        var blue_way_promocao4: String?= null,
+        var blue_way_promocao5: String?= null,
+
+
 
 
         var academia_evolution_historia_da_empresa: String?= null,
@@ -48,19 +54,11 @@ data class BancoDeDados(
         var academia_evolution_promocao_4 : String?= null,
         var academia_evolution_promocao_5 : String?= null,
 
-        var auto_escola_franca_promocao_1 : String?= null,
-        var auto_escola_franca_promocao_2 : String?= null,
-        var auto_escola_franca_promocao_3 : String?= null,
-        var auto_escola_franca_promocao_4 : String?= null,
 
-
-
-
+        var auto_escola_franca_promocao : String?= null,
 
 
         //speednet
-
-
         var speednet_promocoes: String?= null,
 
         var lili_doces_cakes_promocoes: String?= null,

@@ -236,6 +236,11 @@
         <activity android:parentActivityName=".lojas.auto_escola_franca.AutoEscolaFrancaHistoriaActivity" android:name=".lojas.auto_escola_franca.AutoEscolaFrancaHistoriaActivity"  android:theme="@style/themeAutoEscolaFranca" />
         <activity android:parentActivityName=".lojas.auto_escola_franca.AutoEscolaFrancaRedesSociaisActivity" android:name=".lojas.auto_escola_franca.AutoEscolaFrancaRedesSociaisActivity"  android:theme="@style/themeAutoEscolaFranca" />
         <activity android:parentActivityName=".lojas.auto_escola_franca.AutoEscolaFrancaServicosActivity" android:name=".lojas.auto_escola_franca.AutoEscolaFrancaServicosActivity"  android:theme="@style/themeAutoEscolaFranca" />
+        <activity android:theme="@style/themeFotos" android:name=".lojas.auto_escola_franca.fotos.AutoEscolaFrancaPrimeiraFotoActivity" />
+        <activity android:theme="@style/themeFotos" android:name=".lojas.auto_escola_franca.fotos.AutoEscolaFrancaSegundaFotoActivity" />
+        <activity android:theme="@style/themeFotos" android:name=".lojas.auto_escola_franca.fotos.AutoEscolaFrancaTerceiraFotoActivity" />
+        <activity android:theme="@style/themeFotos" android:name=".lojas.auto_escola_franca.fotos.AutoEscolaFrancaQuartaFotoActivity" />
+
 
 
     </application>

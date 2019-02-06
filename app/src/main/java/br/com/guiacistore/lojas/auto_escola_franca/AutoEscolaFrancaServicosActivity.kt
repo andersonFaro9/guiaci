@@ -31,6 +31,11 @@ class AutoEscolaFrancaServicosActivity  : AppCompatActivity(), ICallNumber{
 
         when  {
 
+            item.itemId == R.id.ic_mapa -> {
+                startActivity(Intent(this, AutoEscolaFrancaEnderecoActivity::class.java))
+                return true
+            }
+
             item.itemId == R.id.ic_telefone -> {
                 callNumber()
                 return true

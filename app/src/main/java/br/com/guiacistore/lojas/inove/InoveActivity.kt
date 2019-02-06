@@ -34,7 +34,7 @@ class InoveActivity : AppCompatActivity(),  Invisible, IFirebase, ICallNumber {
         get() = FirebaseDatabase.getInstance()
 
     override val referenciaFirebase: DatabaseReference?
-        get() = databaseInstance?.getReference("clientes")
+        get() = databaseInstance?.getReference("lojas")
 
 
 

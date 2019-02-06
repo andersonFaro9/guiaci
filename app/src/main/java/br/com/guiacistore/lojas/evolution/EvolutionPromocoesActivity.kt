@@ -27,7 +27,7 @@ class EvolutionPromocoesActivity: AppCompatActivity(), IFirebase, IConexaoComInt
         get() = FirebaseDatabase.getInstance()
 
     override val referenciaFirebase: DatabaseReference?
-        get() = databaseInstance?.getReference("clientes")
+        get() = databaseInstance?.getReference("lojas")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,8 +65,6 @@ class EvolutionPromocoesActivity: AppCompatActivity(), IFirebase, IConexaoComInt
 
         referenciaFirebase?.addValueEventListener(object: ValueEventListener {
 
-
-
             override fun onDataChange(dataSnapshot: DataSnapshot?) {
 
 
@@ -90,7 +88,7 @@ class EvolutionPromocoesActivity: AppCompatActivity(), IFirebase, IConexaoComInt
                         listView.adapter = ListaPromocoesImagemTextoSimplesAdapter(applicationContext, listaModel)
                     }
 
-                    evolution_progressBar?.visibility = View.INVISIBLE
+                        evolution_progressBar?.visibility = View.INVISIBLE
 
 
 
