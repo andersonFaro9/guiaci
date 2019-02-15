@@ -40,6 +40,7 @@
             android:theme="@style/themeSpeednet" />
         <activity
             android:name=".SobreActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/barra_sobre" />
         <activity
             android:name=".lojas.biosinformatica.BiosInformaticaActivity"
@@ -83,11 +84,6 @@
             android:name=".lojas.inove.InoveActivity"
             android:parentActivityName=".lojas.inove.InoveActivity"
             android:theme="@style/themeInove" />
-        <activity
-            android:name=".lojas.epg.EpgActivity"
-            android:parentActivityName=".lojas.epg.EpgActivity"
-            android:theme="@style/themeEpg" />
-
 
         <activity
             android:name=".redesocial.IgrejaRosaDeSaronRedesSociaisActivity"
@@ -95,11 +91,6 @@
         <activity
             android:name=".redesocial.InoveRedesSociaisActivity"
             android:screenOrientation="portrait" />
-
-        <!--<activity-->
-            <!--android:name=".lojas.jobsat.JobSatActivity"-->
-            <!--android:parentActivityName=".lojas.jobsat.JobSatActivity"-->
-            <!--android:theme="@style/themeJobSat" />-->
 
         <activity
             android:name=".lojas.publicart.PublicartParceirosActivity"
@@ -151,19 +142,6 @@
             android:parentActivityName=".lojas.blueway.BlueWayActivity"
             android:theme="@style/themeBlueWay" />
 
-        <activity android:parentActivityName=".lojas.epg.EpgActivity"
-            android:theme="@style/themeEpg" android:screenOrientation="portrait"
-            android:name=".lojas.epg.EpgRedesSociaisActivity" />
-
-
-        <activity android:parentActivityName=".lojas.epg.EpgNovidadeActivity" android:name=".lojas.epg.EpgNovidadeActivity"  android:theme="@style/themeEpg" />
-
-        <activity   android:theme="@style/themeFotos" android:name=".lojas.epg.fotos.EpgPrimeiraFotoActivity" />
-        <activity android:name=".lojas.epg.fotos.EpgSegundaFotoActivity" android:theme="@style/themeFotos" />
-        <activity android:name=".lojas.epg.fotos.EpgTerceiraFotoActivity" android:theme="@style/themeFotos"/>
-        <activity android:name=".lojas.epg.fotos.EpgQuartaFotoActivity" android:theme="@style/themeFotos"/>
-        <activity android:parentActivityName=".lojas.epg.EpgServicosActivity" android:name=".lojas.epg.EpgServicosActivity" android:theme="@style/themeEpg" />
-        <activity android:parentActivityName=".lojas.epg.EpgHistoriaActivity" android:theme="@style/themeEpg" android:name=".lojas.epg.EpgHistoriaActivity" />
         <activity android:parentActivityName=".lojas.speednet.SpeednetHistoriaActivity" android:name=".lojas.speednet.SpeednetHistoriaActivity" android:theme="@style/themeSpeednet"  />
         <activity  android:parentActivityName=".lojas.speednet.SpeednetPlanosActivity" android:name=".lojas.speednet.SpeednetPlanosActivity"  android:theme="@style/themeSpeednet"/>
         <activity android:parentActivityName=".lojas.speednet.SpeednetPromocoesActivity" android:name=".lojas.speednet.SpeednetPromocoesActivity" android:theme="@style/themeSpeednet" />
@@ -192,7 +170,6 @@
         <activity android:theme="@style/colorPrimaryFundoFoto" android:name=".lojas.jsbarbearia.fotos.JsBarbeariaQuartaFotoActivity" />
         <activity android:theme="@style/themeSpeednet" android:parentActivityName=".lojas.speednet.SpeedNetEnderecoActivity" android:name=".lojas.speednet.SpeedNetEnderecoActivity" />
         <activity  android:theme="@style/themeGreg" android:name=".lojas.greg.GregBarbeariaEnderecoActivity" android:parentActivityName=".lojas.greg.GregBarbeariaEnderecoActivity" />
-        <activity  android:theme="@style/themeEpg" android:name=".lojas.epg.EpgImpressoesEnderecoActivity" android:parentActivityName=".lojas.epg.EpgImpressoesEnderecoActivity" />
         <activity android:name=".lojas.blueway.BlueWayEnderecoActivity" android:theme="@style/themeBlueWay" android:parentActivityName=".lojas.blueway.BlueWayEnderecoActivity"  />
         <activity android:name=".lojas.publicart.PublicartEnderecoActivity" android:theme="@style/colorPrimaryPubliCart" android:parentActivityName=".lojas.publicart.PublicartEnderecoActivity" />
         <activity android:parentActivityName=".lojas.evolution.EvolutionHistoriaAcvity"   android:theme="@style/themeEvolution" android:name=".lojas.evolution.EvolutionHistoriaAcvity" />
@@ -240,7 +217,17 @@
         <activity android:theme="@style/themeFotos" android:name=".lojas.auto_escola_franca.fotos.AutoEscolaFrancaSegundaFotoActivity" />
         <activity android:theme="@style/themeFotos" android:name=".lojas.auto_escola_franca.fotos.AutoEscolaFrancaTerceiraFotoActivity" />
         <activity android:theme="@style/themeFotos" android:name=".lojas.auto_escola_franca.fotos.AutoEscolaFrancaQuartaFotoActivity" />
-
+        <activity android:parentActivityName=".lojas.dinei_barber.DineiBarberActivity" android:theme="@style/themeDinei" android:name=".lojas.dinei_barber.DineiBarberActivity" />
+        <activity android:theme="@style/themeDinei" android:name=".lojas.dinei_barber.DineiBarberRedesSociaisActivity"  android:parentActivityName=".lojas.dinei_barber.DineiBarberRedesSociaisActivity" />
+        <activity android:parentActivityName=".lojas.dinei_barber.DineiBarberHistoriaActivity" android:theme="@style/themeDinei" android:name=".lojas.dinei_barber.DineiBarberHistoriaActivity" />
+        <activity android:parentActivityName=".lojas.dinei_barber.DineiBarberServicosActivity" android:theme="@style/themeDinei" android:name=".lojas.dinei_barber.DineiBarberServicosActivity" />
+        <activity android:parentActivityName=".lojas.dinei_barber.DineiBarberPromocoesActivity" android:theme="@style/themeDinei" android:name=".lojas.dinei_barber.DineiBarberPromocoesActivity" />
+        <activity  android:parentActivityName=".lojas.dinei_barber.DineiBarberEnderecoActivity" android:theme="@style/themeDinei" android:name=".lojas.dinei_barber.DineiBarberEnderecoActivity" />
+        <activity  android:theme="@style/themeFotos" android:parentActivityName=".lojas.dinei_barber.DineiBarberFotosActivity" android:name=".lojas.dinei_barber.DineiBarberFotosActivity" />
+        <activity  android:theme="@style/themeFotos" android:name=".lojas.dinei_barber.fotos.DineiBarberPrimeiraFotoActivity" />
+        <activity  android:theme="@style/themeFotos" android:name=".lojas.dinei_barber.fotos.DineiBarberSegundaFotoActivity" />
+        <activity  android:theme="@style/themeFotos" android:name=".lojas.dinei_barber.fotos.DineiBarberTerceiraFotoActivity" />
+        <activity  android:theme="@style/themeFotos" android:name=".lojas.dinei_barber.fotos.DineiBarberQuartaFotoActivity" />
 
 
     </application>

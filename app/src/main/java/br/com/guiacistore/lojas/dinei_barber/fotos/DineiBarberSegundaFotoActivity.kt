@@ -1,4 +1,5 @@
-package br.com.guiacistore.lojas.epg.fotos
+package br.com.guiacistore.lojas.dinei_barber.fotos
+
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
@@ -8,20 +9,19 @@ import br.com.guiacistore.interfaces.IButtonOfCloseActivity
 import kotlinx.android.synthetic.main.epg_primeira_foto.*
 import uk.co.senab.photoview.PhotoViewAttacher
 
-
-class EpgPrimeiraFotoActivity : AppCompatActivity(), IButtonOfCloseActivity {
+class DineiBarberSegundaFotoActivity :  AppCompatActivity(), IButtonOfCloseActivity {
 
     override fun closeActivity() { finish() }
-    var atacher: PhotoViewAttacher? = null
 
+    var atacher: PhotoViewAttacher? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.epg_primeira_foto)
+        setContentView(R.layout.dinei_segunda_foto)
 
-        val imageViewEpg1 = findViewById<View>(R.id.lili_primeira_foto)
+        val foto = findViewById<View>(R.id.dinei_segunda_foto)
 
-        atacher = PhotoViewAttacher(imageViewEpg1 as ImageView?)
+        atacher = PhotoViewAttacher(foto as ImageView?)
 
 
         ic_botao_fechar.setOnClickListener { closeActivity()  }
@@ -31,6 +31,3 @@ class EpgPrimeiraFotoActivity : AppCompatActivity(), IButtonOfCloseActivity {
     }
 
 }
-
-
-

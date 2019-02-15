@@ -57,6 +57,8 @@ data class BancoDeDados(
 
         var auto_escola_franca_promocao : String?= null,
 
+        var dinei_promocoes : String?= null,
+
 
         //speednet
         var speednet_promocoes: String?= null,

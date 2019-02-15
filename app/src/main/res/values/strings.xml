@@ -22,12 +22,32 @@
         Nossos horários de funcionamento: Nossa matriz no bairro Inocope, rua J, 20, do lado da delegacia funciona das 05:00hs às 21:00hs da noite e a filial, no bairro da Star, das 05:00hs ao meio-dia, e das 13:00hs até às 20:30hs da noite."
     </string>
 
+    <string name="guiaci_texto_titulo_rede_social">
+        Acesse nossas redes sociais:
+    </string>
+
+
+    <string name="guiaci_texto_facebook">
+        Facebook: guiaciapp/
+
+    </string>
+
+    <string name="guiaci_texto_instagram">
+        Instagram: @guiaciapp/
+
+    </string>
 
     //AUTO ESCOLA FRANCA
     <string name="historia_auto_escola_franca">
         Há 02 anos atrás, os cunhados Moisés França e Raimundo Nakamura decidiram abrir um CFC, diante da falta de opção que existia em Pojuca em conseguir tirar uma carteira de motorista(CNH).
         Temos o que há de melhor na formação de condutores “A B”. Nosso centro de formação de condutores, a Auto Escola França dispõe de qualidade e ótima estrutura, garantindo melhores resultados na formação desses condutores.
         Nossos veículos tem direção hidráulica e ar condicionado; uma equipe de instrutores qualificados, possibilitando o mais alto índice de aprovação da região!!. Nossos telefones são o: (71)3645-2005 ou 9.9981-9741.
+    </string>
+
+
+    <string name="historia_dinei">
+        A Barbershop Dinei Barber foi fundada dia 04 de Abril de 2018 visando novos estilos e tendências à seus  clientes; com novidades constantes e responsabilidade no trabalho sempre.
+        Venha conferir ou entre em contato atráves do telefone: 9999-4927 e saiba mais. Atendemos de segunda à sábado, das 08:00 até às 18:00hs. Cuidar da aparência é o ideal, pois tudo começa pelo visual.
     </string>
 
 
@@ -61,6 +81,10 @@
 
     <string name="mapa_auto_escola_franca">
          Rua Antônio Mota, s/n, Centro de Pojuca - BA
+    </string>
+
+    <string name="mapa_dinei">
+          Praça Alm. Vasconcelos, sn,em frente a Moto T. Elite, px à Escola Blue Way Idiomas, Pojuca-BA.
     </string>
 
     <string name="mapa_bios">

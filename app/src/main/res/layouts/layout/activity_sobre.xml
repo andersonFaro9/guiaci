@@ -50,10 +50,11 @@
 
         <TextView
             android:id="@+id/text_telefone"
-            android:layout_width="match_parent"
-            android:layout_height="121dp"
+            android:layout_width="0dp"
+            android:layout_height="111dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="16dp"
             android:text="@string/sobre"
             android:textAlignment="center"
             android:textColor="@color/album_title"
@@ -74,5 +75,47 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_close" />
+
+        <TextView
+            android:id="@+id/guiaci_texto_titulo"
+            android:layout_width="197dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/guiaci_texto_titulo_rede_social"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_telefone" />
+
+        <TextView
+            android:id="@+id/guiaci_texto_rede_social_facebook"
+            android:layout_width="170dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/guiaci_texto_facebook"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guiaci_texto_titulo" />
+
+        <TextView
+            android:id="@+id/guiaci_texto_rede_social_instagram"
+            android:layout_width="142dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/guiaci_texto_instagram"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guiaci_texto_rede_social_facebook" />
     </android.support.constraint.ConstraintLayout>
 </LinearLayout>

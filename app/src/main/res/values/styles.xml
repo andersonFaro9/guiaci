@@ -16,6 +16,14 @@
     </style>
 
 
+
+    <style name="themeDinei" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryDinei</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDinei</item>
+    </style>
+
+
     <style name="themeSpeednet" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimarySpeednet</item>

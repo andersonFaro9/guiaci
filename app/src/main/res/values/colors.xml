@@ -14,6 +14,8 @@
     <color name="colorPrimaryVinteNove">#000</color>
     <color name="colorPrimarySpeednet">#f58634</color>
     <color name="colorPrimaryAutoEscolaFranca">#C49102</color>
+
+    <color name="colorPrimaryDinei">#EF3A4B</color>
     <!--<color name="colorPrimaryJobSat">#e71212</color>-->
     <color name="colorPrimaryDocesCake">#e1599d</color>
     <color name="colorPrimaryQuadrangular">#8d02ff</color>

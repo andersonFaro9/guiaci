@@ -5,28 +5,15 @@
 
     <item
         android:id="@+id/search"
-        android:enabled="false"
         android:title="busque aqui"
         app:actionViewClass="android.support.v7.widget.SearchView"
         app:showAsAction="always" />
 
-        <item
-            android:id="@+id/telefone"
-            android:name="android:actionMenuTextColor"
-            android:textColorHighlight="@color/primary_material_dark"
-            app:queryHint="telefone"
-            android:icon="@drawable/ic_atencao"
-            app:showAsAction="always"
-            android:title=""
-
-            />
-
-
     <item
-        android:id= "@+id/menu_share"
+        android:id= "@+id/informacoes"
         app:showAsAction="always"
         android:title="share"
-        android:icon="@drawable/ic_share"
+        android:icon="@drawable/ic_redes_sociais_guiaci"
 
         />
 

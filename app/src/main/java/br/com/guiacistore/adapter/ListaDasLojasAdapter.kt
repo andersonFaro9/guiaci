@@ -15,7 +15,7 @@ import br.com.guiacistore.R
 import br.com.guiacistore.lojas.auto_escola_franca.AutoEscolaFrancaActivity
 import br.com.guiacistore.lojas.biosinformatica.BiosInformaticaActivity
 import br.com.guiacistore.lojas.blueway.BlueWayActivity
-import br.com.guiacistore.lojas.epg.EpgActivity
+import br.com.guiacistore.lojas.dinei_barber.DineiBarberActivity
 import br.com.guiacistore.lojas.evolution.AcademiaEvolutionActivity
 import br.com.guiacistore.lojas.greg.GregActivity
 import br.com.guiacistore.lojas.inove.InoveActivity
@@ -24,10 +24,8 @@ import br.com.guiacistore.lojas.lilidoces.LiliDocesCakesActivity
 
 import br.com.guiacistore.lojas.publicart.PubliCartActivity
 import br.com.guiacistore.lojas.quadrangular.QuadrangularActivity
-import br.com.guiacistore.lojas.rosasaron.RosaDeSaronActivity
 import br.com.guiacistore.lojas.speednet.SpeedNetActivity
 import br.com.guiacistore.model.dados.ListaModel
-import br.com.guiacistore.redesocial.IgrejaRosaDeSaronRedesSociaisActivity
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -49,18 +47,22 @@ class ListaDasLojasAdapter(private val context: Context, private var list: List<
             override fun performFiltering(charSequence: CharSequence?): FilterResults {
                 val results = Filter.FilterResults()
 
-                if (charSequence == null || charSequence.isEmpty()) {
-                    results.values = baseList
-                    results.count = baseList.size
-                } else {
-
-                    getBaseList().filterTo(listShop) {
-                        it.titulo.toLowerCase(Locale.getDefault()).contains(charSequence)
+                when {
+                    charSequence == null || charSequence.isEmpty() -> {
+                        results.values = baseList
+                        results.count = baseList.size
 
                     }
+                    else -> {
 
-                    results.count = listShop.size
-                    results.values = listShop
+                        getBaseList().filterTo(listShop) {
+                            it.titulo.toLowerCase(Locale.getDefault()).contains(charSequence)
+
+                        }
+
+                        results.count = listShop.size
+                        results.values = listShop
+                    }
                 }
 
                 return results
@@ -122,16 +124,16 @@ class ListaDasLojasAdapter(private val context: Context, private var list: List<
             when (position) {
                 0 ->  context.startActivity(Intent(context, SpeedNetActivity::class.java))
                 1 ->  context.startActivity(Intent(context, GregActivity::class.java ))
-                2 ->  context.startActivity(Intent(context, JsBarbeariaActivity::class.java ))
-                3 ->  context.startActivity(Intent(context, LiliDocesCakesActivity::class.java ))
-                4 ->  context.startActivity(Intent(context, BiosInformaticaActivity::class.java ))
-                5 ->  context.startActivity(Intent(context, AutoEscolaFrancaActivity::class.java ))
+                2 ->  context.startActivity(Intent(context, LiliDocesCakesActivity::class.java ))
+                //3 ->  context.startActivity(Intent(context, JsBarbeariaActivity::class.java ))
+                3 ->  context.startActivity(Intent(context, BiosInformaticaActivity::class.java ))
+                4 ->  context.startActivity(Intent(context, AutoEscolaFrancaActivity::class.java ))
+                5 ->  context.startActivity(Intent(context, DineiBarberActivity::class.java ))
                 6 ->  context.startActivity(Intent(context, InoveActivity::class.java ))
-                7 ->  context.startActivity(Intent(context, PubliCartActivity::class.java ))
-                8 ->   context.startActivity(Intent(context, AcademiaEvolutionActivity::class.java))
-                9 ->  context.startActivity(Intent(context, BlueWayActivity::class.java ))
-                10 -> context.startActivity(Intent(context, QuadrangularActivity::class.java))
-                11 -> context.startActivity(Intent(context, RosaDeSaronActivity::class.java))
+                7 ->  context.startActivity(Intent(context, AcademiaEvolutionActivity::class.java))
+                8 ->  context.startActivity(Intent(context, BlueWayActivity::class.java ))
+                9 -> context.startActivity(Intent(context, QuadrangularActivity::class.java))
+                10 -> context.startActivity(Intent(context, PubliCartActivity::class.java))
 
             }
 
