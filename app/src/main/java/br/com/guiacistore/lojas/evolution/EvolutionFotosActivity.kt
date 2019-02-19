@@ -104,10 +104,10 @@ open class EvolutionFotosActivity : AppCompatActivity() {
     //Responsável por criar as categorias e mostrar as fotos
     private fun  prepareList(list: ArrayList<ListaDeFotosModel>) {
 
-        list.add(ListaDeFotosModel("", "", "Queima de calorias",
+        list.add(ListaDeFotosModel("", "", "Nossa galera!!",
                 R.drawable.evolution_primeira_foto))
 
-        list.add(ListaDeFotosModel("", "", "Aumento da resistência física e queima de gordura! ",
+        list.add(ListaDeFotosModel("", "", "você sairá daqui campeão!!!",
                 R.drawable.evolution_segunda_foto))
 
         list.add(ListaDeFotosModel("", "", "Deixa os ossos fortes! ",

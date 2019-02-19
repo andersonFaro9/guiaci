@@ -34,8 +34,7 @@
         private fun  prepareList(list: ArrayList<ListaModel>) {
 
             list.add(ListaModel("Speednet", "Aqui tem internet para família inteira, com os melhores planos.", 0, R.drawable.loja_speednet))
-            list.add(ListaModel("Barbearia do Greg.", "Seu estilo passa primeiro por aqui.", 0, R.drawable.loja_barbearia_greg))
-            list.add(ListaModel("Lili Doces & Cakes.", "Trabalhamos à pronta entrega e sob encomenda.", 0, R.drawable.loja_lili_doces_cakes))
+            list.add(ListaModel("Barbershop do Greg.", "Seu estilo passa primeiro por aqui.", 0, R.drawable.loja_barbearia_greg))
             //list.add(ListaModel("JS Barbearia à Domicilio.", "Atendemos no conforto do seu lar.", 0, R.drawable.loja_js_barbearia))
             list.add(ListaModel("Bios Informática e Papelaria", "Trazendo soluções para sua vida.", 0, R.drawable.loja_bios_informatica))
             list.add(ListaModel("Auto Escola França", "Centro de Formação de Condutores",0,R.drawable.loja_auto_escola_franca))
