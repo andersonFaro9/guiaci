@@ -1,2 +1,2 @@
-# Guiaci é um aplicativo que a propaganda de sua loja
+# Guiaci é um aplicativo que faz a propaganda de sua loja
 
