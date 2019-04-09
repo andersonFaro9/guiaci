@@ -24,8 +24,6 @@
 
             prepareList(list)
 
-
-
             recView.adapter = adapter
             recView.layoutManager = GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false)
 
@@ -35,16 +33,12 @@
 
             list.add(ListaModel("Speednet", "Aqui tem internet para família inteira, com os melhores planos.", 0, R.drawable.loja_speednet))
             list.add(ListaModel("Barbershop do Greg.", "Seu estilo passa primeiro por aqui.", 0, R.drawable.loja_barbearia_greg))
-            //list.add(ListaModel("JS Barbearia à Domicilio.", "Atendemos no conforto do seu lar.", 0, R.drawable.loja_js_barbearia))
             list.add(ListaModel("Bios Informática e Papelaria", "Trazendo soluções para sua vida.", 0, R.drawable.loja_bios_informatica))
             list.add(ListaModel("Auto Escola França", "Centro de Formação de Condutores",0,R.drawable.loja_auto_escola_franca))
             list.add(ListaModel("Dinei Barber.", "Não é uma fase, é um estilo.", 0, R.drawable.loja_dinei))
-            list.add(ListaModel("Inove.", "Fabricação, Montagem e Manutenção industrial.", 0, R.drawable.loja_inove))
             list.add(ListaModel("Academia Evolution Fitness de Pojuca.", "Sua evolução começa agora!!.", 0, R.drawable.loja_evolution))
             list.add(ListaModel("Blue Way Idiomas", "Faça a diferença, faça Blue Way!.", 0, R.drawable.loja_blueway))
             list.add(ListaModel("Igreja do Ev. Quadrangular de Pojuca.", "Paz seja convosco.", 0, R.drawable.loja_quadrangular))
-            list.add(ListaModel("Publicart.", "Soluções em comunicação visual.", 0, R.drawable.loja_publicart))
-
 
         }
 

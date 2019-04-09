@@ -34,7 +34,7 @@ fun AutoEscolaFrancaServicosActivity.mostrarServicos() {
 
         val listaModel: ArrayList<ListaModel> = ArrayList()
 
-        listaModel.add(ListaModel("Carros", "Entre em contato.",  R.drawable.ok_promocao,R.drawable.ic_franca_carros))
+        listaModel.add(ListaModel("Carro e moto", "Entre em contato.",  R.drawable.ok_promocao,R.drawable.ic_franca_carros))
 
         listaModel.add(ListaModel("Laudo (primeira habilitação)", "", 0, R.drawable.ic_franca_primeira_habilitacao) )
         listaModel.add(ListaModel("Renovação", "", 0, R.drawable.ic_franca_renovacao_cnh) )
@@ -42,13 +42,6 @@ fun AutoEscolaFrancaServicosActivity.mostrarServicos() {
         listaModel.add(ListaModel("Curso de reciclagem", "", 0, R.drawable.ic_franca_curso_reciclagem) )
         listaModel.add(ListaModel("Curso de atualização", "", 0, R.drawable.ic_franca_atualizacao) )
 
-        listaModel.add(ListaModel("Motos", "Entre em contato.", R.drawable.ok_promocao, R.drawable.ic_franca_motos))
-
-        listaModel.add(ListaModel("Laudo (primeira habilitação)", "", 0, R.drawable.ic_franca_habilitacao_motos) )
-        listaModel.add(ListaModel("Renovação", "", 0, R.drawable.ic_franca_renovacao_motos) )
-        listaModel.add(ListaModel("Adição de Categoria", "", 0, R.drawable.ic_franca_adicao_categoria) )
-        listaModel.add(ListaModel("Curso de reciclagem", "", 0, R.drawable.ic_franca_motos_reciclagem) )
-        listaModel.add(ListaModel("Curso de atualização", "", 0, R.drawable.ic_franca_atualizacao) )
 
         listView.adapter = ListaImagemTextoSimplesAdapter(applicationContext, listaModel)
 

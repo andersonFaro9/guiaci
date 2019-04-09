@@ -18,21 +18,11 @@ import br.com.guiacistore.lojas.blueway.BlueWayActivity
 import br.com.guiacistore.lojas.dinei_barber.DineiBarberActivity
 import br.com.guiacistore.lojas.evolution.AcademiaEvolutionActivity
 import br.com.guiacistore.lojas.greg.GregActivity
-import br.com.guiacistore.lojas.inove.InoveActivity
-import br.com.guiacistore.lojas.jsbarbearia.JsBarbeariaActivity
-import br.com.guiacistore.lojas.lilidoces.LiliDocesCakesActivity
-
-import br.com.guiacistore.lojas.publicart.PubliCartActivity
 import br.com.guiacistore.lojas.quadrangular.QuadrangularActivity
 import br.com.guiacistore.lojas.speednet.SpeedNetActivity
 import br.com.guiacistore.model.dados.ListaModel
 import java.util.*
 import kotlin.collections.ArrayList
-
-
-/**
- * Created by faro on 9/22/17.
- */
 
 //Lista responsável pelas lojas e pela busca das lojas no aplicativo
 
@@ -124,16 +114,12 @@ class ListaDasLojasAdapter(private val context: Context, private var list: List<
             when (position) {
                 0 ->  context.startActivity(Intent(context, SpeedNetActivity::class.java))
                 1 ->  context.startActivity(Intent(context, GregActivity::class.java ))
-                //3 ->  context.startActivity(Intent(context, JsBarbeariaActivity::class.java ))
                 2 ->  context.startActivity(Intent(context, BiosInformaticaActivity::class.java ))
                 3 ->  context.startActivity(Intent(context, AutoEscolaFrancaActivity::class.java ))
                 4 ->  context.startActivity(Intent(context, DineiBarberActivity::class.java ))
-                5 ->  context.startActivity(Intent(context, InoveActivity::class.java ))
-                6 ->  context.startActivity(Intent(context, AcademiaEvolutionActivity::class.java))
-                7 ->  context.startActivity(Intent(context, BlueWayActivity::class.java ))
-                8 -> context.startActivity(Intent(context, QuadrangularActivity::class.java))
-                9 -> context.startActivity(Intent(context, PubliCartActivity::class.java))
-
+                5 ->  context.startActivity(Intent(context, AcademiaEvolutionActivity::class.java))
+                6 ->  context.startActivity(Intent(context, BlueWayActivity::class.java ))
+                7 ->  context.startActivity(Intent(context, QuadrangularActivity::class.java))
             }
 
         }
