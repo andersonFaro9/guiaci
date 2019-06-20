@@ -3,6 +3,253 @@
     <string name="app_name"> Guiaci </string>
 
 
+    //Hortela-pimenta
+    <string name="sobreHortelaPimenta">
+           O Hortelã-pimenta é um híbrido de menta aquática e de hortelã verde, e foi primeiramente descrito por Carl Linneaus em 1753.
+            Possue alta concentração de mentol como a encontrada no óleo essencial Peppermint doTERRA e diferencia o hortelã-pimenta de melhor qualidade de demais produtos.
+            Frequentemente usado em cremes dentais e goma de mascar para higiene bucal,
+            o Hortelã-pimenta continua sendo um dos mais vendidos, e um dos óleos essenciais preferidos da doTERRA.
+    </string>
+
+    <string name="modoDeUsarHortelaPimenta">Modo de usar </string>
+
+    <string name="AplicarHortelaPimenta"> Aplicar sobre a pele na área desejada diluindo de 01 à 03 gotas em óleo de coco fracionado.
+        O óleo essencial dōTERRA também poderá ser utilizado em aromatizador elétrico colocando de 03 à 04 gotas.
+    </string>
+
+
+    <string name="cuidadoHortelaPimenta"> Cuidados </string>
+
+    <string name="comoCuidarHortelaPimenta">
+        Manter longe dos olhos e sempre longe das crianças.
+        E as  grávidas consultar médico antes de usar. Em caso de irritação, descontinue o uso e procure um médico.
+        Deixar o produto ao abrigo da luz e do calor.
+    </string>
+
+
+    //Toranja
+    <string name="sobreToranja">
+          Conhecida como um “fruto proibido” e uma das “sete maravilhas de Barbados”, a Toranja foi primeiramente documentada em 1750 pelo reverendo galês Griffith Hughes.
+        O nome “Grapefruit” é atribuído aos frutos que cresciam em cachos que lembravam os cachos de uvas.
+        Conhecida por seu aroma energizante e revigorante, a Toranja ajuda a elevar o humor.
+        A Toranja também é conhecida por suas propriedades purificantes e é frequentemente utilizada em produtos de cuidados para a pele por sua habilidade de promover a aparência de uma pele saudável.
+    </string>
+
+    <string name="modoDeUsarToranja">Modo de usar </string>
+
+    <string name="AplicarToranja"> Aplicar sobre a pele na área desejada diluindo de 01 à 03 gotas em óleo de coco fracionado.
+        O óleo essencial dōTERRA também poderá ser utilizado em aromatizador elétrico colocando de 03 à 04 gotas.
+    </string>
+
+
+    <string name="cuidadoToranja"> Cuidados </string>
+
+    <string name="comoCuidarToranja">
+        Manter longe dos olhos e sempre longe das crianças.
+        E as  grávidas consultar médico antes de usar. Em caso de irritação, descontinue o uso e procure um médico.
+        Deixar o produto ao abrigo da luz e do calor.
+    </string>
+
+
+
+
+
+
+
+    //Nardo
+    <string name="sobreNardo">
+          Nardo, uma planta florida da família Valeriana, é nativa das altas regiões alpinas e sub-alpinas nas montanhas do Himalaia.
+            O óleo essencial de Nardo é destilado a partir das raízes da planta e tem sido valorizado por séculos, tradicionalmente utilizado para ungir pessoas de alto reconhecimento e em práticas Ayurvérdicas da Índia.
+            Historicamente, Nardo tem sido utilizado para elevar o humor e promover relaxamento, promove uma pele limpa e saudável.
+            Hoje em dia, o óleo é comumente usado em perfumes e em óleos de massagem relaxantes por seu aroma amadeirado e condimentado.
+    </string>
+
+    <string name="modoDeUsarNardo">Modo de usar </string>
+
+    <string name="AplicarNardo"> Aplicar sobre a pele na área desejada diluindo de 01 à 03 gotas em óleo de coco fracionado.
+        O óleo essencial dōTERRA também poderá ser utilizado em aromatizador elétrico colocando de 03 à 04 gotas.
+    </string>
+
+
+    <string name="cuidadoNardo"> Cuidados </string>
+
+    <string name="comoCuidarNardo">
+        Manter longe dos olhos e sempre longe das crianças.
+        E as  grávidas consultar médico antes de usar. Em caso de irritação, descontinue o uso e procure um médico.
+        Deixar o produto ao abrigo da luz e do calor.
+    </string>
+
+
+    //Patchouli
+    <string name="sobrePatchouli">
+           O Patchouli é um arbusto da família da menta, com caules que alcançam até um metro de altura, e que carregam pequenas flores brancas e cor-de-rosa.
+            Facilmente reconhecido por seu aroma doce e almiscarado, o Patchouli é utilizado na indústria de perfumes, assim como em produtos como detergente para roupas e aromatizadores de ambiente.
+            Ele possui muitos benefícios para a pele. Também usado topicamente para ajudar a promover uma aparência de pele macia e radiante.
+            O aroma do Patchouli possui um efeito equilibrante nas emoções.
+    </string>
+
+    <string name="modoDeUsarPatchouli">Modo de usar </string>
+
+    <string name="AplicarPatchouli"> Aplicar sobre a pele na área desejada diluindo de 01 à 03 gotas em óleo de coco fracionado.
+        O óleo essencial dōTERRA também poderá ser utilizado em aromatizador elétrico colocando de 03 à 04 gotas.
+    </string>
+
+
+    <string name="cuidadoPatchouli"> Cuidados </string>
+
+    <string name="comoCuidarpatchouli">
+        Manter longe dos olhos e sempre longe das crianças.
+        E as  grávidas consultar médico antes de usar. Em caso de irritação, descontinue o uso e procure um médico.
+        Deixar o produto ao abrigo da luz e do calor.
+    </string>
+
+
+
+
+
+    //ALECRIM
+    <string name="sobreAlecrim">
+           O Alecrim possui muitos benefícios. Reverenciado por conhecedores, o Alecrim era considerado sagrado pelas culturas grega, romana, egípcia e hebraica.
+           O aroma herbáceo e energizante do Alecrim é frequentemente utilizado em aromaterapia.
+    </string>
+
+    <string name="modoDeUsarAlecrim">Modo de usar </string>
+
+    <string name="AplicarAlecrim"> Aplicar  na pele, diluindo de 01 à 03 gotas em óleo de coco fracionado.
+        O óleo essencial doTERRA também poderá ser utilizado em aromatizador elétrico colocando de 3 à 4 gotas.
+    </string>
+
+
+    <string name="cuidadoAlecrim">Cuidados </string>
+
+    <string name="comoCuidarAlecrim">
+        Manter longe dos olhos e sempre longe das crianças.
+        E as  grávidas consultar médico antes de usar. Em caso de irritação, descontinue o uso e procure um médico.
+        Deixar o produto ao abrigo da luz e do calor.
+    </string>
+
+    //Cravo
+    <string name="sobreCravo">
+        Sabor inconfundível, e contém diversos benefícios. Seu principal componente químico: eugenol, faz com que o cravo seja um óleo essencial, muito estimulante e energizante, usado também em massagem confortante.
+    </string>
+
+    <string name="modoDeUsarCravo">Modo de usar </string>
+
+    <string name="AplicarCravo">
+        Aplicar na pele, diluindo de 01 à 03 gotas em óleo de coco fracionado.
+        O óleo essencial doTERRA também poderá ser utilizado em aromatizador elétrico adicionando de 03 à 04 gotas.
+    </string>
+
+    <string name="cuidadoCravo">Cuidados </string>
+
+    <string name="comoCuidarCravo">
+        Manter longe dos olhos e sempre longe das crianças.
+        E as  grávidas consultar médico antes de usar. Em caso de irritação, descontinue o uso e procure um médico.
+        Deixar o produto ao abrigo da luz e do calor.
+    </string>
+
+
+    //Eucalipto
+    <string name="sobreEucalipto">
+        Seu óleo deixa as vias aéreas livres e são ideais para massagens.
+        O Eucalipto possui propriedades purificantes que podem ser benéficas para a pele e para o ar.
+        Estudos mostram que ele é eficaz em diminuir sentimentos de tensão.
+    </string>
+
+    <string name="modoDeUsarEucalipto">Modo de usar </string>
+
+    <string name="AplicarEucalipto">
+        Aplicar sobre a pele na área desejada diluindo de 01 à 03 gotas em óleo de coco fracionado.
+        O óleo essencial doTERRA também poderá ser utilizado em aromatizador elétrico colocando de 03 à 04 gotas.
+    </string>
+
+    <string name="cuidadoEucalipto">Cuidados </string>
+
+    <string name="comoCuidarEucalipto">
+        Manter longe dos olhos e sempre longe das crianças.
+        E as  grávidas consultar médico antes de usar. Em caso de irritação, descontinue o uso e procure um médico.
+        Deixar o produto ao abrigo da luz e do calor.
+    </string>
+
+
+    //Gengibre
+    <string name="sobreGengibre">
+        Atualmente extraído em Madagascar, o óleo essencial de Gengibre é derivado do rizoma fresco da planta de Gengibre – o talo subterrâneo da planta que sai a partir da raiz.
+        O óleo essencial de Gengibre também pode ser aplicado topicamente ou inalado para um aroma confortante.
+    </string>
+
+    <string name="modoDeUsarGengibre">Modo de usar </string>
+
+    <string name="aplicarGengibre">
+        Aplicar na pele diluindo de 01 à 03 gotas em óleo de coco fracionado.
+        O óleo essencial doTERRA também poderá ser utilizado em aromatizador elétrico colocando de 03 à 04 gotas.
+    </string>
+
+    <string name="cuidadoGengibre">Cuidados </string>
+
+    <string name="comoCuidarGengibre">
+        Manter longe dos olhos e sempre longe das crianças.
+        E as  grávidas consultar médico antes de usar. Em caso de irritação, descontinue o uso e procure um médico.
+        Deixar o produto ao abrigo da luz e do calor.
+    </string>
+
+
+
+    //Lavanda
+    <string name="sobreLavanda">
+        Usada por séculos, com aroma inconfundível, possue diversos benefícios.
+        Nos tempos antigos, os egípcios e romanos usavam para banhos, relaxamento e como perfume;
+        é amplamente usada como calmante e relaxante.
+        Use na água do banho para aliviar o estresse, ou aplique nas têmporas ou nuca.
+        Coloque algumas gotas  nos travesseiros, roupa de cama, ou na planta dos pés para uma noite de sono restauradora.
+        Graças à sua versatilidade, a Lavanda é um óleo indispensável para usar a qualquer hora.
+    </string>
+
+    <string name="modoDeUsarLavanda">Modo de usar </string>
+
+    <string name="aplicarLavanda">
+        Aplicar sobre a pele na área desejada diluindo de 01 à 03 gotas em óleo de coco fracionado.
+        O óleo essencial doTERRA também poderá ser utilizado em aromatizador elétrico colocando de 03 04 gotas.
+    </string>
+
+    <string name="cuidadoLavanda">Cuidados </string>
+
+    <string name="comoCuidarLavanda">
+        Manter longe dos olhos e sempre longe das crianças.
+        E as  grávidas consultar médico antes de usar. Em caso de irritação, descontinue o uso e procure um médico.
+        Deixar o produto ao abrigo da luz e do calor.
+    </string>
+
+
+
+
+
+    //Capim Limão
+    <string name="sobreLimao">
+        Planta alta e perene, o Capim-limão possui um leve aroma cítrico.
+        O Capim-limão também é purificante e tonificante para a pele e é frequentemente usado em produtos de beleza por estes benefícios.
+        O óleo essencial de Capim-limão é ideal para uso em massoterapia.
+        O aroma herbáceo e cítrico do Capim-limão ajuda a aumentar a percepção e promover uma perspectiva positiva.
+    </string>
+
+    <string name="modoDeUsarLimao">Modo de usar </string>
+
+    <string name="aplicarLimao">
+        Aplicar sobre a pele na área desejada diluindo de 01 à 03 gotas em óleo de coco fracionado.
+        O óleo essencial doTERRA também poderá ser utilizado em aromatizador elétrico colocando de 03 04 gotas.
+    </string>
+
+    <string name="cuidadoLimao">Cuidados </string>
+
+    <string name="comoCuidarLimao">
+        Manter longe dos olhos e sempre longe das crianças.
+        E as  grávidas consultar médico antes de usar. Em caso de irritação, descontinue o uso e procure um médico.
+        Deixar o produto ao abrigo da luz e do calor.
+    </string>
+
+
+
+
     //INOVE
     <string name="historia_inove">
         A empresa Inove, Fabricação, Montagem e Manutenção Industrial, surgiu no dia 01 de Outubro de 2017 em Pojuca na Bahia, atuando no mercado industrial,  fabricando e montando estruturas metálicas,  tubulação, montagem eletromecânica, reparação de tanques e caldeiras, caldeiraria pesada e leve e solda em geral e controle de qualidade. A segurança e respeito ao meio ambiente são virtudes que possuímos. Nosso profissionalismo permeia esta empresa, e prioriza pelos cuidados e cursos à nossos colaboradores; e focados em atender as principais exigências que a legislação exige.
@@ -12,6 +259,11 @@
     <string name="sobre">
             Aquela novidade, promoção e facilidade da sua loja preferida, você vai encontrar aqui!!!
            Entre em contato através do (71)-9.96877-997 (Whatsapp) e saiba como colocar sua loja em nosso aplicativo!!.
+    </string>
+
+    <string name="doterra_produtos">
+        Aproveitamos os elementos mais poderosos da natureza e compartilhamos estes presentes por meio da nossa comunidade global de Consultores de Bem-Estar.
+        Da pureza tirada da natureza para sua vida, bem-estar, saúde e família, confira no nosso aplicativo ou entre em contato pelos contatos: 99619-8678 ou Whatsapp: 99169-7422 e falar com o consultor Marcos Lima.
     </string>
 
     //EVOLUTION
@@ -148,12 +400,9 @@
        Rua Antônio Batista, 48.120-000, Pojuca, Bahia
     </string>
 
-
-    R. Antônio Motta, 182, Pojuca - BA, 48.120-000
-
-    <string name="historia_speednet">
-       Pioneira no uso de tecnologias inovadoras, e que sempre agiu dentro da legislação homologada pela Anatel, a SpeedNet Alliance é uma empresa brasileira fundada em outubro de 2012 com intuito imediato de suprir a carência de acesso à internet em Pojuca, na bahia,
-       que contava somente com planos de velocidade de até 600Kbps e preços elevados. Assim nasceu a SpeedNet Alliance: à partir da certeza de criar um provedor de internet que atendesse às reais necessidades dos clientes.
+    <string name="historia_biostelecom">
+       Somos a Bios Telecom! A sua mais nova empresa no ramo de telecomunicações voltada para a internet.
+        Estamos na Rua Antônio Mota, 182, Pojuca e nosso telefone é o 4062.8811, nosso e-mail: sac@biostelecom.com.br.
     </string>
 
 

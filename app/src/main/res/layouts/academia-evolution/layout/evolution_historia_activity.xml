@@ -15,7 +15,7 @@
         android:id="@+id/relativeLayout">
 
         <TextView
-            android:id="@+id/texto_speednet"
+            android:id="@+id/texto_biostelecom"
             android:layout_width="0dp"
             android:layout_height="271dp"
             android:layout_marginStart="3dp"

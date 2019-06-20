@@ -12,14 +12,16 @@ import android.widget.Filterable
 import android.widget.ImageView
 import android.widget.TextView
 import br.com.guiacistore.R
+import br.com.guiacistore.lojas.MultivixPojuca.MultivixPojucaActivity
 import br.com.guiacistore.lojas.auto_escola_franca.AutoEscolaFrancaActivity
-import br.com.guiacistore.lojas.biosinformatica.BiosInformaticaActivity
+import br.com.guiacistore.lojas.biosinfopaper.BiosInfoPaperActivity
 import br.com.guiacistore.lojas.blueway.BlueWayActivity
 import br.com.guiacistore.lojas.dinei_barber.DineiBarberActivity
+import br.com.guiacistore.lojas.doterra.DoTerraActivity
 import br.com.guiacistore.lojas.evolution.AcademiaEvolutionActivity
 import br.com.guiacistore.lojas.greg.GregActivity
 import br.com.guiacistore.lojas.quadrangular.QuadrangularActivity
-import br.com.guiacistore.lojas.speednet.SpeedNetActivity
+import br.com.guiacistore.lojas.biostelecom.BiosTelecomActivity
 import br.com.guiacistore.model.dados.ListaModel
 import java.util.*
 import kotlin.collections.ArrayList
@@ -98,7 +100,6 @@ class ListaDasLojasAdapter(private val context: Context, private var list: List<
         return ViewHolder(view);
     }
 
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val album: ListaModel = list.get(position)
@@ -112,14 +113,16 @@ class ListaDasLojasAdapter(private val context: Context, private var list: List<
         holder.thumbImageView?.setOnClickListener {
 
             when (position) {
-                0 ->  context.startActivity(Intent(context, SpeedNetActivity::class.java))
-                1 ->  context.startActivity(Intent(context, GregActivity::class.java ))
-                2 ->  context.startActivity(Intent(context, BiosInformaticaActivity::class.java ))
-                3 ->  context.startActivity(Intent(context, AutoEscolaFrancaActivity::class.java ))
-                4 ->  context.startActivity(Intent(context, DineiBarberActivity::class.java ))
-                5 ->  context.startActivity(Intent(context, AcademiaEvolutionActivity::class.java))
-                6 ->  context.startActivity(Intent(context, BlueWayActivity::class.java ))
-                7 ->  context.startActivity(Intent(context, QuadrangularActivity::class.java))
+                0 ->  context.startActivity(Intent(context, BiosTelecomActivity::class.java))
+                1 ->  context.startActivity(Intent(context, MultivixPojucaActivity::class.java ))
+                2 ->  context.startActivity(Intent(context, BiosInfoPaperActivity::class.java ))
+                3 ->  context.startActivity(Intent(context, DoTerraActivity::class.java ))
+                4 ->  context.startActivity(Intent(context, AcademiaEvolutionActivity::class.java ))
+                5 ->  context.startActivity(Intent(context, BlueWayActivity::class.java ))
+                6 ->  context.startActivity(Intent(context, QuadrangularActivity::class.java ))
+                7 ->  context.startActivity(Intent(context, GregActivity::class.java))
+                8 ->  context.startActivity(Intent(context, AutoEscolaFrancaActivity::class.java ))
+                9 ->  context.startActivity(Intent(context, DineiBarberActivity::class.java))
             }
 
         }

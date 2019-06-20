@@ -60,7 +60,7 @@ data class BancoDeDados(
         var dinei_promocoes : String?= null,
 
 
-        //speednet
+        //biostelecom
         var speednet_promocoes: String?= null,
 
         var lili_doces_cakes_promocoes: String?= null,

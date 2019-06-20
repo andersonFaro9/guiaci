@@ -9,6 +9,12 @@
 
     </style>
 
+    <style name="themedoterra" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryDoTerra</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDoTerra</item>
+    </style>
+
     <style name="themeAutoEscolaFranca" parent="Theme.AppCompat.Light.DarkActionBar">
     <!-- Customize your theme here. -->
     <item name="colorPrimary">@color/colorPrimaryAutoEscolaFranca</item>
@@ -24,10 +30,10 @@
     </style>
 
 
-    <style name="themeSpeednet" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="themeBiosTelecom" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimarySpeednet</item>
-        <item name="colorPrimaryDark">@color/colorPrimarySpeednet</item>
+        <item name="colorPrimary">@color/colorPrimaryBiosTelecom</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryBiosTelecom</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 

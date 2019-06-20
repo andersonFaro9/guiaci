@@ -6,15 +6,15 @@
 
     <color name="title_color_vintenove">#01a75b</color>
 
-    <color name="colorPrimaryBios">#0098da</color>
+    <color name="colorPrimaryBios">#01a75b</color>
     <color name="colorPrimaryGreg">#79661c</color>
     <color name="colorPrimaryEvolution">#daa625</color>
     <color name="colorPrimaryconexao">#c2270c</color>
     <color name="colorPrimaryBlueWay">#0102d8</color>
     <color name="colorPrimaryVinteNove">#000</color>
-    <color name="colorPrimarySpeednet">#f58634</color>
+    <color name="colorPrimaryBiosTelecom">#000</color>
     <color name="colorPrimaryAutoEscolaFranca">#C49102</color>
-
+    <color name="colorPrimaryDoTerra">#A946CD</color>
     <color name="colorPrimaryDinei">#EF3A4B</color>
     <!--<color name="colorPrimaryJobSat">#e71212</color>-->
     <color name="colorPrimaryDocesCake">#e1599d</color>
@@ -28,6 +28,26 @@
     <color name="colorPrimaryFundoListView">#ece7e7</color>
 
     <color name="colorPrimaryJsBarbearia">#bc3e3e</color>
+
+    <color name="colorTituloAlecrim">#D8C814</color>
+    <color name="colorTituloCravo">#B84A1F</color>
+    <color name="colorTituloEucalipto">#6ABD6D</color>
+    <color name="colorTituloGengibre">#FDB54B</color>
+    <color name="colorTituloLavanda">#C069FF</color>
+
+    <color name="colorTituloCapimLimao">#92CF4B</color>
+    <color name="colorTituloHortelaPimenta">#59B0D8</color>
+    <color name="colorTituloPatchouli">#BA68C8</color>
+    <color name="colorTituloNardo">#2861D5</color>
+    <color name="colorTituloToranja">#ECAF4E</color>
+
+
+    <color name="texto_intro_1">#9C6D42</color>
+    <color name="texto_intro_2">#828830</color>
+    <color name="texto_intro_3">#B760E4</color>
+    <color name="texto_intro_4">#4AAF50</color>
+
+
 
     <color name="colorPrimaryy">#F50057</color>
     <color name="colorPrimaryDark">#e0267d</color>
