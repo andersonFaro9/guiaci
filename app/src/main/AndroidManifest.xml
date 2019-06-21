@@ -199,8 +199,11 @@
         <activity android:theme="@style/themedoterra" android:parentActivityName=".lojas.doterra.DoTerraKitActivity" android:name=".lojas.doterra.DoTerraKitActivity" />
         <activity android:theme="@style/Theme.Intro" android:name=".lojas.doterra.DoTerraFotosActivity" />
 
-        <activity  android:name=".lojas.MultivixPojuca.MultivixPojucaActivity" />
+        <activity   android:parentActivityName=".lojas.multivixPojuca.MultivixPojucaActivity" android:theme="@style/themeMultivix" android:name=".lojas.multivixPojuca.MultivixPojucaActivity" />
         <activity android:parentActivityName=".lojas.biosinfopaper.BiosInfoPaperFotosActivity" android:theme="@style/themeBios" android:name=".lojas.biosinfopaper.BiosInfoPaperFotosActivity" />
+        <activity android:parentActivityName=".lojas.multivixPojuca.MultivixPojucaCursosActivity" android:name=".lojas.multivixPojuca.MultivixPojucaCursosActivity" android:theme="@style/themeMultivix"  />
+        <activity android:parentActivityName=".lojas.multivixPojuca.MultivixPojucaInscricaoActivity" android:name=".lojas.multivixPojuca.MultivixPojucaInscricaoActivity" android:theme="@style/themeMultivix"  />
+        <activity android:parentActivityName=".lojas.multivixPojuca.MultivixEnderecoActivity" android:theme="@style/themeMultivix"  android:name=".lojas.multivixPojuca.MultivixEnderecoActivity" />
 
 
     </application>

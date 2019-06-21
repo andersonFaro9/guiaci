@@ -59,7 +59,7 @@ class BiosTelecomActivity: AppCompatActivity(), ICallNumber {
 
     override fun callNumber() {
         val callIntent = Intent(Intent.ACTION_DIAL)
-        callIntent.data = Uri.parse("tel: 71 40628811")
+        callIntent.data = Uri.parse("tel:  40628811")
         startActivity(callIntent)
     }
 }

@@ -5,14 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="05dp"
+    android:paddingLeft="03dp"
     android:id="@+id/relativeLayout">
 
     <ImageView
         android:id="@+id/imagem"
         android:layout_width="43dp"
         android:layout_height="50dp"
-        android:layout_marginStart="3dp"
+        android:layout_marginStart="2dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,10 +22,10 @@
         android:layout_width="616dp"
         android:layout_height="38dp"
         android:layout_marginTop="17dp"
-        android:paddingStart="11dp"
+        android:paddingStart="09dp"
         android:text=""
         android:textColor="#79080707"
-        android:textSize="15sp"
+        android:textSize="14sp"
         android:textStyle="normal"
         app:layout_constraintStart_toEndOf="@+id/imagem"
         app:layout_constraintTop_toTopOf="parent" />
@@ -34,7 +34,7 @@
         android:id="@+id/subtitulo"
         android:layout_width="331dp"
         android:layout_height="35dp"
-        android:layout_marginStart="13dp"
+        android:layout_marginStart="09dp"
         android:layout_marginTop="4dp"
         android:text=""
         android:textAlignment="viewStart"

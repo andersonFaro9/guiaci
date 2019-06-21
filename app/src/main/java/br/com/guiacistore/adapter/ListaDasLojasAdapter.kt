@@ -12,7 +12,7 @@ import android.widget.Filterable
 import android.widget.ImageView
 import android.widget.TextView
 import br.com.guiacistore.R
-import br.com.guiacistore.lojas.MultivixPojuca.MultivixPojucaActivity
+import br.com.guiacistore.lojas.multivixPojuca.MultivixPojucaActivity
 import br.com.guiacistore.lojas.auto_escola_franca.AutoEscolaFrancaActivity
 import br.com.guiacistore.lojas.biosinfopaper.BiosInfoPaperActivity
 import br.com.guiacistore.lojas.blueway.BlueWayActivity

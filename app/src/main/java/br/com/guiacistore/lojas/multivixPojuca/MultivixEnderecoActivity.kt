@@ -1,4 +1,4 @@
-package br.com.guiacistore.lojas.quadrangular
+package br.com.guiacistore.lojas.multivixPojuca
 
 import android.net.Uri
 import android.os.Bundle
@@ -7,25 +7,24 @@ import br.com.guiacistore.R
 import br.com.guiacistore.extensions_geral.verMapa
 import kotlinx.android.synthetic.main.evolution_endereco.*
 
-class QuadrangularEnderecoActivity : AppCompatActivity() {
+class MultivixEnderecoActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.quadrangular_endereco)
+        setContentView(R.layout.multivix_endereco)
 
         supportActionBar?.title = "Endereço"
 
         texto_endereco_multivix.setOnClickListener {
 
-            verMapa(Uri.parse("https://goo.gl/maps/znp61dgUXcx"))
+            verMapa(Uri.parse("https://bit.ly/2FpyZBy"))
 
         }
 
-
         ic_endereco_multivix.setOnClickListener {
-            verMapa(Uri.parse("https://goo.gl/maps/znp61dgUXcx"))
+            verMapa(Uri.parse("https://bit.ly/2FpyZBy"))
         }
 
 

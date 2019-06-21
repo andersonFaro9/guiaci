@@ -1,3 +1,9 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,42 +14,47 @@
     android:paddingRight="6dp"
     android:id="@+id/relativeLayout">
 
-
     <TextView
-        android:id="@+id/texto_primeiro_endereco_greg"
-        android:layout_width="194dp"
-        android:layout_height="124dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="12dp"
-        android:text="@string/mapa_greg"
+        android:id="@+id/texto_endereco_multivix"
+        android:layout_width="187dp"
+        android:layout_height="134dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/mapa_multivix"
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textoCliqueMapaPrimeiroEndereco" />
 
+
     <ImageView
         android:id="@+id/ic_endereco_multivix"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/texto_primeiro_endereco_greg"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/texto_endereco_multivix"
+        app:layout_constraintTop_toBottomOf="@+id/textoCliqueMapaPrimeiroEndereco"
         app:srcCompat="@drawable/ic_endereco" />
 
     <TextView
         android:id="@+id/textoCliqueMapaPrimeiroEndereco"
         android:layout_width="194dp"
         android:layout_height="69dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="12dp"
-        android:textColor="#00B2EE"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
         android:text="Para ver o mapa clique no endereço"
         android:textAlignment="textEnd"
         android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+        android:textColor="#00B2EE"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 </android.support.constraint.ConstraintLayout>
 
+</ScrollView>
