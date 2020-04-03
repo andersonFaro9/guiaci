@@ -35,6 +35,7 @@ Projeto desenvolvido com:
 📌 Android
 📌 Kotlin
 📌 Firebase
+📌 OneSignal
 
 ## 💻 Projeto
 
