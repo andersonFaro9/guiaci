@@ -3,10 +3,10 @@
 ![guiaci](https://user-images.githubusercontent.com/3237047/78358924-65ad1500-758a-11ea-8434-d0396d41703b.png)
 
 
-<h4 align="center"> 
+<p align="center"> 
 	 🚀 Ao longo do tempo em que estive na cidade de Pojuca entendi que havia a necessidade das lojas e comércio em expandir seu "marketing"  e propagar melhor seus produtos. Pensando nisso eu criei o aplicativo chamado Guiaci, que envia "push notifications"(informações que chegam no topo de um aparelho celular) para os clientes dessas lojas saberem de suas novidades.
 	
-</h4>
+</p>
 <h4 align="center"> 
 
 	Mantenha sua fé em Deus, tira o "s" da "crise", crie e siga firme!!!
