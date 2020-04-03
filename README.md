@@ -7,6 +7,8 @@
 	 🚀 Ao longo do tempo em que estive na cidade de Pojuca entendi que havia a necessidade das lojas e comércio em expandir seu "marketing"  e propagar melhor seus produtos. Pensando nisso eu criei o aplicativo chamado Guiaci, que envia "push notifications"(informações que chegam no topo de um aparelho celular) para os clientes dessas lojas saberem de suas novidades.
 	
 </p>
+
+<br/>
 <h4 align="center"> 
 
 	Mantenha sua fé em Deus, tira o "s" da "crise", crie e siga firme!!!
